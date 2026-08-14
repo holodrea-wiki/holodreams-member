@@ -70,6 +70,23 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
+    /* ★ 追加: ヘッダー非公式表示 & フッター著作権表示 */
+    .header-subtext {
+      font-size: 11.5px;
+      color: #94a3b8;
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+    }
+    .copyright-text {
+      font-size: 11.5px;
+      color: #64748b;
+      text-align: center;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      max-width: 860px;
+    }
+
     .page-container {
       max-width: 1185px;
       margin: 0 auto;
@@ -622,6 +639,8 @@
   <!-- 上部共通ヘッダー -->
   <div class="header">
     <h1>ホロドリ メンバー情報</h1>
+    <!-- ★ 追加: 非公式表示エリア -->
+    <div class="header-subtext" id="headerUnofficialNotice"></div>
   </div>
 
   <div class="page-container">
@@ -682,7 +701,8 @@
   <!-- 共通フッター -->
   <footer>
     <div class="footer-links-container" id="footerLinksBox"></div>
-    <div class="copyright">&copy; 攻略データまとめサイト</div>
+    <!-- ★ 変更: 著作権表示エリア -->
+    <div class="copyright-text" id="footerCopyrightNotice"></div>
   </footer>
 
   <script>
@@ -713,7 +733,27 @@
         .then(res => res.json())
         .then(data => renderExternalLinks(data))
         .catch(err => console.error('外部リンク通信エラー:', err));
+
+      // 著作権・非公式表示の非同期取得
+      const COPYRIGHT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCopyright';
+      fetch(COPYRIGHT_URL, { method: 'GET', redirect: 'follow' })
+        .then(res => res.json())
+        .then(data => renderCopyright(data))
+        .catch(err => console.error('著作権情報通信エラー:', err));
     };
+
+    function renderCopyright(copyMap) {
+      if (!copyMap) return;
+      const unofficialElem = document.getElementById('headerUnofficialNotice');
+      const copyrightElem = document.getElementById('footerCopyrightNotice');
+
+      if (unofficialElem && copyMap['非公式表示']) {
+        unofficialElem.textContent = copyMap['非公式表示'];
+      }
+      if (copyrightElem && copyMap['著作権表示']) {
+        copyrightElem.textContent = copyMap['著作権表示'];
+      }
+    }
 
     function setBackgroundBanner(bannerMap) {
       if (!bannerMap) return;
