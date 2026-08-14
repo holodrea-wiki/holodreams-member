@@ -86,6 +86,15 @@
       white-space: pre-wrap;
       max-width: 860px;
     }
+    /* ★ 追加: モーダルカード内右下の引用コピーライト */
+    .modal-card-copyright {
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: right;
+      margin-top: 4px;
+      padding-right: 4px;
+      white-space: pre-wrap;
+    }
 
     .page-container {
       max-width: 1185px;
@@ -706,6 +715,7 @@
   </footer>
 
   <script>
+    let globalCopyrightMap = {};
     let globalGroupedData = null;
     let globalTagUrlMap = {};
 
@@ -744,6 +754,8 @@
 
     function renderCopyright(copyMap) {
       if (!copyMap) return;
+      globalCopyrightMap = copyMap; // ★ 追加
+      
       const unofficialElem = document.getElementById('headerUnofficialNotice');
       const copyrightElem = document.getElementById('footerCopyrightNotice');
 
@@ -877,6 +889,12 @@
               ${c.introduction_text ? `<div class="intro-text-card">${escapeHtml(c.introduction_text)}</div>` : ''}
               ${linksHtml ? `<div class="intro-links">${linksHtml}</div>` : ''}
             </div>
+
+            <!-- ★ 追加: 引用コピーライト2 表示エリア -->
+            ${globalCopyrightMap['引用コピーライト2'] ? `
+              <div class="modal-card-copyright">${escapeHtml(globalCopyrightMap['引用コピーライト2'])}</div>
+            ` : ''}
+            
           </div>
         `;
       });
@@ -1250,6 +1268,12 @@
                 </div>
               </div>
             </div>
+
+            <!-- ★ 追加: 引用コピーライト1 表示エリア -->
+            ${globalCopyrightMap['引用コピーライト1'] ? `
+              <div class="modal-card-copyright">${escapeHtml(globalCopyrightMap['引用コピーライト1'])}</div>
+            ` : ''}
+            
           </div>
         `;
       });
