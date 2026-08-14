@@ -136,6 +136,15 @@
       white-space: pre-wrap;
       max-width: 860px;
     }
+    /* ★ 追加: モーダルカード内右下の引用コピーライト */
+    .modal-card-copyright {
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: right;
+      margin-top: 4px;
+      padding-right: 4px;
+      white-space: pre-wrap;
+    }
 
     .container {
       max-width: 860px;
@@ -788,6 +797,7 @@
   </footer>
 
   <script>
+    let globalCopyrightMap = {};
     let currentSlideIndex = 1;
     let realSlideCount = 0;
     let autoSlideTimer = null;
@@ -847,6 +857,8 @@
 
     function renderCopyright(copyMap) {
       if (!copyMap) return;
+      globalCopyrightMap = copyMap; // ★ 追加
+      
       const unofficialElem = document.getElementById('headerUnofficialNotice');
       const copyrightElem = document.getElementById('footerCopyrightNotice');
 
@@ -1447,6 +1459,12 @@
                 </div>
               </div>
             </div>
+
+            <!-- ★ 追加: 引用コピーライト1 表示エリア -->
+            ${globalCopyrightMap['引用コピーライト1'] ? `
+              <div class="modal-card-copyright">${escapeHtml(globalCopyrightMap['引用コピーライト1'])}</div>
+            ` : ''}
+            
           </div>
         `;
       });
