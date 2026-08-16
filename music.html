@@ -433,6 +433,21 @@
       display: inline-block;
       color: #0f172a;
       font-weight: 600;
+      white-space: nowrap;
+    }
+    .marquee-active {
+      display: inline-block;
+      /* 全体15秒（初期位置で3秒停止 + 12秒かけてスクロール） */
+      animation: marqueeAnim 15s linear infinite;
+    }
+    .marquee-active:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeAnim {
+      0%   { transform: translateX(0); }
+      20%  { transform: translateX(0); }       /* 初期表示（先頭位置）で3秒間停止 */
+      85%　{ transform: translateX(-100%); }    /* 12秒かけて左端へ完全にスクロール */
+      100% { transform: translateX(-100%); }       /* 初期位置に瞬時に戻る */
     }
 
     /* ⑦ コピーライト表示 */
