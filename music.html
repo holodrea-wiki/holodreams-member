@@ -209,17 +209,23 @@
     #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
 
     /* =========================================
-       楽曲カード専用スタイル (添付画像レイアウト準拠)
+       楽曲カード専用スタイル (水色リキッド調デザイン)
     ========================================= */
     .music-card {
-      background: #ffffff;
-      border: 1.5px solid #cbd5e1;
-      border-radius: 14px;
-      padding: 14px 18px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+      /* 水色の半透明グラデーション＆ガラス質感 */
+      background: linear-gradient(135deg, rgba(224, 242, 254, 0.85) 0%, rgba(186, 230, 253, 0.65) 50%, rgba(125, 211, 252, 0.75) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      border-radius: 18px;
+      padding: 16px 20px;
+      /* リキッド特有のふんわりとした水色の光彩と立体シャドウ */
+      box-shadow: 0 8px 32px rgba(14, 165, 233, 0.18),
+                  inset 0 2px 4px rgba(255, 255, 255, 0.9),
+                  inset 0 -2px 4px rgba(56, 189, 248, 0.2);
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       position: relative;
     }
 
@@ -248,13 +254,15 @@
       width: 24px;
       object-fit: contain;
       flex-shrink: 0;
+      filter: drop-shadow(0 2px 4px rgba(14, 165, 233, 0.3));
     }
     .music-title-text {
       font-size: 19px;
       font-weight: 900;
-      color: #0f172a;
+      color: #0369a1;
       letter-spacing: 0.02em;
       word-break: break-all;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
     /* ② アーティスト */
     .music-artist-row {
@@ -272,7 +280,7 @@
     .artist-text {
       font-size: 13.5px;
       font-weight: bold;
-      color: #475569;
+      color: #0284c7;
     }
 
     /* ボタン群（⑩YouTube, ⑪購入） */
@@ -286,14 +294,15 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: #ff0000;
+      background: linear-gradient(135deg, #ff4b4b 0%, #dc2626 100%);
       color: #ffffff;
       text-decoration: none;
       font-size: 12px;
       font-weight: 900;
-      padding: 6px 12px;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(255, 0, 0, 0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.5);
       transition: opacity 0.2s, transform 0.1s;
     }
     .btn-youtube:hover { opacity: 0.9; transform: translateY(-1px); }
@@ -303,14 +312,15 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: #0077ff;
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
       color: #ffffff;
       text-decoration: none;
       font-size: 12px;
       font-weight: 900;
-      padding: 6px 12px;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0, 119, 255, 0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.6);
       transition: opacity 0.2s, transform 0.1s;
     }
     .btn-buynow:hover { opacity: 0.9; transform: translateY(-1px); }
@@ -339,11 +349,12 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      border-radius: 6px;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.18));
+      border-radius: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      filter: drop-shadow(0 6px 12px rgba(14, 165, 233, 0.25));
     }
 
-    /* 楽曲情報中央ブロック（④再生時間, ⑤Type, ⑥クレジット, ⑦コピーライト） */
+    /* 楽曲情報中央ブロック */
     .music-details-center {
       display: flex;
       flex-direction: column;
@@ -366,7 +377,11 @@
       gap: 5px;
       font-size: 13.5px;
       font-weight: bold;
-      color: #1e293b;
+      color: #0369a1;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
     }
     .time-icon {
       height: 18px;
@@ -378,6 +393,7 @@
       height: 22px;
       width: auto;
       object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
 
     /* ⑥ クレジット（作詞・作曲・編曲） */
@@ -388,6 +404,10 @@
       font-size: 12.5px;
       width: 100%;
       max-width: 320px;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
     }
     .credit-row {
       display: flex;
@@ -400,10 +420,9 @@
       width: 32px;
       min-width: 32px;
       font-weight: bold;
-      color: #0f172a;
+      color: #0369a1;
       letter-spacing: 0.15em;
     }
-    /* 長い場合のマーキーコンテナ */
     .marquee-box {
       flex: 1;
       overflow: hidden;
@@ -412,28 +431,15 @@
     }
     .marquee-text {
       display: inline-block;
-      color: #334155;
-      font-weight: 500;
-    }
-    .marquee-active {
-      display: inline-block;
-      /* padding-left: 100%; を削除（初期位置でテキストが見えるようにする） */
-      animation: marqueeAnim 15s linear infinite;
-    }
-    .marquee-active:hover {
-      animation-play-state: paused;
-    }
-    @keyframes marqueeAnim {
-      0%   { transform: translateX(0); }
-      20%  { transform: translateX(0); }       /* 初期表示（先頭位置）で3秒間停止 */
-      85%{ transform: translateX(-100%); }    /* 12秒かけて左端へ完全にスクロール */
-      100% { transform: translateX(-100%); }       /* 初期位置に瞬時に戻る */
+      color: #0f172a;
+      font-weight: 600;
     }
 
     /* ⑦ コピーライト表示 */
     .track-copyright-text {
       font-size: 10.5px;
-      color: #64748b;
+      color: #0369a1;
+      opacity: 0.8;
       line-height: 1.35;
       word-break: break-word;
       white-space: normal;
@@ -451,15 +457,16 @@
       flex-shrink: 0;
     }
 
-    /* ⑧ スコアレート対象ボックス */
+    /* ⑧ スコアレート対象ボックス (リキッド調) */
     .score-rate-card {
-      background: #e0f2fe;
-      border: 1px solid #bae6fd;
-      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(224, 242, 254, 0.5) 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
       padding: 8px 12px;
       display: flex;
       flex-direction: column;
       gap: 6px;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.8);
     }
     .score-rate-header {
       display: flex;
@@ -486,7 +493,7 @@
       height: 44px;
       border-radius: 50%;
       border: 2px solid #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      box-shadow: 0 3px 6px rgba(2, 132, 199, 0.25);
       object-fit: cover;
       flex-shrink: 0;
     }
@@ -497,16 +504,17 @@
       padding: 6px 0;
     }
 
-    /* ⑨ 難易度タグ ＆ 数値ボックス */
+    /* ⑨ 難易度タグ ＆ 数値ボックス (リキッド調) */
     .difficulty-board {
-      background: #dbeafe;
-      border: 1px solid #bfdbfe;
-      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(224, 242, 254, 0.5) 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
       padding: 6px 8px;
       display: flex;
       justify-content: space-around;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.8);
     }
     .diff-column {
       display: flex;
@@ -520,6 +528,7 @@
       width: 100%;
       max-width: 90px;
       object-fit: contain;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.12));
     }
     .diff-fallback-tag {
       font-size: 11px;
@@ -535,8 +544,9 @@
       font-family: "Arial Black", "Consolas", sans-serif;
       font-size: 18px;
       font-weight: 900;
-      color: #0f172a;
+      color: #0369a1;
       line-height: 1;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 
     /* レスポンシブ対応 */
