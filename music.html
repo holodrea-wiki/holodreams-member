@@ -219,7 +219,6 @@
       border: 1.5px solid rgba(255, 255, 255, 0.8);
       border-radius: 18px;
       padding: 16px 20px;
-      /* リキッド特有のふんわりとした水色の光彩と立体シャドウ */
       box-shadow: 0 8px 32px rgba(14, 165, 233, 0.18),
                   inset 0 2px 4px rgba(255, 255, 255, 0.9),
                   inset 0 -2px 4px rgba(56, 189, 248, 0.2);
@@ -229,35 +228,19 @@
       position: relative;
     }
 
-    /* スマホ時のみ：タイトル上段を縦並びにしてボタンをアーティスト名の下に配置 */
-      .music-top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      .music-main-meta {
-        width: 100%;
-      }
-      .music-actions-wrapper {
-        margin-top: 2px;
-        margin-left: 2px;
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      /* スマホ時のみ：中段以降のブロック（ジャケット・クレジット・右パネル）を縦並びに */
-      .music-content-row { 
-        flex-direction: column; 
-        gap: 12px;
-      }
-      .music-right-panel { 
-        width: 100%; 
-        min-width: 100%; 
-        max-width: 100%; 
-      }
-      .credits-table { 
-        max-width: 100%; 
-      }
+    /* PC時：上段（タイトル・アーティストと右側ボタンを横並び配置） */
+    .music-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .music-main-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      flex: 1;
+      min-width: 0;
     }
     /* ① トラックタイトル */
     .music-title-row {
@@ -342,14 +325,14 @@
     .btn-buynow:hover { opacity: 0.9; transform: translateY(-1px); }
     .btn-buynow svg { width: 14px; height: 14px; fill: currentColor; }
 
-    /* 中段・下段コンテンツエリア */
+    /* PC時：中段・下段コンテンツエリア（ジャケット・クレジット・右パネルを横並び配置） */
     .music-content-row {
       display: flex;
       gap: 16px;
       align-items: stretch;
     }
 
-    /* ③ ジャケット画像（約25%拡大 & 白枠線・背景の削除） */
+    /* ③ ジャケット画像 */
     .jacket-container {
       width: 200px;
       min-width: 200px;
@@ -373,7 +356,7 @@
       filter: drop-shadow(0 6px 12px rgba(14, 165, 233, 0.25));
     }
 
-    /* 楽曲情報中央ブロック（再生時間の真下にクレジットを配置） */
+    /* 楽曲情報中央ブロック */
     .music-details-center {
       display: flex;
       flex-direction: column;
@@ -390,7 +373,7 @@
       gap: 14px;
       flex-wrap: wrap;
     }
-    /* ④ 再生時間（拡大表示） */
+    /* ④ 再生時間 */
     .time-badge {
       display: inline-flex;
       align-items: center;
@@ -408,7 +391,7 @@
       width: 22px;
       object-fit: contain;
     }
-    /* ⑤ Type画像（拡大表示） */
+    /* ⑤ Type画像 */
     .type-badge-img {
       height: 28px;
       width: auto;
@@ -458,7 +441,6 @@
     }
     .marquee-active {
       display: inline-block;
-      /* 全体15秒（初期位置で3秒停止 + 12秒かけてスクロール） */
       animation: marqueeAnim 15s linear infinite;
     }
     .marquee-active:hover {
@@ -466,9 +448,9 @@
     }
     @keyframes marqueeAnim {
       0%   { transform: translateX(0); }
-      20%  { transform: translateX(0); }       /* 初期表示（先頭位置）で3秒間停止 */
-      85%　{ transform: translateX(-100%); }    /* 12秒かけて左端へ完全にスクロール */
-      100% { transform: translateX(-100%); }       /* 初期位置に瞬時に戻る */
+      20%  { transform: translateX(0); }
+      85%  { transform: translateX(-100%); }
+      100% { transform: translateX(-100%); }
     }
 
     /* ⑦ コピーライト表示 */
@@ -482,7 +464,7 @@
       margin-top: auto;
     }
 
-    /* 右側エリア（⑧スコアレート, ⑨難易度タグ & 数値） */
+    /* PC時：右側エリア（スコアレート ＆ 難易度） */
     .music-right-panel {
       width: 440px;
       min-width: 440px;
@@ -493,13 +475,13 @@
       flex-shrink: 0;
     }
 
-    /* ⑧ スコアレート対象ボックス (高さ拡大 & アイコンサイズアップ) */
+    /* ⑧ スコアレート対象ボックス */
     .score-rate-card {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(224, 242, 254, 0.5) 100%);
       border: 1.5px solid rgba(255, 255, 255, 0.8);
       border-radius: 12px;
       padding: 10px 14px;
-      min-height: 100px; /* ボックス全体の高さをしっかり確保 */
+      min-height: 100px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -524,11 +506,11 @@
       align-items: center;
       gap: 8px;
       overflow-x: auto;
-      padding: 4px 2px 6px; /* アイコンの影が見切れないよう余白を確保 */
+      padding: 4px 2px 6px;
     }
     .score-rate-char-icon {
-      width: 58px;  /* 44px → 58px に拡大 */
-      height: 58px; /* 44px → 58px に拡大 */
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
       border: 2.5px solid #ffffff;
       box-shadow: 0 4px 8px rgba(2, 132, 199, 0.28);
@@ -542,7 +524,7 @@
       padding: 12px 4px;
     }
 
-    /* ⑨ 難易度タグ ＆ 数値ボックス (リキッド調) */
+    /* ⑨ 難易度タグ ＆ 数値ボックス */
     .difficulty-board {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(224, 242, 254, 0.5) 100%);
       border: 1.5px solid rgba(255, 255, 255, 0.8);
@@ -587,12 +569,45 @@
       text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 
-    /* レスポンシブ対応（スマホ縦画面のみ適用: max-width: 600px） */
+    /* =========================================
+       レスポンシブ対応（スマホ画面: 600px以下のみ適用）
+    ========================================= */
     @media screen and (max-width: 600px) {
       .sticky-top-container, .list-wrapper { 
         max-width: 100% !important; 
         min-width: 100% !important; 
       }
+      
+      /* スマホ時のみ：タイトル上段を縦並びにしてボタンをアーティスト名の下に配置 */
+      .music-top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .music-main-meta {
+        width: 100%;
+      }
+      .music-actions-wrapper {
+        margin-top: 2px;
+        margin-left: 2px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      /* スマホ時のみ：中段ブロックを縦並びに切り替え */
+      .music-content-row { 
+        flex-direction: column; 
+        gap: 12px;
+      }
+      .music-right-panel { 
+        width: 100%; 
+        min-width: 100%; 
+        max-width: 100%; 
+      }
+      .credits-table { 
+        max-width: 100%; 
+      }
+    }
 
     /* 共通フッターCSS */
     footer {
