@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="description" content="ホロライブドリームス（ホロドリ）の楽曲・トラック一覧データ攻略まとめサイト。">
+  <!-- OGP（SNSシェア用） -->
+  <meta property="og:title" content="ホロドリ 楽曲リスト">
+  <meta property="og:description" content="楽曲一覧・難易度・スコアレート・楽曲クレジット情報">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楽曲リスト</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0f172a;
+      color: #1f2937;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* 共通背景コンテナ & ドットオーバーレイ */
+    .bg-falling-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      background-color: #0b0f19;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .bg-falling-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      background-image: radial-gradient(rgba(15, 23, 42, 0.65) 1px, transparent 1px);
+      background-size: 4.5px 4.5px;
+      -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.05) 15%, rgba(0,0,0,0.85) 80%);
+      mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.05) 15%, rgba(0,0,0,0.85) 80%);
+    }
+
+    /* 上部ナビヘッダー */
+    .header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 24px 20px;
+      text-align: center;
+      border-bottom: 1px solid #334155;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 900;
+      color: #f8fafc;
+      letter-spacing: 0.05em;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .header-subtext {
+      font-size: 11.5px;
+      color: #94a3b8;
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+    }
+    .copyright-text {
+      font-size: 11.5px;
+      color: #64748b;
+      text-align: center;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      max-width: 860px;
+    }
+
+    .sticky-top-container {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 16px;
+      padding-right: 16px;
+      max-width: 1185px;
+      min-width: 610px;
+      margin: 0 auto;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .header-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 10px 16px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      margin-bottom: 8px;
+    }
+    .back-btn {
+      background: #334155;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .back-btn:hover { background: #475569; }
+
+    .search-wrapper {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .search-box {
+      width: 100%;
+      padding: 8px 36px 8px 14px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      color: #0f172a;
+      font-size: 14px;
+      outline: none;
+    }
+    .clear-btn {
+      position: absolute;
+      right: 10px;
+      background: #9ca3af;
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .standalone-blue-header {
+      background: #0044ff;
+      color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      min-height: 44px;
+    }
+    .hit-count-badge {
+      font-size: 14px;
+      font-weight: bold;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+
+    .list-wrapper {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid #cbd5e1;
+      width: 100%;
+      max-width: 1185px;
+      min-width: 610px;
+      margin: 0 auto 24px;
+      overflow-x: auto;
+      flex: 1;
+    }
+    .list-body {
+      display: flex;
+      flex-direction: column;
+      background: rgba(226, 232, 240, 0.8);
+      padding: 12px;
+      gap: 12px;
+      width: 100%;
+    }
+
+    #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
+
+    /* =========================================
+       楽曲カード専用スタイル (添付画像レイアウト準拠)
+    ========================================= */
+    .music-card {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 14px 18px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+
+    /* 上段：タイトル・アーティスト・アクションボタン */
+    .music-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .music-main-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      flex: 1;
+      min-width: 0;
+    }
+    /* ① トラックタイトル */
+    .music-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .track-icon {
+      height: 24px;
+      width: 24px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .music-title-text {
+      font-size: 19px;
+      font-weight: 900;
+      color: #0f172a;
+      letter-spacing: 0.02em;
+      word-break: break-all;
+    }
+    /* ② アーティスト */
+    .music-artist-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 2px;
+    }
+    .artist-icon {
+      height: 16px;
+      width: 16px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .artist-text {
+      font-size: 13.5px;
+      font-weight: bold;
+      color: #475569;
+    }
+
+    /* ボタン群（⑩YouTube, ⑪購入） */
+    .music-actions-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .btn-youtube {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #ff0000;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 6px 12px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(255, 0, 0, 0.3);
+      transition: opacity 0.2s, transform 0.1s;
+    }
+    .btn-youtube:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-youtube svg { width: 14px; height: 14px; fill: currentColor; }
+
+    .btn-buynow {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #0077ff;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 6px 12px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0, 119, 255, 0.3);
+      transition: opacity 0.2s, transform 0.1s;
+    }
+    .btn-buynow:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-buynow svg { width: 14px; height: 14px; fill: currentColor; }
+
+    /* 中段・下段コンテンツエリア */
+    .music-content-row {
+      display: flex;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    /* ③ ジャケット画像 */
+    .jacket-container {
+      width: 140px;
+      min-width: 140px;
+      max-width: 140px;
+      height: 140px;
+      position: relative;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .jacket-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.18));
+    }
+
+    /* 楽曲情報中央ブロック（④再生時間, ⑤Type, ⑥クレジット, ⑦コピーライト） */
+    .music-details-center {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .time-type-line {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    /* ④ 再生時間 */
+    .time-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13.5px;
+      font-weight: bold;
+      color: #1e293b;
+    }
+    .time-icon {
+      height: 18px;
+      width: 18px;
+      object-fit: contain;
+    }
+    /* ⑤ Type画像 */
+    .type-badge-img {
+      height: 22px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* ⑥ クレジット（作詞・作曲・編曲） */
+    .credits-table {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 12.5px;
+      width: 100%;
+      max-width: 320px;
+    }
+    .credit-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .credit-label {
+      width: 32px;
+      min-width: 32px;
+      font-weight: bold;
+      color: #0f172a;
+      letter-spacing: 0.15em;
+    }
+    /* 長い場合のマーキーコンテナ */
+    .marquee-box {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      white-space: nowrap;
+    }
+    .marquee-text {
+      display: inline-block;
+      color: #334155;
+      font-weight: 500;
+    }
+    .marquee-active {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marqueeAnim 12s linear infinite;
+    }
+    .marquee-active:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeAnim {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-100%, 0); }
+    }
+
+    /* ⑦ コピーライト表示 */
+    .track-copyright-text {
+      font-size: 10.5px;
+      color: #64748b;
+      line-height: 1.35;
+      word-break: break-word;
+      white-space: normal;
+      margin-top: auto;
+    }
+
+    /* 右側エリア（⑧スコアレート, ⑨難易度タグ & 数値） */
+    .music-right-panel {
+      width: 440px;
+      min-width: 440px;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    /* ⑧ スコアレート対象ボックス */
+    .score-rate-card {
+      background: #e0f2fe;
+      border: 1px solid #bae6fd;
+      border-radius: 10px;
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .score-rate-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: bold;
+      color: #0284c7;
+    }
+    .score-rate-icon {
+      height: 16px;
+      width: 16px;
+      object-fit: contain;
+    }
+    .score-rate-char-list {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+    .score-rate-char-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .score-rate-none {
+      font-size: 13px;
+      font-weight: bold;
+      color: #64748b;
+      padding: 6px 0;
+    }
+
+    /* ⑨ 難易度タグ ＆ 数値ボックス */
+    .difficulty-board {
+      background: #dbeafe;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 6px 8px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 6px;
+    }
+    .diff-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+    }
+    .diff-tag-img {
+      height: 22px;
+      width: 100%;
+      max-width: 90px;
+      object-fit: contain;
+    }
+    .diff-fallback-tag {
+      font-size: 11px;
+      font-weight: bold;
+      color: #ffffff;
+      padding: 2px 8px;
+      border-radius: 10px;
+      text-align: center;
+      width: 100%;
+      max-width: 90px;
+    }
+    .diff-val {
+      font-family: "Arial Black", "Consolas", sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1;
+    }
+
+    /* レスポンシブ対応 */
+    @media screen and (max-width: 860px) {
+      .sticky-top-container, .list-wrapper { max-width: 100% !important; min-width: 100% !important; }
+      .music-content-row { flex-direction: column; }
+      .music-right-panel { width: 100%; min-width: 100%; max-width: 100%; }
+      .credits-table { max-width: 100%; }
+    }
+
+    /* 共通フッターCSS */
+    footer {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 32px 20px 28px;
+      color: #94a3b8;
+      border-top: 1px solid #334155;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+      margin-top: auto;
+    }
+    .footer-links-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      max-width: 860px;
+    }
+    .footer-line-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px 16px;
+      width: 100%;
+    }
+    .footer-btn-base {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .footer-btn-store {
+      width: 160px;
+      height: 48px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .footer-btn-store:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+    }
+    .footer-btn-x {
+      background: #000000;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 10px 22px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .footer-btn-x:hover {
+      background-color: #18181b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    .footer-x-svg { width: 15px; height: 15px; fill: currentColor; }
+    .footer-btn-site {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      color: #38bdf8;
+      border: 1px solid #475569;
+      padding: 9px 20px;
+      border-radius: 20px;
+      font-size: 13.5px;
+      font-weight: bold;
+      gap: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+    .footer-btn-site:hover {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: #ffffff;
+      border-color: #60a5fa;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.35);
+    }
+    .footer-site-svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- 共通背景コンテナ -->
+  <div class="bg-falling-container" id="bgFallingContainer"></div>
+
+  <!-- 最上部共通ヘッダー -->
+  <div class="header">
+    <h1>ホロドリ メンバー情報</h1>
+    <div class="header-subtext" id="headerUnofficialNotice"></div>
+  </div>
+
+  <div class="sticky-top-container">
+    <div class="header-bar">
+      <a href="index.html" class="back-btn">← TOP</a>
+      <div class="search-wrapper">
+        <input type="text" id="searchInput" class="search-box" placeholder="楽曲名 または アーティスト名 で検索..." oninput="handleSearchInput()">
+        <button type="button" id="clearBtn" class="clear-btn" onclick="clearSearch()">✕</button>
+      </div>
+    </div>
+
+    <div class="standalone-blue-header">
+      <span>楽曲リスト</span>
+      <span class="hit-count-badge" id="hitCountDisplay">0曲</span>
+    </div>
+  </div>
+
+  <div id="loading">データを読み込み中...</div>
+
+  <div class="list-wrapper" id="listWrapper" style="display:none;">
+    <div class="list-body" id="listBody"></div>
+  </div>
+
+  <!-- 共通フッター -->
+  <footer>
+    <div class="footer-links-container" id="footerLinksBox"></div>
+    <div class="copyright-text" id="footerCopyrightNotice"></div>
+  </footer>
+
+  <script>
+    let globalTracksData = [];
+    let globalIconsMap = {};
+    let globalTagUrlMap = {};
+    let globalCharIconMap = {};
+
+    window.onload = function() {
+      // 背景バナー取得
+      const BANNER_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getTopBannerMap';
+      fetch(BANNER_URL, { method: 'GET', redirect: 'follow' })
+        .then(res => res.json())
+        .then(data => setBackgroundBanner(data))
+        .catch(err => console.error('バナー通信エラー:', err));
+
+      // 楽曲データ取得
+      const MUSIC_DATA_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getMusicTrackData';
+      fetch(MUSIC_DATA_URL, { method: 'GET', redirect: 'follow' })
+        .then(res => res.json())
+        .then(data => {
+          if (data.error) console.error(data.message);
+          else initApp(data);
+        })
+        .catch(err => console.error('楽曲データ通信エラー:', err));
+
+      // 外部リンク取得
+      const LINKS_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getExternalLinks';
+      fetch(LINKS_URL, { method: 'GET', redirect: 'follow' })
+        .then(res => res.json())
+        .then(data => renderExternalLinks(data))
+        .catch(err => console.error('外部リンク通信エラー:', err));
+
+      // 著作権・非公式表示の非同期取得
+      const COPYRIGHT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCopyright';
+      fetch(COPYRIGHT_URL, { method: 'GET', redirect: 'follow' })
+        .then(res => res.json())
+        .then(data => renderCopyright(data))
+        .catch(err => console.error('著作権情報通信エラー:', err));
+    };
+
+    function renderCopyright(copyMap) {
+      if (!copyMap) return;
+      const unofficialElem = document.getElementById('headerUnofficialNotice');
+      const copyrightElem = document.getElementById('footerCopyrightNotice');
+
+      if (unofficialElem && copyMap['非公式表示']) unofficialElem.textContent = copyMap['非公式表示'];
+      if (copyrightElem && copyMap['著作権表示']) copyrightElem.textContent = copyMap['著作権表示'];
+    }
+
+    function setBackgroundBanner(bannerMap) {
+      if (!bannerMap) return;
+      const getUrl = (keys) => {
+        for (let k of keys) {
+          if (bannerMap[k]) return bannerMap[k];
+        }
+        return '';
+      };
+      const isMobile = window.innerWidth <= 650;
+      let bgUrl = isMobile ? getUrl(['背景（モバイル）', '背景(モバイル)', '背景モバイル', 'bg_mobile', 'mobile_bg']) : '';
+      if (!bgUrl) bgUrl = getUrl(['背景', 'background', 'bg_banner', 'bg']);
+      
+      if (bgUrl) {
+        const bgContainer = document.getElementById('bgFallingContainer');
+        if (bgContainer) bgContainer.style.backgroundImage = `url('${bgUrl}')`;
+      }
+    }
+
+    function initApp(res) {
+      globalTracksData = res.tracks || [];
+      globalIconsMap = res.globalIcons || {};
+      globalTagUrlMap = res.tagUrlMap || {};
+      globalCharIconMap = res.charIconMap || {};
+
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('listWrapper').style.display = 'block';
+
+      renderTracks();
+    }
+
+    function handleSearchInput() {
+      const input = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('clearBtn');
+      clearBtn.style.display = input.value.trim().length > 0 ? 'flex' : 'none';
+      renderTracks();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      document.getElementById('clearBtn').style.display = 'none';
+      renderTracks();
+    }
+
+    function renderTracks() {
+      const keyword = document.getElementById('searchInput').value.toLowerCase().trim();
+      const listBody = document.getElementById('listBody');
+      listBody.innerHTML = '';
+
+      const filtered = globalTracksData.filter(item => {
+        const getVal = (keys) => {
+          for (let k of keys) {
+            if (item[k] !== undefined && item[k] !== null && item[k] !== '') return String(item[k]).trim();
+          }
+          return '';
+        };
+
+        const title = getVal(['music_title', 'title', '曲名']);
+        const artist = getVal(['artist', 'アーティスト']);
+
+        if (keyword) {
+          const matchTitle = title.toLowerCase().includes(keyword);
+          const matchArtist = artist.toLowerCase().includes(keyword);
+          if (!matchTitle && !matchArtist) return false;
+        }
+        return true;
+      });
+
+      document.getElementById('hitCountDisplay').textContent = filtered.length + '曲';
+
+      if (filtered.length === 0) {
+        listBody.innerHTML = '<div style="text-align:center; padding:40px; color:#f8fafc; background:rgba(255,255,255,0.1); border-radius:8px;">該当する楽曲が見つかりませんでした。</div>';
+        return;
+      }
+
+      // アイコンURL定義
+      const trackIconUrl = globalIconsMap['トラック'] || '';
+      const artistIconUrl = globalIconsMap['アーティスト'] || '';
+      const lengthIconUrl = globalIconsMap['再生時間'] || '';
+      const scoreRateIconUrl = globalIconsMap['スコアレート'] || '';
+
+      // 難易度タグURL定義
+      const easyTagUrl = globalTagUrlMap['EASY'] || '';
+      const normalTagUrl = globalTagUrlMap['NORMAL'] || '';
+      const hardTagUrl = globalTagUrlMap['HARD'] || '';
+      const expertTagUrl = globalTagUrlMap['EXPERT'] || '';
+
+      filtered.forEach(track => {
+        const getVal = (keys) => {
+          for (let k of keys) {
+            if (track[k] !== undefined && track[k] !== null && track[k] !== '') return String(track[k]).trim();
+          }
+          return '';
+        };
+
+        // ① 楽曲タイトル
+        const musicTitle = getVal(['music_title', 'title', '曲名']);
+        // ② アーティスト
+        const artist = getVal(['artist', 'アーティスト']);
+        // ③ ジャケット画像
+        const jacketImg = getVal(['image', 'jacket', '画像']);
+        // ④ 再生時間
+        const lengthStr = getVal(['length', 'time', '再生時間']);
+        // ⑤ 楽曲Type
+        const typeStr = getVal(['type', 'タイプ']);
+        const typeTagUrl = globalTagUrlMap[typeStr] || '';
+        // ⑥ クレジット
+        const lyrics = getVal(['lyrics', '作詞']);
+        const composition = getVal(['composition', '作曲']);
+        const arrangement = getVal(['arrangement', '編曲']);
+        // ⑦ コピーライト
+        const copyright = getVal(['copyright', 'コピーライト']);
+        // ⑧ スコアレート
+        const scoreRateStr = getVal(['score_rate', 'scorerate', 'スコアレート']);
+        // ⑨ 難易度数値
+        const easyVal = getVal(['easy', 'EASY']) || '-';
+        const normalVal = getVal(['normal', 'NORMAL']) || '-';
+        const hardVal = getVal(['hard', 'HARD']) || '-';
+        const expertVal = getVal(['expert', 'EXPERT']) || '-';
+        // ⑩ YouTube URL
+        const mvUrl = getVal(['mv_url', 'youtube', 'mv']);
+        // ⑪ 購入 URL
+        const digitalUrl = getVal(['digital_distribution', 'buy', '配信']);
+
+        const card = document.createElement('div');
+        card.className = 'music-card';
+
+        // クレジット行生成ヘルパー
+        const renderCreditRow = (label, text) => {
+          if (!text) return '';
+          const isLong = text.length > 20;
+          return `
+            <div class="credit-row">
+              <span class="credit-label">${escapeHtml(label)}</span>
+              <div class="marquee-box">
+                <span class="marquee-text ${isLong ? 'marquee-active' : ''}">${escapeHtml(text)}</span>
+              </div>
+            </div>
+          `;
+        };
+
+        const creditsHtml = `
+          ${renderCreditRow('作詞', lyrics)}
+          ${renderCreditRow('作曲', composition)}
+          ${renderCreditRow('編曲', arrangement)}
+        `;
+
+        // スコアレート対象キャラクターアイコン一覧生成
+        let scoreRateContentHtml = '';
+        if (scoreRateStr === '対象外' || !scoreRateStr) {
+          scoreRateContentHtml = '<div class="score-rate-none">対象外</div>';
+        } else {
+          const charNames = scoreRateStr.split(/[,、]/).map(s => s.trim()).filter(Boolean);
+          let iconsHtml = '';
+          charNames.forEach(cName => {
+            const iconUrl = globalCharIconMap[cName];
+            if (iconUrl) {
+              iconsHtml += `<img src="${escapeHtml(iconUrl)}" class="score-rate-char-icon" title="${escapeHtml(cName)}" alt="${escapeHtml(cName)}">`;
+            }
+          });
+          scoreRateContentHtml = `<div class="score-rate-char-list">${iconsHtml || '<div class="score-rate-none">なし</div>'}</div>`;
+        }
+
+        // HTML 組み立て
+        card.innerHTML = `
+          <!-- 上段: タイトル・アーティスト・ボタン -->
+          <div class="music-top-bar">
+            <div class="music-main-meta">
+              <div class="music-title-row">
+                ${trackIconUrl ? `<img src="${escapeHtml(trackIconUrl)}" class="track-icon" alt="track">` : ''}
+                <span class="music-title-text">${escapeHtml(musicTitle)}</span>
+              </div>
+              <div class="music-artist-row">
+                ${artistIconUrl ? `<img src="${escapeHtml(artistIconUrl)}" class="artist-icon" alt="artist">` : ''}
+                <span class="artist-text">${escapeHtml(artist)}</span>
+              </div>
+            </div>
+
+            <div class="music-actions-wrapper">
+              ${mvUrl ? `
+                <a href="${escapeHtml(mvUrl)}" target="_blank" rel="noopener noreferrer" class="btn-youtube">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  <span>YouTube</span>
+                </a>
+              ` : ''}
+              ${digitalUrl ? `
+                <a href="${escapeHtml(digitalUrl)}" target="_blank" rel="noopener noreferrer" class="btn-buynow">
+                  <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                  <span>BUY NOW</span>
+                </a>
+              ` : ''}
+            </div>
+          </div>
+
+          <!-- 中段・下段: ジャケット / クレジット / スコアレート / 難易度 -->
+          <div class="music-content-row">
+            <!-- ジャケット -->
+            <div class="jacket-container">
+              ${jacketImg ? `<img src="${escapeHtml(jacketImg)}" class="jacket-img" alt="${escapeHtml(musicTitle)}">` : ''}
+            </div>
+
+            <!-- 中央情報ブロック -->
+            <div class="music-details-center">
+              <div class="time-type-line">
+                ${lengthStr ? `
+                  <div class="time-badge">
+                    ${lengthIconUrl ? `<img src="${escapeHtml(lengthIconUrl)}" class="time-icon" alt="time">` : ''}
+                    <span>${escapeHtml(lengthStr)}</span>
+                  </div>
+                ` : ''}
+                ${typeTagUrl ? `<img src="${escapeHtml(typeTagUrl)}" class="type-badge-img" alt="${escapeHtml(typeStr)}">` : (typeStr ? `<span style="font-size:12px;font-weight:bold;color:#0284c7;">${escapeHtml(typeStr)}</span>` : '')}
+              </div>
+
+              ${creditsHtml ? `<div class="credits-table">${creditsHtml}</div>` : ''}
+
+              ${copyright ? `<div class="track-copyright-text">${escapeHtml(copyright)}</div>` : ''}
+            </div>
+
+            <!-- 右側ブロック（スコアレート ＆ 難易度） -->
+            <div class="music-right-panel">
+              <!-- スコアレート -->
+              <div class="score-rate-card">
+                <div class="score-rate-header">
+                  ${scoreRateIconUrl ? `<img src="${escapeHtml(scoreRateIconUrl)}" class="score-rate-icon" alt="score rate">` : ''}
+                  <span>スコアレート対象</span>
+                </div>
+                ${scoreRateContentHtml}
+              </div>
+
+              <!-- 難易度 -->
+              <div class="difficulty-board">
+                <div class="diff-column">
+                  ${easyTagUrl ? `<img src="${escapeHtml(easyTagUrl)}" class="diff-tag-img" alt="EASY">` : '<div class="diff-fallback-tag" style="background:#4ade80;">EASY</div>'}
+                  <span class="diff-val">${escapeHtml(easyVal)}</span>
+                </div>
+                <div class="diff-column">
+                  ${normalTagUrl ? `<img src="${escapeHtml(normalTagUrl)}" class="diff-tag-img" alt="NORMAL">` : '<div class="diff-fallback-tag" style="background:#fb923c;">NORMAL</div>'}
+                  <span class="diff-val">${escapeHtml(normalVal)}</span>
+                </div>
+                <div class="diff-column">
+                  ${hardTagUrl ? `<img src="${escapeHtml(hardTagUrl)}" class="diff-tag-img" alt="HARD">` : '<div class="diff-fallback-tag" style="background:#f472b6;">HARD</div>'}
+                  <span class="diff-val">${escapeHtml(hardVal)}</span>
+                </div>
+                <div class="diff-column">
+                  ${expertTagUrl ? `<img src="${escapeHtml(expertTagUrl)}" class="diff-tag-img" alt="EXPERT">` : '<div class="diff-fallback-tag" style="background:#a78bfa;">EXPERT</div>'}
+                  <span class="diff-val">${escapeHtml(expertVal)}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        listBody.appendChild(card);
+      });
+    }
+
+    function renderExternalLinks(linksList) {
+      const linksBox = document.getElementById('footerLinksBox');
+      if (!linksList || !Array.isArray(linksList) || linksList.length === 0) {
+        linksBox.style.display = 'none';
+        return;
+      }
+
+      const lineMap = {};
+      linksList.forEach(item => {
+        const lineNum = Number(item.line) || 1;
+        if (!lineMap[lineNum]) lineMap[lineNum] = [];
+        lineMap[lineNum].push(item);
+      });
+
+      const sortedLines = Object.keys(lineMap).map(Number).sort((a, b) => a - b);
+      const xSvg = `<svg class="footer-x-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`;
+      const siteSvg = `<svg class="footer-site-svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>`;
+
+      let html = '';
+      sortedLines.forEach(lineNum => {
+        html += '<div class="footer-line-row">';
+        lineMap[lineNum].forEach(item => {
+          const type = String(item.type || '').trim();
+          const name = escapeHtml(item.name || '');
+          const url = escapeHtml(item.url || '');
+          const btnImg = escapeHtml(item.button_image || '');
+
+          if (type === 'ストア') {
+            html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="footer-btn-base footer-btn-store" style="background-image: url('${btnImg}');" aria-label="${name || 'ストア'}"></a>`;
+          } else if (type === 'X') {
+            html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="footer-btn-base footer-btn-x">${xSvg}<span>${name}</span></a>`;
+          } else {
+            html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="footer-btn-base footer-btn-site">${siteSvg}<span>${name}</span></a>`;
+          }
+        });
+        html += '</div>';
+      });
+
+      linksBox.innerHTML = html;
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+  </script>
+</body>
+</html>
