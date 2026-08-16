@@ -229,19 +229,35 @@
       position: relative;
     }
 
-    /* 上段：タイトル・アーティスト・アクションボタン */
-    .music-top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .music-main-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      flex: 1;
-      min-width: 0;
+    /* 上段を縦並びに切り替え、ボタンをアーティスト名の下に配置 */
+      .music-top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .music-main-meta {
+        width: 100%;
+      }
+      .music-actions-wrapper {
+        margin-top: 2px;
+        margin-left: 2px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      /* 中段以降のコンテンツも縦並びに */
+      .music-content-row { 
+        flex-direction: column; 
+        gap: 12px;
+      }
+      .music-right-panel { 
+        width: 100%; 
+        min-width: 100%; 
+        max-width: 100%; 
+      }
+      .credits-table { 
+        max-width: 100%; 
+      }
     }
     /* ① トラックタイトル */
     .music-title-row {
