@@ -418,7 +418,7 @@
     .marquee-active {
       display: inline-block;
       padding-left: 100%;
-      /* 全体を15秒（スクロール12秒 + 待機3秒）に変更 */
+      /* 全体15秒（初期位置で3秒停止 + 12秒かけてスクロール） */
       animation: marqueeAnim 15s linear infinite;
     }
     .marquee-active:hover {
@@ -426,8 +426,8 @@
     }
     @keyframes marqueeAnim {
       0% { transform: translate(0, 0); }
-      80% { transform: translate(-100%, 0); }   /* 12秒時点(80%)でスクロール完了 */
-      100% { transform: translate(-100%, 0); }  /* 残り3秒(80%〜100%)は待機 */
+      20% { transform: translate(0, 0); }       /* 開始から3秒間(0%〜20%)はその場で待機 */
+      100% { transform: translate(-100%, 0); }  /* 残り12秒(20%〜100%)で最後までスクロール */
     }
 
     /* ⑦ コピーライト表示 */
