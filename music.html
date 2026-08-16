@@ -229,7 +229,7 @@
       position: relative;
     }
 
-    /* 上段を縦並びに切り替え、ボタンをアーティスト名の下に配置 */
+    /* スマホ時のみ：タイトル上段を縦並びにしてボタンをアーティスト名の下に配置 */
       .music-top-bar {
         flex-direction: column;
         align-items: flex-start;
@@ -245,7 +245,7 @@
         justify-content: flex-start;
       }
 
-      /* 中段以降のコンテンツも縦並びに */
+      /* スマホ時のみ：中段以降のブロック（ジャケット・クレジット・右パネル）を縦並びに */
       .music-content-row { 
         flex-direction: column; 
         gap: 12px;
@@ -587,13 +587,12 @@
       text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 
-    /* レスポンシブ対応 */
-    @media screen and (max-width: 860px) {
-      .sticky-top-container, .list-wrapper { max-width: 100% !important; min-width: 100% !important; }
-      .music-content-row { flex-direction: column; }
-      .music-right-panel { width: 100%; min-width: 100%; max-width: 100%; }
-      .credits-table { max-width: 100%; }
-    }
+    /* レスポンシブ対応（スマホ縦画面のみ適用: max-width: 600px） */
+    @media screen and (max-width: 600px) {
+      .sticky-top-container, .list-wrapper { 
+        max-width: 100% !important; 
+        min-width: 100% !important; 
+      }
 
     /* 共通フッターCSS */
     footer {
