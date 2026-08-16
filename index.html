@@ -748,9 +748,9 @@
       </a>
 
       <!-- 3. 楽曲一覧 -->
-      <a href="collection.html" class="nav-card">
+      <a href="music.html" class="nav-card">
         <div class="card-banner-box">
-          <img id="banner_checker" class="card-banner-img" src="" alt="楽曲一覧">
+          <img id="banner_music" class="card-banner-img" src="" alt="楽曲一覧">
         </div>
         <div class="card-text-content">
           <div class="card-title">楽曲一覧</div>
@@ -977,10 +977,12 @@
 
       const talentUrl = getUrl(['タレント一覧', 'タレント 一覧', 'タレント', 'メンバー詳細カード一覧']);
       const memberUrl = getUrl(['メンバー一覧', 'メンバー 一覧', 'メンバー', 'ホロメンデータ一覧表']);
+      const musicUrl = getUrl(['楽曲一覧', '楽曲 一覧', '楽曲']);
       const checkerUrl = getUrl(['所有率チェッカー', '所持状況コレクション', '所有率', 'チェッカー']);
 
       if (talentUrl) document.getElementById('banner_talent').src = talentUrl;
       if (memberUrl) document.getElementById('banner_member').src = memberUrl;
+      if (musicUrl) document.getElementById('banner_music').src = musicUrl;
       if (checkerUrl) document.getElementById('banner_checker').src = checkerUrl;
     }
 
