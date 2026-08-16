@@ -417,17 +417,17 @@
     }
     .marquee-active {
       display: inline-block;
-      padding-left: 100%;
-      /* 全体15秒（初期位置で3秒停止 + 12秒かけてスクロール） */
+      /* padding-left: 100%; を削除（初期位置でテキストが見えるようにする） */
       animation: marqueeAnim 15s linear infinite;
     }
     .marquee-active:hover {
       animation-play-state: paused;
     }
     @keyframes marqueeAnim {
-      0% { transform: translate(0, 0); }
-      20% { transform: translate(0, 0); }       /* 開始から3秒間(0%〜20%)はその場で待機 */
-      100% { transform: translate(-100%, 0); }  /* 残り12秒(20%〜100%)で最後までスクロール */
+      0%   { transform: translateX(0); }
+      20%  { transform: translateX(0); }       /* 初期表示（先頭位置）で3秒間停止 */
+      99.9%{ transform: translateX(-100%); }    /* 12秒かけて左端へ完全にスクロール */
+      100% { transform: translateX(0); }       /* 初期位置に瞬時に戻る */
     }
 
     /* ⑦ コピーライト表示 */
