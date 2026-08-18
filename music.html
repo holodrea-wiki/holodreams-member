@@ -1044,14 +1044,22 @@
         .then(data => setBackgroundBanner(data))
         .catch(err => console.error('バナー通信エラー:', err));
 
+      // 楽曲データ取得
       const MUSIC_DATA_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getMusicTrackData';
       fetch(MUSIC_DATA_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => {
-          if (data.error) console.error(data.message);
-          else initApp(data);
+          if (data.error) {
+            console.error('GASエラー:', data.message);
+            document.getElementById('loading').textContent = 'データの取得に失敗しました: ' + data.message;
+          } else {
+            initApp(data);
+          }
         })
-        .catch(err => console.error('楽曲データ通信エラー:', err));
+        .catch(err => {
+          console.error('楽曲データ通信エラー:', err);
+          document.getElementById('loading').textContent = 'サーバーとの通信に失敗しました。';
+        });
 
       const LINKS_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getExternalLinks';
       fetch(LINKS_URL, { method: 'GET', redirect: 'follow' })
