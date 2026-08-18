@@ -160,6 +160,7 @@
       justify-content: center;
     }
 
+    /* ★ 修正: 青ヘッダーバー（PC時は左詰め横並び） */
     .standalone-blue-header {
       background: #0044ff;
       color: #ffffff;
@@ -172,8 +173,13 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 12px;
+      gap: 16px;
       min-height: 44px;
+    }
+    .header-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
     .hit-count-badge {
       font-size: 14px;
@@ -182,6 +188,11 @@
       background: rgba(255, 255, 255, 0.2);
       padding: 4px 10px;
       border-radius: 12px;
+    }
+    .header-buttons-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .open-filter-btn, .open-sort-btn {
@@ -198,9 +209,9 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      margin: 0;
     }
     .open-filter-btn:hover, .open-sort-btn:hover { background: #f1f5f9; }
-    .open-filter-btn { margin-left: auto; }
     .filter-icon-inline { height: 16px; width: auto; object-fit: contain; vertical-align: middle; }
 
     /* フィルタ＆ソート モーダル共通スタイル */
@@ -368,6 +379,7 @@
       filter: grayscale(80%);
     }
 
+    /* ★ 修正: リストコンテナ（PC〜中間幅で横スクロールを有効化） */
     .list-wrapper {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
@@ -387,12 +399,13 @@
       background: rgba(226, 232, 240, 0.8);
       padding: 12px;
       gap: 12px;
-      width: 100%;
+      width: max-content;
+      min-width: 100%;
     }
 
     #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
 
-    /* 楽曲カード専用スタイル */
+    /* ★ 修正: 楽曲カード（PC時は固定幅1140pxで崩れを防止） */
     .music-card {
       background: linear-gradient(135deg, rgba(224, 242, 254, 0.85) 0%, rgba(186, 230, 253, 0.65) 50%, rgba(125, 211, 252, 0.75) 100%);
       backdrop-filter: blur(12px);
@@ -407,6 +420,9 @@
       flex-direction: column;
       gap: 12px;
       position: relative;
+      width: 1140px;
+      min-width: 1140px;
+      max-width: 1140px;
     }
 
     .music-top-bar {
@@ -502,9 +518,10 @@
     .btn-buynow:hover { opacity: 0.9; transform: translateY(-1px); }
     .btn-buynow svg { width: 14px; height: 14px; fill: currentColor; }
 
+    /* ★ 修正: 中段・下段コンテンツエリア（余白バランス改善） */
     .music-content-row {
       display: flex;
-      gap: 16px;
+      gap: 24px;
       align-items: stretch;
     }
 
@@ -571,13 +588,14 @@
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
 
+    /* ★ 修正: クレジット（幅を400pxに拡張して余白バランス最適化） */
     .credits-table {
       display: flex;
       flex-direction: column;
       gap: 4px;
       font-size: 13px;
       width: 100%;
-      max-width: 320px;
+      max-width: 400px;
       background: rgba(255, 255, 255, 0.4);
       padding: 8px 12px;
       border-radius: 10px;
@@ -729,11 +747,47 @@
       text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 
+    /* ★ 修正: レスポンシブ対応（スマホ画面: 600px以下のみ適用） */
     @media screen and (max-width: 600px) {
       .sticky-top-container, .list-wrapper { 
         max-width: 100% !important; 
         min-width: 100% !important; 
       }
+      .list-body {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+      .music-card {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* 青ヘッダー：1段目にタイトル、2段目にボタンを2列配置 */
+      .standalone-blue-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 14px;
+      }
+      .header-title-group {
+        width: 100%;
+      }
+      .header-buttons-group {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+      }
+      .open-filter-btn {
+        flex: 1;
+        justify-content: center;
+      }
+      .open-sort-btn {
+        flex: 2;
+        justify-content: center;
+      }
+
+      /* タイトル上段を縦並びにしてボタンをアーティスト名の下に配置 */
       .music-top-bar {
         flex-direction: column;
         align-items: flex-start;
@@ -746,6 +800,13 @@
         width: 100%;
         justify-content: flex-start;
       }
+
+      /* ジャケット画像を中央に配置 */
+      .jacket-container {
+        margin: 0 auto;
+      }
+
+      /* 中段ブロックを縦並びに切り替え */
       .music-content-row { 
         flex-direction: column; 
         gap: 12px;
@@ -868,16 +929,21 @@
       </div>
     </div>
 
+    <!-- ★ 修正: ヘッダーグループ化（PC/スマホで配置を最適化） -->
     <div class="standalone-blue-header">
-      <span>楽曲リスト</span>
-      <span class="hit-count-badge" id="hitCountDisplay">0曲</span>
-      <button type="button" class="open-filter-btn" id="openFilterBtn" onclick="openFilterModal()">
-        <span>フィルタ</span>
-        <img id="mainFilterIcon" src="" class="filter-icon-inline" alt="filter icon">
-      </button>
-      <button type="button" class="open-sort-btn" id="openSortBtn" onclick="openSortModal()">
-        <span id="sortBtnLabel">並び替え: 50音順 (昇順)</span>
-      </button>
+      <div class="header-title-group">
+        <span>楽曲リスト</span>
+        <span class="hit-count-badge" id="hitCountDisplay">0曲</span>
+      </div>
+      <div class="header-buttons-group">
+        <button type="button" class="open-filter-btn" id="openFilterBtn" onclick="openFilterModal()">
+          <span>フィルタ</span>
+          <img id="mainFilterIcon" src="" class="filter-icon-inline" alt="filter icon">
+        </button>
+        <button type="button" class="open-sort-btn" id="openSortBtn" onclick="openSortModal()">
+          <span id="sortBtnLabel">並び替え: 50音順 (昇順)</span>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -1606,8 +1672,6 @@
       const expertTagUrl = globalTagUrlMap['EXPERT'] || '';
 
       // 難易度マスクの判定
-      // 1. 楽曲レベルフィルタ適用中 -> フィルタ対象難易度以外にマスク
-      // 2. 楽曲レベルソート中（フィルタ未適用） -> ソート対象難易度以外にマスク
       const isLevelFilterActive = (filterLevelDiff !== 'none');
       const isLevelSortActive = (currentSortType === 'level');
 
