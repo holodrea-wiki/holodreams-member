@@ -714,7 +714,7 @@
     <div class="header-bar">
       <a href="index.html" class="back-btn">← TOP</a>
       <div class="search-wrapper">
-        <input type="text" id="searchInput" class="search-box" placeholder="楽曲名 または アーティスト名 で検索..." oninput="handleSearchInput()">
+        <input type="text" id="searchInput" class="search-box" placeholder="楽曲名、アーティスト、スコアレート対象で検索..." oninput="handleSearchInput()">
         <button type="button" id="clearBtn" class="clear-btn" onclick="clearSearch()">✕</button>
       </div>
     </div>
@@ -742,6 +742,7 @@
     let globalIconsMap = {};
     let globalTagUrlMap = {};
     let globalCharIconMap = {};
+    let globalArtistTagMap = {};
 
     window.onload = function() {
       // 背景バナー取得
@@ -808,6 +809,7 @@
       globalIconsMap = res.globalIcons || {};
       globalTagUrlMap = res.tagUrlMap || {};
       globalCharIconMap = res.charIconMap || {};
+      globalArtistTagMap = res.artistTagMap || {};
 
       document.getElementById('loading').style.display = 'none';
       document.getElementById('listWrapper').style.display = 'block';
@@ -842,18 +844,37 @@
           return '';
         };
 
+        // 1. 楽曲名
         const title = getVal(['music_title', 'title', '曲名']);
+
+        // 2. アーティスト名 および artistListから引いたartist_tag
         const artist = getVal(['artist', 'アーティスト']);
+        let artistTags = '';
+        if (artist) {
+          const splittedArtists = artist.split(/[,、]/).map(a => a.trim());
+          const tags = splittedArtists.map(a => globalArtistTagMap[a] || '');
+          artistTags = tags.join(' ');
+        }
+
+        // 3. スコアレート
+        const scoreRate = getVal(['score_rate', 'scorerate', 'スコアレート']);
 
         if (keyword) {
           const matchTitle = title.toLowerCase().includes(keyword);
           const matchArtist = artist.toLowerCase().includes(keyword);
-          if (!matchTitle && !matchArtist) return false;
+          const matchArtistTag = artistTags.toLowerCase().includes(keyword);
+          const matchScoreRate = scoreRate.toLowerCase().includes(keyword);
+
+          // 楽曲名 / アーティスト名 / artist_tag / スコアレートのいずれかにマッチ
+          if (!matchTitle && !matchArtist && !matchArtistTag && !matchScoreRate) {
+            return false;
+          }
         }
         return true;
       });
 
       document.getElementById('hitCountDisplay').textContent = filtered.length + '曲';
+      // (※以降の描画ロジックはそのまま)
 
       if (filtered.length === 0) {
         listBody.innerHTML = '<div style="text-align:center; padding:40px; color:#f8fafc; background:rgba(255,255,255,0.1); border-radius:8px;">該当する楽曲が見つかりませんでした。</div>';
