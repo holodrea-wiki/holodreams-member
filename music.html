@@ -331,6 +331,26 @@
       cursor: pointer; 
       text-align: center; 
     }
+    /* ソート用プルダウン */
+    .sort-level-select-wrapper {
+      margin-top: 4px;
+    }
+    .sort-select-box {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #334155;
+      color: #ffffff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: bold;
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .sort-select-box:focus {
+      border-color: #3b82f6;
+    }
     .sort-order-btn.selected { 
       background: #ea580c; 
       color: #ffffff; 
@@ -884,21 +904,25 @@
       <div class="sort-modal-body">
         <div class="sort-sub-title">並び替え項目</div>
         <div class="sort-option-group">
+          <!-- 50音順ボタン -->
           <button type="button" class="sort-opt-btn selected" data-sort="title" onclick="selectSortOption('title', this)">
             <span>50音順（楽曲名）</span>
           </button>
-          <button type="button" class="sort-opt-btn" data-sort="easy" onclick="selectSortOption('easy', this)">
-            <span>楽曲レベル: EASY</span>
+          
+          <!-- 楽曲レベルボタン -->
+          <button type="button" class="sort-opt-btn" data-sort="level" onclick="selectSortOption('level', this)">
+            <span>楽曲レベル</span>
           </button>
-          <button type="button" class="sort-opt-btn" data-sort="normal" onclick="selectSortOption('normal', this)">
-            <span>楽曲レベル: NORMAL</span>
-          </button>
-          <button type="button" class="sort-opt-btn" data-sort="hard" onclick="selectSortOption('hard', this)">
-            <span>楽曲レベル: HARD</span>
-          </button>
-          <button type="button" class="sort-opt-btn" data-sort="expert" onclick="selectSortOption('expert', this)">
-            <span>楽曲レベル: EXPERT</span>
-          </button>
+
+          <!-- 難易度プルダウン（デフォルト: EXPERT） -->
+          <div class="sort-level-select-wrapper" id="levelSelectWrapper">
+            <select id="levelDifficultySelect" class="sort-select-box" onchange="onLevelSelectChange()">
+              <option value="EXPERT" selected>難易度: EXPERT</option>
+              <option value="HARD">難易度: HARD</option>
+              <option value="NORMAL">難易度: NORMAL</option>
+              <option value="EASY">難易度: EASY</option>
+            </select>
+          </div>
         </div>
 
         <div class="sort-sub-title">並び順</div>
@@ -1014,7 +1038,8 @@
       renderTracks();
     }
 
-    let currentSortType = 'title'; // 'title' | 'easy' | 'normal' | 'hard' | 'expert'
+    let currentSortType = 'title'; // 'title' | 'level'
+    let currentSortLevelDiff = 'EXPERT'; // 'EASY' | 'NORMAL' | 'HARD' | 'EXPERT'
     let currentSortOrder = 'asc';  // 'asc' | 'desc'
 
     function openSortModal() { document.getElementById('sortModalOverlay').style.display = 'flex'; }
@@ -1026,6 +1051,16 @@
       currentSortType = sortKey;
     }
 
+    // プルダウン操作時に自動で「楽曲レベル」ボタンを選択状態にする
+    function onLevelSelectChange() {
+      const selectElem = document.getElementById('levelDifficultySelect');
+      currentSortLevelDiff = selectElem.value;
+      const levelBtn = document.querySelector('.sort-opt-btn[data-sort="level"]');
+      if (levelBtn) {
+        selectSortOption('level', levelBtn);
+      }
+    }
+
     function selectSortOrder(orderKey, btnElem) {
       document.querySelectorAll('.sort-order-btn').forEach(b => b.classList.remove('selected'));
       btnElem.classList.add('selected');
@@ -1034,15 +1069,14 @@
 
     function applySortAndClose() {
       closeSortModal();
-      const labels = {
-        title: '50音順',
-        easy: 'レベル: EASY',
-        normal: 'レベル: NORMAL',
-        hard: 'レベル: HARD',
-        expert: 'レベル: EXPERT'
-      };
+      currentSortLevelDiff = document.getElementById('levelDifficultySelect').value;
+
+      let typeLabel = '50音順';
+      if (currentSortType === 'level') {
+        typeLabel = `レベル: ${currentSortLevelDiff}`;
+      }
       const orderLabel = currentSortOrder === 'asc' ? ' (昇順)' : ' (降順)';
-      document.getElementById('sortBtnLabel').textContent = `並び替え: ${labels[currentSortType]}${orderLabel}`;
+      document.getElementById('sortBtnLabel').textContent = `並び替え: ${typeLabel}${orderLabel}`;
       renderTracks();
     }
 
@@ -1083,7 +1117,7 @@
         return true;
       });
 
-      // ★ ソート処理（readカラムによる50音順 / レベル順）
+      // ★ ソート処理（50音順 / プルダウン難易度のレベル順）
       filtered.sort((a, b) => {
         const getNum = (obj, keys) => {
           const v = getVal(obj, keys);
@@ -1091,7 +1125,6 @@
           return isNaN(num) ? -1 : num;
         };
 
-        // 読み仮名（readカラム）を取得するヘルパー（未設定時は曲名）
         const getReadVal = (obj) => {
           return getVal(obj, ['read', 'リード', 'よみ', '読み']) || getVal(obj, ['music_title', 'title', '曲名']);
         };
@@ -1102,21 +1135,15 @@
           const readB = getReadVal(b);
           diff = readA.localeCompare(readB, 'ja');
         } else {
-          // 難易度レベル別
-          const diffMap = {
-            easy: ['easy', 'EASY'],
-            normal: ['normal', 'NORMAL'],
-            hard: ['hard', 'HARD'],
-            expert: ['expert', 'EXPERT']
-          };
-          const keys = diffMap[currentSortType];
-          const valA = getNum(a, keys);
-          const valB = getNum(b, keys);
+          // プルダウンで選択された難易度のカラムを参照
+          const targetDiffKey = currentSortLevelDiff.toLowerCase();
+          const valA = getNum(a, [targetDiffKey, currentSortLevelDiff]);
+          const valB = getNum(b, [targetDiffKey, currentSortLevelDiff]);
 
           if (valA !== valB) {
             diff = valA - valB;
           } else {
-            // レベルが同値の場合は読み仮名（read）の50音順
+            // レベルが同じなら50音順
             const readA = getReadVal(a);
             const readB = getReadVal(b);
             diff = readA.localeCompare(readB, 'ja');
@@ -1263,21 +1290,21 @@
                 ${scoreRateContentHtml}
               </div>
 
-              <!-- 難易度（ソート非対象難易度に dimmed を付与） -->
+              <!-- 難易度（楽曲レベルソート時、選択難易度以外に dimmed クラスを付与） -->
               <div class="difficulty-board">
-                <div class="diff-column ${isLevelSort && currentSortType !== 'easy' ? 'dimmed' : ''}">
+                <div class="diff-column ${currentSortType === 'level' && currentSortLevelDiff !== 'EASY' ? 'dimmed' : ''}">
                   ${easyTagUrl ? `<img src="${escapeHtml(easyTagUrl)}" class="diff-tag-img" alt="EASY">` : '<div class="diff-fallback-tag" style="background:#4ade80;">EASY</div>'}
                   <span class="diff-val">${escapeHtml(easyVal)}</span>
                 </div>
-                <div class="diff-column ${isLevelSort && currentSortType !== 'normal' ? 'dimmed' : ''}">
+                <div class="diff-column ${currentSortType === 'level' && currentSortLevelDiff !== 'NORMAL' ? 'dimmed' : ''}">
                   ${normalTagUrl ? `<img src="${escapeHtml(normalTagUrl)}" class="diff-tag-img" alt="NORMAL">` : '<div class="diff-fallback-tag" style="background:#fb923c;">NORMAL</div>'}
                   <span class="diff-val">${escapeHtml(normalVal)}</span>
                 </div>
-                <div class="diff-column ${isLevelSort && currentSortType !== 'hard' ? 'dimmed' : ''}">
+                <div class="diff-column ${currentSortType === 'level' && currentSortLevelDiff !== 'HARD' ? 'dimmed' : ''}">
                   ${hardTagUrl ? `<img src="${escapeHtml(hardTagUrl)}" class="diff-tag-img" alt="HARD">` : '<div class="diff-fallback-tag" style="background:#f472b6;">HARD</div>'}
                   <span class="diff-val">${escapeHtml(hardVal)}</span>
                 </div>
-                <div class="diff-column ${isLevelSort && currentSortType !== 'expert' ? 'dimmed' : ''}">
+                <div class="diff-column ${currentSortType === 'level' && currentSortLevelDiff !== 'EXPERT' ? 'dimmed' : ''}">
                   ${expertTagUrl ? `<img src="${escapeHtml(expertTagUrl)}" class="diff-tag-img" alt="EXPERT">` : '<div class="diff-fallback-tag" style="background:#a78bfa;">EXPERT</div>'}
                   <span class="diff-val">${escapeHtml(expertVal)}</span>
                 </div>
