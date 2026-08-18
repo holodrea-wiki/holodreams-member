@@ -208,6 +208,148 @@
 
     #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
 
+    /* ソートボタン（ヘッダー青バー内） */
+    .open-sort-btn {
+      background: #ffffff;
+      color: #0044ff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: background 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto;
+    }
+    .open-sort-btn:hover { background: #f1f5f9; }
+
+    /* ソートモーダル */
+    .filter-modal-overlay { 
+      display: none; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background: rgba(0, 0, 0, 0.75); 
+      z-index: 3000; 
+      justify-content: center; 
+      align-items: center; 
+      padding: 16px; 
+    }
+    .sort-modal-card { 
+      background: #1e293b; 
+      color: #ffffff; 
+      width: 100%; 
+      max-width: 420px; 
+      border-radius: 14px; 
+      display: flex; 
+      flex-direction: column; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+      overflow: hidden; 
+      border: 1px solid #334155; 
+    }
+    .filter-modal-topbar { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      padding: 14px 20px; 
+      border-bottom: 1px solid #334155; 
+      background: #0f172a; 
+      font-weight: bold; 
+      font-size: 16px; 
+      color: #ffffff; 
+    }
+    .filter-apply-btn { 
+      background: #ea580c; 
+      color: #ffffff; 
+      border: none; 
+      padding: 6px 16px; 
+      border-radius: 6px; 
+      font-size: 14px; 
+      font-weight: bold; 
+      cursor: pointer; 
+    }
+    .sort-modal-body { 
+      padding: 20px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 16px; 
+    }
+    .sort-sub-title {
+      font-size: 12px;
+      font-weight: bold;
+      color: #94a3b8;
+      margin-bottom: -6px;
+    }
+    .sort-option-group { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 8px; 
+    }
+    .sort-opt-btn { 
+      background: #0f172a; 
+      border: 1px solid #334155; 
+      border-radius: 8px; 
+      padding: 10px 16px; 
+      font-size: 13.5px; 
+      font-weight: bold; 
+      color: #cbd5e1; 
+      text-align: left; 
+      cursor: pointer; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      transition: all 0.15s; 
+    }
+    .sort-opt-btn.selected { 
+      background: #2563eb; 
+      color: #ffffff; 
+      border-color: #3b82f6; 
+    }
+    .sort-order-toggle { 
+      display: flex; 
+      gap: 8px; 
+      background: #0f172a; 
+      padding: 4px; 
+      border-radius: 8px; 
+      border: 1px solid #334155; 
+    }
+    .sort-order-btn { 
+      flex: 1; 
+      padding: 10px; 
+      font-size: 13px; 
+      font-weight: bold; 
+      color: #cbd5e1; 
+      background: transparent; 
+      border: none; 
+      border-radius: 6px; 
+      cursor: pointer; 
+      text-align: center; 
+    }
+    .sort-order-btn.selected { 
+      background: #ea580c; 
+      color: #ffffff; 
+    }
+
+    /* 難易度ソート時：非対象難易度の半透明マスク */
+    .diff-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      transition: opacity 0.2s, filter 0.2s;
+    }
+    .diff-column.dimmed {
+      opacity: 0.25;
+      filter: grayscale(80%);
+    }
+
     /* =========================================
        楽曲カード専用スタイル (水色リキッド調デザイン)
     ========================================= */
@@ -722,10 +864,51 @@
     <div class="standalone-blue-header">
       <span>楽曲リスト</span>
       <span class="hit-count-badge" id="hitCountDisplay">0曲</span>
+      <button type="button" class="open-sort-btn" id="openSortBtn" onclick="openSortModal()">
+        <span id="sortBtnLabel">並び替え: 50音順 (昇順)</span>
+      </button>
     </div>
   </div>
 
   <div id="loading">データを読み込み中...</div>
+
+  <!-- ソート設定ダイアログ -->
+  <div id="sortModalOverlay" class="filter-modal-overlay" onclick="closeSortModal()">
+    <div class="sort-modal-card" onclick="event.stopPropagation()">
+      <div class="filter-modal-topbar">
+        <span>並び替え</span>
+        <div class="filter-modal-actions">
+          <button type="button" class="filter-apply-btn" onclick="applySortAndClose()">決定</button>
+        </div>
+      </div>
+      <div class="sort-modal-body">
+        <div class="sort-sub-title">並び替え項目</div>
+        <div class="sort-option-group">
+          <button type="button" class="sort-opt-btn selected" data-sort="title" onclick="selectSortOption('title', this)">
+            <span>50音順（楽曲名）</span>
+          </button>
+          <button type="button" class="sort-opt-btn" data-sort="easy" onclick="selectSortOption('easy', this)">
+            <span>楽曲レベル: EASY</span>
+          </button>
+          <button type="button" class="sort-opt-btn" data-sort="normal" onclick="selectSortOption('normal', this)">
+            <span>楽曲レベル: NORMAL</span>
+          </button>
+          <button type="button" class="sort-opt-btn" data-sort="hard" onclick="selectSortOption('hard', this)">
+            <span>楽曲レベル: HARD</span>
+          </button>
+          <button type="button" class="sort-opt-btn" data-sort="expert" onclick="selectSortOption('expert', this)">
+            <span>楽曲レベル: EXPERT</span>
+          </button>
+        </div>
+
+        <div class="sort-sub-title">並び順</div>
+        <div class="sort-order-toggle">
+          <button type="button" class="sort-order-btn selected" data-order="asc" onclick="selectSortOrder('asc', this)">昇順</button>
+          <button type="button" class="sort-order-btn" data-order="desc" onclick="selectSortOrder('desc', this)">降順</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="list-wrapper" id="listWrapper" style="display:none;">
     <div class="list-body" id="listBody"></div>
@@ -831,33 +1014,61 @@
       renderTracks();
     }
 
+    let currentSortType = 'title'; // 'title' | 'easy' | 'normal' | 'hard' | 'expert'
+    let currentSortOrder = 'asc';  // 'asc' | 'desc'
+
+    function openSortModal() { document.getElementById('sortModalOverlay').style.display = 'flex'; }
+    function closeSortModal() { document.getElementById('sortModalOverlay').style.display = 'none'; }
+
+    function selectSortOption(sortKey, btnElem) {
+      document.querySelectorAll('.sort-opt-btn').forEach(b => b.classList.remove('selected'));
+      btnElem.classList.add('selected');
+      currentSortType = sortKey;
+    }
+
+    function selectSortOrder(orderKey, btnElem) {
+      document.querySelectorAll('.sort-order-btn').forEach(b => b.classList.remove('selected'));
+      btnElem.classList.add('selected');
+      currentSortOrder = orderKey;
+    }
+
+    function applySortAndClose() {
+      closeSortModal();
+      const labels = {
+        title: '50音順',
+        easy: 'レベル: EASY',
+        normal: 'レベル: NORMAL',
+        hard: 'レベル: HARD',
+        expert: 'レベル: EXPERT'
+      };
+      const orderLabel = currentSortOrder === 'asc' ? ' (昇順)' : ' (降順)';
+      document.getElementById('sortBtnLabel').textContent = `並び替え: ${labels[currentSortType]}${orderLabel}`;
+      renderTracks();
+    }
+
     function renderTracks() {
       const keyword = document.getElementById('searchInput').value.toLowerCase().trim();
       const listBody = document.getElementById('listBody');
       listBody.innerHTML = '';
 
-      const filtered = globalTracksData.filter(item => {
-        const getVal = (keys) => {
-          for (let k of keys) {
-            if (item[k] !== undefined && item[k] !== null && item[k] !== '') return String(item[k]).trim();
-          }
-          return '';
-        };
+      const getVal = (item, keys) => {
+        for (let k of keys) {
+          if (item[k] !== undefined && item[k] !== null && item[k] !== '') return String(item[k]).trim();
+        }
+        return '';
+      };
 
-        // 1. 楽曲名
-        const title = getVal(['music_title', 'title', '曲名']);
-
-        // 2. アーティスト名 および artistListから引いたartist_tag
-        const artist = getVal(['artist', 'アーティスト']);
+      // 検索フィルター
+      let filtered = globalTracksData.filter(item => {
+        const title = getVal(item, ['music_title', 'title', '曲名']);
+        const artist = getVal(item, ['artist', 'アーティスト']);
         let artistTags = '';
         if (artist) {
           const splittedArtists = artist.split(/[,、]/).map(a => a.trim());
           const tags = splittedArtists.map(a => globalArtistTagMap[a] || '');
           artistTags = tags.join(' ');
         }
-
-        // 3. スコアレート
-        const scoreRate = getVal(['score_rate', 'scorerate', 'スコアレート']);
+        const scoreRate = getVal(item, ['score_rate', 'scorerate', 'スコアレート']);
 
         if (keyword) {
           const matchTitle = title.toLowerCase().includes(keyword);
@@ -865,7 +1076,6 @@
           const matchArtistTag = artistTags.toLowerCase().includes(keyword);
           const matchScoreRate = scoreRate.toLowerCase().includes(keyword);
 
-          // 楽曲名 / アーティスト名 / artist_tag / スコアレートのいずれかにマッチ
           if (!matchTitle && !matchArtist && !matchArtistTag && !matchScoreRate) {
             return false;
           }
@@ -873,8 +1083,45 @@
         return true;
       });
 
+      // ★ ソート処理（50音順 / レベル順）
+      filtered.sort((a, b) => {
+        const getNum = (obj, keys) => {
+          const v = getVal(obj, keys);
+          const num = Number(v);
+          return isNaN(num) ? -1 : num;
+        };
+
+        let diff = 0;
+        if (currentSortType === 'title') {
+          const titleA = getVal(a, ['music_title', 'title', '曲名']);
+          const titleB = getVal(b, ['music_title', 'title', '曲名']);
+          diff = titleA.localeCompare(titleB, 'ja');
+        } else {
+          // 難易度レベル別
+          const diffMap = {
+            easy: ['easy', 'EASY'],
+            normal: ['normal', 'NORMAL'],
+            hard: ['hard', 'HARD'],
+            expert: ['expert', 'EXPERT']
+          };
+          const keys = diffMap[currentSortType];
+          const valA = getNum(a, keys);
+          const valB = getNum(b, keys);
+
+          if (valA !== valB) {
+            diff = valA - valB;
+          } else {
+            // レベルが同じ場合は50音順
+            const titleA = getVal(a, ['music_title', 'title', '曲名']);
+            const titleB = getVal(b, ['music_title', 'title', '曲名']);
+            diff = titleA.localeCompare(titleB, 'ja');
+          }
+        }
+
+        return currentSortOrder === 'asc' ? diff : -diff;
+      });
+
       document.getElementById('hitCountDisplay').textContent = filtered.length + '曲';
-      // (※以降の描画ロジックはそのまま)
 
       if (filtered.length === 0) {
         listBody.innerHTML = '<div style="text-align:center; padding:40px; color:#f8fafc; background:rgba(255,255,255,0.1); border-radius:8px;">該当する楽曲が見つかりませんでした。</div>';
@@ -887,54 +1134,37 @@
       const lengthIconUrl = globalIconsMap['再生時間'] || '';
       const scoreRateIconUrl = globalIconsMap['スコアレート'] || '';
 
-      // 難易度タグURL定義
       const easyTagUrl = globalTagUrlMap['EASY'] || '';
       const normalTagUrl = globalTagUrlMap['NORMAL'] || '';
       const hardTagUrl = globalTagUrlMap['HARD'] || '';
       const expertTagUrl = globalTagUrlMap['EXPERT'] || '';
 
-      filtered.forEach(track => {
-        const getVal = (keys) => {
-          for (let k of keys) {
-            if (track[k] !== undefined && track[k] !== null && track[k] !== '') return String(track[k]).trim();
-          }
-          return '';
-        };
+      // ★ 難易度ソート時の非選択マスク判定用フラグ
+      const isLevelSort = ['easy', 'normal', 'hard', 'expert'].includes(currentSortType);
 
-        // ① 楽曲タイトル
-        const musicTitle = getVal(['music_title', 'title', '曲名']);
-        // ② アーティスト
-        const artist = getVal(['artist', 'アーティスト']);
-        // ③ ジャケット画像
-        const jacketImg = getVal(['image', 'jacket', '画像']);
-        // ④ 再生時間
-        const rawLength = getVal(['length', 'time', '再生時間']);
+      filtered.forEach(track => {
+        const musicTitle = getVal(track, ['music_title', 'title', '曲名']);
+        const artist = getVal(track, ['artist', 'アーティスト']);
+        const jacketImg = getVal(track, ['image', 'jacket', '画像']);
+        const rawLength = getVal(track, ['length', 'time', '再生時間']);
         const lengthStr = formatLength(rawLength);
-        // ⑤ 楽曲Type
-        const typeStr = getVal(['type', 'タイプ']);
+        const typeStr = getVal(track, ['type', 'タイプ']);
         const typeTagUrl = globalTagUrlMap[typeStr] || '';
-        // ⑥ クレジット
-        const lyrics = getVal(['lyrics', '作詞']);
-        const composition = getVal(['composition', '作曲']);
-        const arrangement = getVal(['arrangement', '編曲']);
-        // ⑦ コピーライト
-        const copyright = getVal(['copyright', 'コピーライト']);
-        // ⑧ スコアレート
-        const scoreRateStr = getVal(['score_rate', 'scorerate', 'スコアレート']);
-        // ⑨ 難易度数値
-        const easyVal = getVal(['easy', 'EASY']) || '-';
-        const normalVal = getVal(['normal', 'NORMAL']) || '-';
-        const hardVal = getVal(['hard', 'HARD']) || '-';
-        const expertVal = getVal(['expert', 'EXPERT']) || '-';
-        // ⑩ YouTube URL
-        const mvUrl = getVal(['mv_url', 'youtube', 'mv']);
-        // ⑪ 購入 URL
-        const digitalUrl = getVal(['digital_distribution', 'buy', '配信']);
+        const lyrics = getVal(track, ['lyrics', '作詞']);
+        const composition = getVal(track, ['composition', '作曲']);
+        const arrangement = getVal(track, ['arrangement', '編曲']);
+        const copyright = getVal(track, ['copyright', 'コピーライト']);
+        const scoreRateStr = getVal(track, ['score_rate', 'scorerate', 'スコアレート']);
+        const easyVal = getVal(track, ['easy', 'EASY']) || '-';
+        const normalVal = getVal(track, ['normal', 'NORMAL']) || '-';
+        const hardVal = getVal(track, ['hard', 'HARD']) || '-';
+        const expertVal = getVal(track, ['expert', 'EXPERT']) || '-';
+        const mvUrl = getVal(track, ['mv_url', 'youtube', 'mv']);
+        const digitalUrl = getVal(track, ['digital_distribution', 'buy', '配信']);
 
         const card = document.createElement('div');
         card.className = 'music-card';
 
-        // クレジット行生成ヘルパー
         const renderCreditRow = (label, text) => {
           if (!text) return '';
           const isLong = text.length > 20;
@@ -954,7 +1184,6 @@
           ${renderCreditRow('編曲', arrangement)}
         `;
 
-        // スコアレート対象キャラクターアイコン一覧生成
         let scoreRateContentHtml = '';
         if (scoreRateStr === '対象外' || !scoreRateStr) {
           scoreRateContentHtml = '<div class="score-rate-none">対象外</div>';
@@ -970,9 +1199,8 @@
           scoreRateContentHtml = `<div class="score-rate-char-list">${iconsHtml || '<div class="score-rate-none">なし</div>'}</div>`;
         }
 
-        // HTML 組み立て
+        // HTML 組み立て（※難易度カラムに dimmed クラスを動的に適用）
         card.innerHTML = `
-          <!-- 上段: タイトル・アーティスト・ボタン -->
           <div class="music-top-bar">
             <div class="music-main-meta">
               <div class="music-title-row">
@@ -1001,14 +1229,11 @@
             </div>
           </div>
 
-          <!-- 中段・下段: ジャケット / クレジット / スコアレート / 難易度 -->
           <div class="music-content-row">
-            <!-- ジャケット -->
             <div class="jacket-container">
               ${jacketImg ? `<img src="${escapeHtml(jacketImg)}" class="jacket-img" alt="${escapeHtml(musicTitle)}">` : ''}
             </div>
 
-            <!-- 中央情報ブロック -->
             <div class="music-details-center">
               <div class="time-type-line">
                 ${lengthStr ? `
@@ -1021,13 +1246,10 @@
               </div>
 
               ${creditsHtml ? `<div class="credits-table">${creditsHtml}</div>` : ''}
-
               ${copyright ? `<div class="track-copyright-text">${escapeHtml(copyright)}</div>` : ''}
             </div>
 
-            <!-- 右側ブロック（スコアレート ＆ 難易度） -->
             <div class="music-right-panel">
-              <!-- スコアレート -->
               <div class="score-rate-card">
                 <div class="score-rate-header">
                   ${scoreRateIconUrl ? `<img src="${escapeHtml(scoreRateIconUrl)}" class="score-rate-icon" alt="score rate">` : ''}
@@ -1036,21 +1258,21 @@
                 ${scoreRateContentHtml}
               </div>
 
-              <!-- 難易度 -->
+              <!-- 難易度（ソート非対象難易度に dimmed を付与） -->
               <div class="difficulty-board">
-                <div class="diff-column">
+                <div class="diff-column ${isLevelSort && currentSortType !== 'easy' ? 'dimmed' : ''}">
                   ${easyTagUrl ? `<img src="${escapeHtml(easyTagUrl)}" class="diff-tag-img" alt="EASY">` : '<div class="diff-fallback-tag" style="background:#4ade80;">EASY</div>'}
                   <span class="diff-val">${escapeHtml(easyVal)}</span>
                 </div>
-                <div class="diff-column">
+                <div class="diff-column ${isLevelSort && currentSortType !== 'normal' ? 'dimmed' : ''}">
                   ${normalTagUrl ? `<img src="${escapeHtml(normalTagUrl)}" class="diff-tag-img" alt="NORMAL">` : '<div class="diff-fallback-tag" style="background:#fb923c;">NORMAL</div>'}
                   <span class="diff-val">${escapeHtml(normalVal)}</span>
                 </div>
-                <div class="diff-column">
+                <div class="diff-column ${isLevelSort && currentSortType !== 'hard' ? 'dimmed' : ''}">
                   ${hardTagUrl ? `<img src="${escapeHtml(hardTagUrl)}" class="diff-tag-img" alt="HARD">` : '<div class="diff-fallback-tag" style="background:#f472b6;">HARD</div>'}
                   <span class="diff-val">${escapeHtml(hardVal)}</span>
                 </div>
-                <div class="diff-column">
+                <div class="diff-column ${isLevelSort && currentSortType !== 'expert' ? 'dimmed' : ''}">
                   ${expertTagUrl ? `<img src="${escapeHtml(expertTagUrl)}" class="diff-tag-img" alt="EXPERT">` : '<div class="diff-fallback-tag" style="background:#a78bfa;">EXPERT</div>'}
                   <span class="diff-val">${escapeHtml(expertVal)}</span>
                 </div>
