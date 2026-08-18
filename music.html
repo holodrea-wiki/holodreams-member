@@ -184,6 +184,190 @@
       border-radius: 12px;
     }
 
+    .open-filter-btn, .open-sort-btn {
+      background: #ffffff;
+      color: #0044ff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: background 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .open-filter-btn:hover, .open-sort-btn:hover { background: #f1f5f9; }
+    .open-filter-btn { margin-left: auto; }
+    .filter-icon-inline { height: 16px; width: auto; object-fit: contain; vertical-align: middle; }
+
+    /* フィルタ＆ソート モーダル共通スタイル */
+    .filter-modal-overlay { 
+      display: none; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background: rgba(0, 0, 0, 0.75); 
+      z-index: 3000; 
+      justify-content: center; 
+      align-items: center; 
+      padding: 16px; 
+    }
+    .filter-modal-card { 
+      background: #1e293b; 
+      color: #ffffff; 
+      width: 100%; 
+      max-width: 600px; 
+      height: 80vh; 
+      max-height: 700px; 
+      border-radius: 14px; 
+      display: flex; 
+      flex-direction: column; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+      overflow: hidden; 
+      border: 1px solid #334155; 
+    }
+    .filter-modal-topbar { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      padding: 14px 20px; 
+      border-bottom: 1px solid #334155; 
+      background: #0f172a; 
+      font-weight: bold; 
+      font-size: 16px; 
+      color: #ffffff; 
+      flex-shrink: 0; 
+    }
+    .filter-modal-actions { display: flex; gap: 8px; align-items: center; }
+    .filter-apply-btn { background: #ea580c; color: #ffffff; border: none; padding: 6px 16px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; }
+    .filter-reset-btn { background: #334155; color: #f1f5f9; border: 1px solid #475569; padding: 6px 14px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; }
+
+    .filter-tabs-header { display: flex; background: #0f172a; padding: 6px; gap: 4px; border-bottom: 1px solid #334155; flex-shrink: 0; }
+    .filter-tab-btn { flex: 1; padding: 8px 10px; font-size: 12px; font-weight: bold; text-align: center; background: #1e293b; border: 1px solid #334155; border-radius: 6px; cursor: pointer; color: #cbd5e1; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
+    .filter-tab-btn.active { background: #2563eb; color: #ffffff; border-color: #3b82f6; }
+    .tab-filter-icon { height: 14px; width: auto; object-fit: contain; }
+
+    .filter-tabs-body { padding: 16px; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 16px; background: #1e293b; }
+    .filter-tab-pane { display: none; flex-direction: column; gap: 14px; }
+    .filter-tab-pane.active { display: flex; }
+
+    .filter-btn-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+    .filter-chip-btn { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 8px 4px; font-size: 12px; font-weight: bold; color: #cbd5e1; text-align: center; cursor: pointer; user-select: none; }
+    .filter-chip-btn.selected { background: #2563eb; color: #ffffff; border-color: #3b82f6; }
+
+    /* タレントタブ用スタイル */
+    .talent-mode-toggle { display: flex; gap: 8px; background: #0f172a; padding: 4px; border-radius: 8px; border: 1px solid #334155; }
+    .talent-mode-btn { flex: 1; padding: 8px; font-size: 13px; font-weight: bold; color: #cbd5e1; background: transparent; border: none; border-radius: 6px; cursor: pointer; text-align: center; }
+    .talent-mode-btn.selected { background: #2563eb; color: #ffffff; }
+
+    .filter-unit-band {
+      font-size: 12px;
+      font-weight: bold;
+      color: #fef08a;
+      background: #451a03;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-top: 6px;
+      margin-bottom: 4px;
+      border: 1px solid #78350f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .filter-unit-checkbox {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      accent-color: #ea580c;
+    }
+
+    /* 楽曲レベルタブ プルダウン */
+    .level-filter-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .level-filter-label {
+      font-size: 13px;
+      font-weight: bold;
+      color: #cbd5e1;
+    }
+    .level-range-select-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .level-range-select-group select {
+      flex: 1;
+    }
+
+    /* ソートモーダル */
+    .sort-modal-card { 
+      background: #1e293b; 
+      color: #ffffff; 
+      width: 100%; 
+      max-width: 420px; 
+      border-radius: 14px; 
+      display: flex; 
+      flex-direction: column; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+      overflow: hidden; 
+      border: 1px solid #334155; 
+    }
+    .sort-modal-body { padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+    .sort-sub-title { font-size: 12px; font-weight: bold; color: #94a3b8; margin-bottom: -6px; }
+    .sort-option-group { display: flex; flex-direction: column; gap: 8px; }
+    .sort-opt-btn { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 10px 16px; font-size: 13.5px; font-weight: bold; color: #cbd5e1; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.15s; }
+    .sort-opt-btn.selected { background: #2563eb; color: #ffffff; border-color: #3b82f6; }
+    .sort-opt-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .sort-order-toggle { display: flex; gap: 8px; background: #0f172a; padding: 4px; border-radius: 8px; border: 1px solid #334155; }
+    .sort-order-btn { flex: 1; padding: 10px; font-size: 13px; font-weight: bold; color: #cbd5e1; background: transparent; border: none; border-radius: 6px; cursor: pointer; text-align: center; }
+    .sort-order-btn.selected { background: #ea580c; color: #ffffff; }
+
+    .sort-level-select-wrapper { margin-top: 4px; }
+    .sort-select-box {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #334155;
+      color: #ffffff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: bold;
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .sort-select-box:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .sort-disabled-notice {
+      font-size: 11.5px;
+      color: #f87171;
+      margin-top: 4px;
+      display: none;
+    }
+
+    /* 難易度マスク */
+    .diff-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      transition: opacity 0.2s, filter 0.2s;
+    }
+    .diff-column.dimmed {
+      opacity: 0.25;
+      filter: grayscale(80%);
+    }
+
     .list-wrapper {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
@@ -208,173 +392,8 @@
 
     #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
 
-    /* ソートボタン（ヘッダー青バー内） */
-    .open-sort-btn {
-      background: #ffffff;
-      color: #0044ff;
-      border: none;
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: background 0.2s, transform 0.1s;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-left: auto;
-    }
-    .open-sort-btn:hover { background: #f1f5f9; }
-
-    /* ソートモーダル */
-    .filter-modal-overlay { 
-      display: none; 
-      position: fixed; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 100%; 
-      background: rgba(0, 0, 0, 0.75); 
-      z-index: 3000; 
-      justify-content: center; 
-      align-items: center; 
-      padding: 16px; 
-    }
-    .sort-modal-card { 
-      background: #1e293b; 
-      color: #ffffff; 
-      width: 100%; 
-      max-width: 420px; 
-      border-radius: 14px; 
-      display: flex; 
-      flex-direction: column; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
-      overflow: hidden; 
-      border: 1px solid #334155; 
-    }
-    .filter-modal-topbar { 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      padding: 14px 20px; 
-      border-bottom: 1px solid #334155; 
-      background: #0f172a; 
-      font-weight: bold; 
-      font-size: 16px; 
-      color: #ffffff; 
-    }
-    .filter-apply-btn { 
-      background: #ea580c; 
-      color: #ffffff; 
-      border: none; 
-      padding: 6px 16px; 
-      border-radius: 6px; 
-      font-size: 14px; 
-      font-weight: bold; 
-      cursor: pointer; 
-    }
-    .sort-modal-body { 
-      padding: 20px; 
-      display: flex; 
-      flex-direction: column; 
-      gap: 16px; 
-    }
-    .sort-sub-title {
-      font-size: 12px;
-      font-weight: bold;
-      color: #94a3b8;
-      margin-bottom: -6px;
-    }
-    .sort-option-group { 
-      display: flex; 
-      flex-direction: column; 
-      gap: 8px; 
-    }
-    .sort-opt-btn { 
-      background: #0f172a; 
-      border: 1px solid #334155; 
-      border-radius: 8px; 
-      padding: 10px 16px; 
-      font-size: 13.5px; 
-      font-weight: bold; 
-      color: #cbd5e1; 
-      text-align: left; 
-      cursor: pointer; 
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      transition: all 0.15s; 
-    }
-    .sort-opt-btn.selected { 
-      background: #2563eb; 
-      color: #ffffff; 
-      border-color: #3b82f6; 
-    }
-    .sort-order-toggle { 
-      display: flex; 
-      gap: 8px; 
-      background: #0f172a; 
-      padding: 4px; 
-      border-radius: 8px; 
-      border: 1px solid #334155; 
-    }
-    .sort-order-btn { 
-      flex: 1; 
-      padding: 10px; 
-      font-size: 13px; 
-      font-weight: bold; 
-      color: #cbd5e1; 
-      background: transparent; 
-      border: none; 
-      border-radius: 6px; 
-      cursor: pointer; 
-      text-align: center; 
-    }
-    /* ソート用プルダウン */
-    .sort-level-select-wrapper {
-      margin-top: 4px;
-    }
-    .sort-select-box {
-      width: 100%;
-      background: #0f172a;
-      border: 1px solid #334155;
-      color: #ffffff;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 13.5px;
-      font-weight: bold;
-      outline: none;
-      cursor: pointer;
-      transition: border-color 0.2s;
-    }
-    .sort-select-box:focus {
-      border-color: #3b82f6;
-    }
-    .sort-order-btn.selected { 
-      background: #ea580c; 
-      color: #ffffff; 
-    }
-
-    /* 難易度ソート時：非対象難易度の半透明マスク */
-    .diff-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      flex: 1;
-      transition: opacity 0.2s, filter 0.2s;
-    }
-    .diff-column.dimmed {
-      opacity: 0.25;
-      filter: grayscale(80%);
-    }
-
-    /* =========================================
-       楽曲カード専用スタイル (水色リキッド調デザイン)
-    ========================================= */
+    /* 楽曲カード専用スタイル */
     .music-card {
-      /* 水色の半透明グラデーション＆ガラス質感 */
       background: linear-gradient(135deg, rgba(224, 242, 254, 0.85) 0%, rgba(186, 230, 253, 0.65) 50%, rgba(125, 211, 252, 0.75) 100%);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -390,7 +409,6 @@
       position: relative;
     }
 
-    /* PC時：上段（タイトル・アーティストと右側ボタンを横並び配置） */
     .music-top-bar {
       display: flex;
       justify-content: space-between;
@@ -404,7 +422,6 @@
       flex: 1;
       min-width: 0;
     }
-    /* ① トラックタイトル */
     .music-title-row {
       display: flex;
       align-items: center;
@@ -425,7 +442,6 @@
       word-break: break-all;
       text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
-    /* ② アーティスト */
     .music-artist-row {
       display: flex;
       align-items: center;
@@ -444,7 +460,6 @@
       color: #0284c7;
     }
 
-    /* ボタン群（⑩YouTube, ⑪購入） */
     .music-actions-wrapper {
       display: flex;
       align-items: center;
@@ -487,14 +502,12 @@
     .btn-buynow:hover { opacity: 0.9; transform: translateY(-1px); }
     .btn-buynow svg { width: 14px; height: 14px; fill: currentColor; }
 
-    /* PC時：中段・下段コンテンツエリア（ジャケット・クレジット・右パネルを横並び配置） */
     .music-content-row {
       display: flex;
       gap: 16px;
       align-items: stretch;
     }
 
-    /* ③ ジャケット画像 */
     .jacket-container {
       width: 200px;
       min-width: 200px;
@@ -518,7 +531,6 @@
       filter: drop-shadow(0 6px 12px rgba(14, 165, 233, 0.25));
     }
 
-    /* 楽曲情報中央ブロック */
     .music-details-center {
       display: flex;
       flex-direction: column;
@@ -535,7 +547,6 @@
       gap: 14px;
       flex-wrap: wrap;
     }
-    /* ④ 再生時間 */
     .time-badge {
       display: inline-flex;
       align-items: center;
@@ -553,7 +564,6 @@
       width: 22px;
       object-fit: contain;
     }
-    /* ⑤ Type画像 */
     .type-badge-img {
       height: 28px;
       width: auto;
@@ -561,7 +571,6 @@
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
 
-    /* ⑥ クレジット（作詞・作曲・編曲） */
     .credits-table {
       display: flex;
       flex-direction: column;
@@ -615,7 +624,6 @@
       100% { transform: translateX(-100%); }
     }
 
-    /* ⑦ コピーライト表示 */
     .track-copyright-text {
       font-size: 10.5px;
       color: #0369a1;
@@ -626,7 +634,6 @@
       margin-top: auto;
     }
 
-    /* PC時：右側エリア（スコアレート ＆ 難易度） */
     .music-right-panel {
       width: 440px;
       min-width: 440px;
@@ -637,7 +644,6 @@
       flex-shrink: 0;
     }
 
-    /* ⑧ スコアレート対象ボックス */
     .score-rate-card {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(224, 242, 254, 0.5) 100%);
       border: 1.5px solid rgba(255, 255, 255, 0.8);
@@ -686,7 +692,6 @@
       padding: 12px 4px;
     }
 
-    /* ⑨ 難易度タグ ＆ 数値ボックス */
     .difficulty-board {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(224, 242, 254, 0.5) 100%);
       border: 1.5px solid rgba(255, 255, 255, 0.8);
@@ -697,13 +702,6 @@
       align-items: center;
       gap: 6px;
       box-shadow: 0 4px 12px rgba(14, 165, 233, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.8);
-    }
-    .diff-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      flex: 1;
     }
     .diff-tag-img {
       height: 22px;
@@ -731,32 +729,23 @@
       text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 
-    /* =========================================
-       レスポンシブ対応（スマホ画面: 600px以下のみ適用）
-    ========================================= */
     @media screen and (max-width: 600px) {
       .sticky-top-container, .list-wrapper { 
         max-width: 100% !important; 
         min-width: 100% !important; 
       }
-      
-      /* スマホ時のみ：タイトル上段を縦並びにしてボタンをアーティスト名の下に配置 */
       .music-top-bar {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
       }
-      .music-main-meta {
-        width: 100%;
-      }
+      .music-main-meta { width: 100%; }
       .music-actions-wrapper {
         margin-top: 2px;
         margin-left: 2px;
         width: 100%;
         justify-content: flex-start;
       }
-
-      /* スマホ時のみ：中段ブロックを縦並びに切り替え */
       .music-content-row { 
         flex-direction: column; 
         gap: 12px;
@@ -766,12 +755,10 @@
         min-width: 100%; 
         max-width: 100%; 
       }
-      .credits-table { 
-        max-width: 100%; 
-      }
+      .credits-table { max-width: 100%; }
+      .filter-btn-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
     }
 
-    /* 共通フッターCSS */
     footer {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       padding: 32px 20px 28px;
@@ -884,6 +871,10 @@
     <div class="standalone-blue-header">
       <span>楽曲リスト</span>
       <span class="hit-count-badge" id="hitCountDisplay">0曲</span>
+      <button type="button" class="open-filter-btn" id="openFilterBtn" onclick="openFilterModal()">
+        <span>フィルタ</span>
+        <img id="mainFilterIcon" src="" class="filter-icon-inline" alt="filter icon">
+      </button>
       <button type="button" class="open-sort-btn" id="openSortBtn" onclick="openSortModal()">
         <span id="sortBtnLabel">並び替え: 50音順 (昇順)</span>
       </button>
@@ -891,6 +882,82 @@
   </div>
 
   <div id="loading">データを読み込み中...</div>
+
+  <!-- フィルタ設定ダイアログ -->
+  <div id="filterModalOverlay" class="filter-modal-overlay" onclick="closeFilterModal()">
+    <div class="filter-modal-card" onclick="event.stopPropagation()">
+      <div class="filter-modal-topbar">
+        <span>フィルタ</span>
+        <div class="filter-modal-actions">
+          <button type="button" class="filter-reset-btn" onclick="resetAllFilters()">リセット</button>
+          <button type="button" class="filter-apply-btn" onclick="applyFilterAndClose()">決定</button>
+        </div>
+      </div>
+
+      <div class="filter-tabs-header">
+        <button type="button" class="filter-tab-btn active" onclick="switchFilterTab('musicType', this)">
+          <span>楽曲タイプ</span>
+          <img class="tab-filter-icon" data-tab-group="musicType" src="" alt="icon">
+        </button>
+        <button type="button" class="filter-tab-btn" onclick="switchFilterTab('musicLevel', this)">
+          <span>楽曲レベル</span>
+          <img class="tab-filter-icon" data-tab-group="musicLevel" src="" alt="icon">
+        </button>
+        <button type="button" class="filter-tab-btn" onclick="switchFilterTab('talent', this)">
+          <span>タレント</span>
+          <img class="tab-filter-icon" data-tab-group="talent" src="" alt="icon">
+        </button>
+      </div>
+
+      <div class="filter-tabs-body">
+        <!-- タブ1: 楽曲タイプ -->
+        <div id="pane-musicType" class="filter-tab-pane active">
+          <div class="filter-btn-grid" id="typeFilterGrid">
+            <div class="filter-chip-btn selected" data-group="musicType" data-val="all" onclick="toggleChip(this, true)">すべて</div>
+            <div class="filter-chip-btn" data-group="musicType" data-val="オリジナル" onclick="toggleChip(this, true)">オリジナル</div>
+            <div class="filter-chip-btn" data-group="musicType" data-val="カバー" onclick="toggleChip(this, true)">カバー</div>
+          </div>
+        </div>
+
+        <!-- タブ2: 楽曲レベル -->
+        <div id="pane-musicLevel" class="filter-tab-pane">
+          <div class="level-filter-row">
+            <div class="level-filter-label">難易度</div>
+            <select id="filterLevelDiffSelect" class="sort-select-box" onchange="onFilterLevelDiffChange()">
+              <option value="none" selected>設定なし</option>
+              <option value="EASY">EASY</option>
+              <option value="NORMAL">NORMAL</option>
+              <option value="HARD">HARD</option>
+              <option value="EXPERT">EXPERT</option>
+            </select>
+          </div>
+
+          <div class="level-filter-row" id="levelRangeContainer" style="display:none;">
+            <div class="level-filter-label">レベル範囲</div>
+            <div class="level-range-select-group">
+              <select id="filterLevelMinSelect" class="sort-select-box" onchange="onLevelRangeChange()"></select>
+              <span style="font-weight:bold; color:#cbd5e1;">〜</span>
+              <select id="filterLevelMaxSelect" class="sort-select-box" onchange="onLevelRangeChange()"></select>
+            </div>
+          </div>
+        </div>
+
+        <!-- タブ3: タレント -->
+        <div id="pane-talent" class="filter-tab-pane">
+          <div class="filter-btn-grid">
+            <div class="filter-chip-btn selected" id="talentAllChip" data-group="talent" data-val="all" onclick="toggleTalentAllChip(this)">すべて</div>
+          </div>
+
+          <div class="talent-mode-toggle">
+            <button type="button" class="talent-mode-btn selected" data-tmode="artist" onclick="selectTalentMode('artist', this)">アーティスト</button>
+            <button type="button" class="talent-mode-btn" data-tmode="scorerate" onclick="selectTalentMode('scorerate', this)">スコアレート対象</button>
+          </div>
+
+          <div id="talentUnitGroupsContainer" style="display:flex; flex-direction:column; gap:10px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ソート設定ダイアログ -->
   <div id="sortModalOverlay" class="filter-modal-overlay" onclick="closeSortModal()">
@@ -910,11 +977,11 @@
           </button>
           
           <!-- 楽曲レベルボタン -->
-          <button type="button" class="sort-opt-btn" data-sort="level" onclick="selectSortOption('level', this)">
+          <button type="button" class="sort-opt-btn" id="sortOptLevelBtn" data-sort="level" onclick="selectSortOption('level', this)">
             <span>楽曲レベル</span>
           </button>
 
-          <!-- 難易度プルダウン（デフォルト: EXPERT） -->
+          <!-- 難易度プルダウン -->
           <div class="sort-level-select-wrapper" id="levelSelectWrapper">
             <select id="levelDifficultySelect" class="sort-select-box" onchange="onLevelSelectChange()">
               <option value="EXPERT" selected>難易度: EXPERT</option>
@@ -922,6 +989,7 @@
               <option value="NORMAL">難易度: NORMAL</option>
               <option value="EASY">難易度: EASY</option>
             </select>
+            <div id="sortDisabledNotice" class="sort-disabled-notice">※楽曲レベルでのフィルタ適用時は難易度の選択はできません。</div>
           </div>
         </div>
 
@@ -950,16 +1018,32 @@
     let globalTagUrlMap = {};
     let globalCharIconMap = {};
     let globalArtistTagMap = {};
+    let globalCharacterList = [];
+    let globalUnitInfoMap = {};
+
+    let minLevelGlobal = 1;
+    let maxLevelGlobal = 35;
+
+    // フィルタ設定
+    let filterTypeVal = 'all'; // 'all' | 'オリジナル' | 'カバー'
+    let filterLevelDiff = 'none'; // 'none' | 'EASY' | 'NORMAL' | 'HARD' | 'EXPERT'
+    let filterLevelMin = 1;
+    let filterLevelMax = 35;
+    let filterTalentMode = 'artist'; // 'artist' | 'scorerate'
+    let selectedTalentSet = new Set(); // Set of character names
+
+    // ソート設定
+    let currentSortType = 'title'; // 'title' | 'level'
+    let currentSortLevelDiff = 'EXPERT'; // 'EASY' | 'NORMAL' | 'HARD' | 'EXPERT'
+    let currentSortOrder = 'asc';  // 'asc' | 'desc'
 
     window.onload = function() {
-      // 背景バナー取得
       const BANNER_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getTopBannerMap';
       fetch(BANNER_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => setBackgroundBanner(data))
         .catch(err => console.error('バナー通信エラー:', err));
 
-      // 楽曲データ取得
       const MUSIC_DATA_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getMusicTrackData';
       fetch(MUSIC_DATA_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
@@ -969,14 +1053,12 @@
         })
         .catch(err => console.error('楽曲データ通信エラー:', err));
 
-      // 外部リンク取得
       const LINKS_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getExternalLinks';
       fetch(LINKS_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => renderExternalLinks(data))
         .catch(err => console.error('外部リンク通信エラー:', err));
 
-      // 著作権・非公式表示の非同期取得
       const COPYRIGHT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCopyright';
       fetch(COPYRIGHT_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
@@ -988,7 +1070,6 @@
       if (!copyMap) return;
       const unofficialElem = document.getElementById('headerUnofficialNotice');
       const copyrightElem = document.getElementById('footerCopyrightNotice');
-
       if (unofficialElem && copyMap['非公式表示']) unofficialElem.textContent = copyMap['非公式表示'];
       if (copyrightElem && copyMap['著作権表示']) copyrightElem.textContent = copyMap['著作権表示'];
     }
@@ -1017,10 +1098,17 @@
       globalTagUrlMap = res.tagUrlMap || {};
       globalCharIconMap = res.charIconMap || {};
       globalArtistTagMap = res.artistTagMap || {};
+      globalCharacterList = res.characterList || [];
+      globalUnitInfoMap = res.unitInfoMap || {};
 
       document.getElementById('loading').style.display = 'none';
       document.getElementById('listWrapper').style.display = 'block';
 
+      calcLevelMinMax();
+      buildLevelSelectOptions();
+      buildTalentFilterUI();
+      updateFilterIcons();
+      updateSortModalState();
       renderTracks();
     }
 
@@ -1038,11 +1126,318 @@
       renderTracks();
     }
 
-    let currentSortType = 'title'; // 'title' | 'level'
-    let currentSortLevelDiff = 'EXPERT'; // 'EASY' | 'NORMAL' | 'HARD' | 'EXPERT'
-    let currentSortOrder = 'asc';  // 'asc' | 'desc'
+    /* レベル最小・最大値の計算 */
+    function calcLevelMinMax() {
+      let minVal = 999;
+      let maxVal = 0;
+      globalTracksData.forEach(track => {
+        ['easy', 'normal', 'hard', 'expert'].forEach(k => {
+          const val = Number(track[k] || track[k.toUpperCase()]);
+          if (!isNaN(val) && val > 0) {
+            if (val < minVal) minVal = val;
+            if (val > maxVal) maxVal = val;
+          }
+        });
+      });
+      if (minVal === 999) minVal = 1;
+      if (maxVal === 0) maxVal = 35;
+      minLevelGlobal = minVal;
+      maxLevelGlobal = maxVal;
+      filterLevelMin = minLevelGlobal;
+      filterLevelMax = maxLevelGlobal;
+    }
 
-    function openSortModal() { document.getElementById('sortModalOverlay').style.display = 'flex'; }
+    function buildLevelSelectOptions() {
+      const minSelect = document.getElementById('filterLevelMinSelect');
+      const maxSelect = document.getElementById('filterLevelMaxSelect');
+      minSelect.innerHTML = '';
+      maxSelect.innerHTML = '';
+
+      for (let i = minLevelGlobal; i <= maxLevelGlobal; i++) {
+        minSelect.innerHTML += `<option value="${i}" ${i === minLevelGlobal ? 'selected' : ''}>Lv.${i}</option>`;
+        maxSelect.innerHTML += `<option value="${i}" ${i === maxLevelGlobal ? 'selected' : ''}>Lv.${i}</option>`;
+      }
+    }
+
+    /* タレントフィルタUIの動的構築 */
+    function buildTalentFilterUI() {
+      const container = document.getElementById('talentUnitGroupsContainer');
+      container.innerHTML = '';
+
+      const unitMap = {};
+      globalCharacterList.forEach(char => {
+        const units = (char.unit || 'その他').split(/[,、]/).map(u => u.trim()).filter(Boolean);
+        const targetUnits = units.length > 0 ? units : ['その他'];
+
+        targetUnits.forEach(u => {
+          if (!unitMap[u]) unitMap[u] = [];
+          if (!unitMap[u].includes(char.name)) unitMap[u].push(char.name);
+        });
+      });
+
+      const sortedUnits = Object.keys(unitMap).sort((a, b) => {
+        const pA = globalUnitInfoMap[a] ? globalUnitInfoMap[a].priority : 999;
+        const pB = globalUnitInfoMap[b] ? globalUnitInfoMap[b].priority : 999;
+        return pA - pB;
+      });
+
+      sortedUnits.forEach(unitKey => {
+        const uInfo = globalUnitInfoMap[unitKey] || {};
+        const displayName = uInfo.displayName || unitKey;
+        const charNames = unitMap[unitKey];
+
+        const groupElem = document.createElement('div');
+        groupElem.style.display = 'flex';
+        groupElem.style.flexDirection = 'column';
+        groupElem.style.gap = '6px';
+
+        const bandHtml = `
+          <div class="filter-unit-band">
+            <input type="checkbox" class="filter-unit-checkbox" data-unit="${escapeHtml(unitKey)}" onchange="onUnitCheckboxChange(this)">
+            <span>${escapeHtml(displayName)}</span>
+          </div>
+        `;
+
+        let chipsHtml = '<div class="filter-btn-grid">';
+        charNames.forEach(cName => {
+          chipsHtml += `<div class="filter-chip-btn" data-group="talentChar" data-unit="${escapeHtml(unitKey)}" data-val="${escapeHtml(cName)}" onclick="toggleTalentCharChip(this)">${escapeHtml(cName)}</div>`;
+        });
+        chipsHtml += '</div>';
+
+        groupElem.innerHTML = bandHtml + chipsHtml;
+        container.appendChild(groupElem);
+      });
+    }
+
+    /* フィルタタブ切替 */
+    function switchFilterTab(tabName, btnElem) {
+      document.querySelectorAll('.filter-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.filter-tab-pane').forEach(p => p.classList.remove('active'));
+      btnElem.classList.add('active');
+      document.getElementById('pane-' + tabName).classList.add('active');
+    }
+
+    function toggleChip(elem, isSingle = false) {
+      const group = elem.getAttribute('data-group');
+      const val = elem.getAttribute('data-val');
+
+      if (isSingle || val === 'all') {
+        document.querySelectorAll(`.filter-chip-btn[data-group="${group}"]`).forEach(b => b.classList.remove('selected'));
+        elem.classList.add('selected');
+      } else {
+        const allBtn = document.querySelector(`.filter-chip-btn[data-group="${group}"][data-val="all"]`);
+        if (allBtn) allBtn.classList.remove('selected');
+        elem.classList.toggle('selected');
+        const anySelected = document.querySelectorAll(`.filter-chip-btn[data-group="${group}"].selected`).length > 0;
+        if (!anySelected && allBtn) allBtn.classList.add('selected');
+      }
+      updateFilterIcons();
+    }
+
+    /* 楽曲レベルフィルタ変更 */
+    function onFilterLevelDiffChange() {
+      const diffVal = document.getElementById('filterLevelDiffSelect').value;
+      const rangeContainer = document.getElementById('levelRangeContainer');
+      rangeContainer.style.display = (diffVal === 'none') ? 'none' : 'flex';
+      updateFilterIcons();
+    }
+
+    function onLevelRangeChange() {
+      const minVal = Number(document.getElementById('filterLevelMinSelect').value);
+      const maxVal = Number(document.getElementById('filterLevelMaxSelect').value);
+      if (minVal > maxVal) {
+        document.getElementById('filterLevelMaxSelect').value = minVal;
+      }
+      updateFilterIcons();
+    }
+
+    /* タレントフィルタ操作 */
+    function selectTalentMode(modeKey, btnElem) {
+      document.querySelectorAll('.talent-mode-btn').forEach(b => b.classList.remove('selected'));
+      btnElem.classList.add('selected');
+      filterTalentMode = modeKey;
+      updateFilterIcons();
+    }
+
+    function toggleTalentAllChip(btnElem) {
+      btnElem.classList.add('selected');
+      document.querySelectorAll('.filter-chip-btn[data-group="talentChar"]').forEach(c => c.classList.remove('selected'));
+      document.querySelectorAll('.filter-unit-checkbox').forEach(cb => cb.checked = false);
+      selectedTalentSet.clear();
+      updateFilterIcons();
+    }
+
+    function toggleTalentCharChip(chipElem) {
+      const allChip = document.getElementById('talentAllChip');
+      allChip.classList.remove('selected');
+      chipElem.classList.toggle('selected');
+
+      const cName = chipElem.getAttribute('data-val');
+      if (chipElem.classList.contains('selected')) {
+        selectedTalentSet.add(cName);
+      } else {
+        selectedTalentSet.delete(cName);
+      }
+
+      syncUnitCheckboxes();
+
+      if (selectedTalentSet.size === 0) {
+        allChip.classList.add('selected');
+      }
+      updateFilterIcons();
+    }
+
+    function onUnitCheckboxChange(cbElem) {
+      const unitKey = cbElem.getAttribute('data-unit');
+      const isChecked = cbElem.checked;
+      const allChip = document.getElementById('talentAllChip');
+      allChip.classList.remove('selected');
+
+      const unitChips = document.querySelectorAll(`.filter-chip-btn[data-group="talentChar"][data-unit="${unitKey}"]`);
+      unitChips.forEach(chip => {
+        const cName = chip.getAttribute('data-val');
+        if (isChecked) {
+          chip.classList.add('selected');
+          selectedTalentSet.add(cName);
+        } else {
+          chip.classList.remove('selected');
+          selectedTalentSet.delete(cName);
+        }
+      });
+
+      if (selectedTalentSet.size === 0) {
+        allChip.classList.add('selected');
+      }
+      updateFilterIcons();
+    }
+
+    function syncUnitCheckboxes() {
+      document.querySelectorAll('.filter-unit-checkbox').forEach(cb => {
+        const unitKey = cb.getAttribute('data-unit');
+        const unitChips = document.querySelectorAll(`.filter-chip-btn[data-group="talentChar"][data-unit="${unitKey}"]`);
+        const allChecked = Array.from(unitChips).every(c => c.classList.contains('selected'));
+        cb.checked = (unitChips.length > 0 && allChecked);
+      });
+    }
+
+    /* フィルタアイコン制御 */
+    function getMainFilterIconUrl(isOn) {
+      return isOn ? (globalIconsMap['フィルタON'] || globalIconsMap['filter_on'] || '') : (globalIconsMap['フィルタOFF'] || globalIconsMap['filter_off'] || '');
+    }
+
+    function getTabFilterIconUrl(isOn) {
+      return isOn ? (globalIconsMap['フィルタON（タブ）'] || globalIconsMap['フィルタON'] || '') : (globalIconsMap['フィルタOFF（タブ）'] || globalIconsMap['filter_off'] || '');
+    }
+
+    function updateFilterIcons() {
+      // 1. 楽曲タイプ
+      const typeSelected = document.querySelector('.filter-chip-btn[data-group="musicType"].selected');
+      const isTypeOn = typeSelected && typeSelected.getAttribute('data-val') !== 'all';
+
+      // 2. 楽曲レベル
+      const diffVal = document.getElementById('filterLevelDiffSelect') ? document.getElementById('filterLevelDiffSelect').value : 'none';
+      const isLevelOn = (diffVal !== 'none');
+
+      // 3. タレント
+      const isTalentOn = (selectedTalentSet.size > 0);
+
+      const tabMap = {
+        musicType: isTypeOn,
+        musicLevel: isLevelOn,
+        talent: isTalentOn
+      };
+
+      let anyGlobalOn = false;
+      for (const [tabKey, isOn] of Object.entries(tabMap)) {
+        if (isOn) anyGlobalOn = true;
+        const iconElem = document.querySelector(`.tab-filter-icon[data-tab-group="${tabKey}"]`);
+        if (iconElem) {
+          const url = getTabFilterIconUrl(isOn);
+          iconElem.src = url;
+          iconElem.style.display = url ? 'inline-block' : 'none';
+        }
+      }
+
+      const mainIconImg = document.getElementById('mainFilterIcon');
+      if (mainIconImg) {
+        const url = getMainFilterIconUrl(anyGlobalOn);
+        mainIconImg.src = url;
+        mainIconImg.style.display = url ? 'inline-block' : 'none';
+      }
+    }
+
+    function openFilterModal() { document.getElementById('filterModalOverlay').style.display = 'flex'; }
+    function closeFilterModal() { document.getElementById('filterModalOverlay').style.display = 'none'; }
+
+    function resetAllFilters() {
+      // 楽曲タイプ
+      document.querySelectorAll('.filter-chip-btn[data-group="musicType"]').forEach(b => {
+        if (b.getAttribute('data-val') === 'all') b.classList.add('selected');
+        else b.classList.remove('selected');
+      });
+
+      // 楽曲レベル
+      document.getElementById('filterLevelDiffSelect').value = 'none';
+      document.getElementById('filterLevelMinSelect').value = minLevelGlobal;
+      document.getElementById('filterLevelMaxSelect').value = maxLevelGlobal;
+      document.getElementById('levelRangeContainer').style.display = 'none';
+
+      // タレント
+      const allChip = document.getElementById('talentAllChip');
+      if (allChip) allChip.classList.add('selected');
+      document.querySelectorAll('.filter-chip-btn[data-group="talentChar"]').forEach(c => c.classList.remove('selected'));
+      document.querySelectorAll('.filter-unit-checkbox').forEach(cb => cb.checked = false);
+      selectedTalentSet.clear();
+
+      updateFilterIcons();
+    }
+
+    function applyFilterAndClose() {
+      closeFilterModal();
+
+      // 値取得
+      const typeElem = document.querySelector('.filter-chip-btn[data-group="musicType"].selected');
+      filterTypeVal = typeElem ? typeElem.getAttribute('data-val') : 'all';
+
+      filterLevelDiff = document.getElementById('filterLevelDiffSelect').value;
+      filterLevelMin = Number(document.getElementById('filterLevelMinSelect').value);
+      filterLevelMax = Number(document.getElementById('filterLevelMaxSelect').value);
+
+      // ★ 楽曲レベルフィルタ適用時のソート連動制御
+      if (filterLevelDiff !== 'none') {
+        currentSortLevelDiff = filterLevelDiff;
+        document.getElementById('levelDifficultySelect').value = filterLevelDiff;
+        if (currentSortType === 'level') {
+          const orderLabel = currentSortOrder === 'asc' ? ' (昇順)' : ' (降順)';
+          document.getElementById('sortBtnLabel').textContent = `並び替え: レベル: ${currentSortLevelDiff}${orderLabel}`;
+        }
+      }
+
+      updateSortModalState();
+      updateFilterIcons();
+      renderTracks();
+    }
+
+    /* ソートモーダルの難易度選択可否制御 */
+    function updateSortModalState() {
+      const levelSelect = document.getElementById('levelDifficultySelect');
+      const notice = document.getElementById('sortDisabledNotice');
+
+      if (filterLevelDiff !== 'none') {
+        levelSelect.disabled = true;
+        levelSelect.value = filterLevelDiff;
+        notice.style.display = 'block';
+      } else {
+        levelSelect.disabled = false;
+        notice.style.display = 'none';
+      }
+    }
+
+    /* ソート操作 */
+    function openSortModal() { 
+      updateSortModalState();
+      document.getElementById('sortModalOverlay').style.display = 'flex'; 
+    }
     function closeSortModal() { document.getElementById('sortModalOverlay').style.display = 'none'; }
 
     function selectSortOption(sortKey, btnElem) {
@@ -1051,11 +1446,10 @@
       currentSortType = sortKey;
     }
 
-    // プルダウン操作時に自動で「楽曲レベル」ボタンを選択状態にする
     function onLevelSelectChange() {
       const selectElem = document.getElementById('levelDifficultySelect');
       currentSortLevelDiff = selectElem.value;
-      const levelBtn = document.querySelector('.sort-opt-btn[data-sort="level"]');
+      const levelBtn = document.getElementById('sortOptLevelBtn');
       if (levelBtn) {
         selectSortOption('level', levelBtn);
       }
@@ -1069,7 +1463,11 @@
 
     function applySortAndClose() {
       closeSortModal();
-      currentSortLevelDiff = document.getElementById('levelDifficultySelect').value;
+      if (filterLevelDiff !== 'none') {
+        currentSortLevelDiff = filterLevelDiff;
+      } else {
+        currentSortLevelDiff = document.getElementById('levelDifficultySelect').value;
+      }
 
       let typeLabel = '50音順';
       if (currentSortType === 'level') {
@@ -1080,6 +1478,7 @@
       renderTracks();
     }
 
+    /* 楽曲一覧レンダリング */
     function renderTracks() {
       const keyword = document.getElementById('searchInput').value.toLowerCase().trim();
       const listBody = document.getElementById('listBody');
@@ -1092,7 +1491,7 @@
         return '';
       };
 
-      // 検索フィルター
+      // フィルター適用
       let filtered = globalTracksData.filter(item => {
         const title = getVal(item, ['music_title', 'title', '曲名']);
         const artist = getVal(item, ['artist', 'アーティスト']);
@@ -1103,21 +1502,51 @@
           artistTags = tags.join(' ');
         }
         const scoreRate = getVal(item, ['score_rate', 'scorerate', 'スコアレート']);
+        const typeStr = getVal(item, ['type', 'タイプ']);
 
+        // 1. 検索ボックス
         if (keyword) {
           const matchTitle = title.toLowerCase().includes(keyword);
           const matchArtist = artist.toLowerCase().includes(keyword);
           const matchArtistTag = artistTags.toLowerCase().includes(keyword);
           const matchScoreRate = scoreRate.toLowerCase().includes(keyword);
+          if (!matchTitle && !matchArtist && !matchArtistTag && !matchScoreRate) return false;
+        }
 
-          if (!matchTitle && !matchArtist && !matchArtistTag && !matchScoreRate) {
+        // 2. 楽曲タイプフィルタ
+        if (filterTypeVal !== 'all') {
+          if (typeStr !== filterTypeVal) return false;
+        }
+
+        // 3. 楽曲レベルフィルタ
+        if (filterLevelDiff !== 'none') {
+          const diffKey = filterLevelDiff.toLowerCase();
+          const levelVal = Number(item[diffKey] || item[filterLevelDiff]);
+          if (isNaN(levelVal) || levelVal < filterLevelMin || levelVal > filterLevelMax) {
             return false;
           }
         }
+
+        // 4. タレントフィルタ
+        if (selectedTalentSet.size > 0) {
+          if (filterTalentMode === 'artist') {
+            const splitted = artist.split(/[,、]/).map(a => a.trim());
+            const matched = Array.from(selectedTalentSet).some(name => {
+              return splitted.includes(name) || (globalArtistTagMap[name] && artist.includes(name));
+            });
+            if (!matched) return false;
+          } else if (filterTalentMode === 'scorerate') {
+            if (scoreRate === '対象外' || !scoreRate) return false;
+            const splitted = scoreRate.split(/[,、]/).map(s => s.trim());
+            const matched = Array.from(selectedTalentSet).some(name => splitted.includes(name));
+            if (!matched) return false;
+          }
+        }
+
         return true;
       });
 
-      // ★ ソート処理（50音順 / プルダウン難易度のレベル順）
+      // ソート処理
       filtered.sort((a, b) => {
         const getNum = (obj, keys) => {
           const v = getVal(obj, keys);
@@ -1135,7 +1564,6 @@
           const readB = getReadVal(b);
           diff = readA.localeCompare(readB, 'ja');
         } else {
-          // プルダウンで選択された難易度のカラムを参照
           const targetDiffKey = currentSortLevelDiff.toLowerCase();
           const valA = getNum(a, [targetDiffKey, currentSortLevelDiff]);
           const valB = getNum(b, [targetDiffKey, currentSortLevelDiff]);
@@ -1143,7 +1571,6 @@
           if (valA !== valB) {
             diff = valA - valB;
           } else {
-            // レベルが同じなら50音順
             const readA = getReadVal(a);
             const readB = getReadVal(b);
             diff = readA.localeCompare(readB, 'ja');
@@ -1160,7 +1587,6 @@
         return;
       }
 
-      // アイコンURL定義
       const trackIconUrl = globalIconsMap['トラック'] || '';
       const artistIconUrl = globalIconsMap['アーティスト'] || '';
       const lengthIconUrl = globalIconsMap['再生時間'] || '';
@@ -1171,8 +1597,11 @@
       const hardTagUrl = globalTagUrlMap['HARD'] || '';
       const expertTagUrl = globalTagUrlMap['EXPERT'] || '';
 
-      // ★ 難易度ソート時の非選択マスク判定用フラグ
-      const isLevelSort = ['easy', 'normal', 'hard', 'expert'].includes(currentSortType);
+      // 難易度マスクの判定
+      // 1. 楽曲レベルフィルタ適用中 -> フィルタ対象難易度以外にマスク
+      // 2. 楽曲レベルソート中（フィルタ未適用） -> ソート対象難易度以外にマスク
+      const isLevelFilterActive = (filterLevelDiff !== 'none');
+      const isLevelSortActive = (currentSortType === 'level');
 
       filtered.forEach(track => {
         const musicTitle = getVal(track, ['music_title', 'title', '曲名']);
@@ -1231,7 +1660,12 @@
           scoreRateContentHtml = `<div class="score-rate-char-list">${iconsHtml || '<div class="score-rate-none">なし</div>'}</div>`;
         }
 
-        // HTML 組み立て（※難易度カラムに dimmed クラスを動的に適用）
+        // 各難易度カラムの dimmed 判定
+        const isEasyDim = isLevelFilterActive ? (filterLevelDiff !== 'EASY') : (isLevelSortActive && currentSortLevelDiff !== 'EASY');
+        const isNormalDim = isLevelFilterActive ? (filterLevelDiff !== 'NORMAL') : (isLevelSortActive && currentSortLevelDiff !== 'NORMAL');
+        const isHardDim = isLevelFilterActive ? (filterLevelDiff !== 'HARD') : (isLevelSortActive && currentSortLevelDiff !== 'HARD');
+        const isExpertDim = isLevelFilterActive ? (filterLevelDiff !== 'EXPERT') : (isLevelSortActive && currentSortLevelDiff !== 'EXPERT');
+
         card.innerHTML = `
           <div class="music-top-bar">
             <div class="music-main-meta">
@@ -1290,21 +1724,20 @@
                 ${scoreRateContentHtml}
               </div>
 
-              <!-- 難易度（楽曲レベルソート時、選択難易度以外に dimmed クラスを付与） -->
               <div class="difficulty-board">
-                <div class="diff-column ${currentSortType === 'level' && currentSortLevelDiff !== 'EASY' ? 'dimmed' : ''}">
+                <div class="diff-column ${isEasyDim ? 'dimmed' : ''}">
                   ${easyTagUrl ? `<img src="${escapeHtml(easyTagUrl)}" class="diff-tag-img" alt="EASY">` : '<div class="diff-fallback-tag" style="background:#4ade80;">EASY</div>'}
                   <span class="diff-val">${escapeHtml(easyVal)}</span>
                 </div>
-                <div class="diff-column ${currentSortType === 'level' && currentSortLevelDiff !== 'NORMAL' ? 'dimmed' : ''}">
+                <div class="diff-column ${isNormalDim ? 'dimmed' : ''}">
                   ${normalTagUrl ? `<img src="${escapeHtml(normalTagUrl)}" class="diff-tag-img" alt="NORMAL">` : '<div class="diff-fallback-tag" style="background:#fb923c;">NORMAL</div>'}
                   <span class="diff-val">${escapeHtml(normalVal)}</span>
                 </div>
-                <div class="diff-column ${currentSortType === 'level' && currentSortLevelDiff !== 'HARD' ? 'dimmed' : ''}">
+                <div class="diff-column ${isHardDim ? 'dimmed' : ''}">
                   ${hardTagUrl ? `<img src="${escapeHtml(hardTagUrl)}" class="diff-tag-img" alt="HARD">` : '<div class="diff-fallback-tag" style="background:#f472b6;">HARD</div>'}
                   <span class="diff-val">${escapeHtml(hardVal)}</span>
                 </div>
-                <div class="diff-column ${currentSortType === 'level' && currentSortLevelDiff !== 'EXPERT' ? 'dimmed' : ''}">
+                <div class="diff-column ${isExpertDim ? 'dimmed' : ''}">
                   ${expertTagUrl ? `<img src="${escapeHtml(expertTagUrl)}" class="diff-tag-img" alt="EXPERT">` : '<div class="diff-fallback-tag" style="background:#a78bfa;">EXPERT</div>'}
                   <span class="diff-val">${escapeHtml(expertVal)}</span>
                 </div>
@@ -1363,12 +1796,10 @@
       return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
     }
 
-    // 時間文字列を「m:ss」形式にフォーマットするヘルパー関数
     function formatLength(val) {
       if (!val) return '';
       const str = String(val).trim();
 
-      // ISO日付文字列 (例: 1889-12-29T16:40:00.000Z や 2026-08-16T00:03:45.000Z) の場合
       if (str.includes('T') || str.includes('Z')) {
         const d = new Date(str);
         if (!isNaN(d.getTime())) {
@@ -1378,7 +1809,6 @@
         }
       }
 
-      // 「00:03:45」や「03:45」のような時間文字列の場合
       const parts = str.split(':');
       if (parts.length === 3) {
         const m = Number(parts[1]) || 0;
