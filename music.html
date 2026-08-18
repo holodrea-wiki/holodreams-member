@@ -1083,7 +1083,7 @@
         return true;
       });
 
-      // ★ ソート処理（50音順 / レベル順）
+      // ★ ソート処理（readカラムによる50音順 / レベル順）
       filtered.sort((a, b) => {
         const getNum = (obj, keys) => {
           const v = getVal(obj, keys);
@@ -1091,11 +1091,16 @@
           return isNaN(num) ? -1 : num;
         };
 
+        // 読み仮名（readカラム）を取得するヘルパー（未設定時は曲名）
+        const getReadVal = (obj) => {
+          return getVal(obj, ['read', 'リード', 'よみ', '読み']) || getVal(obj, ['music_title', 'title', '曲名']);
+        };
+
         let diff = 0;
         if (currentSortType === 'title') {
-          const titleA = getVal(a, ['music_title', 'title', '曲名']);
-          const titleB = getVal(b, ['music_title', 'title', '曲名']);
-          diff = titleA.localeCompare(titleB, 'ja');
+          const readA = getReadVal(a);
+          const readB = getReadVal(b);
+          diff = readA.localeCompare(readB, 'ja');
         } else {
           // 難易度レベル別
           const diffMap = {
@@ -1111,10 +1116,10 @@
           if (valA !== valB) {
             diff = valA - valB;
           } else {
-            // レベルが同じ場合は50音順
-            const titleA = getVal(a, ['music_title', 'title', '曲名']);
-            const titleB = getVal(b, ['music_title', 'title', '曲名']);
-            diff = titleA.localeCompare(titleB, 'ja');
+            // レベルが同値の場合は読み仮名（read）の50音順
+            const readA = getReadVal(a);
+            const readB = getReadVal(b);
+            diff = readA.localeCompare(readB, 'ja');
           }
         }
 
