@@ -218,11 +218,7 @@
       border-top: 1px solid #cbd5e1;
       border-radius: 0 0 14px 14px;
     }
-    .pagination-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .pagination-left { display: flex; align-items: center; gap: 12px; }
     .per-page-select {
       background: #f1f5f9;
       border: 1.5px solid #cbd5e1;
@@ -234,11 +230,7 @@
       cursor: pointer;
       outline: none;
     }
-    .pagination-controls {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
+    .pagination-controls { display: flex; align-items: center; gap: 4px; }
     .page-btn {
       background: #ffffff;
       border: 1px solid #cbd5e1;
@@ -255,19 +247,9 @@
       justify-content: center;
       transition: all 0.15s;
     }
-    .page-btn:hover:not(:disabled) {
-      background: #e2e8f0;
-      border-color: #94a3b8;
-    }
-    .page-btn.active {
-      background: #0044ff;
-      border-color: #0044ff;
-      color: #ffffff;
-    }
-    .page-btn:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
+    .page-btn:hover:not(:disabled) { background: #e2e8f0; border-color: #94a3b8; }
+    .page-btn.active { background: #0044ff; border-color: #0044ff; color: #ffffff; }
+    .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
     /* モーダル */
     .filter-modal-overlay { 
@@ -380,7 +362,7 @@
 
     #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
 
-    /* ★ 修正：楽曲カードレイアウト（添付画像デザイン完全準拠） */
+    /* ★ 楽曲カードレイアウト（PC・大画面時） */
     .music-card {
       background: linear-gradient(135deg, #dcf0fa 0%, #bde4f7 50%, #9dd7f3 100%);
       border: 1.5px solid #ffffff;
@@ -389,7 +371,7 @@
       box-shadow: 0 4px 16px rgba(14, 165, 233, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.9);
       display: flex;
       flex-direction: row;
-      gap: 16px;
+      gap: 18px;
       position: relative;
       width: 1140px;
       min-width: 1140px;
@@ -399,9 +381,9 @@
 
     /* 左ブロック：ジャケット ＋ 下部バッジ */
     .card-left-col {
-      width: 180px;
-      min-width: 180px;
-      max-width: 180px;
+      width: 175px;
+      min-width: 175px;
+      max-width: 175px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -449,11 +431,11 @@
     .time-pill-badge img { height: 15px; width: 15px; object-fit: contain; }
     .type-pill-img { height: 24px; width: auto; object-fit: contain; }
 
-    /* 中央ブロック：タイトル・アーティスト・クレジット・難易度・コピーライト */
+    /* 中央ブロック：幅をさらに狭めてスリム化（380px） */
     .card-center-col {
-      width: 440px;
-      min-width: 440px;
-      max-width: 440px;
+      width: 380px;
+      min-width: 380px;
+      max-width: 380px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -527,11 +509,11 @@
       text-overflow: ellipsis;
     }
 
-    /* 難易度ピルボード */
+    /* 難易度ピルボード（画像tag参照） */
     .diff-pill-board {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       width: 100%;
     }
     .diff-pill-cell {
@@ -543,9 +525,16 @@
       transition: opacity 0.2s;
     }
     .diff-pill-cell.dimmed { opacity: 0.25; filter: grayscale(80%); }
-    .diff-pill-tag {
+    .diff-tag-img-custom {
+      height: 20px;
       width: 100%;
-      height: 18px;
+      max-width: 82px;
+      object-fit: contain;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+    }
+    .diff-pill-tag-fallback {
+      width: 100%;
+      height: 19px;
       border-radius: 9px;
       display: flex;
       align-items: center;
@@ -556,10 +545,10 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.15);
       border: 1px solid rgba(255,255,255,0.7);
     }
-    .diff-pill-tag.easy { background: linear-gradient(180deg, #6ee7b7 0%, #34d399 100%); }
-    .diff-pill-tag.normal { background: linear-gradient(180deg, #fcd34d 0%, #fbbf24 100%); color:#78350f; }
-    .diff-pill-tag.hard { background: linear-gradient(180deg, #f472b6 0%, #ec4899 100%); }
-    .diff-pill-tag.expert { background: linear-gradient(180deg, #c084fc 0%, #a855f7 100%); }
+    .diff-pill-tag-fallback.easy { background: linear-gradient(180deg, #6ee7b7 0%, #34d399 100%); }
+    .diff-pill-tag-fallback.normal { background: linear-gradient(180deg, #fcd34d 0%, #fbbf24 100%); color:#78350f; }
+    .diff-pill-tag-fallback.hard { background: linear-gradient(180deg, #f472b6 0%, #ec4899 100%); }
+    .diff-pill-tag-fallback.expert { background: linear-gradient(180deg, #c084fc 0%, #a855f7 100%); }
     .diff-pill-num {
       font-family: "Arial Black", sans-serif;
       font-size: 16px;
@@ -579,7 +568,7 @@
       text-overflow: ellipsis;
     }
 
-    /* 右ブロック：上部ボタン ＋ 下部スコアレートパネル（高さ・幅を拡大） */
+    /* 右ブロック：広くなったスコアレートパネル＋ボタン */
     .card-right-col {
       flex: 1;
       min-width: 0;
@@ -631,14 +620,14 @@
     .btn-buynow-pill:hover { transform: translateY(-1px); }
     .btn-buynow-pill svg { width: 13px; height: 13px; fill: currentColor; }
 
-    /* スコアレート対象パネル（作詞～コピーライトの高さと揃える） */
+    /* スコアレート対象パネル */
     .scorerate-container {
       width: 100%;
       flex: 1;
       background: rgba(255, 255, 255, 0.6);
       border: 1.5px solid rgba(255, 255, 255, 0.95);
       border-radius: 12px;
-      padding: 10px 14px;
+      padding: 10px 16px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -657,16 +646,17 @@
     .scorerate-icons-list {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
       overflow-x: auto;
-      padding: 4px 2px 6px;
+      padding: 4px 2px 8px;
     }
+    /* ★ スコアレートキャラアイコン（96px / 1.5倍に拡大） */
     .scorerate-avatar {
-      width: 64px;
-      height: 64px;
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
-      border: 2.5px solid #ffffff;
-      box-shadow: 0 3px 8px rgba(2, 132, 199, 0.3);
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
       object-fit: cover;
       flex-shrink: 0;
       background: #bae6fd;
@@ -675,7 +665,84 @@
       font-size: 14px;
       font-weight: bold;
       color: #64748b;
-      padding: 18px 0;
+      padding: 24px 0;
+    }
+
+    /* ★ スマホ画面（縦長画面）対応 */
+    @media screen and (max-width: 650px) {
+      .sticky-top-container, .list-wrapper { 
+        max-width: 100% !important; 
+        min-width: 100% !important; 
+      }
+      .list-body {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+      .music-card {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        flex-direction: column !important;
+        gap: 14px;
+        padding: 14px;
+      }
+
+      /* 1. 上段（ジャケット・タイトル・アーティスト） */
+      .card-left-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        align-items: center;
+      }
+      .jacket-wrap {
+        height: 160px;
+      }
+
+      /* 2. 中段（中央情報） */
+      .card-center-col {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        gap: 10px;
+      }
+      .title-artist-box {
+        text-align: center;
+        align-items: center;
+      }
+      .track-title-line { justify-content: center; }
+      .artist-line { justify-content: center; }
+
+      /* 3. 下段1（スコアレート対象：コピーライトや再生時間の下へ） */
+      .card-right-col {
+        width: 100% !important;
+        min-width: 100% !important;
+        flex-direction: column !important;
+        align-items: stretch;
+        gap: 12px;
+      }
+      .scorerate-container {
+        order: 1; /* 先にスコアレートを表示 */
+        min-height: auto;
+      }
+      .scorerate-avatar {
+        width: 80px;
+        height: 80px;
+      }
+
+      /* 4. 下段2（ボタン：最下部に配置） */
+      .actions-buttons-row {
+        order: 2; /* 最下部に配置 */
+        width: 100%;
+        justify-content: center;
+        height: auto;
+        gap: 12px;
+      }
+      .btn-youtube-pill, .btn-buynow-pill {
+        flex: 1;
+        justify-content: center;
+        padding: 8px 12px;
+        font-size: 13px;
+      }
+      .filter-btn-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
     }
 
     footer {
@@ -1422,6 +1489,12 @@
       const lengthIconUrl = globalIconsMap['再生時間'] || '';
       const scoreRateIconUrl = globalIconsMap['スコアレート'] || '';
 
+      // ★ 難易度タグの画像参照（tagシート）
+      const easyTagUrl = globalTagUrlMap['EASY'] || '';
+      const normalTagUrl = globalTagUrlMap['NORMAL'] || '';
+      const hardTagUrl = globalTagUrlMap['HARD'] || '';
+      const expertTagUrl = globalTagUrlMap['EXPERT'] || '';
+
       const isLevelFilterActive = (filterLevelDiff !== 'none');
       const isLevelSortActive = (currentSortType === 'level');
 
@@ -1450,7 +1523,7 @@
         const isHardDim = isLevelFilterActive ? (filterLevelDiff !== 'HARD') : (isLevelSortActive && currentSortLevelDiff !== 'HARD');
         const isExpertDim = isLevelFilterActive ? (filterLevelDiff !== 'EXPERT') : (isLevelSortActive && currentSortLevelDiff !== 'EXPERT');
 
-        // スコアレート対象キャラアイコン
+        // スコアレート対象キャラアイコン（96px表示）
         let scoreRateHtml = '';
         if (scoreRateStr === '対象外' || !scoreRateStr) {
           scoreRateHtml = '<div class="scorerate-none-text">対象外</div>';
@@ -1506,22 +1579,22 @@
               <div class="credit-item"><span class="credit-label">編 曲</span><span class="credit-val">${escapeHtml(arrangement || '-')}</span></div>
             </div>
 
-            <!-- 難易度ピルボード -->
+            <!-- 難易度ピルボード（tag_url対応） -->
             <div class="diff-pill-board">
               <div class="diff-pill-cell ${isEasyDim ? 'dimmed' : ''}">
-                <div class="diff-pill-tag easy">EASY</div>
+                ${easyTagUrl ? `<img src="${escapeHtml(easyTagUrl)}" class="diff-tag-img-custom" alt="EASY">` : '<div class="diff-pill-tag-fallback easy">EASY</div>'}
                 <span class="diff-pill-num">${escapeHtml(easyVal)}</span>
               </div>
               <div class="diff-pill-cell ${isNormalDim ? 'dimmed' : ''}">
-                <div class="diff-pill-tag normal">NORMAL</div>
+                ${normalTagUrl ? `<img src="${escapeHtml(normalTagUrl)}" class="diff-tag-img-custom" alt="NORMAL">` : '<div class="diff-pill-tag-fallback normal">NORMAL</div>'}
                 <span class="diff-pill-num">${escapeHtml(normalVal)}</span>
               </div>
               <div class="diff-pill-cell ${isHardDim ? 'dimmed' : ''}">
-                <div class="diff-pill-tag hard">HARD</div>
+                ${hardTagUrl ? `<img src="${escapeHtml(hardTagUrl)}" class="diff-tag-img-custom" alt="HARD">` : '<div class="diff-pill-tag-fallback hard">HARD</div>'}
                 <span class="diff-pill-num">${escapeHtml(hardVal)}</span>
               </div>
               <div class="diff-pill-cell ${isExpertDim ? 'dimmed' : ''}">
-                <div class="diff-pill-tag expert">EXPERT</div>
+                ${expertTagUrl ? `<img src="${escapeHtml(expertTagUrl)}" class="diff-tag-img-custom" alt="EXPERT">` : '<div class="diff-pill-tag-fallback expert">EXPERT</div>'}
                 <span class="diff-pill-num">${escapeHtml(expertVal)}</span>
               </div>
             </div>
