@@ -234,6 +234,47 @@
       text-decoration: none;
     }
 
+    /* メールリンクボタンコンテナ */
+    .contact-mail-container {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px dashed #334155;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-mail-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .contact-mail-btn:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+      transform: translateY(-1px);
+    }
+
+    .contact-mail-notice {
+      font-size: 12px;
+      color: #94a3b8;
+      text-align: center;
+      line-height: 1.5;
+    }
+
     /* フッター */
     footer {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -281,6 +322,26 @@
 
   <main class="about-main-container" id="aboutContainer" style="display:none;">
     <div class="about-card-box" id="aboutContentBox"></div>
+  </main>
+
+  <main class="about-main-container" id="aboutContainer" style="display:none;">
+    <div class="about-card-box">
+      <!-- スプレッドシートのテキストがここに描画される -->
+      <div id="aboutContentBox"></div>
+
+      <!-- テキストの末尾に配置するメール起動ボタン -->
+      <div class="contact-mail-container">
+        <button type="button" class="contact-mail-btn" onclick="openContactMail()">
+          <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span>メールソフトを起動してお問い合わせ</span>
+        </button>
+        <div class="contact-mail-notice">
+          ※メーラーが起動しない場合は、お手数ですが <code>contact@example.com</code> 宛に直接ご連絡ください。
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -514,6 +575,33 @@
     function escapeHtml(str) {
       if (!str) return '';
       return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    /**
+     * 権利者お問い合わせ用メーラー起動関数
+     */
+    function openContactMail() {
+      // ★ 受信先メールアドレスを設定
+      const recipient = 'horodori.wiki@gmail.com';
+  
+      // ★ メールの件名
+      const subject = '【権利関係お問い合わせ】ホロドリ攻略Wiki';
+  
+      // ★ 本文ひな形（改行やインデントをそのまま反映）
+      const body = 
+    `【ご所属・企業名】: 
+    【お名前】: 
+    【ご連絡先メールアドレス】: 
+
+    【該当ページのURL】: 
+    https://holodrea-wiki.github.io/holodreams-member/index.html
+
+    【お問い合わせ・ご要請内容】: 
+    ※具体的な修正・削除要請内容をご記入ください。
+    `;
+
+      const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoUrl;
     }
   </script>
 </body>
