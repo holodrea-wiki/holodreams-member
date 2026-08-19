@@ -371,7 +371,7 @@
       box-shadow: 0 4px 16px rgba(14, 165, 233, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.9);
       display: flex;
       flex-direction: row;
-      gap: 18px;
+      gap: 16px;
       position: relative;
       width: 1140px;
       min-width: 1140px;
@@ -431,7 +431,7 @@
     .time-pill-badge img { height: 15px; width: 15px; object-fit: contain; }
     .type-pill-img { height: 24px; width: auto; object-fit: contain; }
 
-    /* 中央ブロック：幅をさらに狭めてスリム化（380px） */
+    /* 中央ブロック：幅380pxスリム構成 */
     .card-center-col {
       width: 380px;
       min-width: 380px;
@@ -446,36 +446,60 @@
       display: flex;
       flex-direction: column;
       gap: 2px;
+      width: 100%;
     }
     .track-title-line {
       display: flex;
       align-items: center;
       gap: 6px;
+      width: 100%;
+      overflow: hidden;
     }
     .track-title-line .track-icon { height: 20px; width: 20px; object-fit: contain; flex-shrink: 0; }
-    .track-title-line .track-title-text {
+    .track-title-text {
       font-size: 19px;
       font-weight: 900;
       color: #0055a5;
       letter-spacing: 0.02em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
     .artist-line {
       display: flex;
       align-items: center;
       gap: 5px;
       margin-left: 2px;
+      width: 100%;
+      overflow: hidden;
     }
     .artist-line .artist-icon { height: 14px; width: 14px; object-fit: contain; flex-shrink: 0; }
-    .artist-line .artist-text {
+    .artist-text {
       font-size: 13px;
       font-weight: bold;
       color: #0284c7;
-      white-space: nowrap;
+    }
+
+    /* ★ マーキーアニメーション用コンテナ */
+    .marquee-container {
+      flex: 1;
       overflow: hidden;
-      text-overflow: ellipsis;
+      white-space: nowrap;
+      position: relative;
+    }
+    .marquee-inner {
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .marquee-inner.is-marquee {
+      display: inline-block;
+      animation: marqueeAnim 14s linear infinite;
+    }
+    .marquee-inner.is-marquee:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeAnim {
+      0%   { transform: translateX(0); }
+      15%  { transform: translateX(0); }
+      85%  { transform: translateX(-100%); }
+      100% { transform: translateX(-100%); }
     }
 
     /* クレジットパネル（白半透明） */
@@ -492,24 +516,24 @@
     .credit-item {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       font-size: 12px;
+      width: 100%;
+      overflow: hidden;
     }
     .credit-label {
       font-weight: bold;
       color: #0066aa;
       min-width: 30px;
       letter-spacing: 0.15em;
+      flex-shrink: 0;
     }
     .credit-val {
       font-weight: bold;
       color: #1e293b;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
-    /* 難易度ピルボード（画像tag参照） */
+    /* 難易度ピルボード（tag_url対応） */
     .diff-pill-board {
       display: flex;
       align-items: center;
@@ -556,16 +580,15 @@
       color: #004488;
     }
 
-    /* コピーライト（空欄でもスペース維持） */
+    /* ★ コピーライト（折り返し表示でファーストビュー完全表示） */
     .card-copyright {
       font-size: 10px;
       color: #0369a1;
       opacity: 0.85;
-      line-height: 1.2;
-      min-height: 12px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.35;
+      min-height: 14px;
+      white-space: normal;
+      word-break: break-word;
     }
 
     /* 右ブロック：広くなったスコアレートパネル＋ボタン */
@@ -646,17 +669,17 @@
     .scorerate-icons-list {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
       overflow-x: auto;
       padding: 4px 2px 8px;
     }
-    /* ★ スコアレートキャラアイコン（96px / 1.5倍に拡大） */
+    /* ★ スコアレートキャラアイコン（76px に最適化調整） */
     .scorerate-avatar {
-      width: 96px;
-      height: 96px;
+      width: 76px;
+      height: 76px;
       border-radius: 50%;
-      border: 3px solid #ffffff;
-      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+      border: 2.5px solid #ffffff;
+      box-shadow: 0 3px 8px rgba(2, 132, 199, 0.3);
       object-fit: cover;
       flex-shrink: 0;
       background: #bae6fd;
@@ -665,7 +688,7 @@
       font-size: 14px;
       font-weight: bold;
       color: #64748b;
-      padding: 24px 0;
+      padding: 18px 0;
     }
 
     /* ★ スマホ画面（縦長画面）対応 */
@@ -678,6 +701,36 @@
         width: 100% !important;
         min-width: 100% !important;
       }
+
+      /* ★ 修正：スマホ画面の青ヘッダー（2段構成） */
+      .standalone-blue-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        padding: 10px 14px !important;
+      }
+      .header-title-group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .header-buttons-group {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+      }
+      .open-filter-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 8px 10px;
+      }
+      .open-sort-btn {
+        flex: 2;
+        justify-content: center;
+        padding: 8px 10px;
+      }
+
       .music-card {
         width: 100% !important;
         min-width: 100% !important;
@@ -687,7 +740,7 @@
         padding: 14px;
       }
 
-      /* 1. 上段（ジャケット・タイトル・アーティスト） */
+      /* 上段（ジャケット） */
       .card-left-col {
         width: 100% !important;
         max-width: 100% !important;
@@ -697,7 +750,7 @@
         height: 160px;
       }
 
-      /* 2. 中段（中央情報） */
+      /* 中段（中央情報） */
       .card-center-col {
         width: 100% !important;
         min-width: 100% !important;
@@ -711,7 +764,7 @@
       .track-title-line { justify-content: center; }
       .artist-line { justify-content: center; }
 
-      /* 3. 下段1（スコアレート対象：コピーライトや再生時間の下へ） */
+      /* 下段1（スコアレート対象：コピーライトや再生時間の下へ） */
       .card-right-col {
         width: 100% !important;
         min-width: 100% !important;
@@ -720,17 +773,17 @@
         gap: 12px;
       }
       .scorerate-container {
-        order: 1; /* 先にスコアレートを表示 */
+        order: 1;
         min-height: auto;
       }
       .scorerate-avatar {
-        width: 80px;
-        height: 80px;
+        width: 68px;
+        height: 68px;
       }
 
-      /* 4. 下段2（ボタン：最下部に配置） */
+      /* 下段2（ボタン：最下部に配置） */
       .actions-buttons-row {
-        order: 2; /* 最下部に配置 */
+        order: 2;
         width: 100%;
         justify-content: center;
         height: auto;
@@ -784,6 +837,7 @@
       </div>
     </div>
 
+    <!-- 青ヘッダー -->
     <div class="standalone-blue-header">
       <div class="header-title-group">
         <span>楽曲リスト</span>
@@ -1489,7 +1543,6 @@
       const lengthIconUrl = globalIconsMap['再生時間'] || '';
       const scoreRateIconUrl = globalIconsMap['スコアレート'] || '';
 
-      // ★ 難易度タグの画像参照（tagシート）
       const easyTagUrl = globalTagUrlMap['EASY'] || '';
       const normalTagUrl = globalTagUrlMap['NORMAL'] || '';
       const hardTagUrl = globalTagUrlMap['HARD'] || '';
@@ -1506,9 +1559,9 @@
         const lengthStr = formatLength(rawLength);
         const typeStr = getVal(track, ['type', 'タイプ']);
         const typeTagUrl = globalTagUrlMap[typeStr] || '';
-        const lyrics = getVal(track, ['lyrics', '作詞']);
-        const composition = getVal(track, ['composition', '作曲']);
-        const arrangement = getVal(track, ['arrangement', '編曲']);
+        const lyrics = getVal(track, ['lyrics', '作詞']) || '-';
+        const composition = getVal(track, ['composition', '作曲']) || '-';
+        const arrangement = getVal(track, ['arrangement', '編曲']) || '-';
         const copyright = getVal(track, ['copyright', 'コピーライト']);
         const scoreRateStr = getVal(track, ['score_rate', 'scorerate', 'スコアレート']);
         const easyVal = getVal(track, ['easy', 'EASY']) || '-';
@@ -1523,7 +1576,7 @@
         const isHardDim = isLevelFilterActive ? (filterLevelDiff !== 'HARD') : (isLevelSortActive && currentSortLevelDiff !== 'HARD');
         const isExpertDim = isLevelFilterActive ? (filterLevelDiff !== 'EXPERT') : (isLevelSortActive && currentSortLevelDiff !== 'EXPERT');
 
-        // スコアレート対象キャラアイコン（96px表示）
+        // スコアレート対象キャラアイコン（76px）
         let scoreRateHtml = '';
         if (scoreRateStr === '対象外' || !scoreRateStr) {
           scoreRateHtml = '<div class="scorerate-none-text">対象外</div>';
@@ -1564,19 +1617,38 @@
             <div class="title-artist-box">
               <div class="track-title-line">
                 ${trackIconUrl ? `<img src="${escapeHtml(trackIconUrl)}" class="track-icon" alt="track">` : '🎵'}
-                <span class="track-title-text">${escapeHtml(musicTitle)}</span>
+                <div class="marquee-container">
+                  <span class="track-title-text marquee-inner">${escapeHtml(musicTitle)}</span>
+                </div>
               </div>
               <div class="artist-line">
                 ${artistIconUrl ? `<img src="${escapeHtml(artistIconUrl)}" class="artist-icon" alt="artist">` : '🎤'}
-                <span class="artist-text">${escapeHtml(artist)}</span>
+                <div class="marquee-container">
+                  <span class="artist-text marquee-inner">${escapeHtml(artist)}</span>
+                </div>
               </div>
             </div>
 
-            <!-- クレジットパネル -->
+            <!-- クレジットパネル（マーキー対応） -->
             <div class="credits-card">
-              <div class="credit-item"><span class="credit-label">作 詞</span><span class="credit-val">${escapeHtml(lyrics || '-')}</span></div>
-              <div class="credit-item"><span class="credit-label">作 曲</span><span class="credit-val">${escapeHtml(composition || '-')}</span></div>
-              <div class="credit-item"><span class="credit-label">編 曲</span><span class="credit-val">${escapeHtml(arrangement || '-')}</span></div>
+              <div class="credit-item">
+                <span class="credit-label">作 詞</span>
+                <div class="marquee-container">
+                  <span class="credit-val marquee-inner">${escapeHtml(lyrics)}</span>
+                </div>
+              </div>
+              <div class="credit-item">
+                <span class="credit-label">作 曲</span>
+                <div class="marquee-container">
+                  <span class="credit-val marquee-inner">${escapeHtml(composition)}</span>
+                </div>
+              </div>
+              <div class="credit-item">
+                <span class="credit-label">編 曲</span>
+                <div class="marquee-container">
+                  <span class="credit-val marquee-inner">${escapeHtml(arrangement)}</span>
+                </div>
+              </div>
             </div>
 
             <!-- 難易度ピルボード（tag_url対応） -->
@@ -1631,7 +1703,26 @@
 
         listBody.appendChild(card);
       });
+
+      // レンダリング後に各テキストの幅を判定し、はみ出している要素にマーキークラスを付与
+      setTimeout(checkAndApplyMarquee, 50);
     }
+
+    function checkAndApplyMarquee() {
+      const marqueeInners = document.querySelectorAll('.marquee-inner');
+      marqueeInners.forEach(el => {
+        const parent = el.closest('.marquee-container');
+        if (parent && el.scrollWidth > parent.clientWidth + 2) {
+          el.classList.add('is-marquee');
+        } else {
+          el.classList.remove('is-marquee');
+        }
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      checkAndApplyMarquee();
+    });
 
     function renderExternalLinks(linksList) {
       const linksBox = document.getElementById('footerLinksBox');
