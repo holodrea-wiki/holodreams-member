@@ -380,7 +380,7 @@
 
     #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
 
-    /* ★ 添付画像再現：楽曲カードデザイン */
+    /* ★ 修正：楽曲カードレイアウト（添付画像デザイン完全準拠） */
     .music-card {
       background: linear-gradient(135deg, #dcf0fa 0%, #bde4f7 50%, #9dd7f3 100%);
       border: 1.5px solid #ffffff;
@@ -389,7 +389,7 @@
       box-shadow: 0 4px 16px rgba(14, 165, 233, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.9);
       display: flex;
       flex-direction: row;
-      gap: 18px;
+      gap: 16px;
       position: relative;
       width: 1140px;
       min-width: 1140px;
@@ -399,51 +399,45 @@
 
     /* 左ブロック：ジャケット ＋ 下部バッジ */
     .card-left-col {
-      width: 190px;
-      min-width: 190px;
+      width: 180px;
+      min-width: 180px;
+      max-width: 180px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
     }
-    .jacket-record-wrap {
-      width: 190px;
+    .jacket-wrap {
+      width: 100%;
       height: 140px;
-      position: relative;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
+      background: transparent;
     }
     .jacket-main-img {
-      width: 130px;
-      height: 130px;
-      border-radius: 8px;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      position: relative;
-      z-index: 2;
-    }
-    .record-disc-img {
-      width: 120px;
-      height: 120px;
-      position: absolute;
-      right: 4px;
-      top: 10px;
-      z-index: 1;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 6px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.18));
     }
     .time-type-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       width: 100%;
+      min-height: 28px;
     }
     .time-pill-badge {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
       font-size: 13px;
       font-weight: 800;
       color: #0369a1;
@@ -452,17 +446,19 @@
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.9);
     }
-    .time-pill-badge img { height: 16px; width: 16px; object-fit: contain; }
+    .time-pill-badge img { height: 15px; width: 15px; object-fit: contain; }
     .type-pill-img { height: 24px; width: auto; object-fit: contain; }
 
-    /* 中央ブロック：楽曲タイトル・アーティスト・クレジット・難易度・コピーライト */
+    /* 中央ブロック：タイトル・アーティスト・クレジット・難易度・コピーライト */
     .card-center-col {
-      flex: 1;
-      min-width: 0;
+      width: 440px;
+      min-width: 440px;
+      max-width: 440px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
       justify-content: space-between;
+      gap: 6px;
+      flex-shrink: 0;
     }
     .title-artist-box {
       display: flex;
@@ -472,11 +468,11 @@
     .track-title-line {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
-    .track-title-line .track-icon { height: 22px; width: 22px; object-fit: contain; }
+    .track-title-line .track-icon { height: 20px; width: 20px; object-fit: contain; flex-shrink: 0; }
     .track-title-line .track-title-text {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 900;
       color: #0055a5;
       letter-spacing: 0.02em;
@@ -487,10 +483,10 @@
     .artist-line {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       margin-left: 2px;
     }
-    .artist-line .artist-icon { height: 15px; width: 15px; object-fit: contain; }
+    .artist-line .artist-icon { height: 14px; width: 14px; object-fit: contain; flex-shrink: 0; }
     .artist-line .artist-text {
       font-size: 13px;
       font-weight: bold;
@@ -502,14 +498,14 @@
 
     /* クレジットパネル（白半透明） */
     .credits-card {
-      background: rgba(255, 255, 255, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.95);
       border-radius: 8px;
       padding: 6px 12px;
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      max-width: 480px;
+      gap: 3px;
+      width: 100%;
     }
     .credit-item {
       display: flex;
@@ -535,8 +531,8 @@
     .diff-pill-board {
       display: flex;
       align-items: center;
-      gap: 12px;
-      max-width: 480px;
+      gap: 10px;
+      width: 100%;
     }
     .diff-pill-cell {
       flex: 1;
@@ -570,27 +566,34 @@
       font-weight: 900;
       color: #004488;
     }
+
+    /* コピーライト（空欄でもスペース維持） */
     .card-copyright {
       font-size: 10px;
       color: #0369a1;
       opacity: 0.85;
       line-height: 1.2;
+      min-height: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    /* 右ブロック：上部ボタン ＋ 下部スコアレートパネル */
+    /* 右ブロック：上部ボタン ＋ 下部スコアレートパネル（高さ・幅を拡大） */
     .card-right-col {
-      width: 360px;
-      min-width: 360px;
+      flex: 1;
+      min-width: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-end;
-      gap: 10px;
+      gap: 8px;
     }
     .actions-buttons-row {
       display: flex;
       align-items: center;
       gap: 8px;
+      height: 28px;
     }
     .btn-youtube-pill {
       display: inline-flex;
@@ -601,7 +604,7 @@
       text-decoration: none;
       font-size: 12px;
       font-weight: 900;
-      padding: 6px 14px;
+      padding: 5px 14px;
       border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.6);
       box-shadow: 0 2px 6px rgba(220, 38, 38, 0.3);
@@ -619,7 +622,7 @@
       text-decoration: none;
       font-size: 12px;
       font-weight: 900;
-      padding: 6px 14px;
+      padding: 5px 14px;
       border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.7);
       box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
@@ -628,51 +631,51 @@
     .btn-buynow-pill:hover { transform: translateY(-1px); }
     .btn-buynow-pill svg { width: 13px; height: 13px; fill: currentColor; }
 
-    /* スコアレート対象パネル（白半透明 角丸四角） */
+    /* スコアレート対象パネル（作詞～コピーライトの高さと揃える） */
     .scorerate-container {
       width: 100%;
-      background: rgba(255, 255, 255, 0.55);
-      border: 1.5px solid rgba(255, 255, 255, 0.85);
-      border-radius: 14px;
+      flex: 1;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
       padding: 10px 14px;
-      min-height: 105px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      gap: 6px;
+      gap: 8px;
       box-shadow: 0 2px 8px rgba(14, 165, 233, 0.08);
     }
     .scorerate-head-row {
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: bold;
       color: #0284c7;
     }
-    .scorerate-head-row img { height: 16px; width: 16px; object-fit: contain; }
+    .scorerate-head-row img { height: 18px; width: 18px; object-fit: contain; }
     .scorerate-icons-list {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
       overflow-x: auto;
-      padding: 4px 2px;
+      padding: 4px 2px 6px;
     }
     .scorerate-avatar {
-      width: 54px;
-      height: 54px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
-      border: 2px solid #ffffff;
-      box-shadow: 0 3px 6px rgba(2, 132, 199, 0.25);
+      border: 2.5px solid #ffffff;
+      box-shadow: 0 3px 8px rgba(2, 132, 199, 0.3);
       object-fit: cover;
       flex-shrink: 0;
       background: #bae6fd;
     }
     .scorerate-none-text {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: bold;
       color: #64748b;
-      padding: 10px 0;
+      padding: 18px 0;
     }
 
     footer {
@@ -889,7 +892,7 @@
 
     // ページネーション状態
     let currentPage = 1;
-    let itemsPerPage = 50; // 25, 50, 100, 0(ALL)
+    let itemsPerPage = 50;
 
     window.onload = function() {
       const BANNER_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getTopBannerMap';
@@ -1268,7 +1271,6 @@
       renderTracks();
     }
 
-    /* ページネーション制御 */
     function setPage(p) {
       currentPage = p;
       renderTracks();
@@ -1329,7 +1331,6 @@
       document.getElementById('paginationBottom').innerHTML = buildBarHtml();
     }
 
-    /* 楽曲一覧レンダリング */
     function renderTracks() {
       const keyword = document.getElementById('searchInput').value.toLowerCase().trim();
       const listBody = document.getElementById('listBody');
@@ -1410,7 +1411,6 @@
         return;
       }
 
-      // ページネーションによるスライス
       let displayItems = filtered;
       if (itemsPerPage > 0) {
         const start = (currentPage - 1) * itemsPerPage;
@@ -1470,17 +1470,10 @@
         card.className = 'music-card';
 
         card.innerHTML = `
-          <!-- 左列: レコード風ジャケット + 再生時間/タイプ -->
+          <!-- 左列: ジャケット画像 + 再生時間/タイプ -->
           <div class="card-left-col">
-            <div class="jacket-record-wrap">
+            <div class="jacket-wrap">
               ${jacketImg ? `<img src="${escapeHtml(jacketImg)}" class="jacket-main-img" alt="jacket">` : ''}
-              <svg class="record-disc-img" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="48" fill="#18181b" stroke="#27272a" stroke-width="2"/>
-                <circle cx="50" cy="50" r="40" fill="none" stroke="#27272a" stroke-width="1"/>
-                <circle cx="50" cy="50" r="32" fill="none" stroke="#27272a" stroke-width="1"/>
-                <circle cx="50" cy="50" r="18" fill="#dc2626"/>
-                <circle cx="50" cy="50" r="6" fill="#09090b"/>
-              </svg>
             </div>
             <div class="time-type-row">
               ${lengthStr ? `
@@ -1533,7 +1526,7 @@
               </div>
             </div>
 
-            ${copyright ? `<div class="card-copyright">${escapeHtml(copyright)}</div>` : '<div></div>'}
+            <div class="card-copyright">${copyright ? escapeHtml(copyright) : '&nbsp;'}</div>
           </div>
 
           <!-- 右列: YouTube / BUY NOW ボタン + スコアレート対象パネル -->
