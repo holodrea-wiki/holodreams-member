@@ -725,6 +725,17 @@
       .footer-btn-store { width: 140px; height: 42px; }
       .footer-btn-x, .footer-btn-site { padding: 8px 16px; font-size: 12.5px; }
     }
+    /* typeが空白の場合のシンプルなテキストリンク */
+    .footer-link-text {
+      color: #94a3b8;
+      font-size: 13px;
+      text-decoration: underline;
+      transition: color 0.15s;
+      padding: 4px 8px;
+    }
+    .footer-link-text:hover {
+      color: #38bdf8;
+    }
   </style>
 </head>
 <body>
@@ -1460,7 +1471,6 @@
         linksBox.style.display = 'none';
         return;
       }
-
       const lineMap = {};
       linksList.forEach(item => {
         const lineNum = Number(item.line) || 1;
@@ -1469,7 +1479,6 @@
       });
 
       const sortedLines = Object.keys(lineMap).map(Number).sort((a, b) => a - b);
-
       const xSvg = `<svg class="footer-x-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`;
       const siteSvg = `<svg class="footer-site-svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>`;
 
@@ -1486,13 +1495,16 @@
             html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="footer-btn-base footer-btn-store" style="background-image: url('${btnImg}');" aria-label="${name || 'ストア'}"></a>`;
           } else if (type === 'X') {
             html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="footer-btn-base footer-btn-x">${xSvg}<span>${name}</span></a>`;
-          } else {
+          } else if (type === 'サイト' || type === 'WEB' || btnImg !== '') {
+            // typeが「サイト」等の指定がある場合、または画像指定がある場合はボタン表示
             html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="footer-btn-base footer-btn-site">${siteSvg}<span>${name}</span></a>`;
+          } else {
+            // ★ typeが空白の場合はシンプルなリンク付きテキストで表示
+            html += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="footer-link-text">${name}</a>`;
           }
         });
         html += '</div>';
       });
-
       linksBox.innerHTML = html;
     }
 
