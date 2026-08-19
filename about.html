@@ -161,7 +161,7 @@
       margin-top: 10px;
     }
 
-    /* 3. 段落テキスト：段落ブロック（マージンと適切な行間）、左揃え */
+    /* 3. 段落テキスト：左揃え・段落ブロック */
     .about-paragraph {
       font-size: 14px;
       font-weight: 400;
@@ -197,6 +197,12 @@
       border-left: 3px solid #ef4444;
       padding: 6px 12px;
       border-radius: 0 6px 6px 0;
+    }
+
+    /* bold_text が true の場合のテキスト強調 */
+    .is-bold-text {
+      font-weight: 800;
+      color: #ffffff;
     }
 
     /* リンクのスタイリング */
@@ -303,12 +309,16 @@
         });
     };
 
-    function formatCustomLinks(rawStr) {
-      if (!rawStr) return '';
-      let escaped = escapeHtml(String(rawStr));
-      return escaped.replace(/&lt;([^()&<>]+?)\((https?:\/\/[^\s()<>]+?)\)&gt;/g, function(match, text, url) {
+    /**
+     * リンク変換および太字フラグに応じたHTML文字列を生成
+     */
+    function formatTextItem(textStr, isBold) {
+      if (!textStr) return '';
+      let escaped = escapeHtml(String(textStr));
+      let linked = escaped.replace(/&lt;([^()&<>]+?)\((https?:\/\/[^\s()<>]+?)\)&gt;/g, function(match, text, url) {
         return `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
       });
+      return isBold ? `<strong class="is-bold-text">${linked}</strong>` : linked;
     }
 
     function renderAboutPage(rows) {
@@ -320,25 +330,23 @@
         return;
       }
 
-      // priorityの昇順で並び替え
       const sortedRows = [...rows].sort((a, b) => {
         const pA = Number(a.priority) || 0;
         const pB = Number(b.priority) || 0;
         return pA - pB;
       });
 
-      // 段落テキストかつ同じ paragraph_group の行をひとつの段落としてグループ化
       const renderBlocks = [];
       let currentParagraphGroup = null;
-      let currentParagraphTexts = [];
+      let currentParagraphItems = [];
 
       const flushParagraph = () => {
-        if (currentParagraphTexts.length > 0) {
+        if (currentParagraphItems.length > 0) {
           renderBlocks.push({
             type: '段落テキスト',
-            texts: [...currentParagraphTexts]
+            items: [...currentParagraphItems]
           });
-          currentParagraphTexts = [];
+          currentParagraphItems = [];
           currentParagraphGroup = null;
         }
       };
@@ -346,65 +354,63 @@
       sortedRows.forEach(row => {
         const type = String(row.text_type || '').trim();
         const text = String(row.text || '').trim();
+        const isBold = (row.bold_text === true || String(row.bold_text).trim().toLowerCase() === 'true' || row.bold_text === 1 || String(row.bold_text).trim() === '1');
         const pGroup = (row.paragraph_group !== undefined && row.paragraph_group !== null && String(row.paragraph_group).trim() !== '') 
                        ? String(row.paragraph_group).trim() 
                        : null;
 
         if (type === '段落テキスト') {
           if (pGroup !== null) {
-            // グループ指定がある場合：同じグループ値が続く限りまとめる
             if (currentParagraphGroup === pGroup) {
-              currentParagraphTexts.push(text);
+              currentParagraphItems.push({ text: text, isBold: isBold });
             } else {
               flushParagraph();
               currentParagraphGroup = pGroup;
-              currentParagraphTexts.push(text);
+              currentParagraphItems = [{ text: text, isBold: isBold }];
             }
           } else {
-            // グループ指定がない段落テキスト
             flushParagraph();
             renderBlocks.push({
               type: '段落テキスト',
-              texts: [text]
+              items: [{ text: text, isBold: isBold }]
             });
           }
         } else {
           flushParagraph();
           renderBlocks.push({
             type: type,
-            text: text
+            text: text,
+            isBold: isBold
           });
         }
       });
       flushParagraph();
 
-      // 各要素のレンダリング
       renderBlocks.forEach(block => {
         if (block.type === 'タイトル') {
           const el = document.createElement('div');
           el.className = 'about-title';
-          el.innerHTML = formatCustomLinks(block.text);
+          el.innerHTML = formatTextItem(block.text, block.isBold);
           container.appendChild(el);
         } else if (block.type === '項目') {
           const el = document.createElement('div');
           el.className = 'about-heading';
-          el.innerHTML = formatCustomLinks(block.text);
+          el.innerHTML = formatTextItem(block.text, block.isBold);
           container.appendChild(el);
         } else if (block.type === '注釈') {
           const el = document.createElement('div');
           el.className = 'about-annotation';
-          el.innerHTML = formatCustomLinks(block.text);
+          el.innerHTML = formatTextItem(block.text, block.isBold);
           container.appendChild(el);
         } else if (block.type === '段落テキスト') {
           const p = document.createElement('p');
           p.className = 'about-paragraph';
-          // 同一グループ内のテキストを結合してひとつの段落として出力
-          p.innerHTML = block.texts.map(t => formatCustomLinks(t)).join('');
+          p.innerHTML = block.items.map(item => formatTextItem(item.text, item.isBold)).join('');
           container.appendChild(p);
         } else {
           const el = document.createElement('div');
           el.className = 'about-text';
-          el.innerHTML = formatCustomLinks(block.text);
+          el.innerHTML = formatTextItem(block.text, block.isBold);
           container.appendChild(el);
         }
       });
