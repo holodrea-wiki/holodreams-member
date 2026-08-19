@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta name="description" content="ホロライブドリームス（ホロドリ）のタレント・メンバーデータ攻略まとめサイト。">
-  <!-- OGP（SNSシェア用） -->
   <meta property="og:title" content="ホロドリ 攻略データベース">
   <meta property="og:description" content="タレント一覧・メンバー検索・所有率チェッカー機能搭載">
   <meta charset="UTF-8">
@@ -24,7 +23,6 @@
       position: relative;
     }
 
-    /* ★ 共通背景コンテナ & ドットオーバーレイ */
     .bg-falling-container {
       position: fixed;
       top: 0;
@@ -53,7 +51,6 @@
       mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.05) 15%, rgba(0,0,0,0.85) 80%);
     }
 
-    /* 上部ナビヘッダー */
     .header {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       padding: 24px 20px;
@@ -69,8 +66,6 @@
       letter-spacing: 0.05em;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
-
-    /* ★ 追加: ヘッダー非公式表示 & フッター著作権表示 */
     .header-subtext {
       font-size: 11.5px;
       color: #94a3b8;
@@ -91,13 +86,9 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      /* ★ 背景を明るい半透明ホワイトに戻す */
       background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(8px);
-      padding-top: 12px;
-      padding-bottom: 12px;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 12px 16px;
       max-width: 1185px;
       min-width: 610px;
       margin: 0 auto;
@@ -196,7 +187,7 @@
       font-weight: bold;
       cursor: pointer;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: background 0.2s, transform 0.1s;
+      transition: background 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -204,9 +195,79 @@
     .open-filter-btn:hover, .open-sort-btn:hover { background: #f1f5f9; }
     .filter-icon-inline { height: 16px; width: auto; object-fit: contain; vertical-align: middle; }
 
+    /* ページネーションスタイル */
+    .pagination-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid #cbd5e1;
+      font-size: 13px;
+      font-weight: bold;
+      color: #334155;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pagination-bar.bottom {
+      border-bottom: none;
+      border-top: 1px solid #cbd5e1;
+      border-radius: 0 0 14px 14px;
+    }
+    .pagination-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .per-page-select {
+      background: #f1f5f9;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #0f172a;
+      cursor: pointer;
+      outline: none;
+    }
+    .pagination-controls {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .page-btn {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      min-width: 32px;
+      height: 32px;
+      padding: 0 6px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+    .page-btn:hover:not(:disabled) {
+      background: #e2e8f0;
+      border-color: #94a3b8;
+    }
+    .page-btn.active {
+      background: #0044ff;
+      border-color: #0044ff;
+      color: #ffffff;
+    }
+    .page-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
     .filter-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); z-index: 3000; justify-content: center; align-items: center; padding: 16px; }
     .filter-modal-card { background: #1e293b; color: #ffffff; width: 100%; max-width: 600px; height: 80vh; max-height: 700px; border-radius: 14px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; border: 1px solid #334155; }
-    .filter-modal-topbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid #334155; background: #0f172a; font-weight: bold; font-size: 16px; color: #ffffff; flex-shrink: 0; }
+    .filter-modal-topbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid #334155; background: #0f172a; font-weight: bold; font-size: 16px; color: #ffffff; }
     .filter-modal-actions { display: flex; gap: 8px; align-items: center; }
     .filter-apply-btn { background: #ea580c; color: #ffffff; border: none; padding: 6px 16px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; }
     .filter-reset-btn { background: #334155; color: #f1f5f9; border: 1px solid #475569; padding: 6px 14px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; }
@@ -214,13 +275,13 @@
     .sort-modal-card { background: #1e293b; color: #ffffff; width: 100%; max-width: 420px; border-radius: 14px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; border: 1px solid #334155; }
     .sort-modal-body { padding: 20px; display: flex; flex-direction: column; gap: 16px; }
     .sort-option-group { display: flex; flex-direction: column; gap: 10px; }
-    .sort-opt-btn { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 12px 16px; font-size: 14px; font-weight: bold; color: #cbd5e1; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.15s; }
+    .sort-opt-btn { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 12px 16px; font-size: 14px; font-weight: bold; color: #cbd5e1; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
     .sort-opt-btn.selected { background: #2563eb; color: #ffffff; border-color: #3b82f6; }
     .sort-order-toggle { display: flex; gap: 8px; background: #0f172a; padding: 4px; border-radius: 8px; border: 1px solid #334155; }
     .sort-order-btn { flex: 1; padding: 10px; font-size: 13px; font-weight: bold; color: #cbd5e1; background: transparent; border: none; border-radius: 6px; cursor: pointer; text-align: center; }
     .sort-order-btn.selected { background: #ea580c; color: #ffffff; }
 
-    .filter-tabs-header { display: flex; background: #0f172a; padding: 6px; gap: 4px; border-bottom: 1px solid #334155; flex-shrink: 0; }
+    .filter-tabs-header { display: flex; background: #0f172a; padding: 6px; gap: 4px; border-bottom: 1px solid #334155; }
     .filter-tab-btn { flex: 1; padding: 8px 10px; font-size: 12px; font-weight: bold; text-align: center; background: #1e293b; border: 1px solid #334155; border-radius: 6px; cursor: pointer; color: #cbd5e1; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
     .filter-tab-btn.active { background: #2563eb; color: #ffffff; border-color: #3b82f6; }
     .tab-filter-icon { height: 14px; width: auto; object-fit: contain; }
@@ -238,7 +299,24 @@
     .filter-chip-btn { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 8px 4px; font-size: 12px; font-weight: bold; color: #cbd5e1; text-align: center; cursor: pointer; }
     .filter-chip-btn.selected { background: #2563eb; color: #ffffff; border-color: #3b82f6; }
 
-    .list-wrapper { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #cbd5e1; width: 100%; max-width: 1185px; min-width: 610px; margin: 0 auto 24px; overflow-x: auto; flex: 1; }
+    .list-wrapper {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid #cbd5e1;
+      width: 100%;
+      max-width: 1185px;
+      min-width: 610px;
+      margin: 0 auto 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .list-scroll-area {
+      overflow-x: auto;
+      width: 100%;
+    }
     .list-body { display: flex; flex-direction: column; background: rgba(226, 232, 240, 0.8); padding: 8px; gap: 8px; width: max-content; min-width: 100%; }
 
     .list-row-card { background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 8px 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); min-height: 110px; width: 1169px; min-width: 1169px; max-width: 1169px; }
@@ -275,17 +353,6 @@
     .connect-text { font-size: 11px; font-weight: bold; color: #1e293b; white-space: nowrap; }
     .connect-target-img { height: 28px; width: auto; object-fit: contain; flex-shrink: 0; }
 
-    @media screen and (max-width: 600px) {
-      body { padding: 0; }
-      .sticky-top-container, .list-wrapper { max-width: 610px !important; min-width: 610px !important; }
-      .list-body { min-width: 594px !important; max-width: 594px !important; }
-      .list-row-card { width: 594px !important; min-width: 594px !important; max-width: 594px !important; display: flex !important; flex-direction: column; padding: 10px; gap: 10px; min-height: auto; }
-      .block-left-group, .block-right-group { display: flex !important; justify-content: space-between !important; gap: 10px; width: 560px !important; min-width: 560px !important; max-width: 560px !important; }
-      .filter-tabs-header { flex-wrap: wrap; }
-      .filter-tab-btn { flex: 1 1 45%; }
-      .filter-btn-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-    }
-
     .pop-text-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); z-index: 4000; justify-content: center; align-items: center; padding: 20px; }
     .pop-text-card { background: #ffffff; color: #1f2937; border-radius: 16px; padding: 20px; width: 100%; max-width: 580px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); position: relative; }
     .pop-header { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; border-bottom: 2px solid #e5e7eb; padding-bottom: 12px; }
@@ -313,7 +380,6 @@
 
     #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
 
-    /* 共通フッターCSS */
     footer {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       padding: 32px 20px 28px;
@@ -323,115 +389,24 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
       margin-top: auto;
     }
-    .footer-links-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      width: 100%;
-      max-width: 860px;
-    }
-    .footer-line-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 12px 16px;
-      width: 100%;
-    }
-    .footer-btn-base {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-    .footer-btn-store {
-      width: 160px;
-      height: 48px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-    .footer-btn-store:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-    }
-    .footer-btn-x {
-      background: #000000;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: bold;
-      padding: 10px 22px;
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      gap: 8px;
-      white-space: nowrap;
-    }
-    .footer-btn-x:hover {
-      background-color: #18181b;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-      border-color: rgba(255, 255, 255, 0.4);
-    }
-    .footer-x-svg {
-      width: 15px;
-      height: 15px;
-      fill: currentColor;
-    }
-    .footer-btn-site {
-      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-      color: #38bdf8;
-      border: 1px solid #475569;
-      padding: 9px 20px;
-      border-radius: 20px;
-      font-size: 13.5px;
-      font-weight: bold;
-      gap: 8px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-    }
-    .footer-btn-site:hover {
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-      color: #ffffff;
-      border-color: #60a5fa;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.35);
-    }
-    .footer-site-svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
-      flex-shrink: 0;
-    }
-    .copyright {
-      font-size: 12px;
-      color: #64748b;
-      letter-spacing: 0.03em;
-    }
-
-    @media screen and (max-width: 600px) {
-      footer { padding: 24px 16px 20px; }
-      .footer-btn-store { width: 140px; height: 42px; }
-      .footer-btn-x, .footer-btn-site { padding: 8px 16px; font-size: 12.5px; }
-    }
+    .footer-links-container { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 860px; }
+    .footer-line-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 16px; width: 100%; }
+    .footer-btn-base { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s ease; cursor: pointer; }
+    .footer-btn-store { width: 160px; height: 48px; background-size: contain; background-repeat: no-repeat; background-position: center; border-radius: 8px; }
+    .footer-btn-x { background: #000000; color: #ffffff; font-size: 14px; font-weight: bold; padding: 10px 22px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.2); gap: 8px; }
+    .footer-x-svg { width: 15px; height: 15px; fill: currentColor; }
+    .footer-btn-site { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: #38bdf8; border: 1px solid #475569; padding: 9px 20px; border-radius: 20px; font-size: 13.5px; font-weight: bold; gap: 8px; }
+    .footer-site-svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
   </style>
 </head>
 <body>
 
-  <!-- 共通背景コンテナ -->
   <div class="bg-falling-container" id="bgFallingContainer"></div>
 
-  <!-- 最上部共通ヘッダー -->
   <div class="header">
     <h1>ホロドリ 攻略データベース</h1>
-    <!-- ★ 追加: 非公式表示エリア -->
     <div class="header-subtext" id="headerUnofficialNotice"></div>
   </div>
 
@@ -452,7 +427,7 @@
         <img id="mainFilterIcon" src="" class="filter-icon-inline" alt="filter icon">
       </button>
       <button type="button" class="open-sort-btn" id="openSortBtn" onclick="openSortModal()">
-        <span id="sortBtnLabel">並び替え: リリリース順</span>
+        <span id="sortBtnLabel">並び替え: リリース順 (降順)</span>
       </button>
     </div>
   </div>
@@ -460,10 +435,18 @@
   <div id="loading">データを読み込み中...</div>
 
   <div class="list-wrapper" id="listWrapper" style="display:none;">
-    <div class="list-body" id="listBody"></div>
+    <!-- 上部ページャー -->
+    <div class="pagination-bar" id="paginationTop"></div>
+
+    <div class="list-scroll-area">
+      <div class="list-body" id="listBody"></div>
+    </div>
+
+    <!-- 下部ページャー -->
+    <div class="pagination-bar bottom" id="paginationBottom"></div>
   </div>
 
-  <!-- フィルタ設定ダイアログ -->
+  <!-- フィルタモーダル -->
   <div id="filterModalOverlay" class="filter-modal-overlay" onclick="closeFilterModal()">
     <div class="filter-modal-card" onclick="event.stopPropagation()">
       <div class="filter-modal-topbar">
@@ -582,12 +565,11 @@
             <div class="filter-chip-btn" data-group="connectMass" data-val="12" onclick="toggleChip(this)">12マス効果</div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 
-  <!-- ソート設定ダイアログ -->
+  <!-- ソートモーダル -->
   <div id="sortModalOverlay" class="filter-modal-overlay" onclick="closeSortModal()">
     <div class="sort-modal-card" onclick="event.stopPropagation()">
       <div class="filter-modal-topbar">
@@ -627,10 +609,8 @@
     </div>
   </div>
 
-  <!-- 共通フッター -->
   <footer>
     <div class="footer-links-container" id="footerLinksBox"></div>
-    <!-- ★ 変更: 著作権表示エリア -->
     <div class="copyright-text" id="footerCopyrightNotice"></div>
   </footer>
 
@@ -643,63 +623,56 @@
     let currentSortType = 'release';
     let currentSortOrder = 'desc';
 
+    // ページネーション状態
+    let currentPage = 1;
+    let itemsPerPage = 50;
+
     window.onload = function() {
-      // 背景バナー取得
       const BANNER_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getTopBannerMap';
       fetch(BANNER_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => setBackgroundBanner(data))
-        .catch(err => console.error('バナー通信エラー:', err));
+        .catch(err => console.error(err));
 
       const GAS_ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getHolomenTableData';
-
       fetch(GAS_ENDPOINT_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => {
           if (data.error) console.error(data.message);
           else initApp(data);
         })
-        .catch(err => console.error('通信エラー:', err));
+        .catch(err => console.error(err));
 
       const LINKS_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getExternalLinks';
       fetch(LINKS_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => renderExternalLinks(data))
-        .catch(err => console.error('外部リンク通信エラー:', err));
+        .catch(err => console.error(err));
 
-      // 著作権・非公式表示の非同期取得
       const COPYRIGHT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCopyright';
       fetch(COPYRIGHT_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => renderCopyright(data))
-        .catch(err => console.error('著作権情報通信エラー:', err));
+        .catch(err => console.error(err));
     };
 
     function renderCopyright(copyMap) {
       if (!copyMap) return;
       const unofficialElem = document.getElementById('headerUnofficialNotice');
       const copyrightElem = document.getElementById('footerCopyrightNotice');
-
-      if (unofficialElem && copyMap['非公式表示']) {
-        unofficialElem.textContent = copyMap['非公式表示'];
-      }
-      if (copyrightElem && copyMap['著作権表示']) {
-        copyrightElem.textContent = copyMap['著作権表示'];
-      }
+      if (unofficialElem && copyMap['非公式表示']) unofficialElem.textContent = copyMap['非公式表示'];
+      if (copyrightElem && copyMap['著作権表示']) copyrightElem.textContent = copyMap['著作権表示'];
     }
 
     function setBackgroundBanner(bannerMap) {
       if (!bannerMap) return;
       const getUrl = (keys) => {
-        for (let k of keys) {
-          if (bannerMap[k]) return bannerMap[k];
-        }
+        for (let k of keys) if (bannerMap[k]) return bannerMap[k];
         return '';
       };
       const isMobile = window.innerWidth <= 650;
       let bgUrl = isMobile ? getUrl(['背景（モバイル）', '背景(モバイル)', '背景モバイル', 'bg_mobile', 'mobile_bg']) : '';
       if (!bgUrl) bgUrl = getUrl(['背景', 'background', 'bg_banner', 'bg']);
-      
       if (bgUrl) {
         const bgContainer = document.getElementById('bgFallingContainer');
         if (bgContainer) bgContainer.style.backgroundImage = `url('${bgUrl}')`;
@@ -710,6 +683,7 @@
       const input = document.getElementById('searchInput');
       const clearBtn = document.getElementById('clearBtn');
       clearBtn.style.display = input.value.trim().length > 0 ? 'flex' : 'none';
+      currentPage = 1;
       filterData();
     }
 
@@ -717,6 +691,7 @@
       const input = document.getElementById('searchInput');
       input.value = '';
       document.getElementById('clearBtn').style.display = 'none';
+      currentPage = 1;
       filterData();
     }
 
@@ -727,7 +702,7 @@
       globalMasterData = res.masterData || {};
 
       document.getElementById('loading').style.display = 'none';
-      document.getElementById('listWrapper').style.display = 'block';
+      document.getElementById('listWrapper').style.display = 'flex';
 
       buildFilterOptionsDynamically();
       updateFilterIcons();
@@ -751,6 +726,7 @@
       const labels = { release: 'リリース順', unit: 'ユニット順', rarity: 'レアリティ順' };
       const orderLabel = currentSortOrder === 'asc' ? ' (昇順)' : ' (降順)';
       document.getElementById('sortBtnLabel').textContent = `並び替え: ${labels[currentSortType]}${orderLabel}`;
+      currentPage = 1;
       filterData();
     }
 
@@ -769,7 +745,6 @@
     function getMainFilterIconUrl(isOn) {
       return isOn ? (globalIconsMap['フィルタON'] || globalIconsMap['filter_on'] || '') : (globalIconsMap['フィルタOFF'] || globalIconsMap['filter_off'] || '');
     }
-
     function getTabFilterIconUrl(isOn) {
       return isOn ? (globalIconsMap['フィルタON（タブ）'] || globalIconsMap['フィルタON'] || '') : (globalIconsMap['フィルタOFF（タブ）'] || globalIconsMap['filter_off'] || '');
     }
@@ -784,7 +759,6 @@
       };
 
       let anyGlobalOn = false;
-
       for (const [tabKey, groups] of Object.entries(tabGroups)) {
         let isTabOn = false;
         groups.forEach(g => {
@@ -795,7 +769,6 @@
         });
 
         if (isTabOn) anyGlobalOn = true;
-
         const tabIconImg = document.querySelector(`.tab-filter-icon[data-tab-group="${tabKey}"]`);
         if (tabIconImg) {
           const url = getTabFilterIconUrl(isTabOn);
@@ -814,7 +787,7 @@
 
     function openFilterModal() { document.getElementById('filterModalOverlay').style.display = 'flex'; }
     function closeFilterModal() { document.getElementById('filterModalOverlay').style.display = 'none'; }
-    function applyFilterAndClose() { closeFilterModal(); updateFilterIcons(); filterData(); }
+    function applyFilterAndClose() { closeFilterModal(); updateFilterIcons(); currentPage = 1; filterData(); }
 
     function resetAllFilters() {
       const groups = ['rarity', 'type', 'skillTarget', 'skillEffect', 'skillCond', 'skillTargetType', 'costumeEffect', 'costumeCond', 'connectMass'];
@@ -837,7 +810,6 @@
     function toggleChip(elem, isSingle = false) {
       const group = elem.getAttribute('data-group');
       const val = elem.getAttribute('data-val');
-
       if (isSingle || val === 'all') {
         document.querySelectorAll(`.filter-chip-btn[data-group="${group}"]`).forEach(b => b.classList.remove('selected'));
         elem.classList.add('selected');
@@ -907,7 +879,6 @@
         const conditions = md.skill_conditions || [];
 
         let condHtml = `<div class="filter-btn-grid"><div class="filter-chip-btn selected" data-group="${groupName}" data-val="all" onclick="toggleChip(this)">すべて</div></div>`;
-
         const unassignedConds = conditions.filter(c => {
           const ctVal = String(c.condition_type || '').trim();
           return ctVal === '' || ctVal === 'undefined' || ctVal === 'null';
@@ -927,7 +898,6 @@
           const ctId = String(ct.id || '').trim();
           const ctName = String(ct.type || ct.name || '').trim();
           const matchedConds = conditions.filter(c => String(c.condition_type || '').trim() === ctId);
-
           if (matchedConds.length > 0) {
             if (ctName) condHtml += `<div class="filter-sub-section-title">${escapeHtml(ctName)}</div>`;
             condHtml += '<div class="filter-btn-grid">';
@@ -950,7 +920,6 @@
       const targets = md.skill_target || [];
 
       let targetHtml = `<div class="filter-btn-grid"><div class="filter-chip-btn selected" data-group="skillTargetType" data-val="all" onclick="toggleChip(this)">すべて</div></div>`;
-
       const unassignedTargets = targets.filter(st => {
         const ttVal = String(st.skill_target_type || '').trim();
         return ttVal === '' || ttVal === 'undefined' || ttVal === 'null';
@@ -970,7 +939,6 @@
         const ttId = String(tt.id || '').trim();
         const ttName = String(tt.target_type || tt.name || '').trim();
         const matchedTargets = targets.filter(st => String(st.skill_target_type || '').trim() === ttId);
-
         if (matchedTargets.length > 0) {
           if (ttName) targetHtml += `<div class="filter-sub-section-title">${escapeHtml(ttName)}</div>`;
           targetHtml += '<div class="filter-btn-grid">';
@@ -990,6 +958,66 @@
       if (!cellValue) return false;
       const cellTokens = String(cellValue).split(/[,、]/).map(s => s.trim());
       return selectedValues.some(val => cellTokens.includes(val));
+    }
+
+    function setPage(p) {
+      currentPage = p;
+      filterData();
+      document.getElementById('listWrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function changePerPage(val) {
+      itemsPerPage = Number(val);
+      currentPage = 1;
+      filterData();
+    }
+
+    function renderPagination(totalCount) {
+      const totalPages = itemsPerPage === 0 ? 1 : Math.ceil(totalCount / itemsPerPage) || 1;
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIdx = itemsPerPage === 0 ? (totalCount > 0 ? 1 : 0) : Math.min((currentPage - 1) * itemsPerPage + 1, totalCount);
+      const endIdx = itemsPerPage === 0 ? totalCount : Math.min(currentPage * itemsPerPage, totalCount);
+
+      const perPageSelectHtml = `
+        <span>表示数:</span>
+        <select class="per-page-select" onchange="changePerPage(this.value)">
+          <option value="25" ${itemsPerPage === 25 ? 'selected' : ''}>25</option>
+          <option value="50" ${itemsPerPage === 50 ? 'selected' : ''}>50</option>
+          <option value="100" ${itemsPerPage === 100 ? 'selected' : ''}>100</option>
+          <option value="0" ${itemsPerPage === 0 ? 'selected' : ''}>ALL</option>
+        </select>
+        <span>(${startIdx}〜${endIdx} / 全${totalCount}件)</span>
+      `;
+
+      let pagesHtml = '';
+      if (totalPages > 1) {
+        pagesHtml += `<button class="page-btn" onclick="setPage(1)" ${currentPage === 1 ? 'disabled' : ''}>«</button>`;
+        pagesHtml += `<button class="page-btn" onclick="setPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>‹</button>`;
+
+        let startP = Math.max(1, currentPage - 2);
+        let endP = Math.min(totalPages, currentPage + 2);
+        if (endP - startP < 4) {
+          if (startP === 1) endP = Math.min(totalPages, startP + 4);
+          else if (endP === totalPages) startP = Math.max(1, endP - 4);
+        }
+
+        for (let i = startP; i <= endP; i++) {
+          pagesHtml += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="setPage(${i})">${i}</button>`;
+        }
+
+        pagesHtml += `<button class="page-btn" onclick="setPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>›</button>`;
+        pagesHtml += `<button class="page-btn" onclick="setPage(${totalPages})" ${currentPage === totalPages ? 'disabled' : ''}>»</button>`;
+      }
+
+      const buildBarHtml = () => `
+        <div class="pagination-left">${perPageSelectHtml}</div>
+        <div class="pagination-controls">${pagesHtml}</div>
+      `;
+
+      document.getElementById('paginationTop').innerHTML = buildBarHtml();
+      document.getElementById('paginationBottom').innerHTML = buildBarHtml();
     }
 
     function filterData() {
@@ -1106,7 +1134,6 @@
         const idB = getNum(b, ['id', 'ID']);
 
         let diff = 0;
-
         if (currentSortType === 'release') {
           if (releaseA !== releaseB) diff = releaseB - releaseA;
           else if (rarityA !== rarityB) diff = rarityB - rarityA;
@@ -1125,13 +1152,20 @@
       });
 
       document.getElementById('hitCountDisplay').textContent = filtered.length + '名';
+      renderPagination(filtered.length);
 
       if (filtered.length === 0) {
         listBody.innerHTML = '<div style="text-align:center; padding:40px; color:#f8fafc; background:rgba(255,255,255,0.1); border-radius:8px;">該当するホロメンが見つかりませんでした。</div>';
         return;
       }
 
-      filtered.forEach(item => {
+      let displayItems = filtered;
+      if (itemsPerPage > 0) {
+        const start = (currentPage - 1) * itemsPerPage;
+        displayItems = filtered.slice(start, start + itemsPerPage);
+      }
+
+      displayItems.forEach(item => {
         const getVal = (keys) => {
           for (let k of keys) {
             if (item[k] !== undefined && item[k] !== null && item[k] !== '') return item[k];
@@ -1141,7 +1175,6 @@
 
         const charName = getVal(['character', 'キャラクター名', '名前']);
         const aliasStr = getVal(['alias', '二つ名']);
-        
         const mainImgUrl = getVal(['image', '画像']);
         const iconImgUrl = getVal(['icon', 'アイコン']);
         const mobilePlateUrl = getVal(['mobile_name_plate', 'mobilenameplate']);
@@ -1291,14 +1324,12 @@
       const isMobile = window.matchMedia('(max-width: 600px)').matches;
       const pcBg = elem.getAttribute('data-pop-pc-bg');
       const mobileBg = elem.getAttribute('data-pop-mobile-bg');
-
       const npBgUrl = isMobile ? (mobileBg || pcBg) : (pcBg || mobileBg);
       const innerHtml = elem._npInnerHtml || '';
 
       const npCard = document.getElementById('popHeaderNpCard');
       npCard.style.backgroundImage = npBgUrl ? `url('${escapeHtml(npBgUrl)}')` : 'none';
       npCard.innerHTML = innerHtml;
-
       document.getElementById('popCategoryTitle').textContent = categoryTitleText;
     }
 
@@ -1352,7 +1383,6 @@
       setupPopHeader(elem, 'ライブスキル');
 
       let html = '<div class="skill-pop-section">';
-
       html += `
         <div class="skill-pop-row">
           ${spIcon ? `<img src="${escapeHtml(spIcon)}" class="skill-pop-icon">` : '<div style="font-weight:bold; color:#2563eb; width:36px;">SP</div>'}
@@ -1362,7 +1392,6 @@
           </div>
         </div>
       `;
-
       html += `
         <div class="skill-pop-row">
           ${aIcon ? `<img src="${escapeHtml(aIcon)}" class="skill-pop-icon">` : '<div style="font-weight:bold; color:#2563eb; width:36px;">A</div>'}
@@ -1372,7 +1401,6 @@
           </div>
         </div>
       `;
-
       html += `
         <div class="skill-pop-row">
           ${pIcon ? `<img src="${escapeHtml(pIcon)}" class="skill-pop-icon">` : '<div style="font-weight:bold; color:#2563eb; width:36px;">P</div>'}
@@ -1382,7 +1410,6 @@
           </div>
         </div>
       `;
-
       html += '</div>';
 
       document.getElementById('popContent').innerHTML = html;
@@ -1402,11 +1429,9 @@
     function parseSkillTextWithTags(text) {
       if (!text) return '';
       const str = String(text);
-
       return str.replace(/\{([^}]+)\}/g, (match, tagName) => {
         const trimmedTag = String(tagName).trim();
         const tagUrl = globalTagUrlMap[trimmedTag];
-
         if (tagUrl && String(tagUrl).startsWith('http')) {
           return `<img src="${escapeHtml(tagUrl)}" class="inline-tag-img" alt="${escapeHtml(trimmedTag)}">`;
         }
@@ -1416,9 +1441,7 @@
 
     function showConnectPop(elem, costumeSkill, costumeIcon, connectMass, connectEffect, connectTargetUrl) {
       setupPopHeader(elem, '衣装スキル ＆ コネクト効果');
-
       let html = '<div class="connect-pop-section">';
-
       const parsedCostumeSkill = parseSkillTextWithTags(costumeSkill);
       html += `
         <div class="connect-pop-row">
@@ -1429,7 +1452,6 @@
           </div>
         </div>
       `;
-
       const connectFullText = (connectMass ? connectMass + ' : ' : '') + (connectEffect || '');
       const parsedConnectEffect = parseSkillTextWithTags(connectFullText);
       html += `
@@ -1441,16 +1463,13 @@
           </div>
         </div>
       `;
-
       html += '</div>';
 
       document.getElementById('popContent').innerHTML = html;
       document.getElementById('popOverlay').style.display = 'flex';
     }
 
-    function closePopText() {
-      document.getElementById('popOverlay').style.display = 'none';
-    }
+    function closePopText() { document.getElementById('popOverlay').style.display = 'none'; }
 
     function renderExternalLinks(linksList) {
       const linksBox = document.getElementById('footerLinksBox');
@@ -1458,7 +1477,6 @@
         linksBox.style.display = 'none';
         return;
       }
-
       const lineMap = {};
       linksList.forEach(item => {
         const lineNum = Number(item.line) || 1;
@@ -1467,7 +1485,6 @@
       });
 
       const sortedLines = Object.keys(lineMap).map(Number).sort((a, b) => a - b);
-
       const xSvg = `<svg class="footer-x-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`;
       const siteSvg = `<svg class="footer-site-svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>`;
 
@@ -1490,7 +1507,6 @@
         });
         html += '</div>';
       });
-
       linksBox.innerHTML = html;
     }
 
