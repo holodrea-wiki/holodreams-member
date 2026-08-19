@@ -23,7 +23,7 @@
       position: relative;
     }
 
-    /* 背景アニメーション・ドットパターン（music.html共通） */
+    /* 背景アニメーション・ドットパターン */
     .bg-falling-container {
       position: fixed;
       top: 0;
@@ -106,7 +106,7 @@
     }
     .back-btn:hover { background: #475569; }
 
-    /* メイン下地コンテナ（ダーク背景＋半透明カード） */
+    /* メイン下地コンテナ */
     .about-main-container {
       width: 100%;
       max-width: 860px;
@@ -134,7 +134,6 @@
       font-size: 15px;
     }
 
-    /* --- テキストタイプ別スタイル --- */
     /* 1. タイトル：太字・大・中央揃え */
     .about-title {
       font-size: 26px;
@@ -162,19 +161,31 @@
       margin-top: 10px;
     }
 
-    /* 3. テキスト / 段落テキスト：小・左揃え */
-    .about-text, .about-paragraph {
+    /* 3. 段落テキスト：段落ブロック（マージンと適切な行間）、左揃え */
+    .about-paragraph {
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      color: #cbd5e1;
+      line-height: 1.85;
+      margin: 12px 0 18px 0;
+      word-break: break-word;
+      letter-spacing: 0.015em;
+    }
+
+    /* 4. 通常テキスト：小・左揃え */
+    .about-text {
       font-size: 14px;
       font-weight: 400;
       text-align: left;
       color: #cbd5e1;
       line-height: 1.8;
-      margin: 10px 0;
+      margin: 8px 0;
       word-break: break-word;
       letter-spacing: 0.015em;
     }
 
-    /* 4. 注釈：小・赤色・左揃え */
+    /* 5. 注釈：小・赤色・左揃え */
     .about-annotation {
       font-size: 13px;
       font-weight: 600;
@@ -200,7 +211,7 @@
       text-decoration: none;
     }
 
-    /* フッター（music.htmlと同一） */
+    /* フッター */
     footer {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       padding: 32px 20px 28px;
@@ -259,25 +270,21 @@
     const GAS_BASE_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec';
 
     window.onload = function() {
-      // 背景
       fetch(`${GAS_BASE_URL}?action=getTopBannerMap`, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => setBackgroundBanner(data))
         .catch(err => console.error(err));
 
-      // フッターリンク
       fetch(`${GAS_BASE_URL}?action=getExternalLinks`, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => renderExternalLinks(data))
         .catch(err => console.error(err));
 
-      // 著作権表示
       fetch(`${GAS_BASE_URL}?action=getCopyright`, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => renderCopyright(data))
         .catch(err => console.error(err));
 
-      // Aboutデータ取得
       fetch(`${GAS_BASE_URL}?action=getAboutData`, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => {
@@ -299,7 +306,6 @@
     function formatCustomLinks(rawStr) {
       if (!rawStr) return '';
       let escaped = escapeHtml(String(rawStr));
-      // <表示テキスト(URL)> を aタグに置換
       return escaped.replace(/&lt;([^()&<>]+?)\((https?:\/\/[^\s()<>]+?)\)&gt;/g, function(match, text, url) {
         return `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
       });
@@ -314,17 +320,28 @@
         return;
       }
 
-      // priority昇順ソート
+      // priorityの昇順で並び替え
       const sortedRows = [...rows].sort((a, b) => {
         const pA = Number(a.priority) || 0;
         const pB = Number(b.priority) || 0;
         return pA - pB;
       });
 
-      // 段落テキストのグループ化処理
+      // 段落テキストかつ同じ paragraph_group の行をひとつの段落としてグループ化
       const renderBlocks = [];
       let currentParagraphGroup = null;
       let currentParagraphTexts = [];
+
+      const flushParagraph = () => {
+        if (currentParagraphTexts.length > 0) {
+          renderBlocks.push({
+            type: '段落テキスト',
+            texts: [...currentParagraphTexts]
+          });
+          currentParagraphTexts = [];
+          currentParagraphGroup = null;
+        }
+      };
 
       sortedRows.forEach(row => {
         const type = String(row.text_type || '').trim();
@@ -333,31 +350,35 @@
                        ? String(row.paragraph_group).trim() 
                        : null;
 
-        if (type === '段落テキスト' && pGroup !== null) {
-          if (currentParagraphGroup === pGroup) {
-            currentParagraphTexts.push(text);
-          } else {
-            if (currentParagraphTexts.length > 0) {
-              renderBlocks.push({ type: '段落テキスト', texts: currentParagraphTexts });
+        if (type === '段落テキスト') {
+          if (pGroup !== null) {
+            // グループ指定がある場合：同じグループ値が続く限りまとめる
+            if (currentParagraphGroup === pGroup) {
+              currentParagraphTexts.push(text);
+            } else {
+              flushParagraph();
+              currentParagraphGroup = pGroup;
+              currentParagraphTexts.push(text);
             }
-            currentParagraphGroup = pGroup;
-            currentParagraphTexts = [text];
+          } else {
+            // グループ指定がない段落テキスト
+            flushParagraph();
+            renderBlocks.push({
+              type: '段落テキスト',
+              texts: [text]
+            });
           }
         } else {
-          if (currentParagraphTexts.length > 0) {
-            renderBlocks.push({ type: '段落テキスト', texts: currentParagraphTexts });
-            currentParagraphGroup = null;
-            currentParagraphTexts = [];
-          }
-          renderBlocks.push({ type: type, text: text });
+          flushParagraph();
+          renderBlocks.push({
+            type: type,
+            text: text
+          });
         }
       });
+      flushParagraph();
 
-      if (currentParagraphTexts.length > 0) {
-        renderBlocks.push({ type: '段落テキスト', texts: currentParagraphTexts });
-      }
-
-      // DOM描画
+      // 各要素のレンダリング
       renderBlocks.forEach(block => {
         if (block.type === 'タイトル') {
           const el = document.createElement('div');
@@ -375,14 +396,11 @@
           el.innerHTML = formatCustomLinks(block.text);
           container.appendChild(el);
         } else if (block.type === '段落テキスト') {
-          const el = document.createElement('div');
-          el.className = 'about-paragraph';
-          if (block.texts) {
-            el.innerHTML = block.texts.map(t => formatCustomLinks(t)).join('<br>');
-          } else {
-            el.innerHTML = formatCustomLinks(block.text);
-          }
-          container.appendChild(el);
+          const p = document.createElement('p');
+          p.className = 'about-paragraph';
+          // 同一グループ内のテキストを結合してひとつの段落として出力
+          p.innerHTML = block.texts.map(t => formatCustomLinks(t)).join('');
+          container.appendChild(p);
         } else {
           const el = document.createElement('div');
           el.className = 'about-text';
