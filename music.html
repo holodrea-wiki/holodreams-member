@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
   <meta name="description" content="ホロライブドリームス（ホロドリ）の楽曲・トラック一覧データ攻略まとめサイト。">
-  <!-- OGP（SNSシェア用） -->
   <meta property="og:title" content="ホロドリ 攻略データベース">
   <meta property="og:description" content="楽曲一覧・難易度・スコアレート・楽曲クレジット情報">
   <meta charset="UTF-8">
@@ -24,7 +23,6 @@
       position: relative;
     }
 
-    /* 共通背景コンテナ & ドットオーバーレイ */
     .bg-falling-container {
       position: fixed;
       top: 0;
@@ -53,7 +51,6 @@
       mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.05) 15%, rgba(0,0,0,0.85) 80%);
     }
 
-    /* 上部ナビヘッダー */
     .header {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       padding: 24px 20px;
@@ -91,10 +88,7 @@
       z-index: 1000;
       background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(8px);
-      padding-top: 12px;
-      padding-bottom: 12px;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 12px 16px;
       max-width: 1185px;
       min-width: 610px;
       margin: 0 auto;
@@ -160,7 +154,6 @@
       justify-content: center;
     }
 
-    /* ★ 修正: 青ヘッダーバー（PC時は左詰め横並び） */
     .standalone-blue-header {
       background: #0044ff;
       color: #ffffff;
@@ -176,11 +169,7 @@
       gap: 16px;
       min-height: 44px;
     }
-    .header-title-group {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .header-title-group { display: flex; align-items: center; gap: 12px; }
     .hit-count-badge {
       font-size: 14px;
       font-weight: bold;
@@ -189,11 +178,7 @@
       padding: 4px 10px;
       border-radius: 12px;
     }
-    .header-buttons-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .header-buttons-group { display: flex; align-items: center; gap: 10px; }
 
     .open-filter-btn, .open-sort-btn {
       background: #ffffff;
@@ -205,7 +190,7 @@
       font-weight: bold;
       cursor: pointer;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: background 0.2s, transform 0.1s;
+      transition: background 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -214,14 +199,81 @@
     .open-filter-btn:hover, .open-sort-btn:hover { background: #f1f5f9; }
     .filter-icon-inline { height: 16px; width: auto; object-fit: contain; vertical-align: middle; }
 
-    /* フィルタ＆ソート モーダル共通スタイル */
+    /* ページネーション 共通スタイル */
+    .pagination-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid #cbd5e1;
+      font-size: 13px;
+      font-weight: bold;
+      color: #334155;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pagination-bar.bottom {
+      border-bottom: none;
+      border-top: 1px solid #cbd5e1;
+      border-radius: 0 0 14px 14px;
+    }
+    .pagination-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .per-page-select {
+      background: #f1f5f9;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #0f172a;
+      cursor: pointer;
+      outline: none;
+    }
+    .pagination-controls {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .page-btn {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      min-width: 32px;
+      height: 32px;
+      padding: 0 6px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+    .page-btn:hover:not(:disabled) {
+      background: #e2e8f0;
+      border-color: #94a3b8;
+    }
+    .page-btn.active {
+      background: #0044ff;
+      border-color: #0044ff;
+      color: #ffffff;
+    }
+    .page-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* モーダル */
     .filter-modal-overlay { 
       display: none; 
       position: fixed; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 100%; 
+      top: 0; left: 0; width: 100%; height: 100%; 
       background: rgba(0, 0, 0, 0.75); 
       z-index: 3000; 
       justify-content: center; 
@@ -252,13 +304,12 @@
       font-weight: bold; 
       font-size: 16px; 
       color: #ffffff; 
-      flex-shrink: 0; 
     }
     .filter-modal-actions { display: flex; gap: 8px; align-items: center; }
     .filter-apply-btn { background: #ea580c; color: #ffffff; border: none; padding: 6px 16px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; }
     .filter-reset-btn { background: #334155; color: #f1f5f9; border: 1px solid #475569; padding: 6px 14px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; }
 
-    .filter-tabs-header { display: flex; background: #0f172a; padding: 6px; gap: 4px; border-bottom: 1px solid #334155; flex-shrink: 0; }
+    .filter-tabs-header { display: flex; background: #0f172a; padding: 6px; gap: 4px; border-bottom: 1px solid #334155; }
     .filter-tab-btn { flex: 1; padding: 8px 10px; font-size: 12px; font-weight: bold; text-align: center; background: #1e293b; border: 1px solid #334155; border-radius: 6px; cursor: pointer; color: #cbd5e1; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
     .filter-tab-btn.active { background: #2563eb; color: #ffffff; border-color: #3b82f6; }
     .tab-filter-icon { height: 14px; width: auto; object-fit: contain; }
@@ -271,65 +322,19 @@
     .filter-chip-btn { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 8px 4px; font-size: 12px; font-weight: bold; color: #cbd5e1; text-align: center; cursor: pointer; user-select: none; }
     .filter-chip-btn.selected { background: #2563eb; color: #ffffff; border-color: #3b82f6; }
 
-    /* タレントタブ用スタイル */
     .talent-mode-toggle { display: flex; gap: 8px; background: #0f172a; padding: 4px; border-radius: 8px; border: 1px solid #334155; }
     .talent-mode-btn { flex: 1; padding: 8px; font-size: 13px; font-weight: bold; color: #cbd5e1; background: transparent; border: none; border-radius: 6px; cursor: pointer; text-align: center; }
     .talent-mode-btn.selected { background: #2563eb; color: #ffffff; }
 
-    .filter-unit-band {
-      font-size: 12px;
-      font-weight: bold;
-      color: #fef08a;
-      background: #451a03;
-      padding: 6px 10px;
-      border-radius: 6px;
-      margin-top: 6px;
-      margin-bottom: 4px;
-      border: 1px solid #78350f;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .filter-unit-checkbox {
-      width: 16px;
-      height: 16px;
-      cursor: pointer;
-      accent-color: #ea580c;
-    }
+    .filter-unit-band { font-size: 12px; font-weight: bold; color: #fef08a; background: #451a03; padding: 6px 10px; border-radius: 6px; margin-top: 6px; margin-bottom: 4px; border: 1px solid #78350f; display: flex; align-items: center; gap: 8px; }
+    .filter-unit-checkbox { width: 16px; height: 16px; cursor: pointer; accent-color: #ea580c; }
 
-    /* 楽曲レベルタブ プルダウン */
-    .level-filter-row {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .level-filter-label {
-      font-size: 13px;
-      font-weight: bold;
-      color: #cbd5e1;
-    }
-    .level-range-select-group {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .level-range-select-group select {
-      flex: 1;
-    }
+    .level-filter-row { display: flex; flex-direction: column; gap: 8px; }
+    .level-filter-label { font-size: 13px; font-weight: bold; color: #cbd5e1; }
+    .level-range-select-group { display: flex; align-items: center; gap: 8px; }
+    .level-range-select-group select { flex: 1; }
 
-    /* ソートモーダル */
-    .sort-modal-card { 
-      background: #1e293b; 
-      color: #ffffff; 
-      width: 100%; 
-      max-width: 420px; 
-      border-radius: 14px; 
-      display: flex; 
-      flex-direction: column; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
-      overflow: hidden; 
-      border: 1px solid #334155; 
-    }
+    .sort-modal-card { background: #1e293b; color: #ffffff; width: 100%; max-width: 420px; border-radius: 14px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; border: 1px solid #334155; }
     .sort-modal-body { padding: 20px; display: flex; flex-direction: column; gap: 16px; }
     .sort-sub-title { font-size: 12px; font-weight: bold; color: #94a3b8; margin-bottom: -6px; }
     .sort-option-group { display: flex; flex-direction: column; gap: 8px; }
@@ -339,47 +344,12 @@
     .sort-order-toggle { display: flex; gap: 8px; background: #0f172a; padding: 4px; border-radius: 8px; border: 1px solid #334155; }
     .sort-order-btn { flex: 1; padding: 10px; font-size: 13px; font-weight: bold; color: #cbd5e1; background: transparent; border: none; border-radius: 6px; cursor: pointer; text-align: center; }
     .sort-order-btn.selected { background: #ea580c; color: #ffffff; }
-
     .sort-level-select-wrapper { margin-top: 4px; }
-    .sort-select-box {
-      width: 100%;
-      background: #0f172a;
-      border: 1px solid #334155;
-      color: #ffffff;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 13.5px;
-      font-weight: bold;
-      outline: none;
-      cursor: pointer;
-      transition: border-color 0.2s;
-    }
-    .sort-select-box:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
-    .sort-disabled-notice {
-      font-size: 11.5px;
-      color: #f87171;
-      margin-top: 4px;
-      display: none;
-    }
+    .sort-select-box { width: 100%; background: #0f172a; border: 1px solid #334155; color: #ffffff; padding: 10px 14px; border-radius: 8px; font-size: 13.5px; font-weight: bold; outline: none; cursor: pointer; }
+    .sort-select-box:disabled { opacity: 0.4; cursor: not-allowed; }
+    .sort-disabled-notice { font-size: 11.5px; color: #f87171; margin-top: 4px; display: none; }
 
-    /* 難易度マスク */
-    .diff-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      flex: 1;
-      transition: opacity 0.2s, filter 0.2s;
-    }
-    .diff-column.dimmed {
-      opacity: 0.25;
-      filter: grayscale(80%);
-    }
-
-    /* ★ 修正: リストコンテナ（PC〜中間幅で横スクロールを有効化） */
+    /* リストコンテナ */
     .list-wrapper {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
@@ -390,8 +360,13 @@
       max-width: 1185px;
       min-width: 610px;
       margin: 0 auto 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .list-scroll-area {
       overflow-x: auto;
-      flex: 1;
+      width: 100%;
     }
     .list-body {
       display: flex;
@@ -405,419 +380,299 @@
 
     #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
 
-    /* ★ 修正: 楽曲カード（PC時は固定幅1140pxで崩れを防止） */
+    /* ★ 添付画像再現：楽曲カードデザイン */
     .music-card {
-      background: linear-gradient(135deg, rgba(224, 242, 254, 0.85) 0%, rgba(186, 230, 253, 0.65) 50%, rgba(125, 211, 252, 0.75) 100%);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1.5px solid rgba(255, 255, 255, 0.8);
-      border-radius: 18px;
-      padding: 16px 20px;
-      box-shadow: 0 8px 32px rgba(14, 165, 233, 0.18),
-                  inset 0 2px 4px rgba(255, 255, 255, 0.9),
-                  inset 0 -2px 4px rgba(56, 189, 248, 0.2);
+      background: linear-gradient(135deg, #dcf0fa 0%, #bde4f7 50%, #9dd7f3 100%);
+      border: 1.5px solid #ffffff;
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: 0 4px 16px rgba(14, 165, 233, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.9);
       display: flex;
-      flex-direction: column;
-      gap: 12px;
+      flex-direction: row;
+      gap: 18px;
       position: relative;
       width: 1140px;
       min-width: 1140px;
       max-width: 1140px;
+      align-items: stretch;
     }
 
-    .music-top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .music-main-meta {
+    /* 左ブロック：ジャケット ＋ 下部バッジ */
+    .card-left-col {
+      width: 190px;
+      min-width: 190px;
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .jacket-record-wrap {
+      width: 190px;
+      height: 140px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .jacket-main-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      position: relative;
+      z-index: 2;
+    }
+    .record-disc-img {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      right: 4px;
+      top: 10px;
+      z-index: 1;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    }
+    .time-type-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+    }
+    .time-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #0369a1;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+    }
+    .time-pill-badge img { height: 16px; width: 16px; object-fit: contain; }
+    .type-pill-img { height: 24px; width: auto; object-fit: contain; }
+
+    /* 中央ブロック：楽曲タイトル・アーティスト・クレジット・難易度・コピーライト */
+    .card-center-col {
       flex: 1;
       min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-content: space-between;
     }
-    .music-title-row {
+    .title-artist-box {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .track-title-line {
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .track-icon {
-      height: 24px;
-      width: 24px;
-      object-fit: contain;
-      flex-shrink: 0;
-      filter: drop-shadow(0 2px 4px rgba(14, 165, 233, 0.3));
-    }
-    .music-title-text {
-      font-size: 19px;
+    .track-title-line .track-icon { height: 22px; width: 22px; object-fit: contain; }
+    .track-title-line .track-title-text {
+      font-size: 20px;
       font-weight: 900;
-      color: #0369a1;
+      color: #0055a5;
       letter-spacing: 0.02em;
-      word-break: break-all;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    .music-artist-row {
+    .artist-line {
       display: flex;
       align-items: center;
       gap: 6px;
       margin-left: 2px;
     }
-    .artist-icon {
-      height: 16px;
-      width: 16px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-    .artist-text {
-      font-size: 13.5px;
+    .artist-line .artist-icon { height: 15px; width: 15px; object-fit: contain; }
+    .artist-line .artist-text {
+      font-size: 13px;
       font-weight: bold;
       color: #0284c7;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .music-actions-wrapper {
+    /* クレジットパネル（白半透明） */
+    .credits-card {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      padding: 6px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      max-width: 480px;
+    }
+    .credit-item {
       display: flex;
       align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-    .btn-youtube {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: linear-gradient(135deg, #ff4b4b 0%, #dc2626 100%);
-      color: #ffffff;
-      text-decoration: none;
+      gap: 12px;
       font-size: 12px;
-      font-weight: 900;
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.5);
-      transition: opacity 0.2s, transform 0.1s;
     }
-    .btn-youtube:hover { opacity: 0.9; transform: translateY(-1px); }
-    .btn-youtube svg { width: 14px; height: 14px; fill: currentColor; }
-
-    .btn-buynow {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 900;
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.6);
-      transition: opacity 0.2s, transform 0.1s;
+    .credit-label {
+      font-weight: bold;
+      color: #0066aa;
+      min-width: 30px;
+      letter-spacing: 0.15em;
     }
-    .btn-buynow:hover { opacity: 0.9; transform: translateY(-1px); }
-    .btn-buynow svg { width: 14px; height: 14px; fill: currentColor; }
+    .credit-val {
+      font-weight: bold;
+      color: #1e293b;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-    /* ★ 修正: 中段・下段コンテンツエリア（余白バランス改善） */
-    .music-content-row {
+    /* 難易度ピルボード */
+    .diff-pill-board {
       display: flex;
-      gap: 24px;
-      align-items: stretch;
+      align-items: center;
+      gap: 12px;
+      max-width: 480px;
     }
-
-    .jacket-container {
-      width: 200px;
-      min-width: 200px;
-      max-width: 200px;
-      height: 200px;
-      position: relative;
-      flex-shrink: 0;
+    .diff-pill-cell {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      transition: opacity 0.2s;
+    }
+    .diff-pill-cell.dimmed { opacity: 0.25; filter: grayscale(80%); }
+    .diff-pill-tag {
+      width: 100%;
+      height: 18px;
+      border-radius: 9px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: transparent;
-      border: none;
-      box-shadow: none;
+      font-size: 10px;
+      font-weight: 900;
+      color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255,255,255,0.7);
     }
-    .jacket-img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 0;
-      border: none;
-      filter: drop-shadow(0 6px 12px rgba(14, 165, 233, 0.25));
+    .diff-pill-tag.easy { background: linear-gradient(180deg, #6ee7b7 0%, #34d399 100%); }
+    .diff-pill-tag.normal { background: linear-gradient(180deg, #fcd34d 0%, #fbbf24 100%); color:#78350f; }
+    .diff-pill-tag.hard { background: linear-gradient(180deg, #f472b6 0%, #ec4899 100%); }
+    .diff-pill-tag.expert { background: linear-gradient(180deg, #c084fc 0%, #a855f7 100%); }
+    .diff-pill-num {
+      font-family: "Arial Black", sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      color: #004488;
     }
-
-    .music-details-center {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      min-width: 0;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .time-type-line {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .time-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 15px;
-      font-weight: bold;
+    .card-copyright {
+      font-size: 10px;
       color: #0369a1;
-      background: rgba(255, 255, 255, 0.5);
-      padding: 4px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-    }
-    .time-icon {
-      height: 22px;
-      width: 22px;
-      object-fit: contain;
-    }
-    .type-badge-img {
-      height: 28px;
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+      opacity: 0.85;
+      line-height: 1.2;
     }
 
-    /* ★ 修正: クレジット（幅を400pxに拡張して余白バランス最適化） */
-    .credits-table {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      font-size: 13px;
-      width: 100%;
-      max-width: 400px;
-      background: rgba(255, 255, 255, 0.4);
-      padding: 8px 12px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      margin-top: 0;
-    }
-    .credit-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .credit-label {
-      width: 32px;
-      min-width: 32px;
-      font-weight: bold;
-      color: #0369a1;
-      letter-spacing: 0.15em;
-    }
-    .marquee-box {
-      flex: 1;
-      overflow: hidden;
-      position: relative;
-      white-space: nowrap;
-    }
-    .marquee-text {
-      display: inline-block;
-      color: #0f172a;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-    .marquee-active {
-      display: inline-block;
-      animation: marqueeAnim 15s linear infinite;
-    }
-    .marquee-active:hover {
-      animation-play-state: paused;
-    }
-    @keyframes marqueeAnim {
-      0%   { transform: translateX(0); }
-      20%  { transform: translateX(0); }
-      85%  { transform: translateX(-100%); }
-      100% { transform: translateX(-100%); }
-    }
-
-    .track-copyright-text {
-      font-size: 10.5px;
-      color: #0369a1;
-      opacity: 0.8;
-      line-height: 1.35;
-      word-break: break-word;
-      white-space: normal;
-      margin-top: auto;
-    }
-
-    .music-right-panel {
-      width: 440px;
-      min-width: 440px;
-      max-width: 440px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    .score-rate-card {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(224, 242, 254, 0.5) 100%);
-      border: 1.5px solid rgba(255, 255, 255, 0.8);
-      border-radius: 12px;
-      padding: 10px 14px;
-      min-height: 100px;
+    /* 右ブロック：上部ボタン ＋ 下部スコアレートパネル */
+    .card-right-col {
+      width: 360px;
+      min-width: 360px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 8px;
-      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+      align-items: flex-end;
+      gap: 10px;
     }
-    .score-rate-header {
+    .actions-buttons-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-youtube-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 2px 6px rgba(220, 38, 38, 0.3);
+      transition: transform 0.1s;
+    }
+    .btn-youtube-pill:hover { transform: translateY(-1px); }
+    .btn-youtube-pill svg { width: 12px; height: 12px; fill: currentColor; }
+
+    .btn-buynow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
+      transition: transform 0.1s;
+    }
+    .btn-buynow-pill:hover { transform: translateY(-1px); }
+    .btn-buynow-pill svg { width: 13px; height: 13px; fill: currentColor; }
+
+    /* スコアレート対象パネル（白半透明 角丸四角） */
+    .scorerate-container {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.55);
+      border: 1.5px solid rgba(255, 255, 255, 0.85);
+      border-radius: 14px;
+      padding: 10px 14px;
+      min-height: 105px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(14, 165, 233, 0.08);
+    }
+    .scorerate-head-row {
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: bold;
       color: #0284c7;
     }
-    .score-rate-icon {
-      height: 18px;
-      width: 18px;
-      object-fit: contain;
-    }
-    .score-rate-char-list {
+    .scorerate-head-row img { height: 16px; width: 16px; object-fit: contain; }
+    .scorerate-icons-list {
       display: flex;
       align-items: center;
       gap: 8px;
       overflow-x: auto;
-      padding: 4px 2px 6px;
+      padding: 4px 2px;
     }
-    .score-rate-char-icon {
-      width: 58px;
-      height: 58px;
+    .scorerate-avatar {
+      width: 54px;
+      height: 54px;
       border-radius: 50%;
-      border: 2.5px solid #ffffff;
-      box-shadow: 0 4px 8px rgba(2, 132, 199, 0.28);
+      border: 2px solid #ffffff;
+      box-shadow: 0 3px 6px rgba(2, 132, 199, 0.25);
       object-fit: cover;
       flex-shrink: 0;
+      background: #bae6fd;
     }
-    .score-rate-none {
-      font-size: 14px;
+    .scorerate-none-text {
+      font-size: 13px;
       font-weight: bold;
       color: #64748b;
-      padding: 12px 4px;
-    }
-
-    .difficulty-board {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(224, 242, 254, 0.5) 100%);
-      border: 1.5px solid rgba(255, 255, 255, 0.8);
-      border-radius: 12px;
-      padding: 6px 8px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.8);
-    }
-    .diff-tag-img {
-      height: 22px;
-      width: 100%;
-      max-width: 90px;
-      object-fit: contain;
-      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.12));
-    }
-    .diff-fallback-tag {
-      font-size: 11px;
-      font-weight: bold;
-      color: #ffffff;
-      padding: 2px 8px;
-      border-radius: 10px;
-      text-align: center;
-      width: 100%;
-      max-width: 90px;
-    }
-    .diff-val {
-      font-family: "Arial Black", "Consolas", sans-serif;
-      font-size: 18px;
-      font-weight: 900;
-      color: #0369a1;
-      line-height: 1;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-    }
-
-    /* ★ 修正: レスポンシブ対応（スマホ画面: 600px以下のみ適用） */
-    @media screen and (max-width: 600px) {
-      .sticky-top-container, .list-wrapper { 
-        max-width: 100% !important; 
-        min-width: 100% !important; 
-      }
-      .list-body {
-        width: 100% !important;
-        min-width: 100% !important;
-      }
-      .music-card {
-        width: 100% !important;
-        min-width: 100% !important;
-        max-width: 100% !important;
-      }
-
-      /* 青ヘッダー：1段目にタイトル、2段目にボタンを2列配置 */
-      .standalone-blue-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 10px 14px;
-      }
-      .header-title-group {
-        width: 100%;
-      }
-      .header-buttons-group {
-        width: 100%;
-        display: flex;
-        gap: 8px;
-      }
-      .open-filter-btn {
-        flex: 1;
-        justify-content: center;
-      }
-      .open-sort-btn {
-        flex: 2;
-        justify-content: center;
-      }
-
-      /* タイトル上段を縦並びにしてボタンをアーティスト名の下に配置 */
-      .music-top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      .music-main-meta { width: 100%; }
-      .music-actions-wrapper {
-        margin-top: 2px;
-        margin-left: 2px;
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      /* ジャケット画像を中央に配置 */
-      .jacket-container {
-        margin: 0 auto;
-      }
-
-      /* 中段ブロックを縦並びに切り替え */
-      .music-content-row { 
-        flex-direction: column; 
-        gap: 12px;
-      }
-      .music-right-panel { 
-        width: 100%; 
-        min-width: 100%; 
-        max-width: 100%; 
-      }
-      .credits-table { max-width: 100%; }
-      .filter-btn-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+      padding: 10px 0;
     }
 
     footer {
@@ -829,92 +684,22 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
       margin-top: auto;
     }
-    .footer-links-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      width: 100%;
-      max-width: 860px;
-    }
-    .footer-line-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 12px 16px;
-      width: 100%;
-    }
-    .footer-btn-base {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-    .footer-btn-store {
-      width: 160px;
-      height: 48px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-    .footer-btn-store:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-    }
-    .footer-btn-x {
-      background: #000000;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: bold;
-      padding: 10px 22px;
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      gap: 8px;
-      white-space: nowrap;
-    }
-    .footer-btn-x:hover {
-      background-color: #18181b;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-      border-color: rgba(255, 255, 255, 0.4);
-    }
+    .footer-links-container { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 860px; }
+    .footer-line-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 16px; width: 100%; }
+    .footer-btn-base { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s ease; cursor: pointer; }
+    .footer-btn-store { width: 160px; height: 48px; background-size: contain; background-repeat: no-repeat; background-position: center; border-radius: 8px; }
+    .footer-btn-x { background: #000000; color: #ffffff; font-size: 14px; font-weight: bold; padding: 10px 22px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.2); gap: 8px; }
     .footer-x-svg { width: 15px; height: 15px; fill: currentColor; }
-    .footer-btn-site {
-      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-      color: #38bdf8;
-      border: 1px solid #475569;
-      padding: 9px 20px;
-      border-radius: 20px;
-      font-size: 13.5px;
-      font-weight: bold;
-      gap: 8px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-    }
-    .footer-btn-site:hover {
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-      color: #ffffff;
-      border-color: #60a5fa;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.35);
-    }
+    .footer-btn-site { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: #38bdf8; border: 1px solid #475569; padding: 9px 20px; border-radius: 20px; font-size: 13.5px; font-weight: bold; gap: 8px; }
     .footer-site-svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
   </style>
 </head>
 <body>
 
-  <!-- 共通背景コンテナ -->
   <div class="bg-falling-container" id="bgFallingContainer"></div>
 
-  <!-- 最上部共通ヘッダー -->
   <div class="header">
     <h1>ホロドリ 攻略データベース</h1>
     <div class="header-subtext" id="headerUnofficialNotice"></div>
@@ -929,7 +714,6 @@
       </div>
     </div>
 
-    <!-- ★ 修正: ヘッダーグループ化（PC/スマホで配置を最適化） -->
     <div class="standalone-blue-header">
       <div class="header-title-group">
         <span>楽曲リスト</span>
@@ -949,7 +733,19 @@
 
   <div id="loading">データを読み込み中...</div>
 
-  <!-- フィルタ設定ダイアログ -->
+  <div class="list-wrapper" id="listWrapper" style="display:none;">
+    <!-- 上部ページャー -->
+    <div class="pagination-bar" id="paginationTop"></div>
+
+    <div class="list-scroll-area">
+      <div class="list-body" id="listBody"></div>
+    </div>
+
+    <!-- 下部ページャー -->
+    <div class="pagination-bar bottom" id="paginationBottom"></div>
+  </div>
+
+  <!-- フィルタモーダル -->
   <div id="filterModalOverlay" class="filter-modal-overlay" onclick="closeFilterModal()">
     <div class="filter-modal-card" onclick="event.stopPropagation()">
       <div class="filter-modal-topbar">
@@ -976,7 +772,6 @@
       </div>
 
       <div class="filter-tabs-body">
-        <!-- タブ1: 楽曲タイプ -->
         <div id="pane-musicType" class="filter-tab-pane active">
           <div class="filter-btn-grid" id="typeFilterGrid">
             <div class="filter-chip-btn selected" data-group="musicType" data-val="all" onclick="toggleChip(this, true)">すべて</div>
@@ -985,7 +780,6 @@
           </div>
         </div>
 
-        <!-- タブ2: 楽曲レベル -->
         <div id="pane-musicLevel" class="filter-tab-pane">
           <div class="level-filter-row">
             <div class="level-filter-label">難易度</div>
@@ -1008,7 +802,6 @@
           </div>
         </div>
 
-        <!-- タブ3: タレント -->
         <div id="pane-talent" class="filter-tab-pane">
           <div class="filter-btn-grid">
             <div class="filter-chip-btn selected" id="talentAllChip" data-group="talent" data-val="all" onclick="toggleTalentAllChip(this)">すべて</div>
@@ -1025,7 +818,7 @@
     </div>
   </div>
 
-  <!-- ソート設定ダイアログ -->
+  <!-- ソートモーダル -->
   <div id="sortModalOverlay" class="filter-modal-overlay" onclick="closeSortModal()">
     <div class="sort-modal-card" onclick="event.stopPropagation()">
       <div class="filter-modal-topbar">
@@ -1037,17 +830,13 @@
       <div class="sort-modal-body">
         <div class="sort-sub-title">並び替え項目</div>
         <div class="sort-option-group">
-          <!-- 50音順ボタン -->
           <button type="button" class="sort-opt-btn selected" data-sort="title" onclick="selectSortOption('title', this)">
             <span>50音順（楽曲名）</span>
           </button>
-          
-          <!-- 楽曲レベルボタン -->
           <button type="button" class="sort-opt-btn" id="sortOptLevelBtn" data-sort="level" onclick="selectSortOption('level', this)">
             <span>楽曲レベル</span>
           </button>
 
-          <!-- 難易度プルダウン -->
           <div class="sort-level-select-wrapper" id="levelSelectWrapper">
             <select id="levelDifficultySelect" class="sort-select-box" onchange="onLevelSelectChange()">
               <option value="EXPERT" selected>難易度: EXPERT</option>
@@ -1068,11 +857,6 @@
     </div>
   </div>
 
-  <div class="list-wrapper" id="listWrapper" style="display:none;">
-    <div class="list-body" id="listBody"></div>
-  </div>
-
-  <!-- 共通フッター -->
   <footer>
     <div class="footer-links-container" id="footerLinksBox"></div>
     <div class="copyright-text" id="footerCopyrightNotice"></div>
@@ -1091,53 +875,49 @@
     let maxLevelGlobal = 35;
 
     // フィルタ設定
-    let filterTypeVal = 'all'; // 'all' | 'オリジナル' | 'カバー'
-    let filterLevelDiff = 'none'; // 'none' | 'EASY' | 'NORMAL' | 'HARD' | 'EXPERT'
+    let filterTypeVal = 'all';
+    let filterLevelDiff = 'none';
     let filterLevelMin = 1;
     let filterLevelMax = 35;
-    let filterTalentMode = 'artist'; // 'artist' | 'scorerate'
-    let selectedTalentSet = new Set(); // Set of character names
+    let filterTalentMode = 'artist';
+    let selectedTalentSet = new Set();
 
     // ソート設定
-    let currentSortType = 'title'; // 'title' | 'level'
-    let currentSortLevelDiff = 'EXPERT'; // 'EASY' | 'NORMAL' | 'HARD' | 'EXPERT'
-    let currentSortOrder = 'asc';  // 'asc' | 'desc'
+    let currentSortType = 'title';
+    let currentSortLevelDiff = 'EXPERT';
+    let currentSortOrder = 'asc';
+
+    // ページネーション状態
+    let currentPage = 1;
+    let itemsPerPage = 50; // 25, 50, 100, 0(ALL)
 
     window.onload = function() {
       const BANNER_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getTopBannerMap';
       fetch(BANNER_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => setBackgroundBanner(data))
-        .catch(err => console.error('バナー通信エラー:', err));
+        .catch(err => console.error(err));
 
-      // 楽曲データ取得
       const MUSIC_DATA_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getMusicTrackData';
       fetch(MUSIC_DATA_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => {
-          if (data.error) {
-            console.error('GASエラー:', data.message);
-            document.getElementById('loading').textContent = 'データの取得に失敗しました: ' + data.message;
-          } else {
-            initApp(data);
-          }
+          if (data.error) document.getElementById('loading').textContent = 'データの取得に失敗しました: ' + data.message;
+          else initApp(data);
         })
-        .catch(err => {
-          console.error('楽曲データ通信エラー:', err);
-          document.getElementById('loading').textContent = 'サーバーとの通信に失敗しました。';
-        });
+        .catch(err => document.getElementById('loading').textContent = 'サーバーとの通信に失敗しました。');
 
       const LINKS_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getExternalLinks';
       fetch(LINKS_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => renderExternalLinks(data))
-        .catch(err => console.error('外部リンク通信エラー:', err));
+        .catch(err => console.error(err));
 
       const COPYRIGHT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCopyright';
       fetch(COPYRIGHT_URL, { method: 'GET', redirect: 'follow' })
         .then(res => res.json())
         .then(data => renderCopyright(data))
-        .catch(err => console.error('著作権情報通信エラー:', err));
+        .catch(err => console.error(err));
     };
 
     function renderCopyright(copyMap) {
@@ -1151,15 +931,12 @@
     function setBackgroundBanner(bannerMap) {
       if (!bannerMap) return;
       const getUrl = (keys) => {
-        for (let k of keys) {
-          if (bannerMap[k]) return bannerMap[k];
-        }
+        for (let k of keys) if (bannerMap[k]) return bannerMap[k];
         return '';
       };
       const isMobile = window.innerWidth <= 650;
       let bgUrl = isMobile ? getUrl(['背景（モバイル）', '背景(モバイル)', '背景モバイル', 'bg_mobile', 'mobile_bg']) : '';
       if (!bgUrl) bgUrl = getUrl(['背景', 'background', 'bg_banner', 'bg']);
-      
       if (bgUrl) {
         const bgContainer = document.getElementById('bgFallingContainer');
         if (bgContainer) bgContainer.style.backgroundImage = `url('${bgUrl}')`;
@@ -1176,7 +953,7 @@
       globalUnitInfoMap = res.unitInfoMap || {};
 
       document.getElementById('loading').style.display = 'none';
-      document.getElementById('listWrapper').style.display = 'block';
+      document.getElementById('listWrapper').style.display = 'flex';
 
       calcLevelMinMax();
       buildLevelSelectOptions();
@@ -1190,6 +967,7 @@
       const input = document.getElementById('searchInput');
       const clearBtn = document.getElementById('clearBtn');
       clearBtn.style.display = input.value.trim().length > 0 ? 'flex' : 'none';
+      currentPage = 1;
       renderTracks();
     }
 
@@ -1197,13 +975,12 @@
       const input = document.getElementById('searchInput');
       input.value = '';
       document.getElementById('clearBtn').style.display = 'none';
+      currentPage = 1;
       renderTracks();
     }
 
-    /* レベル最小・最大値の計算 */
     function calcLevelMinMax() {
-      let minVal = 999;
-      let maxVal = 0;
+      let minVal = 999, maxVal = 0;
       globalTracksData.forEach(track => {
         ['easy', 'normal', 'hard', 'expert'].forEach(k => {
           const val = Number(track[k] || track[k.toUpperCase()]);
@@ -1226,23 +1003,19 @@
       const maxSelect = document.getElementById('filterLevelMaxSelect');
       minSelect.innerHTML = '';
       maxSelect.innerHTML = '';
-
       for (let i = minLevelGlobal; i <= maxLevelGlobal; i++) {
         minSelect.innerHTML += `<option value="${i}" ${i === minLevelGlobal ? 'selected' : ''}>Lv.${i}</option>`;
         maxSelect.innerHTML += `<option value="${i}" ${i === maxLevelGlobal ? 'selected' : ''}>Lv.${i}</option>`;
       }
     }
 
-    /* タレントフィルタUIの動的構築 */
     function buildTalentFilterUI() {
       const container = document.getElementById('talentUnitGroupsContainer');
       container.innerHTML = '';
-
       const unitMap = {};
       globalCharacterList.forEach(char => {
         const units = (char.unit || 'その他').split(/[,、]/).map(u => u.trim()).filter(Boolean);
         const targetUnits = units.length > 0 ? units : ['その他'];
-
         targetUnits.forEach(u => {
           if (!unitMap[u]) unitMap[u] = [];
           if (!unitMap[u].includes(char.name)) unitMap[u].push(char.name);
@@ -1265,25 +1038,23 @@
         groupElem.style.flexDirection = 'column';
         groupElem.style.gap = '6px';
 
-        const bandHtml = `
-          <div class="filter-unit-band">
-            <input type="checkbox" class="filter-unit-checkbox" data-unit="${escapeHtml(unitKey)}" onchange="onUnitCheckboxChange(this)">
-            <span>${escapeHtml(displayName)}</span>
-          </div>
-        `;
-
         let chipsHtml = '<div class="filter-btn-grid">';
         charNames.forEach(cName => {
           chipsHtml += `<div class="filter-chip-btn" data-group="talentChar" data-unit="${escapeHtml(unitKey)}" data-val="${escapeHtml(cName)}" onclick="toggleTalentCharChip(this)">${escapeHtml(cName)}</div>`;
         });
         chipsHtml += '</div>';
 
-        groupElem.innerHTML = bandHtml + chipsHtml;
+        groupElem.innerHTML = `
+          <div class="filter-unit-band">
+            <input type="checkbox" class="filter-unit-checkbox" data-unit="${escapeHtml(unitKey)}" onchange="onUnitCheckboxChange(this)">
+            <span>${escapeHtml(displayName)}</span>
+          </div>
+          ${chipsHtml}
+        `;
         container.appendChild(groupElem);
       });
     }
 
-    /* フィルタタブ切替 */
     function switchFilterTab(tabName, btnElem) {
       document.querySelectorAll('.filter-tab-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.filter-tab-pane').forEach(p => p.classList.remove('active'));
@@ -1294,7 +1065,6 @@
     function toggleChip(elem, isSingle = false) {
       const group = elem.getAttribute('data-group');
       const val = elem.getAttribute('data-val');
-
       if (isSingle || val === 'all') {
         document.querySelectorAll(`.filter-chip-btn[data-group="${group}"]`).forEach(b => b.classList.remove('selected'));
         elem.classList.add('selected');
@@ -1308,24 +1078,19 @@
       updateFilterIcons();
     }
 
-    /* 楽曲レベルフィルタ変更 */
     function onFilterLevelDiffChange() {
       const diffVal = document.getElementById('filterLevelDiffSelect').value;
-      const rangeContainer = document.getElementById('levelRangeContainer');
-      rangeContainer.style.display = (diffVal === 'none') ? 'none' : 'flex';
+      document.getElementById('levelRangeContainer').style.display = (diffVal === 'none') ? 'none' : 'flex';
       updateFilterIcons();
     }
 
     function onLevelRangeChange() {
       const minVal = Number(document.getElementById('filterLevelMinSelect').value);
       const maxVal = Number(document.getElementById('filterLevelMaxSelect').value);
-      if (minVal > maxVal) {
-        document.getElementById('filterLevelMaxSelect').value = minVal;
-      }
+      if (minVal > maxVal) document.getElementById('filterLevelMaxSelect').value = minVal;
       updateFilterIcons();
     }
 
-    /* タレントフィルタ操作 */
     function selectTalentMode(modeKey, btnElem) {
       document.querySelectorAll('.talent-mode-btn').forEach(b => b.classList.remove('selected'));
       btnElem.classList.add('selected');
@@ -1345,27 +1110,18 @@
       const allChip = document.getElementById('talentAllChip');
       allChip.classList.remove('selected');
       chipElem.classList.toggle('selected');
-
       const cName = chipElem.getAttribute('data-val');
-      if (chipElem.classList.contains('selected')) {
-        selectedTalentSet.add(cName);
-      } else {
-        selectedTalentSet.delete(cName);
-      }
-
+      if (chipElem.classList.contains('selected')) selectedTalentSet.add(cName);
+      else selectedTalentSet.delete(cName);
       syncUnitCheckboxes();
-
-      if (selectedTalentSet.size === 0) {
-        allChip.classList.add('selected');
-      }
+      if (selectedTalentSet.size === 0) allChip.classList.add('selected');
       updateFilterIcons();
     }
 
     function onUnitCheckboxChange(cbElem) {
       const unitKey = cbElem.getAttribute('data-unit');
       const isChecked = cbElem.checked;
-      const allChip = document.getElementById('talentAllChip');
-      allChip.classList.remove('selected');
+      document.getElementById('talentAllChip').classList.remove('selected');
 
       const unitChips = document.querySelectorAll(`.filter-chip-btn[data-group="talentChar"][data-unit="${unitKey}"]`);
       unitChips.forEach(chip => {
@@ -1378,10 +1134,7 @@
           selectedTalentSet.delete(cName);
         }
       });
-
-      if (selectedTalentSet.size === 0) {
-        allChip.classList.add('selected');
-      }
+      if (selectedTalentSet.size === 0) document.getElementById('talentAllChip').classList.add('selected');
       updateFilterIcons();
     }
 
@@ -1394,33 +1147,21 @@
       });
     }
 
-    /* フィルタアイコン制御 */
     function getMainFilterIconUrl(isOn) {
       return isOn ? (globalIconsMap['フィルタON'] || globalIconsMap['filter_on'] || '') : (globalIconsMap['フィルタOFF'] || globalIconsMap['filter_off'] || '');
     }
-
     function getTabFilterIconUrl(isOn) {
       return isOn ? (globalIconsMap['フィルタON（タブ）'] || globalIconsMap['フィルタON'] || '') : (globalIconsMap['フィルタOFF（タブ）'] || globalIconsMap['filter_off'] || '');
     }
 
     function updateFilterIcons() {
-      // 1. 楽曲タイプ
       const typeSelected = document.querySelector('.filter-chip-btn[data-group="musicType"].selected');
       const isTypeOn = typeSelected && typeSelected.getAttribute('data-val') !== 'all';
-
-      // 2. 楽曲レベル
       const diffVal = document.getElementById('filterLevelDiffSelect') ? document.getElementById('filterLevelDiffSelect').value : 'none';
       const isLevelOn = (diffVal !== 'none');
-
-      // 3. タレント
       const isTalentOn = (selectedTalentSet.size > 0);
 
-      const tabMap = {
-        musicType: isTypeOn,
-        musicLevel: isLevelOn,
-        talent: isTalentOn
-      };
-
+      const tabMap = { musicType: isTypeOn, musicLevel: isLevelOn, talent: isTalentOn };
       let anyGlobalOn = false;
       for (const [tabKey, isOn] of Object.entries(tabMap)) {
         if (isOn) anyGlobalOn = true;
@@ -1431,7 +1172,6 @@
           iconElem.style.display = url ? 'inline-block' : 'none';
         }
       }
-
       const mainIconImg = document.getElementById('mainFilterIcon');
       if (mainIconImg) {
         const url = getMainFilterIconUrl(anyGlobalOn);
@@ -1444,40 +1184,30 @@
     function closeFilterModal() { document.getElementById('filterModalOverlay').style.display = 'none'; }
 
     function resetAllFilters() {
-      // 楽曲タイプ
       document.querySelectorAll('.filter-chip-btn[data-group="musicType"]').forEach(b => {
         if (b.getAttribute('data-val') === 'all') b.classList.add('selected');
         else b.classList.remove('selected');
       });
-
-      // 楽曲レベル
       document.getElementById('filterLevelDiffSelect').value = 'none';
       document.getElementById('filterLevelMinSelect').value = minLevelGlobal;
       document.getElementById('filterLevelMaxSelect').value = maxLevelGlobal;
       document.getElementById('levelRangeContainer').style.display = 'none';
-
-      // タレント
       const allChip = document.getElementById('talentAllChip');
       if (allChip) allChip.classList.add('selected');
       document.querySelectorAll('.filter-chip-btn[data-group="talentChar"]').forEach(c => c.classList.remove('selected'));
       document.querySelectorAll('.filter-unit-checkbox').forEach(cb => cb.checked = false);
       selectedTalentSet.clear();
-
       updateFilterIcons();
     }
 
     function applyFilterAndClose() {
       closeFilterModal();
-
-      // 値取得
       const typeElem = document.querySelector('.filter-chip-btn[data-group="musicType"].selected');
       filterTypeVal = typeElem ? typeElem.getAttribute('data-val') : 'all';
-
       filterLevelDiff = document.getElementById('filterLevelDiffSelect').value;
       filterLevelMin = Number(document.getElementById('filterLevelMinSelect').value);
       filterLevelMax = Number(document.getElementById('filterLevelMaxSelect').value);
 
-      // ★ 楽曲レベルフィルタ適用時のソート連動制御
       if (filterLevelDiff !== 'none') {
         currentSortLevelDiff = filterLevelDiff;
         document.getElementById('levelDifficultySelect').value = filterLevelDiff;
@@ -1486,17 +1216,15 @@
           document.getElementById('sortBtnLabel').textContent = `並び替え: レベル: ${currentSortLevelDiff}${orderLabel}`;
         }
       }
-
       updateSortModalState();
       updateFilterIcons();
+      currentPage = 1;
       renderTracks();
     }
 
-    /* ソートモーダルの難易度選択可否制御 */
     function updateSortModalState() {
       const levelSelect = document.getElementById('levelDifficultySelect');
       const notice = document.getElementById('sortDisabledNotice');
-
       if (filterLevelDiff !== 'none') {
         levelSelect.disabled = true;
         levelSelect.value = filterLevelDiff;
@@ -1507,49 +1235,98 @@
       }
     }
 
-    /* ソート操作 */
     function openSortModal() { 
       updateSortModalState();
       document.getElementById('sortModalOverlay').style.display = 'flex'; 
     }
     function closeSortModal() { document.getElementById('sortModalOverlay').style.display = 'none'; }
-
     function selectSortOption(sortKey, btnElem) {
       document.querySelectorAll('.sort-opt-btn').forEach(b => b.classList.remove('selected'));
       btnElem.classList.add('selected');
       currentSortType = sortKey;
     }
-
     function onLevelSelectChange() {
       const selectElem = document.getElementById('levelDifficultySelect');
       currentSortLevelDiff = selectElem.value;
       const levelBtn = document.getElementById('sortOptLevelBtn');
-      if (levelBtn) {
-        selectSortOption('level', levelBtn);
-      }
+      if (levelBtn) selectSortOption('level', levelBtn);
     }
-
     function selectSortOrder(orderKey, btnElem) {
       document.querySelectorAll('.sort-order-btn').forEach(b => b.classList.remove('selected'));
       btnElem.classList.add('selected');
       currentSortOrder = orderKey;
     }
-
     function applySortAndClose() {
       closeSortModal();
-      if (filterLevelDiff !== 'none') {
-        currentSortLevelDiff = filterLevelDiff;
-      } else {
-        currentSortLevelDiff = document.getElementById('levelDifficultySelect').value;
-      }
+      if (filterLevelDiff !== 'none') currentSortLevelDiff = filterLevelDiff;
+      else currentSortLevelDiff = document.getElementById('levelDifficultySelect').value;
 
-      let typeLabel = '50音順';
-      if (currentSortType === 'level') {
-        typeLabel = `レベル: ${currentSortLevelDiff}`;
-      }
+      let typeLabel = currentSortType === 'level' ? `レベル: ${currentSortLevelDiff}` : '50音順';
       const orderLabel = currentSortOrder === 'asc' ? ' (昇順)' : ' (降順)';
       document.getElementById('sortBtnLabel').textContent = `並び替え: ${typeLabel}${orderLabel}`;
+      currentPage = 1;
       renderTracks();
+    }
+
+    /* ページネーション制御 */
+    function setPage(p) {
+      currentPage = p;
+      renderTracks();
+      document.getElementById('listWrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function changePerPage(val) {
+      itemsPerPage = Number(val);
+      currentPage = 1;
+      renderTracks();
+    }
+
+    function renderPagination(totalCount) {
+      const totalPages = itemsPerPage === 0 ? 1 : Math.ceil(totalCount / itemsPerPage) || 1;
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIdx = itemsPerPage === 0 ? (totalCount > 0 ? 1 : 0) : Math.min((currentPage - 1) * itemsPerPage + 1, totalCount);
+      const endIdx = itemsPerPage === 0 ? totalCount : Math.min(currentPage * itemsPerPage, totalCount);
+
+      const perPageSelectHtml = `
+        <span>表示数:</span>
+        <select class="per-page-select" onchange="changePerPage(this.value)">
+          <option value="25" ${itemsPerPage === 25 ? 'selected' : ''}>25</option>
+          <option value="50" ${itemsPerPage === 50 ? 'selected' : ''}>50</option>
+          <option value="100" ${itemsPerPage === 100 ? 'selected' : ''}>100</option>
+          <option value="0" ${itemsPerPage === 0 ? 'selected' : ''}>ALL</option>
+        </select>
+        <span>(${startIdx}〜${endIdx} / 全${totalCount}件)</span>
+      `;
+
+      let pagesHtml = '';
+      if (totalPages > 1) {
+        pagesHtml += `<button class="page-btn" onclick="setPage(1)" ${currentPage === 1 ? 'disabled' : ''}>«</button>`;
+        pagesHtml += `<button class="page-btn" onclick="setPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>‹</button>`;
+
+        let startP = Math.max(1, currentPage - 2);
+        let endP = Math.min(totalPages, currentPage + 2);
+        if (endP - startP < 4) {
+          if (startP === 1) endP = Math.min(totalPages, startP + 4);
+          else if (endP === totalPages) startP = Math.max(1, endP - 4);
+        }
+
+        for (let i = startP; i <= endP; i++) {
+          pagesHtml += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="setPage(${i})">${i}</button>`;
+        }
+
+        pagesHtml += `<button class="page-btn" onclick="setPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>›</button>`;
+        pagesHtml += `<button class="page-btn" onclick="setPage(${totalPages})" ${currentPage === totalPages ? 'disabled' : ''}>»</button>`;
+      }
+
+      const buildBarHtml = () => `
+        <div class="pagination-left">${perPageSelectHtml}</div>
+        <div class="pagination-controls">${pagesHtml}</div>
+      `;
+
+      document.getElementById('paginationTop').innerHTML = buildBarHtml();
+      document.getElementById('paginationBottom').innerHTML = buildBarHtml();
     }
 
     /* 楽曲一覧レンダリング */
@@ -1565,20 +1342,17 @@
         return '';
       };
 
-      // フィルター適用
       let filtered = globalTracksData.filter(item => {
         const title = getVal(item, ['music_title', 'title', '曲名']);
         const artist = getVal(item, ['artist', 'アーティスト']);
         let artistTags = '';
         if (artist) {
-          const splittedArtists = artist.split(/[,、]/).map(a => a.trim());
-          const tags = splittedArtists.map(a => globalArtistTagMap[a] || '');
-          artistTags = tags.join(' ');
+          const splitted = artist.split(/[,、]/).map(a => a.trim());
+          artistTags = splitted.map(a => globalArtistTagMap[a] || '').join(' ');
         }
         const scoreRate = getVal(item, ['score_rate', 'scorerate', 'スコアレート']);
         const typeStr = getVal(item, ['type', 'タイプ']);
 
-        // 1. 検索ボックス
         if (keyword) {
           const matchTitle = title.toLowerCase().includes(keyword);
           const matchArtist = artist.toLowerCase().includes(keyword);
@@ -1587,27 +1361,17 @@
           if (!matchTitle && !matchArtist && !matchArtistTag && !matchScoreRate) return false;
         }
 
-        // 2. 楽曲タイプフィルタ
-        if (filterTypeVal !== 'all') {
-          if (typeStr !== filterTypeVal) return false;
-        }
+        if (filterTypeVal !== 'all' && typeStr !== filterTypeVal) return false;
 
-        // 3. 楽曲レベルフィルタ
         if (filterLevelDiff !== 'none') {
-          const diffKey = filterLevelDiff.toLowerCase();
-          const levelVal = Number(item[diffKey] || item[filterLevelDiff]);
-          if (isNaN(levelVal) || levelVal < filterLevelMin || levelVal > filterLevelMax) {
-            return false;
-          }
+          const levelVal = Number(item[filterLevelDiff.toLowerCase()] || item[filterLevelDiff]);
+          if (isNaN(levelVal) || levelVal < filterLevelMin || levelVal > filterLevelMax) return false;
         }
 
-        // 4. タレントフィルタ
         if (selectedTalentSet.size > 0) {
           if (filterTalentMode === 'artist') {
             const splitted = artist.split(/[,、]/).map(a => a.trim());
-            const matched = Array.from(selectedTalentSet).some(name => {
-              return splitted.includes(name) || (globalArtistTagMap[name] && artist.includes(name));
-            });
+            const matched = Array.from(selectedTalentSet).some(name => splitted.includes(name) || (globalArtistTagMap[name] && artist.includes(name)));
             if (!matched) return false;
           } else if (filterTalentMode === 'scorerate') {
             if (scoreRate === '対象外' || !scoreRate) return false;
@@ -1616,49 +1380,41 @@
             if (!matched) return false;
           }
         }
-
         return true;
       });
 
-      // ソート処理
       filtered.sort((a, b) => {
         const getNum = (obj, keys) => {
-          const v = getVal(obj, keys);
-          const num = Number(v);
+          const num = Number(getVal(obj, keys));
           return isNaN(num) ? -1 : num;
         };
-
-        const getReadVal = (obj) => {
-          return getVal(obj, ['read', 'リード', 'よみ', '読み']) || getVal(obj, ['music_title', 'title', '曲名']);
-        };
+        const getReadVal = (obj) => getVal(obj, ['read', 'リード', 'よみ', '読み']) || getVal(obj, ['music_title', 'title', '曲名']);
 
         let diff = 0;
         if (currentSortType === 'title') {
-          const readA = getReadVal(a);
-          const readB = getReadVal(b);
-          diff = readA.localeCompare(readB, 'ja');
+          diff = getReadVal(a).localeCompare(getReadVal(b), 'ja');
         } else {
-          const targetDiffKey = currentSortLevelDiff.toLowerCase();
-          const valA = getNum(a, [targetDiffKey, currentSortLevelDiff]);
-          const valB = getNum(b, [targetDiffKey, currentSortLevelDiff]);
-
-          if (valA !== valB) {
-            diff = valA - valB;
-          } else {
-            const readA = getReadVal(a);
-            const readB = getReadVal(b);
-            diff = readA.localeCompare(readB, 'ja');
-          }
+          const targetKey = currentSortLevelDiff.toLowerCase();
+          const valA = getNum(a, [targetKey, currentSortLevelDiff]);
+          const valB = getNum(b, [targetKey, currentSortLevelDiff]);
+          diff = (valA !== valB) ? valA - valB : getReadVal(a).localeCompare(getReadVal(b), 'ja');
         }
-
         return currentSortOrder === 'asc' ? diff : -diff;
       });
 
       document.getElementById('hitCountDisplay').textContent = filtered.length + '曲';
+      renderPagination(filtered.length);
 
       if (filtered.length === 0) {
         listBody.innerHTML = '<div style="text-align:center; padding:40px; color:#f8fafc; background:rgba(255,255,255,0.1); border-radius:8px;">該当する楽曲が見つかりませんでした。</div>';
         return;
+      }
+
+      // ページネーションによるスライス
+      let displayItems = filtered;
+      if (itemsPerPage > 0) {
+        const start = (currentPage - 1) * itemsPerPage;
+        displayItems = filtered.slice(start, start + itemsPerPage);
       }
 
       const trackIconUrl = globalIconsMap['トラック'] || '';
@@ -1666,16 +1422,10 @@
       const lengthIconUrl = globalIconsMap['再生時間'] || '';
       const scoreRateIconUrl = globalIconsMap['スコアレート'] || '';
 
-      const easyTagUrl = globalTagUrlMap['EASY'] || '';
-      const normalTagUrl = globalTagUrlMap['NORMAL'] || '';
-      const hardTagUrl = globalTagUrlMap['HARD'] || '';
-      const expertTagUrl = globalTagUrlMap['EXPERT'] || '';
-
-      // 難易度マスクの判定
       const isLevelFilterActive = (filterLevelDiff !== 'none');
       const isLevelSortActive = (currentSortType === 'level');
 
-      filtered.forEach(track => {
+      displayItems.forEach(track => {
         const musicTitle = getVal(track, ['music_title', 'title', '曲名']);
         const artist = getVal(track, ['artist', 'アーティスト']);
         const jacketImg = getVal(track, ['image', 'jacket', '画像']);
@@ -1695,125 +1445,120 @@
         const mvUrl = getVal(track, ['mv_url', 'youtube', 'mv']);
         const digitalUrl = getVal(track, ['digital_distribution', 'buy', '配信']);
 
-        const card = document.createElement('div');
-        card.className = 'music-card';
-
-        const renderCreditRow = (label, text) => {
-          if (!text) return '';
-          const isLong = text.length > 20;
-          return `
-            <div class="credit-row">
-              <span class="credit-label">${escapeHtml(label)}</span>
-              <div class="marquee-box">
-                <span class="marquee-text ${isLong ? 'marquee-active' : ''}">${escapeHtml(text)}</span>
-              </div>
-            </div>
-          `;
-        };
-
-        const creditsHtml = `
-          ${renderCreditRow('作詞', lyrics)}
-          ${renderCreditRow('作曲', composition)}
-          ${renderCreditRow('編曲', arrangement)}
-        `;
-
-        let scoreRateContentHtml = '';
-        if (scoreRateStr === '対象外' || !scoreRateStr) {
-          scoreRateContentHtml = '<div class="score-rate-none">対象外</div>';
-        } else {
-          const charNames = scoreRateStr.split(/[,、]/).map(s => s.trim()).filter(Boolean);
-          let iconsHtml = '';
-          charNames.forEach(cName => {
-            const iconUrl = globalCharIconMap[cName];
-            if (iconUrl) {
-              iconsHtml += `<img src="${escapeHtml(iconUrl)}" class="score-rate-char-icon" title="${escapeHtml(cName)}" alt="${escapeHtml(cName)}">`;
-            }
-          });
-          scoreRateContentHtml = `<div class="score-rate-char-list">${iconsHtml || '<div class="score-rate-none">なし</div>'}</div>`;
-        }
-
-        // 各難易度カラムの dimmed 判定
         const isEasyDim = isLevelFilterActive ? (filterLevelDiff !== 'EASY') : (isLevelSortActive && currentSortLevelDiff !== 'EASY');
         const isNormalDim = isLevelFilterActive ? (filterLevelDiff !== 'NORMAL') : (isLevelSortActive && currentSortLevelDiff !== 'NORMAL');
         const isHardDim = isLevelFilterActive ? (filterLevelDiff !== 'HARD') : (isLevelSortActive && currentSortLevelDiff !== 'HARD');
         const isExpertDim = isLevelFilterActive ? (filterLevelDiff !== 'EXPERT') : (isLevelSortActive && currentSortLevelDiff !== 'EXPERT');
 
+        // スコアレート対象キャラアイコン
+        let scoreRateHtml = '';
+        if (scoreRateStr === '対象外' || !scoreRateStr) {
+          scoreRateHtml = '<div class="scorerate-none-text">対象外</div>';
+        } else {
+          const charNames = scoreRateStr.split(/[,、]/).map(s => s.trim()).filter(Boolean);
+          let avatarsHtml = '';
+          charNames.forEach(cName => {
+            const iconUrl = globalCharIconMap[cName];
+            if (iconUrl) {
+              avatarsHtml += `<img src="${escapeHtml(iconUrl)}" class="scorerate-avatar" title="${escapeHtml(cName)}" alt="${escapeHtml(cName)}">`;
+            }
+          });
+          scoreRateHtml = `<div class="scorerate-icons-list">${avatarsHtml || '<div class="scorerate-none-text">なし</div>'}</div>`;
+        }
+
+        const card = document.createElement('div');
+        card.className = 'music-card';
+
         card.innerHTML = `
-          <div class="music-top-bar">
-            <div class="music-main-meta">
-              <div class="music-title-row">
-                ${trackIconUrl ? `<img src="${escapeHtml(trackIconUrl)}" class="track-icon" alt="track">` : ''}
-                <span class="music-title-text">${escapeHtml(musicTitle)}</span>
+          <!-- 左列: レコード風ジャケット + 再生時間/タイプ -->
+          <div class="card-left-col">
+            <div class="jacket-record-wrap">
+              ${jacketImg ? `<img src="${escapeHtml(jacketImg)}" class="jacket-main-img" alt="jacket">` : ''}
+              <svg class="record-disc-img" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#27272a" stroke-width="1"/>
+                <circle cx="50" cy="50" r="32" fill="none" stroke="#27272a" stroke-width="1"/>
+                <circle cx="50" cy="50" r="18" fill="#dc2626"/>
+                <circle cx="50" cy="50" r="6" fill="#09090b"/>
+              </svg>
+            </div>
+            <div class="time-type-row">
+              ${lengthStr ? `
+                <div class="time-pill-badge">
+                  ${lengthIconUrl ? `<img src="${escapeHtml(lengthIconUrl)}" alt="time">` : '⏱'}
+                  <span>${escapeHtml(lengthStr)}</span>
+                </div>
+              ` : ''}
+              ${typeTagUrl ? `<img src="${escapeHtml(typeTagUrl)}" class="type-pill-img" alt="${escapeHtml(typeStr)}">` : (typeStr ? `<span style="font-size:12px;font-weight:bold;color:#0284c7;">${escapeHtml(typeStr)}</span>` : '')}
+            </div>
+          </div>
+
+          <!-- 中央列: タイトル・アーティスト・クレジット・難易度・コピーライト -->
+          <div class="card-center-col">
+            <div class="title-artist-box">
+              <div class="track-title-line">
+                ${trackIconUrl ? `<img src="${escapeHtml(trackIconUrl)}" class="track-icon" alt="track">` : '🎵'}
+                <span class="track-title-text">${escapeHtml(musicTitle)}</span>
               </div>
-              <div class="music-artist-row">
-                ${artistIconUrl ? `<img src="${escapeHtml(artistIconUrl)}" class="artist-icon" alt="artist">` : ''}
+              <div class="artist-line">
+                ${artistIconUrl ? `<img src="${escapeHtml(artistIconUrl)}" class="artist-icon" alt="artist">` : '🎤'}
                 <span class="artist-text">${escapeHtml(artist)}</span>
               </div>
             </div>
 
-            <div class="music-actions-wrapper">
+            <!-- クレジットパネル -->
+            <div class="credits-card">
+              <div class="credit-item"><span class="credit-label">作 詞</span><span class="credit-val">${escapeHtml(lyrics || '-')}</span></div>
+              <div class="credit-item"><span class="credit-label">作 曲</span><span class="credit-val">${escapeHtml(composition || '-')}</span></div>
+              <div class="credit-item"><span class="credit-label">編 曲</span><span class="credit-val">${escapeHtml(arrangement || '-')}</span></div>
+            </div>
+
+            <!-- 難易度ピルボード -->
+            <div class="diff-pill-board">
+              <div class="diff-pill-cell ${isEasyDim ? 'dimmed' : ''}">
+                <div class="diff-pill-tag easy">EASY</div>
+                <span class="diff-pill-num">${escapeHtml(easyVal)}</span>
+              </div>
+              <div class="diff-pill-cell ${isNormalDim ? 'dimmed' : ''}">
+                <div class="diff-pill-tag normal">NORMAL</div>
+                <span class="diff-pill-num">${escapeHtml(normalVal)}</span>
+              </div>
+              <div class="diff-pill-cell ${isHardDim ? 'dimmed' : ''}">
+                <div class="diff-pill-tag hard">HARD</div>
+                <span class="diff-pill-num">${escapeHtml(hardVal)}</span>
+              </div>
+              <div class="diff-pill-cell ${isExpertDim ? 'dimmed' : ''}">
+                <div class="diff-pill-tag expert">EXPERT</div>
+                <span class="diff-pill-num">${escapeHtml(expertVal)}</span>
+              </div>
+            </div>
+
+            ${copyright ? `<div class="card-copyright">${escapeHtml(copyright)}</div>` : '<div></div>'}
+          </div>
+
+          <!-- 右列: YouTube / BUY NOW ボタン + スコアレート対象パネル -->
+          <div class="card-right-col">
+            <div class="actions-buttons-row">
               ${mvUrl ? `
-                <a href="${escapeHtml(mvUrl)}" target="_blank" rel="noopener noreferrer" class="btn-youtube">
+                <a href="${escapeHtml(mvUrl)}" target="_blank" rel="noopener noreferrer" class="btn-youtube-pill">
                   <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                   <span>YouTube</span>
                 </a>
               ` : ''}
               ${digitalUrl ? `
-                <a href="${escapeHtml(digitalUrl)}" target="_blank" rel="noopener noreferrer" class="btn-buynow">
+                <a href="${escapeHtml(digitalUrl)}" target="_blank" rel="noopener noreferrer" class="btn-buynow-pill">
                   <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
                   <span>BUY NOW</span>
                 </a>
               ` : ''}
             </div>
-          </div>
 
-          <div class="music-content-row">
-            <div class="jacket-container">
-              ${jacketImg ? `<img src="${escapeHtml(jacketImg)}" class="jacket-img" alt="${escapeHtml(musicTitle)}">` : ''}
-            </div>
-
-            <div class="music-details-center">
-              <div class="time-type-line">
-                ${lengthStr ? `
-                  <div class="time-badge">
-                    ${lengthIconUrl ? `<img src="${escapeHtml(lengthIconUrl)}" class="time-icon" alt="time">` : ''}
-                    <span>${escapeHtml(lengthStr)}</span>
-                  </div>
-                ` : ''}
-                ${typeTagUrl ? `<img src="${escapeHtml(typeTagUrl)}" class="type-badge-img" alt="${escapeHtml(typeStr)}">` : (typeStr ? `<span style="font-size:12px;font-weight:bold;color:#0284c7;">${escapeHtml(typeStr)}</span>` : '')}
+            <div class="scorerate-container">
+              <div class="scorerate-head-row">
+                ${scoreRateIconUrl ? `<img src="${escapeHtml(scoreRateIconUrl)}" alt="icon">` : ''}
+                <span>スコアレート対象</span>
               </div>
-
-              ${creditsHtml ? `<div class="credits-table">${creditsHtml}</div>` : ''}
-              ${copyright ? `<div class="track-copyright-text">${escapeHtml(copyright)}</div>` : ''}
-            </div>
-
-            <div class="music-right-panel">
-              <div class="score-rate-card">
-                <div class="score-rate-header">
-                  ${scoreRateIconUrl ? `<img src="${escapeHtml(scoreRateIconUrl)}" class="score-rate-icon" alt="score rate">` : ''}
-                  <span>スコアレート対象</span>
-                </div>
-                ${scoreRateContentHtml}
-              </div>
-
-              <div class="difficulty-board">
-                <div class="diff-column ${isEasyDim ? 'dimmed' : ''}">
-                  ${easyTagUrl ? `<img src="${escapeHtml(easyTagUrl)}" class="diff-tag-img" alt="EASY">` : '<div class="diff-fallback-tag" style="background:#4ade80;">EASY</div>'}
-                  <span class="diff-val">${escapeHtml(easyVal)}</span>
-                </div>
-                <div class="diff-column ${isNormalDim ? 'dimmed' : ''}">
-                  ${normalTagUrl ? `<img src="${escapeHtml(normalTagUrl)}" class="diff-tag-img" alt="NORMAL">` : '<div class="diff-fallback-tag" style="background:#fb923c;">NORMAL</div>'}
-                  <span class="diff-val">${escapeHtml(normalVal)}</span>
-                </div>
-                <div class="diff-column ${isHardDim ? 'dimmed' : ''}">
-                  ${hardTagUrl ? `<img src="${escapeHtml(hardTagUrl)}" class="diff-tag-img" alt="HARD">` : '<div class="diff-fallback-tag" style="background:#f472b6;">HARD</div>'}
-                  <span class="diff-val">${escapeHtml(hardVal)}</span>
-                </div>
-                <div class="diff-column ${isExpertDim ? 'dimmed' : ''}">
-                  ${expertTagUrl ? `<img src="${escapeHtml(expertTagUrl)}" class="diff-tag-img" alt="EXPERT">` : '<div class="diff-fallback-tag" style="background:#a78bfa;">EXPERT</div>'}
-                  <span class="diff-val">${escapeHtml(expertVal)}</span>
-                </div>
-              </div>
+              ${scoreRateHtml}
             </div>
           </div>
         `;
@@ -1828,7 +1573,6 @@
         linksBox.style.display = 'none';
         return;
       }
-
       const lineMap = {};
       linksList.forEach(item => {
         const lineNum = Number(item.line) || 1;
@@ -1859,7 +1603,6 @@
         });
         html += '</div>';
       });
-
       linksBox.innerHTML = html;
     }
 
@@ -1871,7 +1614,6 @@
     function formatLength(val) {
       if (!val) return '';
       const str = String(val).trim();
-
       if (str.includes('T') || str.includes('Z')) {
         const d = new Date(str);
         if (!isNaN(d.getTime())) {
@@ -1880,7 +1622,6 @@
           return `${m}:${s}`;
         }
       }
-
       const parts = str.split(':');
       if (parts.length === 3) {
         const m = Number(parts[1]) || 0;
@@ -1891,7 +1632,6 @@
         const s = String(parts[1]).padStart(2, '0');
         return `${m}:${s}`;
       }
-
       return str;
     }
   </script>
