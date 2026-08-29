@@ -742,36 +742,15 @@
     let globalTagUrlMap = {};
 
     window.onload = function() {
-      // 背景バナー取得
-      const BANNER_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getTopBannerMap';
-      fetch(BANNER_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => setBackgroundBanner(data))
-        .catch(err => console.error('バナー通信エラー:', err));
-
-      const GAS_ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCharacterDataGroupedByUnit';
-
-      fetch(GAS_ENDPOINT_URL, { method: 'GET', redirect: 'follow' })
+      fetch('./data.json')
         .then(res => res.json())
         .then(data => {
-          if (data.error) showError(new Error(data.message));
-          else renderData(data);
+          if (data.topBannerMap) setBackgroundBanner(data.topBannerMap);
+          if (data.copyright) renderCopyright(data.copyright);
+          if (data.externalLinks) renderExternalLinks(data.externalLinks);
+          if (data.characterDataGroupedByUnit) renderData(data.characterDataGroupedByUnit);
         })
         .catch(err => showError(new Error('データの読み込みに失敗しました。')));
-
-      // 外部リンクの非同期取得
-      const LINKS_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getExternalLinks';
-      fetch(LINKS_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderExternalLinks(data))
-        .catch(err => console.error('外部リンク通信エラー:', err));
-
-      // 著作権・非公式表示の非同期取得
-      const COPYRIGHT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCopyright';
-      fetch(COPYRIGHT_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderCopyright(data))
-        .catch(err => console.error('著作権情報通信エラー:', err));
     };
 
     function renderCopyright(copyMap) {
