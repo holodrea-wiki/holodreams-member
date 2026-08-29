@@ -360,36 +360,21 @@
     const GAS_BASE_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec';
 
     window.onload = function() {
-      fetch(`${GAS_BASE_URL}?action=getTopBannerMap`, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => setBackgroundBanner(data))
-        .catch(err => console.error(err));
-
-      fetch(`${GAS_BASE_URL}?action=getExternalLinks`, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderExternalLinks(data))
-        .catch(err => console.error(err));
-
-      fetch(`${GAS_BASE_URL}?action=getCopyright`, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderCopyright(data))
-        .catch(err => console.error(err));
-
-      fetch(`${GAS_BASE_URL}?action=getAboutData`, { method: 'GET', redirect: 'follow' })
+      fetch('./data.json')
         .then(res => res.json())
         .then(data => {
           document.getElementById('loading').style.display = 'none';
           document.getElementById('aboutContainer').style.display = 'block';
-          if (data && data.error) {
-            document.getElementById('aboutContentBox').innerHTML = `<div style="color:#f87171; text-align:center;">データの取得に失敗しました: ${escapeHtml(data.message)}</div>`;
-          } else {
-            renderAboutPage(data || []);
-          }
+
+          if (data.topBannerMap) setBackgroundBanner(data.topBannerMap);
+          if (data.copyright) renderCopyright(data.copyright);
+          if (data.externalLinks) renderExternalLinks(data.externalLinks);
+          if (data.aboutData) renderAboutPage(data.aboutData);
         })
         .catch(err => {
           document.getElementById('loading').style.display = 'none';
           document.getElementById('aboutContainer').style.display = 'block';
-          document.getElementById('aboutContentBox').innerHTML = '<div style="color:#f87171; text-align:center;">サーバーとの通信に失敗しました。</div>';
+          document.getElementById('aboutContentBox').innerHTML = '<div style="color:#f87171; text-align:center;">データの読み込みに失敗しました。</div>';
         });
     };
 
