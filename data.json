@@ -76,6 +76,10 @@
     {
       "timestamp": "2026-08-30",
       "message": "以下の新楽曲を追加！\n・「Say!ファンファーレ!」\n　　- 白上フブキ\n・「夜光通信」\n　　- 大神ミオ\n・「カミサマ・ネコサマ」\n　　- 猫又おかゆ\n・「ころねの最凶天災☆わんだふぉー♡わーるど」\n　　- 戌神ころね\n・「We are GAMERS !!!!」\n　　- ホロライブゲーマーズ"
+    },
+    {
+      "timestamp": "2026-08-30",
+      "message": "以下の新楽曲を追加！\n・「Backseat」\n　　- カエラ・コヴァルスキア"
     }
   ],
   "pickupImages": [
@@ -18587,6 +18591,26 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=UATaOzzxq_0",
         "digital_distribution": "https://cover.lnk.to/WeareGAMERS"
+      },
+      {
+        "id": 100131,
+        "music_title": "Backseat",
+        "read": "Backseat",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100131.png",
+        "length": "2:29",
+        "type": "オリジナル",
+        "artist": "カエラ・コヴァルスキア",
+        "lyrics": "Kaela Kovalskia",
+        "composition": "水野谷怜",
+        "arrangement": "水野谷怜",
+        "copyright": "",
+        "score_rate": "カエラ・コヴァルスキア",
+        "easy": 2,
+        "normal": 10,
+        "hard": 16,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=q0Qr4top0dA",
+        "digital_distribution": "https://cover.lnk.to/Backseat"
       }
     ],
     "globalIcons": {
