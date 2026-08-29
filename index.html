@@ -834,47 +834,17 @@
     let isClickPrevented = false;
 
     window.onload = function() {
-      // 1. バナー画像取得
-      const BANNER_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getTopBannerMap';
-      fetch(BANNER_URL, { method: 'GET', redirect: 'follow' })
+      fetch('./data.json')
         .then(res => res.json())
-        .then(data => setBanners(data))
-        .catch(err => console.error('バナー通信エラー:', err));
-
-      // 2. 更新履歴取得
-      const HISTORY_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getUpdateHistory';
-      fetch(HISTORY_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderHistory(data))
-        .catch(err => console.error('履歴通信エラー:', err));
-
-      // 3. ピックアップ画像取得
-      const PICKUP_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getPickupImages';
-      fetch(PICKUP_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderPickupSlider(data))
-        .catch(err => console.error('ピックアップ通信エラー:', err));
-
-      // 4. 手前から奥へまっすぐ落ちていく3D背景用（★5メンバー画像）取得
-      const ALL_IMAGES_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getAllImages';
-      fetch(ALL_IMAGES_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => initFallingBackground(data))
-        .catch(err => console.error('全画像通信エラー:', err));
-
-      // 5. 外部リンク取得
-      const LINKS_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getExternalLinks';
-      fetch(LINKS_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderExternalLinks(data))
-        .catch(err => console.error('外部リンク通信エラー:', err));
-
-      // 6. 著作権・非公式表示の取得
-      const COPYRIGHT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCopyright';
-      fetch(COPYRIGHT_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderCopyright(data))
-        .catch(err => console.error('著作権情報通信エラー:', err));
+        .then(data => {
+          if (data.topBannerMap) setBanners(data.topBannerMap);
+          if (data.updateHistory) renderHistory(data.updateHistory);
+          if (data.pickupImages) renderPickupSlider(data.pickupImages);
+          if (data.allImages) initFallingBackground(data.allImages);
+          if (data.externalLinks) renderExternalLinks(data.externalLinks);
+          if (data.copyright) renderCopyright(data.copyright);
+        })
+        .catch(err => console.error('TOPデータ読み込みエラー:', err));
     };
 
     function renderCopyright(copyMap) {
