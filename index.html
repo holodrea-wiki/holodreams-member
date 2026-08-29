@@ -819,6 +819,7 @@
   </footer>
 
   <script>
+    let globalAllHolomenData = null;
     let globalCopyrightMap = {};
     let currentSlideIndex = 1;
     let realSlideCount = 0;
@@ -843,6 +844,7 @@
           if (data.allImages) initFallingBackground(data.allImages);
           if (data.externalLinks) renderExternalLinks(data.externalLinks);
           if (data.copyright) renderCopyright(data.copyright);
+          if (data.holomenTableData) globalAllHolomenData = data.holomenTableData; // ★ 保持
         })
         .catch(err => console.error('TOPデータ読み込みエラー:', err));
     };
@@ -1206,54 +1208,51 @@
       const body = document.getElementById('modalBody');
 
       filterBar.style.display = 'none';
-
       title.textContent = 'ピックアップメンバー情報';
-      body.innerHTML = '<div style="text-align:center; padding:50px; color:#aaa;">データを読み込み中...</div>';
       modal.style.display = 'flex';
 
-      const GAS_ENDPOINT_URL = `https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCharacterDetailsByName&charName=${encodeURIComponent(charName)}`;
+      if (!globalAllHolomenData || !globalAllHolomenData.rows) {
+        body.innerHTML = '<div style="padding:20px; text-align:center; color:#9ca3af;">データがありません。</div>';
+        return;
+      }
 
-      fetch(GAS_ENDPOINT_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => {
-          if (data.error) {
-            body.innerHTML = '<div style="color:#ef4444; padding:20px;">エラー: ' + escapeHtml(data.message) + '</div>';
-          } else {
-            const getVal = (item, keys) => {
-              for (let k of keys) {
-                if (item[k] !== undefined && item[k] !== null && item[k] !== '') return String(item[k]).trim();
-              }
-              return '';
-            };
+      const getVal = (item, keys) => {
+        for (let k of keys) {
+          if (item[k] !== undefined && item[k] !== null && item[k] !== '') return String(item[k]).trim();
+        }
+        return '';
+      };
 
-            let matchedDetails = data.details || [];
-            if (matchedDetails.length > 1) {
-              const filtered = matchedDetails.filter(item => {
-                const itemId = getVal(item, ['id', 'ID']);
-                const itemAlias = getVal(item, ['alias', '二つ名', 'メンバー名']);
-                const itemImg = getVal(item, ['image', '画像', 'メイン画像']);
+      // 該当キャラクターのカードを抽出
+      let matchedDetails = globalAllHolomenData.rows.filter(item => {
+        const cName = getVal(item, ['character', 'キャラクター名', '名前']);
+        return cName === charName;
+      });
 
-                if (targetCardId && itemId && itemId === targetCardId) return true;
-                if (aliasStr && itemAlias && itemAlias === aliasStr) return true;
-                if (targetImgUrl && itemImg && itemImg === targetImgUrl) return true;
-                return false;
-              });
+      if (matchedDetails.length > 1) {
+        const filtered = matchedDetails.filter(item => {
+          const itemId = getVal(item, ['id', 'ID']);
+          const itemAlias = getVal(item, ['alias', '二つ名', 'メンバー名']);
+          const itemImg = getVal(item, ['image', '画像', 'メイン画像']);
 
-              if (filtered.length > 0) {
-                matchedDetails = [filtered[0]];
-              } else {
-                matchedDetails = [matchedDetails[0]];
-              }
-            }
+          if (targetCardId && itemId && itemId === targetCardId) return true;
+          if (aliasStr && itemAlias && itemAlias === aliasStr) return true;
+          if (targetImgUrl && itemImg && itemImg === targetImgUrl) return true;
+          return false;
+        });
 
-            renderCharacterDetails({
-              details: matchedDetails,
-              globalIcons: data.globalIcons || {},
-              tagUrlMap: data.tagUrlMap || {}
-            });
-          }
-        })
-        .catch(err => { body.innerHTML = '<div style="color:#ef4444; padding:20px;">詳細データの取得に失敗しました。</div>'; });
+        if (filtered.length > 0) {
+          matchedDetails = [filtered[0]];
+        } else {
+          matchedDetails = [matchedDetails[0]];
+        }
+      }
+
+      renderCharacterDetails({
+        details: matchedDetails,
+        globalIcons: globalAllHolomenData.globalIcons || {},
+        tagUrlMap: globalAllHolomenData.tagUrlMap || {}
+      });
     }
 
     function formatDateString(val) {
