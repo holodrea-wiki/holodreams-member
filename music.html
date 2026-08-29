@@ -1027,32 +1027,18 @@
     let itemsPerPage = 50;
 
     window.onload = function() {
-      const BANNER_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getTopBannerMap';
-      fetch(BANNER_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => setBackgroundBanner(data))
-        .catch(err => console.error(err));
-
-      const MUSIC_DATA_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getMusicTrackData';
-      fetch(MUSIC_DATA_URL, { method: 'GET', redirect: 'follow' })
+      fetch('./data.json')
         .then(res => res.json())
         .then(data => {
-          if (data.error) document.getElementById('loading').textContent = 'データの取得に失敗しました: ' + data.message;
-          else initApp(data);
+          if (data.topBannerMap) setBackgroundBanner(data.topBannerMap);
+          if (data.copyright) renderCopyright(data.copyright);
+          if (data.externalLinks) renderExternalLinks(data.externalLinks);
+          if (data.musicTrackData) initApp(data.musicTrackData);
         })
-        .catch(err => document.getElementById('loading').textContent = 'サーバーとの通信に失敗しました。');
-
-      const LINKS_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getExternalLinks';
-      fetch(LINKS_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderExternalLinks(data))
-        .catch(err => console.error(err));
-
-      const COPYRIGHT_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCopyright';
-      fetch(COPYRIGHT_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => renderCopyright(data))
-        .catch(err => console.error(err));
+       .catch(err => {
+          console.error('データ読み込みエラー:', err);
+          document.getElementById('loading').textContent = 'データの読み込みに失敗しました。';
+        });
     };
 
     function renderCopyright(copyMap) {
