@@ -72,34 +72,28 @@
   ],
   "pickupImages": [
     {
-      "id": "10201004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10201004.jpg",
-      "character": "百鬼あやめ",
-      "alias": "百鬼流・ぷかぷかリゾート"
+      "id": "10103004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10103004.jpg",
+      "character": "白上フブキ",
+      "alias": "渚で魅せるtwinkle"
     },
     {
-      "id": "10403004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10403004.jpg",
-      "character": "姫森ルーナ",
-      "alias": "のんびり姫のおねだりビーチ"
+      "id": "10251004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10251004.jpg",
+      "character": "大神ミオ",
+      "alias": "夏にまどろむWolf Heart"
     },
     {
-      "id": "20201004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20201004.jpg",
-      "character": "クレイジー・オリー",
-      "alias": "常夏のCrazy Dive"
+      "id": "10252004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10252004.jpg",
+      "character": "猫又おかゆ",
+      "alias": "パラソル下のリバティキャット"
     },
     {
-      "id": "30101004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30101004.jpg",
-      "character": "森カリオペ",
-      "alias": "ビーチに刺さるReaper’s Spike"
-    },
-    {
-      "id": "30103004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30103004.jpg",
-      "character": "一伊那尓栖",
-      "alias": "潮騒の記憶をたどって"
+      "id": "10253004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10253004.jpg",
+      "character": "戌神ころね",
+      "alias": "密林を舞うワイルドサマー！"
     }
   ],
   "allImages": [
@@ -168,7 +162,11 @@
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10403004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20201004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30101004.jpg",
-    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30103004.jpg"
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30103004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10103004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10251004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10252004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10253004.jpg"
   ],
   "copyright": {
     "著作権表示": "当サイトはファン有志による非公式の攻略データサイトです。\nサイト内のゲーム画像・データの著作権は、すべてカバー株式会社および株式会社QualiArtsに帰属します。\n© COVER Corp. / © QualiArts, Inc.",
@@ -438,6 +436,7 @@
             "狐のお宮でこんこんこん",
             "ギアあげるFOXパフォーマンス",
             "We are hololive!",
+            "渚で魅せるtwinkle",
             "白上フブキ"
           ],
           "message": "「こんこんきーつね！白上フブキです！」",
@@ -581,6 +580,7 @@
             "狐のお宮でこんこんこん",
             "ギアあげるFOXパフォーマンス",
             "We are hololive!",
+            "渚で魅せるtwinkle",
             "白上フブキ"
           ],
           "message": "「こんこんきーつね！白上フブキです！」",
@@ -606,6 +606,7 @@
             "ホッととろけるnightscape",
             "光射す狼の歌声",
             "We are hololive!",
+            "夏にまどろむWolf Heart",
             "大神ミオ"
           ],
           "message": "「こんばんみぉーん！大神ミオだよ～！」",
@@ -631,6 +632,7 @@
             "宴の果てに、ナイショの戯れ",
             "夢中にさせるいたずらCATライブ",
             "We are hololive!",
+            "パラソル下のリバティキャット",
             "猫又おかゆ",
             "宴の果てに",
             "ナイショの戯れ"
@@ -658,6 +660,7 @@
             "Go! Go! Laughing Skater",
             "farout dogパンチライン",
             "We are hololive!",
+            "密林を舞うワイルドサマー！",
             "戌神ころね"
           ],
           "message": "「ぉぁよ～！ゆびゆび～」",
@@ -1745,6 +1748,203 @@
   "holomenTableData": {
     "rows": [
       {
+        "id": 10103004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10103004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10103004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10103004.png",
+        "character": "白上フブキ",
+        "alias": "渚で魅せるtwinkle",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10103.png",
+        "unit": "ホロライブ 1期生, ホロライブ ゲーマーズ",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 25865,
+        "performance": 6803,
+        "technic": 7682,
+        "sense": 11380,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果135％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "35秒毎に中確率で13秒間スコアが115％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "なし",
+        "passive-target": "キュートタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{キュートタイプ}2人のスコアサポート効果11％",
+        "costumeｰname": "1UPスポーティ",
+        "costumeｰeffect": "センスUP",
+        "costume-conditions": "キュートタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{キュートタイプ}2人以上で全員のセンスが130％UP",
+        "connect-mass": "8マス効果",
+        "connect-target": "[8マス] 左寄り",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100801.png",
+        "connect_effect": "範囲内のホロメンボード効果を135％UP",
+        "fast_release": "炎天下のトロピックアイランドガチャ",
+        "release_at": 20260829,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10103.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation1.png",
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
+        ]
+      },
+      {
+        "id": 10251004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10251004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10251004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10251004.png",
+        "character": "大神ミオ",
+        "alias": "夏にまどろむWolf Heart",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10251.png",
+        "unit": "ホロライブ ゲーマーズ",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25865,
+        "performance": 6803,
+        "technic": 11380,
+        "sense": 7682,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果135％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "23秒毎に中確率で8秒間スコアが120％UP",
+        "passive-type": "テクニックUP",
+        "passive-conditions": "ピュアタイプ〇人以上",
+        "passive-target": "ピュアタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}2人以上で{ピュアタイプ}2人のテクニックが43％UP",
+        "costumeｰname": "渚のHIGH SCORE",
+        "costumeｰeffect": "テクニックUP",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}2人以上で全員のテクニックが130％UP",
+        "connect-mass": "6マス効果",
+        "connect-target": "[6マス] 左┣ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100601.png",
+        "connect_effect": "範囲内のホロメンボード効果を160％UP",
+        "fast_release": "炎天下のトロピックアイランドガチャ",
+        "release_at": 20260829,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10251.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
+        ]
+      },
+      {
+        "id": 10252004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10252004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10252004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10252004.png",
+        "character": "猫又おかゆ",
+        "alias": "パラソル下のリバティキャット",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10252.png",
+        "unit": "ホロライブ ゲーマーズ",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ハッピー",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+        "total_status": 25920,
+        "performance": 11145,
+        "technic": 7828,
+        "sense": 6947,
+        "special-effect": "スコアサポート, スコアUP",
+        "special-conditions": "ゲーマーズ〇人以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "11秒間スコアサポート効果130％\n{ゲーマーズ}が2人以上でスキル発動率が50％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "28秒毎に高確率で10秒間スコアが110％UP",
+        "passive-type": "パフォーマンスUP",
+        "passive-conditions": "なし",
+        "passive-target": "ゲーマーズ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ゲーマーズ}2人のパフォーマンスが43％UP",
+        "costumeｰname": "潮風のキャットウォーク",
+        "costumeｰeffect": "パフォーマンスUP",
+        "costume-conditions": "ゲーマーズ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ゲーマーズ}2人以上で全員のパフォーマンスが135％UP",
+        "connect-mass": "8マス効果",
+        "connect-target": "[8マス] 右寄り",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100802.png",
+        "connect_effect": "範囲内のホロメンボード効果を135％UP",
+        "fast_release": "炎天下のトロピックアイランドガチャ",
+        "release_at": 20260829,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10252.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
+        ]
+      },
+      {
+        "id": 10253004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10253004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10253004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10253004.png",
+        "character": "戌神ころね",
+        "alias": "密林を舞うワイルドサマー！",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10253.png",
+        "unit": "ホロライブ ゲーマーズ",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25920,
+        "performance": 6947,
+        "technic": 11145,
+        "sense": 7828,
+        "special-effect": "スコアサポート, スコアUP",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果120％\nスキル発動率が40％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率, ピュアタイプ〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "32秒毎に高確率で11秒間スコアが60％UP\n{ピュアタイプ}2人以上でスコアが120％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "なし",
+        "passive-target": "ピュアタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}2人のスコアサポート効果11％",
+        "costumeｰname": "しましまインパクト",
+        "costumeｰeffect": "スコアサポート, テクニックUP",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}2人以上で全員のテクニックが80％UP\n{ピュアタイプ}2人以上で全員のスコアサポート効果25％",
+        "connect-mass": "6マス効果",
+        "connect-target": "[6マス] 右 ┫型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100602.png",
+        "connect_effect": "範囲内のホロメンボード効果を160％UP",
+        "fast_release": "炎天下のトロピックアイランドガチャ",
+        "release_at": 20260829,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10253.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
+        ]
+      },
+      {
         "id": 10201004,
         "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10201004.jpg",
         "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10201004.png",
@@ -1788,7 +1988,7 @@
         "fast_release": "熱帯びる夏の一日ガチャ",
         "release_at": 20260817,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10201.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation2.png"
         ]
@@ -1837,7 +2037,7 @@
         "fast_release": "熱帯びる夏の一日ガチャ",
         "release_at": 20260817,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10403.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation4.png"
         ]
@@ -1886,7 +2086,7 @@
         "fast_release": "熱帯びる夏の一日ガチャ",
         "release_at": 20260817,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20201.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration2.png"
         ]
@@ -1935,7 +2135,7 @@
         "fast_release": "熱帯びる夏の一日ガチャ",
         "release_at": 20260817,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30101.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Myth.png"
         ]
@@ -1984,7 +2184,7 @@
         "fast_release": "熱帯びる夏の一日ガチャ",
         "release_at": 20260817,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30103.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Myth.png"
         ]
@@ -11114,6 +11314,26 @@
         ],
         "cards": [
           {
+            "id": 10103004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10103004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10103004.jpg",
+            "alias": "渚で魅せるtwinkle",
+            "character": "白上フブキ",
+            "char_id": 10103,
+            "rarity": 5,
+            "release_at": 20260829,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "ホロライブ 1期生",
+              "ホロライブ ゲーマーズ"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation1.png",
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10103.png"
+          },
+          {
             "id": 10103001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10103001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10103001.jpg",
@@ -11481,6 +11701,24 @@
         ],
         "cards": [
           {
+            "id": 10251004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10251004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10251004.jpg",
+            "alias": "夏にまどろむWolf Heart",
+            "character": "大神ミオ",
+            "char_id": 10251,
+            "rarity": 5,
+            "release_at": 20260829,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブ ゲーマーズ"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10251.png"
+          },
+          {
             "id": 10251001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10251001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10251001.jpg",
@@ -11546,6 +11784,24 @@
         ],
         "cards": [
           {
+            "id": 10252004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10252004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10252004.jpg",
+            "alias": "パラソル下のリバティキャット",
+            "character": "猫又おかゆ",
+            "char_id": 10252,
+            "rarity": 5,
+            "release_at": 20260829,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+            "units": [
+              "ホロライブ ゲーマーズ"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10252.png"
+          },
+          {
             "id": 10252001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10252001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10252001.jpg",
@@ -11610,6 +11866,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
         ],
         "cards": [
+          {
+            "id": 10253004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10253004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10253004.jpg",
+            "alias": "密林を舞うワイルドサマー！",
+            "character": "戌神ころね",
+            "char_id": 10253,
+            "rarity": 5,
+            "release_at": 20260829,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブ ゲーマーズ"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10253.png"
+          },
           {
             "id": 10253001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10253001.png",
@@ -18203,8 +18477,108 @@
         "normal": 9,
         "hard": 18,
         "expert": 28,
-        "mv_url": "",
+        "mv_url": "https://www.youtube.com/watch?v=vwzQcLr_fQ8",
         "digital_distribution": ""
+      },
+      {
+        "id": 100126,
+        "music_title": "Say!ファンファーレ!",
+        "read": "せい!ふぁんふぁーれ!",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100126.png",
+        "length": "1:47",
+        "type": "オリジナル",
+        "artist": "白上フブキ",
+        "lyrics": "ハム",
+        "composition": "ハム",
+        "arrangement": "ハム",
+        "copyright": "",
+        "score_rate": "白上フブキ",
+        "easy": 5,
+        "normal": 13,
+        "hard": 18,
+        "expert": 24,
+        "mv_url": "https://www.youtube.com/watch?v=pFgUluV_00s",
+        "digital_distribution": "https://sf.streamlink.to/say"
+      },
+      {
+        "id": 100127,
+        "music_title": "夜光通信",
+        "read": "やこうつうしん",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100127.png",
+        "length": "2:24",
+        "type": "オリジナル",
+        "artist": "大神ミオ",
+        "lyrics": "堀江晶太",
+        "composition": "堀江晶太",
+        "arrangement": "堀江晶太",
+        "copyright": "",
+        "score_rate": "大神ミオ",
+        "easy": 3,
+        "normal": 9,
+        "hard": 18,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=eZWjYWcQ4Xo",
+        "digital_distribution": "https://cover.lnk.to/YakouTsuushinn"
+      },
+      {
+        "id": 100128,
+        "music_title": "カミサマ・ネコサマ",
+        "read": "かみさま・ねこさま",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100128.png",
+        "length": "2:19",
+        "type": "オリジナル",
+        "artist": "猫又おかゆ",
+        "lyrics": "鳥屋茶房",
+        "composition": "鳥屋茶房",
+        "arrangement": "橘亮祐",
+        "copyright": "",
+        "score_rate": "猫又おかゆ",
+        "easy": 6,
+        "normal": 12,
+        "hard": 20,
+        "expert": 27,
+        "mv_url": "https://www.youtube.com/watch?v=gA6Qf7iu8SE",
+        "digital_distribution": "https://cover.lnk.to/Okayu1stalbum"
+      },
+      {
+        "id": 100129,
+        "music_title": "ころねの最凶天災☆わんだふぉー♡わーるど",
+        "read": "ころねのさいきょうてんさい☆わんだふぉー♡わーるど",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100129.png",
+        "length": "1:44",
+        "type": "オリジナル",
+        "artist": "戌神ころね",
+        "lyrics": "おぐらあすか（Hifumi,inc.）, saji（Hifumi,inc.）",
+        "composition": "おぐらあすか（Hifumi,inc.）, saji（Hifumi,inc.）",
+        "arrangement": "おぐらあすか（Hifumi,inc.）",
+        "copyright": "",
+        "score_rate": "戌神ころね",
+        "easy": 7,
+        "normal": 13,
+        "hard": 21,
+        "expert": 28,
+        "mv_url": "https://www.youtube.com/watch?v=nks1I1sY53I",
+        "digital_distribution": "https://korone.streamlink.to/WANDERFUL"
+      },
+      {
+        "id": 100130,
+        "music_title": "We are GAMERS !!!!",
+        "read": "うぃー あー げーまーず !!!!",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100130.png",
+        "length": "2:46",
+        "type": "オリジナル",
+        "artist": "ホロライブゲーマーズ",
+        "lyrics": "PandaBoY",
+        "composition": "PandaBoY",
+        "arrangement": "PandaBoY",
+        "copyright": "",
+        "score_rate": "白上フブキ, 大神ミオ, 猫又おかゆ, 戌神ころね",
+        "easy": 7,
+        "normal": 13,
+        "hard": 22,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=UATaOzzxq_0",
+        "digital_distribution": "https://cover.lnk.to/WeareGAMERS"
       }
     ],
     "globalIcons": {
@@ -18395,7 +18769,8 @@
       "miComet": "さくらみこ, 星街すいせい",
       "秘密結社holoX": "ラプラス・ダークネス, 鷹嶺ルイ, 博衣こより, 風真いろは",
       "hololive Indonesia 1st Generation": "アユンダ・リス, ムーナ・ホシノヴァ, アイラニ・イオフィフティーン",
-      "Blue Journey": "不知火フレア, 常闇トワ, 尾丸ポルカ"
+      "Blue Journey": "不知火フレア, 常闇トワ, 尾丸ポルカ",
+      "ホロライブゲーマーズ": "白上フブキ, 大神ミオ, 猫又おかゆ, 戌神ころね"
     },
     "characterList": [
       {
