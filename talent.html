@@ -738,6 +738,7 @@
 
   <script>
     let globalCopyrightMap = {};
+    let globalAllHolomenData = null;
     let globalGroupedData = null;
     let globalTagUrlMap = {};
 
@@ -748,6 +749,7 @@
           if (data.topBannerMap) setBackgroundBanner(data.topBannerMap);
           if (data.copyright) renderCopyright(data.copyright);
           if (data.externalLinks) renderExternalLinks(data.externalLinks);
+          if (data.holomenTableData) globalAllHolomenData = data.holomenTableData; // ★ 保持
           if (data.characterDataGroupedByUnit) renderData(data.characterDataGroupedByUnit);
         })
         .catch(err => showError(new Error('データの読み込みに失敗しました。')));
@@ -994,18 +996,24 @@
       document.getElementById('modalTypeFilter').innerHTML = '<option value="">すべて</option>';
 
       title.textContent = charName + ' のメンバー情報';
-      body.innerHTML = '<div style="text-align:center; padding:50px; color:#aaa;">データを読み込み中...</div>';
       modal.style.display = 'flex';
 
-      const GAS_ENDPOINT_URL = `https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec?action=getCharacterDetailsByName&charName=${encodeURIComponent(charName)}`;
+      if (!globalAllHolomenData || !globalAllHolomenData.rows) {
+        body.innerHTML = '<div style="padding:20px; text-align:center; color:#9ca3af;">データがありません。</div>';
+        return;
+      }
 
-      fetch(GAS_ENDPOINT_URL, { method: 'GET', redirect: 'follow' })
-        .then(res => res.json())
-        .then(data => {
-          if (data.error) body.innerHTML = '<div style="color:#ef4444; padding:20px;">エラー: ' + escapeHtml(data.message) + '</div>';
-          else renderCharacterDetails(data);
-        })
-        .catch(err => { body.innerHTML = '<div style="color:#ef4444; padding:20px;">詳細データの取得に失敗しました。</div>'; });
+      // data.json の中から該当キャラクターのカードを抽出
+      const matchedRows = globalAllHolomenData.rows.filter(item => {
+        const cName = item.character || item['キャラクター名'] || item['名前'] || '';
+        return String(cName).trim() === String(charName).trim();
+      });
+
+      renderCharacterDetails({
+        details: matchedRows,
+        globalIcons: globalAllHolomenData.globalIcons || {},
+        tagUrlMap: globalAllHolomenData.tagUrlMap || {}
+      });
     }
 
     function formatDateString(val) {
