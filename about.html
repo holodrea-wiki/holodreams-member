@@ -360,7 +360,7 @@
     const GAS_BASE_URL = 'https://script.google.com/macros/s/AKfycbxequWJqOweGHAQZYx6lDqEU5gZXFlAyPi0f5zlPQFYPn_xJRL1ROyxsqUvBjJcV50w/exec';
 
     window.onload = function() {
-      fetch('./data.json')
+      fetch('./data.json?v=' + new Date().getTime(), { cache: 'no-store' })
         .then(res => res.json())
         .then(data => {
           document.getElementById('loading').style.display = 'none';
