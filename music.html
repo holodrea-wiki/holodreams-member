@@ -1027,7 +1027,7 @@
     let itemsPerPage = 50;
 
     window.onload = function() {
-      fetch('./data.json')
+      fetch('./data.json?v=' + new Date().getTime(), { cache: 'no-store' })
         .then(res => res.json())
         .then(data => {
           if (data.topBannerMap) setBackgroundBanner(data.topBannerMap);
