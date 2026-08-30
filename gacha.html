@@ -353,6 +353,69 @@
       .card-title-bar { flex-direction: column; align-items: flex-start; }
       .card-action-btns { width: 100%; justify-content: flex-end; }
     }
+
+    /* --- 所持ステータスバッジ --- */
+    .status-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 11px;
+      border-radius: 4px;
+      margin-left: 6px;
+      font-weight: bold;
+    }
+    .status-badge.unowned {
+      background-color: #e2e8f0;
+      color: #475569;
+    }
+    .status-badge.owned {
+      background-color: #dcfce7;
+      color: #166534;
+    }
+
+    /* --- ピックアップ選択ボタン --- */
+    .pickup-select-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .pickup-btn-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: none; /* 未選択時は非表示 */
+    }
+    .pickup-btn-icon.active {
+      display: inline-block;
+    }
+
+    /* --- 排出結果カードと半透明マスク --- */
+    .gacha-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .gacha-card.already-owned::after {
+      content: "所持済";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.55);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: bold;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -421,7 +484,10 @@
     <!-- 実行ボタン群（選択ピックアップ ＋ ガチャボタン） -->
     <div class="gacha-btn-group">
       <button type="button" class="btn-select-pu" onclick="openPuSelectModal()">
-        <span>🎯 選択ピックアップ</span>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <img id="puSelectedIcon" src="" alt="" style="width:24px; height:24px; border-radius:50%; object-fit:cover; display:none;">
+          <span>🎯 選択ピックアップ</span>
+        </div>
         <span class="pu-selected-label" id="puSelectedLabel">未設定 (均等配分)</span>
       </button>
       <button type="button" class="btn-gacha single" onclick="executeGacha(1)">
@@ -849,21 +915,26 @@
     function selectPuItem(id) {
       selectedPuId = id;
       const label = document.getElementById('puSelectedLabel');
+      const icon = document.getElementById('puSelectedIcon');
+
       if (id === null) {
         label.textContent = '未設定 (均等配分)';
+        if (icon) {
+          icon.style.display = 'none';
+          icon.src = '';
+        }
       } else {
         const chosen = poolStar5PU.find(p => String(p.id) === String(id));
-        label.textContent = chosen ? `${chosen.character} (1.0%)` : '設定中';
+        if (chosen) {
+          label.textContent = `${chosen.character} (1.0000%)`;
+          if (icon) {
+            icon.src = chosen.icon || chosen['アイコン'] || '';
+            icon.style.display = 'inline-block';
+          }
+        }
       }
       updatePuDisplayRateLabel();
       closePuSelectModal();
-    }
-
-    function closePuSelectModal() {
-      document.getElementById('puSelectModal').style.display = 'none';
-    }
-    function closePuSelectModalOnOverlay(e) {
-      if (e.target.id === 'puSelectModal') closePuSelectModal();
     }
 
     /* ========================================================
@@ -1119,6 +1190,85 @@
       if (!str) return '';
       return String(str)
         .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    // 所持管理用Set（メンバーのIDや名前を保持）
+    const ownedMemberIds = new Set();
+
+    // 選択中のピックアップメンバー
+    let selectedPickupMember = null;
+
+    /**
+     * 1. ピックアップ選択ボタンの更新
+     */
+    function updatePickupButton(member) {
+      selectedPickupMember = member;
+      const btn = document.getElementById("pickupSelectBtn");
+      const iconImg = document.getElementById("pickupBtnIcon");
+      const label = document.getElementById("pickupBtnLabel");
+
+      if (member) {
+        iconImg.src = member.iconUrl;
+        iconImg.alt = member.name;
+        iconImg.classList.add("active");
+        label.textContent = member.name;
+      } else {
+        iconImg.classList.remove("active");
+        iconImg.src = "";
+        label.textContent = "メンバーを選択";
+      }
+    }
+
+    /**
+     * 2. 提供割合一覧の描画（所持・未所持バッジ付き）
+     */
+    function renderRatesList(memberList) {
+      const container = document.getElementById("ratesContainer");
+      container.innerHTML = "";
+
+      memberList.forEach(member => {
+        const isOwned = ownedMemberIds.has(member.id);
+        const row = document.createElement("div");
+        row.className = "rate-item-row";
+
+        row.innerHTML = `
+          <span class="member-name">${member.name}</span>
+          <span class="member-rate">${member.rate}%</span>
+          <span class="status-badge ${isOwned ? 'owned' : 'unowned'}">
+            ${isOwned ? '所持済' : '未所持'}
+          </span>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    /**
+     * 3. ガチャ実行処理＆結果描画
+     */
+    function onGachaDraw(drawResults, allMembers) {
+      const resultsContainer = document.getElementById("gachaResults");
+      resultsContainer.innerHTML = "";
+
+      drawResults.forEach(resultMember => {
+        // 過去に獲得済み（または今回の連ガチャ内で既に排出済み）かを判定
+        const isAlreadyOwned = ownedMemberIds.has(resultMember.id);
+
+        // 所持セットに追加
+        ownedMemberIds.add(resultMember.id);
+
+        // 結果カード要素の作成
+        const card = document.createElement("div");
+        card.className = `gacha-card ${isAlreadyOwned ? 'already-owned' : ''}`;
+        card.innerHTML = `
+          <img src="${resultMember.imageUrl}" alt="${resultMember.name}">
+          <span class="name">${resultMember.name}</span>
+        `;
+
+        resultsContainer.appendChild(card);
+      });
+
+      // 提供割合モーダル/リストの表示状態を再描画して最新化
+      renderRatesList(allMembers);
     }
   </script>
 </body>
