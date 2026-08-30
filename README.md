@@ -9,13 +9,12 @@
 | ページ名 / ツール名 | 概要 / 主な機能 | リンク |
 | :--- | :--- | :--- |
 | **ポータルTOP** | サイト全体の総合ポータル・更新情報・ナビゲーション | [サイトを開く](https://holodrea-wiki.github.io/holodreams-member/index.html) |
-| **タレント・メンバー一覧** | 所属・属性・期生別の多軸フィルター＆リアルタイム検索 | [一覧を見る](https://holodrea-wiki.github.io/holodreams-member/members.html) |
-| **楽曲一覧データベース** | 楽曲検索、ソート機能、各種詳細データのモーダル表示 | [楽曲一覧を見る](https://holodrea-wiki.github.io/holodreams-member/songs.html) |
+| **タレント一覧** | 期生別の多軸フィルター＆リアルタイム検索 | [一覧を見る](https://holodrea-wiki.github.io/holodreams-member/talent.html) |
+| **メンバー一覧** | 所属・属性・期生別の多軸フィルター＆リアルタイム検索 | [一覧を見る](https://holodrea-wiki.github.io/holodreams-member/member.html) |
+| **楽曲一覧データベース** | 楽曲検索、ソート機能、各種詳細データのモーダル表示 | [楽曲一覧を見る](https://holodrea-wiki.github.io/holodreams-member/music.html) |
 | **ガチャシミュレーター** | 排出確率計算ロジック、カード演出、所持・未所持判定 | [ツールを試す](https://holodrea-wiki.github.io/holodreams-member/gacha.html) |
-| **所有率チェッカー** | 所持率の自動計算、**結果のX（Twitter）シェア機能** | [チェッカーを開く](https://holodrea-wiki.github.io/holodreams-member/checker.html) |
+| **所有率チェッカー** | 所持率の自動計算、**結果のX（Twitter）シェア機能** | [チェッカーを開く](https://holodrea-wiki.github.io/holodreams-member/collecyion.html) |
 | **サイトについて / お問い合わせ** | 二次創作ガイドライン準拠、免責事項、**権利者向け定型文付き問い合わせフォーム** | [確認する](https://holodrea-wiki.github.io/holodreams-member/about.html) |
-
-※各HTMLファイル名（`members.html`、`songs.html`、`checker.html`、`about.html` 等）は実際のリポジトリ構成に合わせて調整してください。
 
 ---
 
