@@ -107,13 +107,13 @@
     .btn-select-pu {
       background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
       color: #ffffff; border: 1.5px solid #a78bfa; border-radius: 12px;
-      padding: 12px 16px; font-size: 14px; font-weight: bold; cursor: pointer;
+      padding: 10px 14px; font-size: 14px; font-weight: bold; cursor: pointer;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 3px; min-width: 150px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+      gap: 3px; min-width: 160px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
       transition: all 0.15s ease;
     }
     .btn-select-pu:hover { background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%); }
-    .pu-selected-label { font-size: 11px; color: #fef08a; font-weight: bold; max-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .pu-selected-label { font-size: 11px; color: #fef08a; font-weight: bold; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
     .btn-gacha {
       flex: 1; min-width: 170px; max-width: 240px; padding: 14px 20px;
@@ -168,16 +168,27 @@
     .result-item.star-3 { border-color: #38bdf8; }
 
     .result-avatar-wrap {
-      position: relative; width: 70px; height: 70px;
+      position: relative; width: 70px; height: 70px; border-radius: 12px;
     }
     .result-avatar {
       width: 100%; height: 100%; border-radius: 12px; object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4); display: block;
     }
+    
+    /* ★ 重複排出（2体目以降）時の半透明マスク */
+    .result-item.already-owned .result-avatar-wrap::after {
+      content: "所持済";
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(15, 23, 42, 0.75); color: #cbd5e1;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 900; border-radius: 12px;
+      letter-spacing: 0.05em; border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
     .result-rarity-badge {
       position: absolute; bottom: -4px; right: -4px;
       font-size: 10px; font-weight: 900; padding: 1px 6px; border-radius: 8px;
-      color: #ffffff;
+      color: #ffffff; z-index: 2;
     }
     .result-rarity-badge.r5 { background: #ea580c; border: 1px solid #fde047; }
     .result-rarity-badge.r4 { background: #db2777; }
@@ -186,7 +197,7 @@
     .result-pickup-tag {
       position: absolute; top: -6px; left: -6px;
       background: #ef4444; color: #ffffff; font-size: 9px; font-weight: 900;
-      padding: 2px 6px; border-radius: 6px; border: 1px solid #ffffff;
+      padding: 2px 6px; border-radius: 6px; border: 1px solid #ffffff; z-index: 2;
     }
     .result-name {
       font-size: 11.5px; font-weight: bold; color: #ffffff; text-align: center;
@@ -297,9 +308,25 @@
     }
     .rate-detail-unit-tags { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
     .rate-detail-unit-img { height: 18px; width: auto; object-fit: contain; vertical-align: middle; }
+    
+    .rate-detail-right {
+      display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+    }
     .rate-detail-prob {
-      font-family: "Consolas", monospace; font-size: 14px; font-weight: bold;
+      font-family: "Consolas", monospace; font-size: 13.5px; font-weight: bold;
       color: #38bdf8; white-space: nowrap; text-align: right;
+    }
+
+    /* ★ 所持・未所持バッジ */
+    .status-badge {
+      font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px;
+      white-space: nowrap; border: 1px solid transparent;
+    }
+    .status-badge.unowned {
+      background-color: rgba(148, 163, 184, 0.15); color: #94a3b8; border-color: #475569;
+    }
+    .status-badge.owned {
+      background-color: rgba(34, 197, 94, 0.2); color: #4ade80; border-color: #22c55e;
     }
 
     /* 選択ピックアップダイアログ用カード */
@@ -352,69 +379,6 @@
       .btn-gacha, .btn-select-pu { max-width: 100%; }
       .card-title-bar { flex-direction: column; align-items: flex-start; }
       .card-action-btns { width: 100%; justify-content: flex-end; }
-    }
-
-    /* --- 所持ステータスバッジ --- */
-    .status-badge {
-      display: inline-block;
-      padding: 2px 6px;
-      font-size: 11px;
-      border-radius: 4px;
-      margin-left: 6px;
-      font-weight: bold;
-    }
-    .status-badge.unowned {
-      background-color: #e2e8f0;
-      color: #475569;
-    }
-    .status-badge.owned {
-      background-color: #dcfce7;
-      color: #166534;
-    }
-
-    /* --- ピックアップ選択ボタン --- */
-    .pickup-select-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border: 1px solid #cbd5e1;
-      border-radius: 6px;
-      background-color: #fff;
-      cursor: pointer;
-    }
-    .pickup-btn-icon {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: none; /* 未選択時は非表示 */
-    }
-    .pickup-btn-icon.active {
-      display: inline-block;
-    }
-
-    /* --- 排出結果カードと半透明マスク --- */
-    .gacha-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-    .gacha-card.already-owned::after {
-      content: "所持済";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.55);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: bold;
-      pointer-events: none;
     }
   </style>
 </head>
@@ -485,7 +449,7 @@
     <div class="gacha-btn-group">
       <button type="button" class="btn-select-pu" onclick="openPuSelectModal()">
         <div style="display:flex; align-items:center; gap:6px;">
-          <img id="puSelectedIcon" src="" alt="" style="width:24px; height:24px; border-radius:50%; object-fit:cover; display:none;">
+          <img id="puSelectedIcon" src="" alt="" style="width:22px; height:22px; border-radius:50%; object-fit:cover; display:none;">
           <span>🎯 選択ピックアップ</span>
         </div>
         <span class="pu-selected-label" id="puSelectedLabel">未設定 (均等配分)</span>
@@ -517,7 +481,7 @@
 
   <!-- 提供割合詳細モーダル（3タブ構成） -->
   <div id="rateModal" class="modal-overlay" onclick="closeRateModalOnOverlay(event)">
-    <div class="modal-content">
+    <div class="modal-content" onclick="event.stopPropagation()">
       <div class="modal-header">
         <span>提供割合 ＆ 排出情報</span>
         <button class="modal-close-btn" onclick="closeRateModal()">&times;</button>
@@ -527,22 +491,18 @@
         <button type="button" class="modal-tab-btn" onclick="switchRateTab('guaranteed', this)">★4以上確定枠</button>
         <button type="button" class="modal-tab-btn" onclick="switchRateTab('history', this)">排出履歴</button>
       </div>
-      <div class="modal-body" id="rateModalBody">
-        <!-- JSで動的生成 -->
-      </div>
+      <div class="modal-body" id="rateModalBody"></div>
     </div>
   </div>
 
   <!-- 選択ピックアップモーダル -->
   <div id="puSelectModal" class="modal-overlay" onclick="closePuSelectModalOnOverlay(event)">
-    <div class="modal-content" style="max-width: 540px;">
+    <div class="modal-content" style="max-width: 540px;" onclick="event.stopPropagation()">
       <div class="modal-header">
         <span>ピックアップメンバーの選択</span>
         <button class="modal-close-btn" onclick="closePuSelectModal()">&times;</button>
       </div>
-      <div class="modal-body" id="puSelectModalBody">
-        <!-- JSで動的生成 -->
-      </div>
+      <div class="modal-body" id="puSelectModalBody"></div>
     </div>
   </div>
 
@@ -564,6 +524,9 @@
 
     // 選択中ピックアップID（nullなら通常配分）
     let selectedPuId = null;
+
+    // ★ 所持管理用Set（排出したカードIDを保持）
+    const ownedCardSet = new Set();
 
     // 統計・履歴データ
     let totalRolls = 0;
@@ -664,44 +627,36 @@
      * 各アイテムの個別確率を算出（通常枠 / 確定枠）
      */
     function getProbMap(isGuaranteed = false) {
-      const probMap = {}; // { id: number }
+      const probMap = {};
 
-      // 1. ピックアップ確率の配分 (合計2.0%)
       const puCount = poolStar5PU.length;
       if (puCount > 0) {
         if (selectedPuId && puCount > 1) {
-          // 選択された1体に 1.0%、残りの puCount - 1 体に 1.0% を均等割
           const unselectedEach = 1.0 / (puCount - 1);
           poolStar5PU.forEach(item => {
             probMap[item.id] = (String(item.id) === String(selectedPuId)) ? 1.0 : unselectedEach;
           });
         } else {
-          // 均等割
           const eachPu = 2.0 / puCount;
           poolStar5PU.forEach(item => { probMap[item.id] = eachPu; });
         }
       }
 
-      // 2. ★5通常枠 (合計3.0%)
       const normal5Count = poolStar5Normal.length;
       if (normal5Count > 0) {
         const eachNormal5 = 3.0 / normal5Count;
         poolStar5Normal.forEach(item => { probMap[item.id] = eachNormal5; });
       } else if (puCount > 0) {
-        // 通常枠不在時のフォールバック
         const extraEach = 3.0 / puCount;
         poolStar5PU.forEach(item => { probMap[item.id] = (probMap[item.id] || 0) + extraEach; });
       }
 
-      // 3. ★4枠 & ★3枠
       if (isGuaranteed) {
-        // ★4以上確定枠：★4に 95.0%、★3は 0%
         const star4Count = poolStar4.length;
         const each4 = star4Count > 0 ? (95.0 / star4Count) : 0;
         poolStar4.forEach(item => { probMap[item.id] = each4; });
         poolStar3.forEach(item => { probMap[item.id] = 0; });
       } else {
-        // 通常枠：★4に 10.0%、★3に 85.0%
         const star4Count = poolStar4.length;
         const each4 = star4Count > 0 ? (10.0 / star4Count) : 0;
         poolStar4.forEach(item => { probMap[item.id] = each4; });
@@ -718,12 +673,10 @@
      * 1回分の抽選ロジック
      */
     function rollOnce(isGuaranteed = false) {
-      const rand = Math.random() * 100; // 0 〜 100
+      const rand = Math.random() * 100;
 
-      // ★5 ピックアップ判定 (0% 〜 2.0%)
       if (rand < 2.0 && poolStar5PU.length > 0) {
         if (selectedPuId && poolStar5PU.length > 1) {
-          // 0% 〜 1.0% は選択されたPU、1.0% 〜 2.0% は非選択PUから均等選出
           if (rand < 1.0) {
             const selectedItem = poolStar5PU.find(p => String(p.id) === String(selectedPuId));
             return { item: selectedItem || poolStar5PU[0], isPU: true, rarity: 5 };
@@ -738,29 +691,24 @@
         }
       }
 
-      // ★5 通常枠 (2.0% 〜 5.0%)
       if (rand < 5.0) {
         const targetPool = poolStar5Normal.length > 0 ? poolStar5Normal : poolStar5PU;
         const chosen = targetPool[Math.floor(Math.random() * targetPool.length)];
         return { item: chosen, isPU: poolStar5Normal.length === 0, rarity: 5 };
       }
 
-      // ★4 枠判定
       if (isGuaranteed) {
-        // 確定枠：5.0% 〜 100.0% はすべて ★4
         if (poolStar4.length > 0) {
           const chosen = poolStar4[Math.floor(Math.random() * poolStar4.length)];
           return { item: chosen, isPU: false, rarity: 4 };
         }
       } else {
-        // 通常枠：5.0% 〜 15.0% が ★4
         if (rand < 15.0 && poolStar4.length > 0) {
           const chosen = poolStar4[Math.floor(Math.random() * poolStar4.length)];
           return { item: chosen, isPU: false, rarity: 4 };
         }
       }
 
-      // ★3 枠 (通常枠の 15.0% 〜 100.0%)
       const targetPool3 = poolStar3.length > 0 ? poolStar3 : (poolStar4.length > 0 ? poolStar4 : poolStar5PU);
       const chosen = targetPool3[Math.floor(Math.random() * targetPool3.length)];
       return { item: chosen, isPU: false, rarity: Number(chosen.rarity) || 3 };
@@ -777,10 +725,19 @@
 
       const results = [];
       for (let i = 0; i < times; i++) {
-        // 10連実行時の10回目（i === 9）のみ確定枠ロジックを適用
         const isGuaranteed = (times === 10 && i === 9);
         const res = rollOnce(isGuaranteed);
-        results.push(res);
+
+        // ★ 排出時点ですでに所持していたかを判定
+        const isAlreadyOwned = ownedCardSet.has(res.item.id);
+
+        // 所持Setに追加
+        ownedCardSet.add(res.item.id);
+
+        results.push({
+          ...res,
+          isAlreadyOwned: isAlreadyOwned
+        });
 
         totalRolls++;
         if (res.rarity === 5) {
@@ -792,7 +749,6 @@
           countStar3++;
         }
 
-        // 履歴に追加
         rollHistory.unshift({
           rollNumber: totalRolls,
           item: res.item,
@@ -822,7 +778,8 @@
         const rarity = res.rarity;
 
         const card = document.createElement('div');
-        card.className = `result-item star-${rarity}`;
+        // ★ すでに所持済み（2体目以降）の場合は .already-owned を付与
+        card.className = `result-item star-${rarity} ${res.isAlreadyOwned ? 'already-owned' : ''}`;
 
         card.innerHTML = `
           ${res.isPU ? '<div class="result-pickup-tag">PU</div>' : ''}
@@ -858,6 +815,7 @@
       countStar4 = 0;
       countStar3 = 0;
       rollHistory = [];
+      ownedCardSet.clear(); // 所持状態もリセット
       updateStatsDisplay();
       document.getElementById('resultsGrid').innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding:30px; color:#94a3b8; font-size:13px;">ボタンを押してガチャを実行してください</div>';
       document.getElementById('resultCountLabel').textContent = '未実行';
@@ -903,7 +861,7 @@
                 <span style="font-size:14px; font-weight:bold; color:#ffffff;">${escapeHtml(charName)}</span>
               </div>
             </div>
-            ${isSelected ? '<span style="color:#a855f7; font-weight:bold;">✓ 選択中 (1.0%)</span>' : ''}
+            ${isSelected ? '<span style="color:#a855f7; font-weight:bold;">✓ 選択中 (1.0000%)</span>' : ''}
           </div>
         `;
       });
@@ -935,6 +893,13 @@
       }
       updatePuDisplayRateLabel();
       closePuSelectModal();
+    }
+
+    function closePuSelectModal() {
+      document.getElementById('puSelectModal').style.display = 'none';
+    }
+    function closePuSelectModalOnOverlay(e) {
+      if (e.target.id === 'puSelectModal') closePuSelectModal();
     }
 
     /* ========================================================
@@ -981,7 +946,6 @@
         return `★`.repeat(rarityNum);
       };
 
-      // 1. 全体確率サマリーカード
       let html = `
         <div class="modal-summary-card">
           <div class="modal-summary-row" style="color:#f59e0b;">
@@ -999,13 +963,11 @@
         </div>
       `;
 
-      // 2. レアリティ別セクション (5 > 4 > 3)
       [5, 4, 3].forEach(targetRarity => {
         const currentGroup = allRowsData.filter(item => Number(item.rarity) === targetRarity);
         if (currentGroup.length === 0) return;
-        if (isGuaranteed && targetRarity === 3) return; // 確定枠では★3は非表示
+        if (isGuaranteed && targetRarity === 3) return;
 
-        // ソート: pickup(TRUE > FALSE) > id(昇順)
         currentGroup.sort((a, b) => {
           const isPuA = (a.pickup === true || String(a.pickup).trim().toLowerCase() === 'true' || a.pickup === 1 || String(a.pickup).trim() === '1');
           const isPuB = (b.pickup === true || String(b.pickup).trim().toLowerCase() === 'true' || b.pickup === 1 || String(b.pickup).trim() === '1');
@@ -1029,12 +991,12 @@
           const isPU = (item.pickup === true || String(item.pickup).trim().toLowerCase() === 'true' || item.pickup === 1 || String(item.pickup).trim() === '1');
           const isSelectedPU = isPU && (String(item.id) === String(selectedPuId));
           const prob = probMap[item.id] || 0;
+          const isOwned = ownedCardSet.has(item.id);
 
           const charName = item.character || item['キャラクター名'] || '名称不明';
           const alias = item.alias || item['二つ名'] || '';
           const iconUrl = item.icon || item['アイコン'] || 'https://via.placeholder.com/48?text=No+Img';
 
-          // ユニットタグ画像
           let unitTagsHtml = '';
           if (item.unit_tag_urls && Array.isArray(item.unit_tag_urls) && item.unit_tag_urls.length > 0) {
             unitTagsHtml = item.unit_tag_urls.map(u => `<img src="${escapeHtml(u)}" class="rate-detail-unit-img" alt="unit">`).join('');
@@ -1064,7 +1026,10 @@
                   </div>
                 </div>
               </div>
-              <div class="rate-detail-prob">${formatProbability(prob)}</div>
+              <div class="rate-detail-right">
+                <span class="status-badge ${isOwned ? 'owned' : 'unowned'}">${isOwned ? '所持済' : '未所持'}</span>
+                <span class="rate-detail-prob">${formatProbability(prob)}</span>
+              </div>
             </div>
           `;
         });
@@ -1190,85 +1155,6 @@
       if (!str) return '';
       return String(str)
         .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-    }
-
-    // 所持管理用Set（メンバーのIDや名前を保持）
-    const ownedMemberIds = new Set();
-
-    // 選択中のピックアップメンバー
-    let selectedPickupMember = null;
-
-    /**
-     * 1. ピックアップ選択ボタンの更新
-     */
-    function updatePickupButton(member) {
-      selectedPickupMember = member;
-      const btn = document.getElementById("pickupSelectBtn");
-      const iconImg = document.getElementById("pickupBtnIcon");
-      const label = document.getElementById("pickupBtnLabel");
-
-      if (member) {
-        iconImg.src = member.iconUrl;
-        iconImg.alt = member.name;
-        iconImg.classList.add("active");
-        label.textContent = member.name;
-      } else {
-        iconImg.classList.remove("active");
-        iconImg.src = "";
-        label.textContent = "メンバーを選択";
-      }
-    }
-
-    /**
-     * 2. 提供割合一覧の描画（所持・未所持バッジ付き）
-     */
-    function renderRatesList(memberList) {
-      const container = document.getElementById("ratesContainer");
-      container.innerHTML = "";
-
-      memberList.forEach(member => {
-        const isOwned = ownedMemberIds.has(member.id);
-        const row = document.createElement("div");
-        row.className = "rate-item-row";
-
-        row.innerHTML = `
-          <span class="member-name">${member.name}</span>
-          <span class="member-rate">${member.rate}%</span>
-          <span class="status-badge ${isOwned ? 'owned' : 'unowned'}">
-            ${isOwned ? '所持済' : '未所持'}
-          </span>
-        `;
-        container.appendChild(row);
-      });
-    }
-
-    /**
-     * 3. ガチャ実行処理＆結果描画
-     */
-    function onGachaDraw(drawResults, allMembers) {
-      const resultsContainer = document.getElementById("gachaResults");
-      resultsContainer.innerHTML = "";
-
-      drawResults.forEach(resultMember => {
-        // 過去に獲得済み（または今回の連ガチャ内で既に排出済み）かを判定
-        const isAlreadyOwned = ownedMemberIds.has(resultMember.id);
-
-        // 所持セットに追加
-        ownedMemberIds.add(resultMember.id);
-
-        // 結果カード要素の作成
-        const card = document.createElement("div");
-        card.className = `gacha-card ${isAlreadyOwned ? 'already-owned' : ''}`;
-        card.innerHTML = `
-          <img src="${resultMember.imageUrl}" alt="${resultMember.name}">
-          <span class="name">${resultMember.name}</span>
-        `;
-
-        resultsContainer.appendChild(card);
-      });
-
-      // 提供割合モーダル/リストの表示状態を再描画して最新化
-      renderRatesList(allMembers);
     }
   </script>
 </body>
