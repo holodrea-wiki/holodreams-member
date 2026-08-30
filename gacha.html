@@ -84,6 +84,10 @@
       font-size: 16px; font-weight: bold; color: #93c5fd;
       border-bottom: 1px solid #475569; padding-bottom: 8px;
       display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 8px;
+    }
+    .card-action-btns {
+      display: flex; gap: 8px; align-items: center;
     }
     .rate-table {
       width: 100%; border-collapse: collapse; font-size: 13.5px;
@@ -124,10 +128,17 @@
     .btn-gacha.multi:hover { background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%); }
     .btn-sub-label { font-size: 11px; opacity: 0.85; font-weight: normal; }
 
+    .btn-rate-modal {
+      background: #0284c7; color: #ffffff; border: 1px solid #38bdf8;
+      padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: bold;
+      cursor: pointer; transition: background 0.15s;
+    }
+    .btn-rate-modal:hover { background: #0369a1; }
+
     .btn-reset {
       background: #334155; color: #cbd5e1; border: 1px solid #475569;
       padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: bold;
-      cursor: pointer; align-self: flex-end; transition: background 0.15s;
+      cursor: pointer; transition: background 0.15s;
     }
     .btn-reset:hover { background: #475569; color: #ffffff; }
 
@@ -189,6 +200,66 @@
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;
     }
 
+    /* モーダルダイアログ */
+    .modal-overlay {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(10, 15, 26, 0.85); backdrop-filter: blur(4px); z-index: 2000;
+      justify-content: center; align-items: center; padding: 16px;
+    }
+    .modal-content {
+      background: #111827; color: #ffffff; border-radius: 16px; width: 100%; max-width: 680px;
+      max-height: 85vh; display: flex; flex-direction: column;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); overflow: hidden; border: 1px solid #374151;
+    }
+    .modal-header {
+      padding: 14px 20px; background: #1f2937; display: flex; justify-content: space-between;
+      align-items: center; font-weight: bold; font-size: 16px; border-bottom: 1px solid #374151;
+    }
+    .modal-close-btn {
+      background: rgba(255,255,255,0.2); border: none; color: white;
+      font-size: 20px; width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+    }
+    .modal-body {
+      padding: 16px; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 8px;
+    }
+
+    /* 提供割合詳細アイテム */
+    .rate-detail-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 12px; border-radius: 10px; background: #1e293b;
+      border: 1px solid #334155; gap: 12px;
+    }
+    .rate-detail-row.is-pu {
+      border-color: #ef4444; background: linear-gradient(90deg, rgba(239, 68, 68, 0.15) 0%, #1e293b 100%);
+    }
+    .rate-detail-left {
+      display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0;
+    }
+    .rate-detail-icon-box {
+      position: relative; width: 48px; height: 48px; flex-shrink: 0;
+    }
+    .rate-detail-icon {
+      width: 100%; height: 100%; border-radius: 8px; object-fit: cover;
+    }
+    .rate-detail-pu-badge {
+      position: absolute; top: -4px; left: -4px; background: #ef4444;
+      color: #ffffff; font-size: 8px; font-weight: 900; padding: 1px 4px;
+      border-radius: 4px; border: 1px solid #ffffff;
+    }
+    .rate-detail-name-box {
+      display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0;
+    }
+    .rate-detail-alias {
+      font-size: 11px; color: #94a3b8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .rate-detail-char {
+      font-size: 14px; font-weight: bold; color: #ffffff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .rate-detail-prob {
+      font-family: "Consolas", monospace; font-size: 14px; font-weight: bold;
+      color: #38bdf8; white-space: nowrap; text-align: right;
+    }
+
     #loading { text-align: center; padding: 60px; color: #f8fafc; font-weight: bold; }
 
     /* フッター */
@@ -214,6 +285,8 @@
       .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
       .gacha-btn-group { flex-direction: column; align-items: stretch; }
       .btn-gacha { max-width: 100%; }
+      .card-title-bar { flex-direction: column; align-items: flex-start; }
+      .card-action-btns { width: 100%; justify-content: flex-end; }
     }
   </style>
 </head>
@@ -239,7 +312,10 @@
     <div class="gacha-card-box">
       <div class="card-title-bar">
         <span>提供割合 ＆ 実行統計</span>
-        <button type="button" class="btn-reset" onclick="resetStats()">回数リセット</button>
+        <div class="card-action-btns">
+          <button type="button" class="btn-rate-modal" onclick="openRateModal()">提供割合</button>
+          <button type="button" class="btn-reset" onclick="resetStats()">回数リセット</button>
+        </div>
       </div>
 
       <table class="rate-table">
@@ -304,6 +380,19 @@
 
   </main>
 
+  <!-- 提供割合詳細モーダル -->
+  <div id="rateModal" class="modal-overlay" onclick="closeRateModalOnOverlay(event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>提供割合 詳細一覧</span>
+        <button class="modal-close-btn" onclick="closeRateModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="rateModalBody">
+        <!-- JSで動的生成 -->
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-links-container" id="footerLinksBox"></div>
     <div class="copyright-text" id="footerCopyrightNotice"></div>
@@ -315,6 +404,7 @@
     let poolStar5Normal = [];
     let poolStar4 = [];
     let poolStar3 = [];
+    let allRowsData = [];
 
     // 統計データ
     let totalRolls = 0;
@@ -334,7 +424,8 @@
           if (data.copyright) renderCopyright(data.copyright);
           if (data.externalLinks) renderExternalLinks(data.externalLinks);
           if (data.holomenTableData && data.holomenTableData.rows) {
-            initGachaPools(data.holomenTableData.rows);
+            allRowsData = data.holomenTableData.rows;
+            initGachaPools(allRowsData);
           }
         })
         .catch(err => {
@@ -367,18 +458,101 @@
       });
 
       // ピックアップ枠の確率表示更新
-      const puRateText = poolStar5PU.length > 0 ? (2.0 / poolStar5PU.length).toFixed(2) : '0.00';
+      const puRateText = poolStar5PU.length > 0 ? (2.0 / poolStar5PU.length).toFixed(3) : '0.000';
       document.getElementById('puRateDisplay').textContent = poolStar5PU.length > 0 ? `合計2.0 (1体あたり${puRateText})` : '0.0';
     }
 
     /**
+     * 提供割合モーダルの表示
+     */
+    function openRateModal() {
+      const modal = document.getElementById('rateModal');
+      const body = document.getElementById('rateModalBody');
+      body.innerHTML = '';
+
+      if (!allRowsData || allRowsData.length === 0) {
+        body.innerHTML = '<div style="text-align:center; padding:20px; color:#94a3b8;">データがありません。</div>';
+        modal.style.display = 'flex';
+        return;
+      }
+
+      // 各カテゴリごとの1体あたり個別確率の計算
+      const puRateEach = poolStar5PU.length > 0 ? (2.0 / poolStar5PU.length) : 0;
+      const normal5RateEach = poolStar5Normal.length > 0 ? (3.0 / poolStar5Normal.length) : (poolStar5PU.length > 0 ? (5.0 / poolStar5PU.length) : 0);
+      const star4RateEach = poolStar4.length > 0 ? (10.0 / poolStar4.length) : 0;
+      const star3RateEach = poolStar3.length > 0 ? (85.0 / poolStar3.length) : 0;
+
+      // ソート順：
+      // 1. pickup: TRUE > FALSE
+      // 2. rarity: 5 > 4 > 3
+      // 3. id: 昇順
+      const sortedList = [...allRowsData].sort((a, b) => {
+        const isPuA = (a.pickup === true || String(a.pickup).trim().toLowerCase() === 'true' || a.pickup === 1 || String(a.pickup).trim() === '1');
+        const isPuB = (b.pickup === true || String(b.pickup).trim().toLowerCase() === 'true' || b.pickup === 1 || String(b.pickup).trim() === '1');
+
+        if (isPuA !== isPuB) return isPuA ? -1 : 1;
+
+        const rA = Number(a.rarity) || 0;
+        const rB = Number(b.rarity) || 0;
+        if (rA !== rB) return rB - rA;
+
+        const idA = Number(a.id) || 0;
+        const idB = Number(b.id) || 0;
+        return idA - idB;
+      });
+
+      let html = '';
+      sortedList.forEach(item => {
+        const r = Number(item.rarity) || 0;
+        const isPU = (item.pickup === true || String(item.pickup).trim().toLowerCase() === 'true' || item.pickup === 1 || String(item.pickup).trim() === '1');
+        
+        let prob = 0;
+        if (r === 5) {
+          prob = isPU ? puRateEach : normal5RateEach;
+        } else if (r === 4) {
+          prob = star4RateEach;
+        } else if (r === 3) {
+          prob = star3RateEach;
+        }
+
+        const charName = item.character || item['キャラクター名'] || '名称不明';
+        const alias = item.alias || item['二つ名'] || '';
+        const iconUrl = item.icon || item['アイコン'] || 'https://via.placeholder.com/48?text=No+Img';
+
+        html += `
+          <div class="rate-detail-row ${isPU ? 'is-pu' : ''}">
+            <div class="rate-detail-left">
+              <div class="rate-detail-icon-box">
+                <img src="${escapeHtml(iconUrl)}" class="rate-detail-icon" alt="${escapeHtml(charName)}" loading="lazy">
+                ${isPU ? '<div class="rate-detail-pu-badge">PU</div>' : ''}
+              </div>
+              <div class="rate-detail-name-box">
+                <div class="rate-detail-alias">${escapeHtml(alias)}</div>
+                <div class="rate-detail-char">★${r} ${escapeHtml(charName)}</div>
+              </div>
+            </div>
+            <div class="rate-detail-prob">${prob.toFixed(3)}%</div>
+          </div>
+        `;
+      });
+
+      body.innerHTML = html;
+      modal.style.display = 'flex';
+    }
+
+    function closeRateModal() {
+      document.getElementById('rateModal').style.display = 'none';
+    }
+
+    function closeRateModalOnOverlay(e) {
+      if (e.target.id === 'rateModal') closeRateModal();
+    }
+
+    /**
      * 1回分の抽選ロジック
-     * - ★5合計: 5% (PU: 2%, 通常: 3%)
-     * - ★4合計: 10%
-     * - ★3合計: 85%
      */
     function rollOnce() {
-      const rand = Math.random() * 100; // 0 〜 100
+      const rand = Math.random() * 100;
 
       // 1. ★5 ピックアップ枠 (0% 〜 2.0%)
       if (rand < 2.0 && poolStar5PU.length > 0) {
