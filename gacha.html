@@ -118,13 +118,9 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .btn-gacha:active { transform: scale(0.97); }
-    .btn-gacha.single {
-      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-    }
+    .btn-gacha.single { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); }
     .btn-gacha.single:hover { background: linear-gradient(135deg, #0369a1 0%, #075985 100%); }
-    .btn-gacha.multi {
-      background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
-    }
+    .btn-gacha.multi { background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); }
     .btn-gacha.multi:hover { background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%); }
     .btn-sub-label { font-size: 11px; opacity: 0.85; font-weight: normal; }
 
@@ -158,13 +154,11 @@
       100% { transform: scale(1); opacity: 1; }
     }
     .result-item.star-5 {
-      border-color: #f59e0b;
-      box-shadow: 0 0 16px rgba(245, 158, 11, 0.45);
+      border-color: #f59e0b; box-shadow: 0 0 16px rgba(245, 158, 11, 0.45);
       background: linear-gradient(180deg, rgba(245, 158, 11, 0.2) 0%, rgba(15, 23, 42, 0.8) 100%);
     }
     .result-item.star-4 {
-      border-color: #ec4899;
-      box-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
+      border-color: #ec4899; box-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
     }
     .result-item.star-3 {
       border-color: #38bdf8;
@@ -208,7 +202,7 @@
     }
     .modal-content {
       background: #111827; color: #ffffff; border-radius: 16px; width: 100%; max-width: 680px;
-      max-height: 85vh; display: flex; flex-direction: column;
+      max-height: 88vh; display: flex; flex-direction: column;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); overflow: hidden; border: 1px solid #374151;
     }
     .modal-header {
@@ -220,7 +214,31 @@
       font-size: 20px; width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
     }
     .modal-body {
-      padding: 16px; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 8px;
+      padding: 16px; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 14px;
+    }
+
+    /* ★ モーダル内：全体確率サマリー */
+    .modal-summary-card {
+      background: #1e293b; border: 1px solid #334155; border-radius: 12px;
+      padding: 12px 16px; display: flex; flex-direction: column; gap: 6px;
+    }
+    .modal-summary-row {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 14px; font-weight: bold;
+    }
+    .modal-summary-icon {
+      height: 22px; width: auto; object-fit: contain; vertical-align: middle;
+    }
+
+    /* ★ レアリティ区切りセクション */
+    .rate-section-header {
+      display: flex; align-items: center; gap: 10px; margin-top: 8px; margin-bottom: 2px;
+    }
+    .rate-section-icon {
+      height: 26px; width: auto; object-fit: contain;
+    }
+    .rate-section-line {
+      flex: 1; height: 1px; background: linear-gradient(90deg, #475569 0%, transparent 100%);
     }
 
     /* 提供割合詳細アイテム */
@@ -247,13 +265,22 @@
       border-radius: 4px; border: 1px solid #ffffff;
     }
     .rate-detail-name-box {
-      display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0;
+      display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0;
     }
     .rate-detail-alias {
       font-size: 11px; color: #94a3b8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
+    .rate-detail-char-line {
+      display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+    }
     .rate-detail-char {
       font-size: 14px; font-weight: bold; color: #ffffff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .rate-detail-unit-tags {
+      display: flex; gap: 4px; align-items: center; flex-shrink: 0;
+    }
+    .rate-detail-unit-img {
+      height: 18px; width: auto; object-fit: contain; vertical-align: middle;
     }
     .rate-detail-prob {
       font-family: "Consolas", monospace; font-size: 14px; font-weight: bold;
@@ -405,6 +432,9 @@
     let poolStar4 = [];
     let poolStar3 = [];
     let allRowsData = [];
+    let globalTagUrlMap = {};
+    let globalIconsMap = {};
+    let rarityIcons = {};
 
     // 統計データ
     let totalRolls = 0;
@@ -423,10 +453,27 @@
           if (data.topBannerMap) setBackgroundBanner(data.topBannerMap);
           if (data.copyright) renderCopyright(data.copyright);
           if (data.externalLinks) renderExternalLinks(data.externalLinks);
-          if (data.holomenTableData && data.holomenTableData.rows) {
-            allRowsData = data.holomenTableData.rows;
+          
+          if (data.holomenTableData) {
+            globalTagUrlMap = data.holomenTableData.tagUrlMap || {};
+            globalIconsMap = data.holomenTableData.globalIcons || {};
+            allRowsData = data.holomenTableData.rows || [];
             initGachaPools(allRowsData);
           }
+
+          // レアリティ画像URLの抽出
+          rarityIcons = {
+            5: globalIconsMap['レアリティ5'] || globalIconsMap['rarity5'] || globalIconsMap['★5'] || '',
+            4: globalIconsMap['レアリティ4'] || globalIconsMap['rarity4'] || globalIconsMap['★4'] || '',
+            3: globalIconsMap['レアリティ3'] || globalIconsMap['rarity3'] || globalIconsMap['★3'] || ''
+          };
+
+          // 一覧データからrarity-iconをフォールバック収集
+          allRowsData.forEach(item => {
+            const r = Number(item.rarity) || 0;
+            const rIcon = item['rarity-icon'] || item['rarity_icon'];
+            if (rIcon && !rarityIcons[r]) rarityIcons[r] = rIcon;
+          });
         })
         .catch(err => {
           console.error('データ読み込みエラー:', err);
@@ -457,9 +504,8 @@
         }
       });
 
-      // ピックアップ枠の確率表示更新
       const puRateText = poolStar5PU.length > 0 ? (2.0 / poolStar5PU.length).toFixed(3) : '0.000';
-      document.getElementById('puRateDisplay').textContent = poolStar5PU.length > 0 ? `合計2.0 (1体あたり${puRateText})` : '0.0';
+      document.getElementById('puRateDisplay').textContent = poolStar5PU.length > 0 ? `合計2.0% (1体あたり${puRateText}%)` : '0.0%';
     }
 
     /**
@@ -476,64 +522,112 @@
         return;
       }
 
-      // 各カテゴリごとの1体あたり個別確率の計算
+      // 個別確率の算出
       const puRateEach = poolStar5PU.length > 0 ? (2.0 / poolStar5PU.length) : 0;
       const normal5RateEach = poolStar5Normal.length > 0 ? (3.0 / poolStar5Normal.length) : (poolStar5PU.length > 0 ? (5.0 / poolStar5PU.length) : 0);
       const star4RateEach = poolStar4.length > 0 ? (10.0 / poolStar4.length) : 0;
       const star3RateEach = poolStar3.length > 0 ? (85.0 / poolStar3.length) : 0;
 
-      // ソート順：
-      // 1. pickup: TRUE > FALSE
-      // 2. rarity: 5 > 4 > 3
-      // 3. id: 昇順
-      const sortedList = [...allRowsData].sort((a, b) => {
-        const isPuA = (a.pickup === true || String(a.pickup).trim().toLowerCase() === 'true' || a.pickup === 1 || String(a.pickup).trim() === '1');
-        const isPuB = (b.pickup === true || String(b.pickup).trim().toLowerCase() === 'true' || b.pickup === 1 || String(b.pickup).trim() === '1');
-
-        if (isPuA !== isPuB) return isPuA ? -1 : 1;
-
-        const rA = Number(a.rarity) || 0;
-        const rB = Number(b.rarity) || 0;
-        if (rA !== rB) return rB - rA;
-
-        const idA = Number(a.id) || 0;
-        const idB = Number(b.id) || 0;
-        return idA - idB;
-      });
-
-      let html = '';
-      sortedList.forEach(item => {
-        const r = Number(item.rarity) || 0;
-        const isPU = (item.pickup === true || String(item.pickup).trim().toLowerCase() === 'true' || item.pickup === 1 || String(item.pickup).trim() === '1');
-        
-        let prob = 0;
-        if (r === 5) {
-          prob = isPU ? puRateEach : normal5RateEach;
-        } else if (r === 4) {
-          prob = star4RateEach;
-        } else if (r === 3) {
-          prob = star3RateEach;
+      // 1. 全体確率サマリーカードを一番上に設置
+      const getRarityBadgeHtml = (rarityNum) => {
+        const iconUrl = rarityIcons[rarityNum];
+        if (iconUrl) {
+          return `<img src="${escapeHtml(iconUrl)}" class="modal-summary-icon" alt="★${rarityNum}">`;
         }
+        return `★`.repeat(rarityNum);
+      };
 
-        const charName = item.character || item['キャラクター名'] || '名称不明';
-        const alias = item.alias || item['二つ名'] || '';
-        const iconUrl = item.icon || item['アイコン'] || 'https://via.placeholder.com/48?text=No+Img';
+      let html = `
+        <div class="modal-summary-card">
+          <div class="modal-summary-row" style="color:#f59e0b;">
+            <span>${getRarityBadgeHtml(5)}</span>
+            <span>5.0%</span>
+          </div>
+          <div class="modal-summary-row" style="color:#ec4899;">
+            <span>${getRarityBadgeHtml(4)}</span>
+            <span>10.0%</span>
+          </div>
+          <div class="modal-summary-row" style="color:#38bdf8;">
+            <span>${getRarityBadgeHtml(3)}</span>
+            <span>85.0%</span>
+          </div>
+        </div>
+      `;
+
+      // 2. レアリティ別セクションの生成 (5 > 4 > 3)
+      [5, 4, 3].forEach(targetRarity => {
+        // 対象レアリティ内のアイテムを抽出
+        const currentGroup = allRowsData.filter(item => Number(item.rarity) === targetRarity);
+        if (currentGroup.length === 0) return;
+
+        // ソート: pickup(TRUE > FALSE) > id(昇順)
+        currentGroup.sort((a, b) => {
+          const isPuA = (a.pickup === true || String(a.pickup).trim().toLowerCase() === 'true' || a.pickup === 1 || String(a.pickup).trim() === '1');
+          const isPuB = (b.pickup === true || String(b.pickup).trim().toLowerCase() === 'true' || b.pickup === 1 || String(b.pickup).trim() === '1');
+
+          if (isPuA !== isPuB) return isPuA ? -1 : 1;
+
+          const idA = Number(a.id) || 0;
+          const idB = Number(b.id) || 0;
+          return idA - idB;
+        });
+
+        // セクション見出し
+        const secIconUrl = rarityIcons[targetRarity];
+        const secHeaderVisual = secIconUrl 
+          ? `<img src="${escapeHtml(secIconUrl)}" class="rate-section-icon" alt="★${targetRarity}">` 
+          : `<span style="font-weight:900; font-size:16px;">${'★'.repeat(targetRarity)}</span>`;
 
         html += `
-          <div class="rate-detail-row ${isPU ? 'is-pu' : ''}">
-            <div class="rate-detail-left">
-              <div class="rate-detail-icon-box">
-                <img src="${escapeHtml(iconUrl)}" class="rate-detail-icon" alt="${escapeHtml(charName)}" loading="lazy">
-                ${isPU ? '<div class="rate-detail-pu-badge">PU</div>' : ''}
-              </div>
-              <div class="rate-detail-name-box">
-                <div class="rate-detail-alias">${escapeHtml(alias)}</div>
-                <div class="rate-detail-char">★${r} ${escapeHtml(charName)}</div>
-              </div>
-            </div>
-            <div class="rate-detail-prob">${prob.toFixed(3)}%</div>
+          <div class="rate-section-header">
+            ${secHeaderVisual}
+            <div class="rate-section-line"></div>
           </div>
         `;
+
+        // メンバーリスト描画
+        currentGroup.forEach(item => {
+          const isPU = (item.pickup === true || String(item.pickup).trim().toLowerCase() === 'true' || item.pickup === 1 || String(item.pickup).trim() === '1');
+          
+          let prob = 0;
+          if (targetRarity === 5) prob = isPU ? puRateEach : normal5RateEach;
+          else if (targetRarity === 4) prob = star4RateEach;
+          else if (targetRarity === 3) prob = star3RateEach;
+
+          const charName = item.character || item['キャラクター名'] || '名称不明';
+          const alias = item.alias || item['二つ名'] || '';
+          const iconUrl = item.icon || item['アイコン'] || 'https://via.placeholder.com/48?text=No+Img';
+
+          // ユニットタグ画像の取得
+          let unitTagsHtml = '';
+          if (item.unit_tag_urls && Array.isArray(item.unit_tag_urls) && item.unit_tag_urls.length > 0) {
+            unitTagsHtml = item.unit_tag_urls.map(u => `<img src="${escapeHtml(u)}" class="rate-detail-unit-img" alt="unit">`).join('');
+          } else if (item.unit) {
+            const rawUnits = String(item.unit).split(/[,、]/).map(u => u.trim());
+            unitTagsHtml = rawUnits
+              .map(u => globalTagUrlMap[u] ? `<img src="${escapeHtml(globalTagUrlMap[u])}" class="rate-detail-unit-img" alt="${escapeHtml(u)}">` : '')
+              .join('');
+          }
+
+          html += `
+            <div class="rate-detail-row ${isPU ? 'is-pu' : ''}">
+              <div class="rate-detail-left">
+                <div class="rate-detail-icon-box">
+                  <img src="${escapeHtml(iconUrl)}" class="rate-detail-icon" alt="${escapeHtml(charName)}" loading="lazy">
+                  ${isPU ? '<div class="rate-detail-pu-badge">PU</div>' : ''}
+                </div>
+                <div class="rate-detail-name-box">
+                  <div class="rate-detail-alias">${escapeHtml(alias)}</div>
+                  <div class="rate-detail-char-line">
+                    <span class="rate-detail-char">${escapeHtml(charName)}</span>
+                    <div class="rate-detail-unit-tags">${unitTagsHtml}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="rate-detail-prob">${prob.toFixed(3)}%</div>
+            </div>
+          `;
+        });
       });
 
       body.innerHTML = html;
@@ -593,7 +687,6 @@
         const res = rollOnce();
         results.push(res);
 
-        // カウント更新
         totalRolls++;
         if (res.rarity === 5) {
           countStar5++;
