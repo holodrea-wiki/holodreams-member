@@ -18612,6 +18612,26 @@
         "expert": 25,
         "mv_url": "https://www.youtube.com/watch?v=q0Qr4top0dA",
         "digital_distribution": "https://cover.lnk.to/Backseat"
+      },
+      {
+        "id": 100132,
+        "music_title": "シミュラルク",
+        "read": "しみゅらるく",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100132.png",
+        "length": "2:23",
+        "type": "オリジナル",
+        "artist": "獅白ぼたん",
+        "lyrics": "椎乃味醂",
+        "composition": "椎乃味醂",
+        "arrangement": "椎乃味醂",
+        "copyright": "",
+        "score_rate": "獅白ぼたん",
+        "easy": 7,
+        "normal": 13,
+        "hard": 22,
+        "expert": 28,
+        "mv_url": "https://www.youtube.com/watch?v=SXLHcjhz2Ys",
+        "digital_distribution": "https://cover.lnk.to/zFHUu3"
       }
     ],
     "globalIcons": {
