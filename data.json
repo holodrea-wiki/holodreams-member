@@ -85,32 +85,34 @@
     {
       "timestamp": "2026-09-08",
       "message": "以下の新楽曲を追加！\n・「シミュラルク」\n　　- 獅白ぼたん"
+    },
+    {
+      "timestamp": "2026-09-09",
+      "message": "新イベント「炎天下のトロピックアイランドガチャ」の新メンバー追加！\n・鷹嶺ルイ［波音に安らぐ、しごでき幹部］\n・フワワ・アビスガード［フワワのFlowing Summer］\n・モココ・アビスガード［モココのBreezy Summer］"
+    },
+    {
+      "timestamp": "2026-09-09",
+      "message": "以下の新楽曲を追加！\n・「Illusion Night」\n　　- パヴォリア・レイネ\n・「三位一体♡ラブシステム」\n　　- 鷹嶺ルイ, フワワ・アビスガード, モココ・アビスガード\n・「ホロホーク」\n　　- 鷹嶺ルイ\n・「めくるめくランデヴー」\n　　- FUWAMOCO"
     }
   ],
   "pickupImages": [
     {
-      "id": "10103004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10103004.jpg",
-      "character": "白上フブキ",
-      "alias": "渚で魅せるtwinkle"
+      "id": "10602004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10602004.jpg",
+      "character": "鷹嶺ルイ",
+      "alias": "波音に安らぐ、しごでき幹部"
     },
     {
-      "id": "10251004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10251004.jpg",
-      "character": "大神ミオ",
-      "alias": "夏にまどろむWolf Heart"
+      "id": "30304004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30304004.jpg",
+      "character": "フワワ・アビスガード",
+      "alias": "フワワのFlowing Summer"
     },
     {
-      "id": "10252004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10252004.jpg",
-      "character": "猫又おかゆ",
-      "alias": "パラソル下のリバティキャット"
-    },
-    {
-      "id": "10253004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10253004.jpg",
-      "character": "戌神ころね",
-      "alias": "密林を舞うワイルドサマー！"
+      "id": "30305004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30305004.jpg",
+      "character": "モココ・アビスガード",
+      "alias": "モココのBreezy Summer"
     }
   ],
   "allImages": [
@@ -183,7 +185,10 @@
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10103004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10251004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10252004.jpg",
-    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10253004.jpg"
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10253004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10602004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30304004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30305004.jpg"
   ],
   "copyright": {
     "著作権表示": "当サイトはファン有志による非公式の攻略データサイトです。\nサイト内のゲーム画像・データの著作権は、すべてカバー株式会社および株式会社QualiArtsに帰属します。\n© COVER Corp. / © QualiArts, Inc.",
@@ -1037,7 +1042,10 @@
             "組織支える超敏腕幹部",
             "どこでも信頼！切れ者LIVE",
             "We are hololive!",
-            "鷹嶺ルイ"
+            "波音に安らぐ、しごでき幹部",
+            "鷹嶺ルイ",
+            "波音に安らぐ",
+            "しごでき幹部"
           ],
           "message": "「皆さんまったかね～！？」",
           "introduction_text": "【秘密結社holoX】の女幹部。\r\n総帥にできない交渉を担当しており、実質「組織の司令塔」。一見クールに見えるが仲間思いで面倒見が良いお姉さん。\r\nしかし、大事な所でミスをするポンコツ。",
@@ -1607,6 +1615,7 @@
             "ぽわぽわドーナッツパーティ♪",
             "ホッと安らぐフワフワライブ",
             "We are hololive!",
+            "フワワのFlowing Summer",
             "フワワ・アビスガード"
           ],
           "message": "「ふわふわに包み込んであげようかな～？」",
@@ -1632,6 +1641,7 @@
             "のほほんドーナッツパーティ♪",
             "パッと笑顔にモコモコライブ",
             "We are hololive!",
+            "モココのBreezy Summer",
             "モココ・アビスガード"
           ],
           "message": "「遊びの時間だー！みんな、準備は出来てるよね！」",
@@ -1765,6 +1775,153 @@
   "holomenTableData": {
     "rows": [
       {
+        "id": 10602004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10602004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10602004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10602004.png",
+        "character": "鷹嶺ルイ",
+        "alias": "波音に安らぐ、しごでき幹部",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10602.png",
+        "unit": "秘密結社holoX",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ハッピー",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+        "total_status": 25920,
+        "performance": 6947,
+        "technic": 7828,
+        "sense": 11145,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "holoX〇人以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "11秒間スコアサポート効果130％\n{holoX}が2人以上でスキル発動率が50％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "28秒毎に高確率で9秒間スコアが125％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "holoX〇人以上",
+        "passive-target": "holoX〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{holoX}2人以上で{holoX}2人のスコアサポート効果12％",
+        "costumeｰname": "シーサイドエレガント",
+        "costumeｰeffect": "センスUP",
+        "costume-conditions": "holoX〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{holoX}2人以上で全員のセンスが135％UP",
+        "connect-mass": "5マス効果",
+        "connect-target": "[5マス] 下 ╋ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100502.png",
+        "connect_effect": "範囲内のホロメンボード効果を200％UP",
+        "fast_release": "秘密のバケーションガチャ",
+        "release_at": 20260908,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10602.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_holoX.png"
+        ]
+      },
+      {
+        "id": 30304004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30304004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30304004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_30304004.png",
+        "character": "フワワ・アビスガード",
+        "alias": "フワワのFlowing Summer",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_30304.png",
+        "unit": "ホロライブEN Advent",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 26029,
+        "performance": 10672,
+        "technic": 7366,
+        "sense": 7991,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果120％\nスキル発動率が40％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率, ピュアタイプ〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "35秒毎に高確率で12秒間スコアが60％UP\n{ピュアタイプ}2人以上でスコアが120％UP",
+        "passive-type": "全パラメータUP",
+        "passive-conditions": "ピュアタイプ〇人以上",
+        "passive-target": "自身",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}2人以上で自身の全パラメータが32％UP",
+        "costumeｰname": "キャンディハニー",
+        "costumeｰeffect": "全パラメータUP, スコアサポート",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}2人以上で全員の全パラメータが30％UP\n{ピュアタイプ}2人以上で全員のスコアサポート効果25％",
+        "connect-mass": "3マス効果",
+        "connect-target": "[3マス] 下3マス",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100301.png",
+        "connect_effect": "範囲内のホロメンボード効果を270％UP",
+        "fast_release": "秘密のバケーションガチャ",
+        "release_at": 20260908,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30304.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+        ]
+      },
+      {
+        "id": 30305004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30305004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30305004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_30305004.png",
+        "character": "モココ・アビスガード",
+        "alias": "モココのBreezy Summer",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_30305.png",
+        "unit": "ホロライブEN Advent",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25920,
+        "performance": 11145,
+        "technic": 6947,
+        "sense": 7828,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "10秒間スコアサポート効果145％\nスキル発動率が50％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率, ピュアタイプ〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "22秒毎に中確率で8秒間スコアが60％UP\n{ピュアタイプ}2人以上でスコアが120％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "なし",
+        "passive-target": "ピュアタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}2人のスコアサポート効果11％",
+        "costumeｰname": "キャンディポップ",
+        "costumeｰeffect": "パフォーマンスUP",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}2人以上で全員のパフォーマンスが80％UP",
+        "connect-mass": "3マス効果",
+        "connect-target": "[3マス] 左3マス",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100302.png",
+        "connect_effect": "範囲内のホロメンボード効果を250％UP",
+        "fast_release": "秘密のバケーションガチャ",
+        "release_at": 20260908,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30305.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+        ]
+      },
+      {
         "id": 10103004,
         "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10103004.jpg",
         "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10103004.png",
@@ -1808,7 +1965,7 @@
         "fast_release": "炎天下のトロピックアイランドガチャ",
         "release_at": 20260829,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10103.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation1.png",
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
@@ -1858,7 +2015,7 @@
         "fast_release": "炎天下のトロピックアイランドガチャ",
         "release_at": 20260829,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10251.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
         ]
@@ -1880,7 +2037,7 @@
         "performance": 11145,
         "technic": 7828,
         "sense": 6947,
-        "special-effect": "スコアサポート, スコアUP",
+        "special-effect": "スコアサポート, スキル発動率",
         "special-conditions": "ゲーマーズ〇人以上",
         "special-target": "全員",
         "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
@@ -1907,7 +2064,7 @@
         "fast_release": "炎天下のトロピックアイランドガチャ",
         "release_at": 20260829,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10252.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
         ]
@@ -1929,7 +2086,7 @@
         "performance": 6947,
         "technic": 11145,
         "sense": 7828,
-        "special-effect": "スコアサポート, スコアUP",
+        "special-effect": "スコアサポート, スキル発動率",
         "special-conditions": "なし",
         "special-target": "全員",
         "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
@@ -1956,7 +2113,7 @@
         "fast_release": "炎天下のトロピックアイランドガチャ",
         "release_at": 20260829,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10253.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Gamers.png"
         ]
@@ -12819,6 +12976,24 @@
         ],
         "cards": [
           {
+            "id": 10602004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10602004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10602004.jpg",
+            "alias": "波音に安らぐ、しごでき幹部",
+            "character": "鷹嶺ルイ",
+            "char_id": 10602,
+            "rarity": 5,
+            "release_at": 20260908,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+            "units": [
+              "秘密結社holoX"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_holoX.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10602.png"
+          },
+          {
             "id": 10602001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10602001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10602001.jpg",
@@ -14238,6 +14413,24 @@
         ],
         "cards": [
           {
+            "id": 30304004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30304004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30304004.jpg",
+            "alias": "フワワのFlowing Summer",
+            "character": "フワワ・アビスガード",
+            "char_id": 30304,
+            "rarity": 5,
+            "release_at": 20260908,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブEN Advent"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30304.png"
+          },
+          {
             "id": 30304001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30304001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30304001.jpg",
@@ -14302,6 +14495,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
         ],
         "cards": [
+          {
+            "id": 30305004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30305004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30305004.jpg",
+            "alias": "モココのBreezy Summer",
+            "character": "モココ・アビスガード",
+            "char_id": 30305,
+            "rarity": 5,
+            "release_at": 20260908,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブEN Advent"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30305.png"
+          },
           {
             "id": 30305001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30305001.png",
@@ -18636,6 +18847,86 @@
         "expert": 28,
         "mv_url": "https://www.youtube.com/watch?v=SXLHcjhz2Ys",
         "digital_distribution": "https://cover.lnk.to/zFHUu3"
+      },
+      {
+        "id": 100133,
+        "music_title": "Illusion Night",
+        "read": "いりゅーじょん ないと",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100133.png",
+        "length": "2:06",
+        "type": "オリジナル",
+        "artist": "パヴォリア・レイネ",
+        "lyrics": "Aira（Dream Monster）",
+        "composition": "Aira（Dream Monster）",
+        "arrangement": "Aira（Dream Monster）",
+        "copyright": "",
+        "score_rate": "パヴォリア・レイネ",
+        "easy": 4,
+        "normal": 10,
+        "hard": 18,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=gREPKQUoD4o",
+        "digital_distribution": "https://cover.lnk.to/IllusionNight"
+      },
+      {
+        "id": 100134,
+        "music_title": "三位一体♡ラブシステム",
+        "read": "さんみいったい♡らぶしすてむ",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100134.png",
+        "length": "2:11",
+        "type": "オリジナル",
+        "artist": "鷹嶺ルイ, フワワ・アビスガード, モココ・アビスガード",
+        "lyrics": "宇佐美祐二(Hifumi,inc.)",
+        "composition": "宇佐美祐二(Hifumi,inc.)",
+        "arrangement": "宇佐美祐二(Hifumi,inc.)",
+        "copyright": "",
+        "score_rate": "鷹嶺ルイ, フワワ・アビスガード, モココ・アビスガード",
+        "easy": 4,
+        "normal": 10,
+        "hard": 17,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=6iWKB-Tq8aA",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100135,
+        "music_title": "ホロホーク",
+        "read": "ほろほーく",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100135.png",
+        "length": "2:32",
+        "type": "オリジナル",
+        "artist": "鷹嶺ルイ",
+        "lyrics": "すりぃ",
+        "composition": "すりぃ",
+        "arrangement": "すりぃ",
+        "copyright": "",
+        "score_rate": "鷹嶺ルイ",
+        "easy": 7,
+        "normal": 12,
+        "hard": 20,
+        "expert": 27,
+        "mv_url": "https://www.youtube.com/watch?v=Q69V7YYfFHY",
+        "digital_distribution": "https://cover.lnk.to/HoloHawk"
+      },
+      {
+        "id": 100136,
+        "music_title": "めくるめくランデヴー",
+        "read": "めくるめくらんでゔー",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100136.png",
+        "length": "1:50",
+        "type": "オリジナル",
+        "artist": "FUWAMOCO",
+        "lyrics": "竹内サティフォ",
+        "composition": "ONIGAWARA",
+        "arrangement": "ONIGAWARA",
+        "copyright": "© 2026 by Nippon Television Music Corporation & COVER corporation",
+        "score_rate": "フワワ・アビスガード, モココ・アビスガード",
+        "easy": 3,
+        "normal": 11,
+        "hard": 17,
+        "expert": 24,
+        "mv_url": "https://www.youtube.com/watch?v=vSwxof0K8lk",
+        "digital_distribution": "https://cover.lnk.to/IvH4P9"
       }
     ],
     "globalIcons": {
