@@ -97,6 +97,10 @@
     {
       "timestamp": "2026-09-19",
       "message": "新イベント「涼を求めるトリップガチャ」の新メンバー追加！\n・アキ・ローゼンタール［陽だまりのミスティカルスイング］\n・ラプラス・ダークネス［総帥専用！シークレットプール］\n・アーニャ・メルフィッサ［まったりサニーホリデイ］\n・シオリ・ノヴェラ［知を潤すナイトプール］"
+    },
+    {
+      "timestamp": "2026-09-20",
+      "message": "以下の新楽曲を追加！\n・「Grave of Halo」\n　　- アキ・ローゼンタール"
     }
   ],
   "pickupImages": [
@@ -19213,6 +19217,26 @@
         "expert": 24,
         "mv_url": "https://www.youtube.com/watch?v=vSwxof0K8lk",
         "digital_distribution": "https://cover.lnk.to/IvH4P9"
+      },
+      {
+        "id": 100137,
+        "music_title": "Grave of Halo",
+        "read": "ぐれいゔ おぶ へいろー",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100137.png",
+        "length": "2:03",
+        "type": "オリジナル",
+        "artist": "アキ・ローゼンタール",
+        "lyrics": "太嘉志・猟平",
+        "composition": "太嘉志・猟平",
+        "arrangement": "太嘉志・猟平",
+        "copyright": "",
+        "score_rate": "アキ・ローゼンタール",
+        "easy": 10,
+        "normal": 15,
+        "hard": 24,
+        "expert": 29,
+        "mv_url": "https://www.youtube.com/watch?v=Orzu2ixxDU4&list=RDOrzu2ixxDU4&start_radio=1",
+        "digital_distribution": ""
       }
     ],
     "globalIcons": {
