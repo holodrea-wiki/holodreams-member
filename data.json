@@ -101,6 +101,10 @@
     {
       "timestamp": "2026-09-20",
       "message": "以下の新楽曲を追加！\n・「Grave of Halo」\n　　- アキ・ローゼンタール"
+    },
+    {
+      "timestamp": "2026-09-22",
+      "message": "以下の新楽曲を追加！\n・「Glitch Through」\n　　- シオリ・ノヴェラ"
     }
   ],
   "pickupImages": [
@@ -19235,7 +19239,27 @@
         "normal": 15,
         "hard": 24,
         "expert": 29,
-        "mv_url": "https://www.youtube.com/watch?v=Orzu2ixxDU4&list=RDOrzu2ixxDU4&start_radio=1",
+        "mv_url": "https://www.youtube.com/watch?v=8ncXOgv_m34",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100138,
+        "music_title": "Glitch Through",
+        "read": "ぐりっち するー",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100138.png",
+        "length": "2:04",
+        "type": "オリジナル",
+        "artist": "シオリ・ノヴェラ",
+        "lyrics": "堀川大翼(Elements Garden)",
+        "composition": "堀川大翼(Elements Garden)",
+        "arrangement": "堀川大翼(Elements Garden)",
+        "copyright": "",
+        "score_rate": "シオリ・ノヴェラ",
+        "easy": 3,
+        "normal": 9,
+        "hard": 17,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=yWIVS0s7i8c",
         "digital_distribution": ""
       }
     ],
