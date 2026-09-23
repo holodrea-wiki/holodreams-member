@@ -105,6 +105,10 @@
     {
       "timestamp": "2026-09-22",
       "message": "以下の新楽曲を追加！\n・「Glitch Through」\n　　- シオリ・ノヴェラ"
+    },
+    {
+      "timestamp": "2026-09-23",
+      "message": "以下の新楽曲を追加！\n・「リーサルドーズ・パラノイド」\n　　- ラプラス・ダークネス"
     }
   ],
   "pickupImages": [
@@ -19260,6 +19264,26 @@
         "hard": 17,
         "expert": 25,
         "mv_url": "https://www.youtube.com/watch?v=yWIVS0s7i8c",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100139,
+        "music_title": "リーサルドーズ・パラノイド",
+        "read": "りーさいるどーず・ぱらのいど",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100139.png",
+        "length": "2:13",
+        "type": "オリジナル",
+        "artist": "ラプラス・ダークネス",
+        "lyrics": "蒼井純人 (SUPA LOVE)",
+        "composition": "蒼井純人 (SUPA LOVE)",
+        "arrangement": "蒼井純人 (SUPA LOVE)",
+        "copyright": "",
+        "score_rate": "ラプラス・ダークネス",
+        "easy": 8,
+        "normal": 14,
+        "hard": 24,
+        "expert": 29,
+        "mv_url": "https://www.youtube.com/watch?v=3iTM2nBOc1k",
         "digital_distribution": ""
       }
     ],
