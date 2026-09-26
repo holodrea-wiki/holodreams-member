@@ -113,6 +113,10 @@
     {
       "timestamp": "2026-09-25",
       "message": "以下の新楽曲を追加！\n・「64.」\n　　- アーニャ・メルフィッサ"
+    },
+    {
+      "timestamp": "2026-09-26",
+      "message": "以下の新楽曲を追加！\n・「Watcha Gatcha!!!!!!!!」\n　　- hololive 5st Generation, 秘密結社holoX"
     }
   ],
   "pickupImages": [
@@ -19309,6 +19313,26 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=xdtU2P4jzF0",
         "digital_distribution": ""
+      },
+      {
+        "id": 100141,
+        "music_title": "Watcha Gatcha!!!!!!!!",
+        "read": "わちゃ がちゃ!!!!!!!!",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100141.png",
+        "length": "2:02",
+        "type": "オリジナル",
+        "artist": "hololive 5st Generation, 秘密結社holoX",
+        "lyrics": "PandaBoY",
+        "composition": "PandaBoY",
+        "arrangement": "PandaBoY",
+        "copyright": "",
+        "score_rate": "雪花ラミィ, 桃鈴ねね, 獅白ぼたん, 尾丸ポルカ, ラプラス・ダークネス, 鷹嶺ルイ, 博衣こより, 風真いろは",
+        "easy": 6,
+        "normal": 13,
+        "hard": 22,
+        "expert": 27,
+        "mv_url": "https://www.youtube.com/watch?v=iSQYbf9XFg8&list=RDiSQYbf9XFg8&start_radio=1",
+        "digital_distribution": "https://cover.lnk.to/PDNfpg"
       }
     ],
     "globalIcons": {
@@ -19500,7 +19524,8 @@
       "秘密結社holoX": "ラプラス・ダークネス, 鷹嶺ルイ, 博衣こより, 風真いろは",
       "hololive Indonesia 1st Generation": "アユンダ・リス, ムーナ・ホシノヴァ, アイラニ・イオフィフティーン",
       "Blue Journey": "不知火フレア, 常闇トワ, 尾丸ポルカ",
-      "ホロライブゲーマーズ": "白上フブキ, 大神ミオ, 猫又おかゆ, 戌神ころね"
+      "ホロライブゲーマーズ": "白上フブキ, 大神ミオ, 猫又おかゆ, 戌神ころね",
+      "hololive 5st Generation": "雪花ラミィ, 桃鈴ねね, 獅白ぼたん, 尾丸ポルカ"
     },
     "characterList": [
       {
