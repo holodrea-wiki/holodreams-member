@@ -117,32 +117,40 @@
     {
       "timestamp": "2026-09-26",
       "message": "以下の新楽曲を追加！\n・「Watcha Gatcha!!!!!!!!」\n　　- hololive 5st Generation, 秘密結社holoX"
+    },
+    {
+      "timestamp": "2026-09-30",
+      "message": "新イベント「夢見るブルーフロンティアガチャ」の新メンバー追加！\n・宝鐘マリン［お宝独占♡ウォーターキャノン］\n・博衣こより［振り向きざまのaventure］\n・こぼ・かなえる［波間に揺れるBody ＆ Soul］\n・ハコス・ベールズ［これがボクのイチオシ！］"
+    },
+    {
+      "timestamp": "2026-09-30",
+      "message": "以下の新楽曲を追加！\n・「きゃぴ」\n　　- 宝鐘マリン\n・「爆ラブ+ケミストリー」\n　　- 博衣こより\n・「プロポーズ」\n　　- こぼ・かなえる\n・「Play Dice!」\n　　- ハコス・ベールズ"
     }
   ],
   "pickupImages": [
     {
-      "id": "10101004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10101004.jpg",
-      "character": "アキ・ローゼンタール",
-      "alias": "陽だまりのミスティカルスイング"
+      "id": "10304004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10304004.jpg",
+      "character": "宝鐘マリン",
+      "alias": "お宝独占♡ウォーターキャノン"
     },
     {
-      "id": "10601004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10601004.jpg",
-      "character": "ラプラス・ダークネス",
-      "alias": "総帥専用！シークレットプール"
+      "id": "10603004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10603004.jpg",
+      "character": "博衣こより",
+      "alias": "振り向きざまのaventure"
     },
     {
-      "id": "20202004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20202004.jpg",
-      "character": "アーニャ・メルフィッサ",
-      "alias": "まったりサニーホリデイ"
+      "id": "20303004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20303004.jpg",
+      "character": "こぼ・かなえる",
+      "alias": "波間に揺れるBody ＆ Soul"
     },
     {
-      "id": "30301004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30301004.jpg",
-      "character": "シオリ・ノヴェラ",
-      "alias": "知を潤すナイトプール"
+      "id": "30203004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30203004.jpg",
+      "character": "ハコス・ベールズ",
+      "alias": "これがボクのイチオシ！"
     }
   ],
   "allImages": [
@@ -222,7 +230,11 @@
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10101004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10601004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20202004.jpg",
-    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30301004.jpg"
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30301004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10304004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10603004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20303004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30203004.jpg"
   ],
   "copyright": {
     "著作権表示": "当サイトはファン有志による非公式の攻略データサイトです。\nサイト内のゲーム画像・データの著作権は、すべてカバー株式会社および株式会社QualiArtsに帰属します。\n© COVER Corp. / © QualiArts, Inc.",
@@ -827,6 +839,7 @@
             "妖艶あふれるマリンブルー",
             "♡とらえる海賊のテリトリー",
             "We are hololive!",
+            "お宝独占♡ウォーターキャノン",
             "宝鐘マリン"
           ],
           "message": "「Ahoy! 宝鐘海賊団船長！宝鐘マリンです～！」「ヨーソロー」",
@@ -1106,6 +1119,7 @@
             "助手くんの心を鷲掴みライブ！",
             "舞台に響くcute howl",
             "We are hololive!",
+            "振り向きざまのaventure",
             "博衣こより"
           ],
           "message": "「holoXの～頭脳！博衣こよりだよ～！」",
@@ -1379,6 +1393,7 @@
             "あめ上がりの雨喜雨喜シャーマン",
             "ドタバタフルスロットルステージ",
             "We are hololive!",
+            "波間に揺れるBody ＆ Soul",
             "こぼ・かなえる"
           ],
           "message": "「ぼこぼこぼ~こぼ・かなえるアットユアサービス！」",
@@ -1545,6 +1560,7 @@
             "Chaotic Powerful Rat",
             "Let's dance more！",
             "We are hololive!",
+            "これがボクのイチオシ！",
             "ハコス・ベールズ"
           ],
           "message": "「WAZZUP!! 皆の世界的ネズミアイドル——ハコス・ベールズです！」",
@@ -1813,6 +1829,202 @@
   "holomenTableData": {
     "rows": [
       {
+        "id": 10304004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10304004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10304004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10304004.png",
+        "character": "宝鐘マリン",
+        "alias": "お宝独占♡ウォーターキャノン",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10304.png",
+        "unit": "ホロライブ 3期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25920,
+        "performance": 7828,
+        "technic": 6947,
+        "sense": 11145,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "14秒間スコアサポート効果115％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "34秒毎に中確率で12秒間スコアが120％UP",
+        "passive-type": "センスUP",
+        "passive-conditions": "ピュアタイプ〇人以上",
+        "passive-target": "ピュアタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}2人以上で{ピュアタイプ}2人のセンスが43％UP",
+        "costumeｰname": "ディープネスマリナー",
+        "costumeｰeffect": "スコアサポート, センスUP",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}2人以上で全員のセンスが30％UP\n{ピュアタイプ}2人以上で全員のスコアサポート効果25％",
+        "connect-mass": "3マス効果",
+        "connect-target": "[3マス] 右3マス",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100303.png",
+        "connect_effect": "範囲内のホロメンボード効果を260％UP",
+        "fast_release": "夢見るブルーフロンティアガチャ",
+        "release_at": 20260928,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10304.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation3.png"
+        ]
+      },
+      {
+        "id": 10603004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10603004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10603004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10603004.png",
+        "character": "博衣こより",
+        "alias": "振り向きざまのaventure",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10603.png",
+        "unit": "秘密結社holoX",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ハッピー",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+        "total_status": 26082,
+        "performance": 10433,
+        "technic": 7981,
+        "sense": 7668,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果135％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率, ライフ〇以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "25秒毎に中確率で9秒間スコアが60％UP\nライフ600以上でスコアが120％UP",
+        "passive-type": "パフォーマンスUP",
+        "passive-conditions": "ハッピータイプ〇人以上",
+        "passive-target": "ハッピータイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ハッピータイプ}2人以上で{ハッピータイプ}2人のパフォーマンスが43％UP",
+        "costumeｰname": "ピーチサイドジオメトリー",
+        "costumeｰeffect": "スコアサポート",
+        "costume-conditions": "なし",
+        "costume-target": "全員",
+        "costumeｰskill": "全員のスコアサポート効果60％",
+        "connect-mass": "5マス効果",
+        "connect-target": "[5マス] 下 ╋ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100502.png",
+        "connect_effect": "範囲内のホロメンボード効果を200％UP",
+        "fast_release": "夢見るブルーフロンティアガチャ",
+        "release_at": 20260928,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10603.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_holoX.png"
+        ]
+      },
+      {
+        "id": 20303004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20303004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20303004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_20303004.png",
+        "character": "こぼ・かなえる",
+        "alias": "波間に揺れるBody ＆ Soul",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_20303.png",
+        "unit": "ホロライブID 3期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 25865,
+        "performance": 6803,
+        "technic": 7682,
+        "sense": 11380,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "10秒間スコアサポート効果160％",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "29秒毎に高確率で10秒間スコアが115％UP",
+        "passive-type": "センスUP",
+        "passive-conditions": "キュートタイプ〇人以上",
+        "passive-target": "キュートタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{キュートタイプ}2人以上で{キュートタイプ}2人のセンスが43％UP",
+        "costumeｰname": "リップルディーヴァ",
+        "costumeｰeffect": "センスUP",
+        "costume-conditions": "キュートタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{キュートタイプ}2人以上で全員のセンスが130％UP",
+        "connect-mass": "3マス効果",
+        "connect-target": "[3マス] 下3マス",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100301.png",
+        "connect_effect": "範囲内のホロメンボード効果を270％UP",
+        "fast_release": "夢見るブルーフロンティアガチャ",
+        "release_at": 20260928,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20303.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration3.png"
+        ]
+      },
+      {
+        "id": 30203004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30203004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30203004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_30203004.png",
+        "character": "ハコス・ベールズ",
+        "alias": "これがボクのイチオシ！",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_30203.png",
+        "unit": "ホロライブEN Promise",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ハッピー",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+        "total_status": 25974,
+        "performance": 7221,
+        "technic": 7844,
+        "sense": 10909,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "15秒間スコアサポート効果105％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率, Promise〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "22秒毎に中確率で8秒間スコアが65％UP\n{Promise}が2人以上でスコアが125％UP",
+        "passive-type": "全パラメータUP",
+        "passive-conditions": "Promise〇人以上",
+        "passive-target": "自身",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{Promise}が2人以上で自身の全パラメータが33％UP",
+        "costumeｰname": "シャボンフィーバー",
+        "costumeｰeffect": "全パラメータUP",
+        "costume-conditions": "Promise〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{Promise}が2人以上で全員の全パラメータが50％UP",
+        "connect-mass": "8マス効果",
+        "connect-target": "[8マス] 左寄り",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100801.png",
+        "connect_effect": "範囲内のホロメンボード効果を135％UP",
+        "fast_release": "夢見るブルーフロンティアガチャ",
+        "release_at": 20260928,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30203.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Promise.png"
+        ]
+      },
+      {
         "id": 10101004,
         "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10101004.jpg",
         "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10101004.png",
@@ -1856,7 +2068,7 @@
         "fast_release": "涼を求めるトリップガチャ",
         "release_at": 20260918,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10101.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation1.png"
         ]
@@ -1905,7 +2117,7 @@
         "fast_release": "涼を求めるトリップガチャ",
         "release_at": 20260918,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10601.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_holoX.png"
         ]
@@ -1954,7 +2166,7 @@
         "fast_release": "涼を求めるトリップガチャ",
         "release_at": 20260918,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20202.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration2.png"
         ]
@@ -2003,7 +2215,7 @@
         "fast_release": "涼を求めるトリップガチャ",
         "release_at": 20260918,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30301.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
         ]
@@ -12607,6 +12819,24 @@
         ],
         "cards": [
           {
+            "id": 10304004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10304004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10304004.jpg",
+            "alias": "お宝独占♡ウォーターキャノン",
+            "character": "宝鐘マリン",
+            "char_id": 10304,
+            "rarity": 5,
+            "release_at": 20260928,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブ 3期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation3.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10304.png"
+          },
+          {
             "id": 10304001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10304001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10304001.jpg",
@@ -13329,6 +13559,24 @@
         ],
         "cards": [
           {
+            "id": 10603004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10603004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10603004.jpg",
+            "alias": "振り向きざまのaventure",
+            "character": "博衣こより",
+            "char_id": 10603,
+            "rarity": 5,
+            "release_at": 20260928,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+            "units": [
+              "秘密結社holoX"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_holoX.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10603.png"
+          },
+          {
             "id": 10603001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10603001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10603001.jpg",
@@ -14015,6 +14263,24 @@
         ],
         "cards": [
           {
+            "id": 20303004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20303004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20303004.jpg",
+            "alias": "波間に揺れるBody ＆ Soul",
+            "character": "こぼ・かなえる",
+            "char_id": 20303,
+            "rarity": 5,
+            "release_at": 20260928,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "ホロライブID 3期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration3.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20303.png"
+          },
+          {
             "id": 20303001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20303001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20303001.jpg",
@@ -14440,6 +14706,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Promise.png"
         ],
         "cards": [
+          {
+            "id": 30203004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30203004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30203004.jpg",
+            "alias": "これがボクのイチオシ！",
+            "character": "ハコス・ベールズ",
+            "char_id": 30203,
+            "rarity": 5,
+            "release_at": 20260928,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+            "units": [
+              "ホロライブEN Promise"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Promise.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30203.png"
+          },
           {
             "id": 30203001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30203001.png",
@@ -19333,6 +19617,86 @@
         "expert": 27,
         "mv_url": "https://www.youtube.com/watch?v=iSQYbf9XFg8&list=RDiSQYbf9XFg8&start_radio=1",
         "digital_distribution": "https://cover.lnk.to/PDNfpg"
+      },
+      {
+        "id": 100142,
+        "music_title": "きゃぴ",
+        "read": "きゃぴ",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100142.png",
+        "length": "2:03",
+        "type": "オリジナル",
+        "artist": "宝鐘マリン",
+        "lyrics": "てにをは",
+        "composition": "てにをは",
+        "arrangement": "てにをは",
+        "copyright": "",
+        "score_rate": "宝鐘マリン",
+        "easy": 4,
+        "normal": 10,
+        "hard": 17,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=-H4bB6hxeEs",
+        "digital_distribution": "https://cover.lnk.to/KdZ1dH"
+      },
+      {
+        "id": 100143,
+        "music_title": "爆ラブ+ケミストリー",
+        "read": "ばくらぶ+けみすとりー",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100143.png",
+        "length": "2:05",
+        "type": "オリジナル",
+        "artist": "博衣こより",
+        "lyrics": "ナユタン星人",
+        "composition": "ナユタン星人",
+        "arrangement": "ナユタン星人",
+        "copyright": "",
+        "score_rate": "博衣こより",
+        "easy": 5,
+        "normal": 13,
+        "hard": 20,
+        "expert": 28,
+        "mv_url": "https://www.youtube.com/watch?v=65R4ZpEuzvM",
+        "digital_distribution": "https://cover.lnk.to/JzYSQD"
+      },
+      {
+        "id": 200063,
+        "music_title": "プロポーズ",
+        "read": "ぷろぽーず",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/cover/jacketBanner_200063.png",
+        "length": "2:13",
+        "type": "カバー",
+        "artist": "こぼ・かなえる",
+        "lyrics": "なとり",
+        "composition": "なとり",
+        "arrangement": "",
+        "copyright": "© 2025 by Sony Music Publishing(Japan) Inc.",
+        "score_rate": "こぼ・かなえる",
+        "easy": 3,
+        "normal": 10,
+        "hard": 18,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=hDALUZZrE5U",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100144,
+        "music_title": "Play Dice!",
+        "read": "ぷれい・だいす！",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100144.png",
+        "length": "2:35",
+        "type": "オリジナル",
+        "artist": "ハコス・ベールズ",
+        "lyrics": "かめりあ, Hakos Baelz",
+        "composition": "かめりあ",
+        "arrangement": "かめりあ",
+        "copyright": "",
+        "score_rate": "ハコス・ベールズ",
+        "easy": 4,
+        "normal": 11,
+        "hard": 20,
+        "expert": 28,
+        "mv_url": "https://www.youtube.com/watch?v=na6bysYNuS0",
+        "digital_distribution": "https://cover.lnk.to/PlayDice"
       }
     ],
     "globalIcons": {
