@@ -125,6 +125,10 @@
     {
       "timestamp": "2026-09-30",
       "message": "以下の新楽曲を追加！\n・「きゃぴ」\n　　- 宝鐘マリン\n・「爆ラブ+ケミストリー」\n　　- 博衣こより\n・「プロポーズ」\n　　- こぼ・かなえる\n・「Play Dice!」\n　　- ハコス・ベールズ"
+    },
+    {
+      "timestamp": "2026-10-01",
+      "message": "以下の新楽曲を追加！\n・「PARADAISE！」\n　　- hololive IDOL PROJECT\n・「Wonky Monky」\n　　- 戌神ころね"
     }
   ],
   "pickupImages": [
@@ -19697,6 +19701,46 @@
         "expert": 28,
         "mv_url": "https://www.youtube.com/watch?v=na6bysYNuS0",
         "digital_distribution": "https://cover.lnk.to/PlayDice"
+      },
+      {
+        "id": 100145,
+        "music_title": "PARADAISE！",
+        "read": "ぱらだいす！",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100145.png",
+        "length": "1:56",
+        "type": "オリジナル",
+        "artist": "hololive IDOL PROJECT",
+        "lyrics": "中村歩, 吉村隆行",
+        "composition": "中村歩, 吉村隆行",
+        "arrangement": "中村歩, 吉村隆行",
+        "copyright": "",
+        "score_rate": "対象外",
+        "easy": 4,
+        "normal": 10,
+        "hard": 19,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=11VKhxkxlDs",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100146,
+        "music_title": "Wonky Monky",
+        "read": "うぉんきー まんきー",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100146.png",
+        "length": "2:04",
+        "type": "オリジナル",
+        "artist": "戌神ころね",
+        "lyrics": "夕野ヨシミ(IOSYS)",
+        "composition": "Giga",
+        "arrangement": "Giga",
+        "copyright": "",
+        "score_rate": "戌神ころね",
+        "easy": 5,
+        "normal": 11,
+        "hard": 18,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=UPSSUSLlwjY",
+        "digital_distribution": "https://cover.lnk.to/WonkyMonkey"
       }
     ],
     "globalIcons": {
