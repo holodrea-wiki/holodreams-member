@@ -129,6 +129,10 @@
     {
       "timestamp": "2026-10-01",
       "message": "以下の新楽曲を追加！\n・「PARADAISE！」\n　　- hololive IDOL PROJECT\n・「Wonky Monky」\n　　- 戌神ころね"
+    },
+    {
+      "timestamp": "2026-10-05",
+      "message": "以下の新楽曲を追加！\n・「KONKON Beats」\n　　- 白上フブキ"
     }
   ],
   "pickupImages": [
@@ -19741,6 +19745,26 @@
         "expert": 25,
         "mv_url": "https://www.youtube.com/watch?v=UPSSUSLlwjY",
         "digital_distribution": "https://cover.lnk.to/WonkyMonkey"
+      },
+      {
+        "id": 100147,
+        "music_title": "KONKON Beats",
+        "read": "こんこん びーつ",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100147.png",
+        "length": "1:41",
+        "type": "オリジナル",
+        "artist": "白上フブキ",
+        "lyrics": "TOKOTOKO",
+        "composition": "TOKOTOKO",
+        "arrangement": "TOKOTOKO",
+        "copyright": "",
+        "score_rate": "白上フブキ",
+        "easy": 5,
+        "normal": 12,
+        "hard": 18,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=c2hbKnXIa_c",
+        "digital_distribution": "https://cover.lnk.to/KONKONBeats"
       }
     ],
     "globalIcons": {
