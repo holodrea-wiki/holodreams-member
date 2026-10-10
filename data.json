@@ -141,6 +141,10 @@
     {
       "timestamp": "2026-10-07",
       "message": "以下の新楽曲を追加！\n・「ラミィズバリバリワークアウト」\n　　- 雪花ラミィ\n・「HOLOGRAM CIRCUS」\n　　- 尾丸ポルカ\n・「トウキョウ・シャンディ・ランデヴ」\n　　- 一条莉々華"
+    },
+    {
+      "timestamp": "2026-10-10",
+      "message": "以下の新楽曲を追加！\n・「ぐるぐる＠まわる＠まわルーナ」\n　　- 姫森ルーナ"
     }
   ],
   "pickupImages": [
@@ -20034,6 +20038,26 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=aSjwNHCA64M&list=RDaSjwNHCA64M&start_radio=1",
         "digital_distribution": ""
+      },
+      {
+        "id": 100150,
+        "music_title": "ぐるぐる＠まわる＠まわルーナ",
+        "read": "ぐるぐる＠まわる＠まわるーな",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100150.png",
+        "length": "",
+        "type": "オリジナル",
+        "artist": "姫森ルーナ",
+        "lyrics": "立秋",
+        "composition": "立秋",
+        "arrangement": "立秋",
+        "copyright": "",
+        "score_rate": "姫森ルーナ",
+        "easy": 4,
+        "normal": 9,
+        "hard": 18,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=ysV01Wj-wHM",
+        "digital_distribution": "https://cover.lnk.to/RoundandRoundandCircLuna"
       }
     ],
     "globalIcons": {
