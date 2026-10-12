@@ -145,6 +145,10 @@
     {
       "timestamp": "2026-10-10",
       "message": "以下の新楽曲を追加！\n・「ぐるぐる＠まわる＠まわルーナ」\n　　- 姫森ルーナ"
+    },
+    {
+      "timestamp": "2026-10-13",
+      "message": "以下の新楽曲を追加！\n・「NEW[zom]BIE!!」\n　　- クレイジー・オリー"
     }
   ],
   "pickupImages": [
@@ -20044,7 +20048,7 @@
         "music_title": "ぐるぐる＠まわる＠まわルーナ",
         "read": "ぐるぐる＠まわる＠まわるーな",
         "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100150.png",
-        "length": "",
+        "length": "1:38",
         "type": "オリジナル",
         "artist": "姫森ルーナ",
         "lyrics": "立秋",
@@ -20058,6 +20062,26 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=ysV01Wj-wHM",
         "digital_distribution": "https://cover.lnk.to/RoundandRoundandCircLuna"
+      },
+      {
+        "id": 100151,
+        "music_title": "NEW[zom]BIE!!",
+        "read": "NEW[zom]BIE!!",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100151.png",
+        "length": "2:02",
+        "type": "オリジナル",
+        "artist": "クレイジー・オリー",
+        "lyrics": "櫻澤ヒカル(Hifumi,inc.), 斎藤大(Hifumi,inc.)",
+        "composition": "yuzen (Hifumi,inc.)",
+        "arrangement": "yuzen (Hifumi,inc.)",
+        "copyright": "",
+        "score_rate": "クレイジー・オリー",
+        "easy": 6,
+        "normal": 13,
+        "hard": 19,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=CswOsZYY_zc",
+        "digital_distribution": "https://cover.lnk.to/NEWzomBIE"
       }
     ],
     "globalIcons": {
