@@ -149,26 +149,40 @@
     {
       "timestamp": "2026-10-13",
       "message": "以下の新楽曲を追加！\n・「NEW[zom]BIE!!」\n　　- クレイジー・オリー"
+    },
+    {
+      "timestamp": "2026-10-21",
+      "message": "新イベント「至福のシーサイドデイズガチャ」の新メンバー追加！\n・常闇トワ［ゆらゆら過ごす木陰のバカンス］\n・獅白ぼたん［一心不乱のちゅるタイム］\n・カエラ・コヴァルスキア［木陰で紡ぐShiny Memory］\n・古石ビジュー［笑顔輝くSand castle］"
+    },
+    {
+      "timestamp": "2026-10-21",
+      "message": "以下の新楽曲を追加！\n・「Shallow Shadow」\n　　- 常闇トワ"
     }
   ],
   "pickupImages": [
     {
-      "id": "10501004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10501004.jpg",
-      "character": "雪花ラミィ",
-      "alias": "火照りを鎮める癒しの一口"
+      "id": "10402004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10402004.jpg",
+      "character": "常闇トワ",
+      "alias": "ゆらゆら過ごす木陰のバカンス"
     },
     {
-      "id": "10504004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10504004.jpg",
-      "character": "尾丸ポルカ",
-      "alias": "幸せ分け合うMeat For You"
+      "id": "10503004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10503004.jpg",
+      "character": "獅白ぼたん",
+      "alias": "一心不乱のちゅるタイム"
     },
     {
-      "id": "40102004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40102004.jpg",
-      "character": "一条莉々華",
-      "alias": "夏夜を彩るBrilliant Smile"
+      "id": "20302004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20302004.jpg",
+      "character": "カエラ・コヴァルスキア",
+      "alias": "木陰で紡ぐShiny Memory"
+    },
+    {
+      "id": "30302004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30302004.jpg",
+      "character": "古石ビジュー",
+      "alias": "笑顔輝くSand castle"
     }
   ],
   "allImages": [
@@ -255,7 +269,11 @@
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30203004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10501004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10504004.jpg",
-    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40102004.jpg"
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40102004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10402004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10503004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20302004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30302004.jpg"
   ],
   "copyright": {
     "著作権表示": "当サイトはファン有志による非公式の攻略データサイトです。\nサイト内のゲーム画像・データの著作権は、すべてカバー株式会社および株式会社QualiArtsに帰属します。\n© COVER Corp. / © QualiArts, Inc.",
@@ -919,6 +937,7 @@
             "ガチで終わらんチルい夜遊び",
             "余裕ぶっこくナイトライブ",
             "We are hololive!",
+            "ゆらゆら過ごす木陰のバカンス",
             "常闇トワ"
           ],
           "message": "「こんやっぴーホロライブ4期生常闇トワ様です」",
@@ -1028,6 +1047,7 @@
             "目を奪う神エイム！lion's hunt",
             "魅せるLaughing Lion",
             "We are hololive!",
+            "一心不乱のちゅるタイム",
             "獅白ぼたん"
           ],
           "message": "「ららーいおん♪」「ほならな～」",
@@ -1391,6 +1411,7 @@
             "こころ強さは鍛冶場で研ぐ",
             "鍛冶場に匹敵！激アツライブ",
             "We are hololive!",
+            "木陰で紡ぐShiny Memory",
             "カエラ・コヴァルスキア"
           ],
           "message": "「皆さんこんにちは、ホロライブID3期生の鍛冶屋、カエラです。」",
@@ -1642,6 +1663,7 @@
             "キラッキラCrystal place",
             "キラリと見せる無垢な素顔",
             "We are hololive!",
+            "笑顔輝くSand castle",
             "古石ビジュー"
           ],
           "message": "「この輝きが、伝わればいいな」",
@@ -1853,6 +1875,202 @@
   "holomenTableData": {
     "rows": [
       {
+        "id": 10402004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10402004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10402004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10402004.png",
+        "character": "常闇トワ",
+        "alias": "ゆらゆら過ごす木陰のバカンス",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10402.png",
+        "unit": "ホロライブ 4期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 25920,
+        "performance": 6947,
+        "technic": 11145,
+        "sense": 7828,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果120％\nスキル発動率が40％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率, キュートタイプ〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "26秒毎に中確率で9秒間スコアが65％UP\n{キュートタイプ}2人以上でスコアが125％UP",
+        "passive-type": "テクニックUP",
+        "passive-conditions": "キュートタイプ〇人以上",
+        "passive-target": "キュートタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{キュートタイプ}2人以上で{キュートタイプ}2人のテクニックが43％UP",
+        "costumeｰname": "サンセットホライゾン",
+        "costumeｰeffect": "テクニックUP, スコアサポート",
+        "costume-conditions": "キュートタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{キュートタイプ}2人以上で全員のテクニックが80％UP\n{キュートタイプ}2人以上で全員のスコアサポート効果25％",
+        "connect-mass": "12マス効果",
+        "connect-target": "[12マス] 中央放射",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_101201.png",
+        "connect_effect": "範囲内のホロメンボード効果を105％UP",
+        "fast_release": "至福のシーサイドデイズガチャ",
+        "release_at": 20261019,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10402.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation4.png"
+        ]
+      },
+      {
+        "id": 10503004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10503004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10503004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10503004.png",
+        "character": "獅白ぼたん",
+        "alias": "一心不乱のちゅるタイム",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10503.png",
+        "unit": "ホロライブ 5期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 25920,
+        "performance": 7828,
+        "technic": 6947,
+        "sense": 11145,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果120％\nスキル発動率が40％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率, キュートタイプ〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "32秒毎に中確率で11秒間スコアが65％UP\n{キュートタイプ}2人以上でスコアが125％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "なし",
+        "passive-target": "キュートタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{キュートタイプ}2人の全スコアサポート効果11％",
+        "costumeｰname": "ワイルドサンシャイン",
+        "costumeｰeffect": "センスUP, スコアサポート",
+        "costume-conditions": "キュートタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{キュートタイプ}2人以上で全員のセンスが80％UP\n{キュートタイプ}2人以上で全員のスコアサポート効果25％",
+        "connect-mass": "4マス効果",
+        "connect-target": "[4マス] 上左 ┛型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100402.png",
+        "connect_effect": "範囲内のホロメンボード効果を200％UP",
+        "fast_release": "至福のシーサイドデイズガチャ",
+        "release_at": 20261019,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10503.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
+        ]
+      },
+      {
+        "id": 20302004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20302004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20302004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_20302004.png",
+        "character": "カエラ・コヴァルスキア",
+        "alias": "木陰で紡ぐShiny Memory",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_20302.png",
+        "unit": "ホロライブID 3期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ハッピー",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+        "total_status": 25920,
+        "performance": 6947,
+        "technic": 7828,
+        "sense": 11145,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "ID3期生〇人以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "10秒間スコアサポート効果145％\n{ID3期生}が２人以上でスキル発動率が55％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "34秒毎に高確率で12秒間スコアが115％UP",
+        "passive-type": "センスUP",
+        "passive-conditions": "なし",
+        "passive-target": "ID3期生〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ID3期生}2人のセンスが43％UP",
+        "costumeｰname": "パッショナートレアメタル",
+        "costumeｰeffect": "センスUP",
+        "costume-conditions": "ID3期生〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ID3期生}2人以上で全員のセンスが135％UP",
+        "connect-mass": "4マス効果",
+        "connect-target": "[4マス] 上下┃型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100401.png",
+        "connect_effect": "範囲内のホロメンボード効果を200％UP",
+        "fast_release": "至福のシーサイドデイズガチャ",
+        "release_at": 20261019,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20302.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration3.png"
+        ]
+      },
+      {
+        "id": 30302004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30302004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30302004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_30302004.png",
+        "character": "古石ビジュー",
+        "alias": "笑顔輝くSand castle",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_30302.png",
+        "unit": "ホロライブEN Advent",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ハッピー",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+        "total_status": 25920,
+        "performance": 11145,
+        "technic": 7828,
+        "sense": 6947,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "Advent〇人以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果120％\n{Advent}が2人以上でスキル発動率が45％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "19秒毎に高確率で7秒間スコアが110％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "Advent〇人以上",
+        "passive-target": "Advent〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{Advent}が2人以上で{Advent}2人のスコアサポート効果12％",
+        "costumeｰname": "スパークルジェム",
+        "costumeｰeffect": "パフォーマンスUP",
+        "costume-conditions": "Advent〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{Advent}が2人以上で全員のパフォーマンスが135％UP",
+        "connect-mass": "8マス効果",
+        "connect-target": "[8マス] 左寄り",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100801.png",
+        "connect_effect": "範囲内のホロメンボード効果を135％UP",
+        "fast_release": "至福のシーサイドデイズガチャ",
+        "release_at": 20261019,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30302.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+        ]
+      },
+      {
         "id": 10501004,
         "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10501004.jpg",
         "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10501004.png",
@@ -1896,7 +2114,7 @@
         "fast_release": "橋を架けるオーシャンクリエイトガチャ",
         "release_at": 20261007,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10501.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
         ]
@@ -1945,7 +2163,7 @@
         "fast_release": "橋を架けるオーシャンクリエイトガチャ",
         "release_at": 20261007,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10504.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
         ]
@@ -1994,7 +2212,7 @@
         "fast_release": "橋を架けるオーシャンクリエイトガチャ",
         "release_at": 20261007,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_40102.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_holoX.png"
         ]
@@ -13156,6 +13374,24 @@
         ],
         "cards": [
           {
+            "id": 10402004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10402004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10402004.jpg",
+            "alias": "ゆらゆら過ごす木陰のバカンス",
+            "character": "常闇トワ",
+            "char_id": 10402,
+            "rarity": 5,
+            "release_at": 20261019,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "ホロライブ 4期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation4.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10402.png"
+          },
+          {
             "id": 10402001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10402001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10402001.jpg",
@@ -13451,6 +13687,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
         ],
         "cards": [
+          {
+            "id": 10503004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10503004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10503004.jpg",
+            "alias": "一心不乱のちゅるタイム",
+            "character": "獅白ぼたん",
+            "char_id": 10503,
+            "rarity": 5,
+            "release_at": 20261019,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "ホロライブ 5期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10503.png"
+          },
           {
             "id": 10503001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10503001.png",
@@ -14405,6 +14659,24 @@
         ],
         "cards": [
           {
+            "id": 20302004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20302004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20302004.jpg",
+            "alias": "木陰で紡ぐShiny Memory",
+            "character": "カエラ・コヴァルスキア",
+            "char_id": 20302,
+            "rarity": 5,
+            "release_at": 20261019,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+            "units": [
+              "ホロライブID 3期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration3.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20302.png"
+          },
+          {
             "id": 20302001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20302001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20302001.jpg",
@@ -15079,6 +15351,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
         ],
         "cards": [
+          {
+            "id": 30302004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30302004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30302004.jpg",
+            "alias": "笑顔輝くSand castle",
+            "character": "古石ビジュー",
+            "char_id": 30302,
+            "rarity": 5,
+            "release_at": 20261019,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+            "units": [
+              "ホロライブEN Advent"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30302.png"
+          },
           {
             "id": 30302001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30302001.png",
@@ -20082,6 +20372,26 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=CswOsZYY_zc",
         "digital_distribution": "https://cover.lnk.to/NEWzomBIE"
+      },
+      {
+        "id": 100152,
+        "music_title": "Shallow Shadow",
+        "read": "Shallow Shadow",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100152.png",
+        "length": "2:03",
+        "type": "オリジナル",
+        "artist": "常闇トワ",
+        "lyrics": "本多友紀（EverNest）",
+        "composition": "本多友紀（EverNest）",
+        "arrangement": "傳田有矢（EverNest）",
+        "copyright": "",
+        "score_rate": "常闇トワ",
+        "easy": 5,
+        "normal": 10,
+        "hard": 18,
+        "expert": 27,
+        "mv_url": "https://www.youtube.com/watch?v=ylpBsZ0jHZc&list=RDylpBsZ0jHZc&start_radio=1",
+        "digital_distribution": ""
       }
     ],
     "globalIcons": {
