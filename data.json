@@ -161,6 +161,10 @@
     {
       "timestamp": "2026-10-23",
       "message": "以下の新楽曲を追加！\n・「Forge My Soul」\n　　- カエラ・コヴァルスキア"
+    },
+    {
+      "timestamp": "2026-10-23",
+      "message": "以下の新楽曲を追加！\n・「アマリリス」\n　　- 獅白ぼたん"
     }
   ],
   "pickupImages": [
@@ -20415,6 +20419,26 @@
         "hard": 17,
         "expert": 25,
         "mv_url": "https://www.youtube.com/watch?v=8On-I5qQeLw",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100154,
+        "music_title": "アマリリス",
+        "read": "あまりりす",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100154.png",
+        "length": "1:49",
+        "type": "オリジナル",
+        "artist": "獅白ぼたん",
+        "lyrics": "山下僚海(SUPA LOVE)",
+        "composition": "山下僚海(SUPA LOVE)",
+        "arrangement": "山下僚海(SUPA LOVE)",
+        "copyright": "",
+        "score_rate": "獅白ぼたん",
+        "easy": 4,
+        "normal": 10,
+        "hard": 18,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=BtpR74RBESc&list=RDBtpR74RBESc&start_radio=1",
         "digital_distribution": ""
       }
     ],
