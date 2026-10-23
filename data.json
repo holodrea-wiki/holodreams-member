@@ -157,6 +157,10 @@
     {
       "timestamp": "2026-10-21",
       "message": "以下の新楽曲を追加！\n・「Shallow Shadow」\n　　- 常闇トワ"
+    },
+    {
+      "timestamp": "2026-10-23",
+      "message": "以下の新楽曲を追加！\n・「Forge My Soul」\n　　- カエラ・コヴァルスキア"
     }
   ],
   "pickupImages": [
@@ -20391,6 +20395,26 @@
         "hard": 18,
         "expert": 27,
         "mv_url": "https://www.youtube.com/watch?v=ylpBsZ0jHZc&list=RDylpBsZ0jHZc&start_radio=1",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100153,
+        "music_title": "Forge My Soul",
+        "read": "Forge My Soul",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100153.png",
+        "length": "1:45",
+        "type": "オリジナル",
+        "artist": "カエラ・コヴァルスキア",
+        "lyrics": "Ryota Saito",
+        "composition": "Ryota Saito, 玉木千尋",
+        "arrangement": "玉木千尋",
+        "copyright": "",
+        "score_rate": "カエラ・コヴァルスキア",
+        "easy": 3,
+        "normal": 8,
+        "hard": 17,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=8On-I5qQeLw",
         "digital_distribution": ""
       }
     ],
