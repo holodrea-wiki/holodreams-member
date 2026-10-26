@@ -165,6 +165,10 @@
     {
       "timestamp": "2026-10-23",
       "message": "以下の新楽曲を追加！\n・「アマリリス」\n　　- 獅白ぼたん"
+    },
+    {
+      "timestamp": "2026-10-26",
+      "message": "以下の新楽曲を追加！\n・「CORE//UNBREAKABLE」\n　　- 古石ビジュー"
     }
   ],
   "pickupImages": [
@@ -20439,6 +20443,26 @@
         "hard": 18,
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=BtpR74RBESc&list=RDBtpR74RBESc&start_radio=1",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100155,
+        "music_title": "CORE//UNBREAKABLE",
+        "read": "CORE//UNBREAKABLE",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100155.png",
+        "length": "1:59",
+        "type": "オリジナル",
+        "artist": "古石ビジュー",
+        "lyrics": "太嘉志・猟平",
+        "composition": "太嘉志・猟平",
+        "arrangement": "太嘉志・猟平",
+        "copyright": "",
+        "score_rate": "古石ビジュー",
+        "easy": 4,
+        "normal": 14,
+        "hard": 23,
+        "expert": 28,
+        "mv_url": "https://www.youtube.com/watch?v=7CM4ZbyrafQ",
         "digital_distribution": ""
       }
     ],
