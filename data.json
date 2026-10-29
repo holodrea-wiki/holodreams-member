@@ -169,32 +169,50 @@
     {
       "timestamp": "2026-10-26",
       "message": "以下の新楽曲を追加！\n・「CORE//UNBREAKABLE」\n　　- 古石ビジュー"
+    },
+    {
+      "timestamp": "2026-10-29",
+      "message": "新イベント「変幻自在☆Cosplay Nightガチャ」の新メンバー追加！\n・夏色まつり［おてんば狼のあま～いTrick］\r\n・ベスティア・ゼータ［気まぐれガールのドキドキ診療室］\r\n・ネリッサ・レイヴンクロフト［魅惑のMagic Potion］\r\n・儒烏風亭らでん［高貴なるヴァンパイアの嗜み］\r\n・轟はじめ［今宵開幕！あやかしダンシング］"
+    },
+    {
+      "timestamp": "2026-10-29",
+      "message": "以下の新楽曲を追加！\n・「ENDLESS FES」\n　　- 夏色まつり\n・「Break It Down」\n　　- ベスティア・ゼータ\n・「Sweetest Scarlet」\n　　- ネリッサ・レイヴンクロフト\n・「Miracle Palette」\n　　- 儒烏風亭らでん\n・「BANZAI」\n　　- 轟はじめ\n・「怪宴スペクタクル」\n　　- 夏色まつり, ベスティア・ゼータ, ネリッサ・レイヴンクロフト, 儒烏風亭らでん, 轟はじめ"
+    },
+    {
+      "timestamp": "2026-10-29",
+      "message": "以下の新楽曲を追加！\n・「Sakuraful March」\n　　- さくらみこ"
     }
   ],
   "pickupImages": [
     {
-      "id": "10402004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10402004.jpg",
-      "character": "常闇トワ",
-      "alias": "ゆらゆら過ごす木陰のバカンス"
+      "id": "10104004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10104004.jpg",
+      "character": "夏色まつり",
+      "alias": "おてんば狼のあま～いTrick"
     },
     {
-      "id": "10503004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10503004.jpg",
-      "character": "獅白ぼたん",
-      "alias": "一心不乱のちゅるタイム"
+      "id": "20301004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20301004.jpg",
+      "character": "ベスティア・ゼータ",
+      "alias": "気まぐれガールのドキドキ診療室"
     },
     {
-      "id": "20302004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20302004.jpg",
-      "character": "カエラ・コヴァルスキア",
-      "alias": "木陰で紡ぐShiny Memory"
+      "id": "30303004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30303004.jpg",
+      "character": "ネリッサ・レイヴンクロフト",
+      "alias": "魅惑のMagic Potion"
     },
     {
-      "id": "30302004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30302004.jpg",
-      "character": "古石ビジュー",
-      "alias": "笑顔輝くSand castle"
+      "id": "40103004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40103004.jpg",
+      "character": "儒烏風亭らでん",
+      "alias": "高貴なるヴァンパイアの嗜み"
+    },
+    {
+      "id": "40104004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40104004.jpg",
+      "character": "轟はじめ",
+      "alias": "今宵開幕！あやかしダンシング"
     }
   ],
   "allImages": [
@@ -285,7 +303,12 @@
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10402004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10503004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20302004.jpg",
-    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30302004.jpg"
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30302004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10104004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20301004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30303004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40103004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40104004.jpg"
   ],
   "copyright": {
     "著作権表示": "当サイトはファン有志による非公式の攻略データサイトです。\nサイト内のゲーム画像・データの著作権は、すべてカバー株式会社および株式会社QualiArtsに帰属します。\n© COVER Corp. / © QualiArts, Inc.",
@@ -582,6 +605,7 @@
             "ハジける快活チアリーダー",
             "あざとさ全開キュンキュンライブ",
             "We are hololive!",
+            "おてんば狼のあま～いTrick",
             "夏色まつり"
           ],
           "message": "「わっしょ～い！ホロライブの清楚担当みんなのアイドル夏色まつりです！」",
@@ -1398,6 +1422,7 @@
             "陽だまりとネコろ構成員",
             "childlikeるんるんライブ",
             "We are hololive!",
+            "気まぐれガールのドキドキ診療室",
             "ベスティア・ゼータ"
           ],
           "message": "「アァァ！ミッションスタート！ホロライブID3期生のベスティア・ゼータです！」",
@@ -1701,6 +1726,7 @@
             "歌に揺らめくノクターン",
             "美声届ける夕闇ステージ",
             "We are hololive!",
+            "魅惑のMagic Potion",
             "ネリッサ・レイヴンクロフト"
           ],
           "message": "「嗚呼、やはり良い響きですね――アイドルソングというものは」",
@@ -1841,6 +1867,7 @@
             "叡智を灯し、アートに導く",
             "cultural performer",
             "We are hololive!",
+            "高貴なるヴァンパイアの嗜み",
             "儒烏風亭らでん",
             "叡智を灯し",
             "アートに導く"
@@ -1868,6 +1895,7 @@
             "ガーリー番長のお裾分け",
             "番長の番長たる所以",
             "We are hololive!",
+            "今宵開幕！あやかしダンシング",
             "轟はじめ"
           ],
           "message": "「ぶんぶんぶーん！押忍！hololive DEV_IS ReGLOSSの番長！轟はじめ！」",
@@ -1886,6 +1914,251 @@
   ],
   "holomenTableData": {
     "rows": [
+      {
+        "id": 10104004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10104004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10104004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10104004.png",
+        "character": "夏色まつり",
+        "alias": "おてんば狼のあま～いTrick",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10104.png",
+        "unit": "ホロライブ 1期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25865,
+        "performance": 7682,
+        "technic": 6803,
+        "sense": 11380,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "14秒間スコアサポート効果115％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "26秒毎に中確率で10秒間スコアが110％UP",
+        "passive-type": "センスUP",
+        "passive-conditions": "ピュアタイプ〇人以上",
+        "passive-target": "ピュアタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}2人以上で{ピュアタイプ}2人のセンスが43％UP",
+        "costumeｰname": "なりきりもふもふウルフ",
+        "costumeｰeffect": "センスUP",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}2人以上で全員のセンスが130％UP",
+        "connect-mass": "6マス効果",
+        "connect-target": "[6マス] 右 ┫型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100602.png",
+        "connect_effect": "範囲内のホロメンボード効果を160％UP",
+        "fast_release": "変幻自在☆Cosplay Nightガチャ",
+        "release_at": 20261029,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10104.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation1.png"
+        ]
+      },
+      {
+        "id": 20301004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20301004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20301004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_20301004.png",
+        "character": "ベスティア・ゼータ",
+        "alias": "気まぐれガールのドキドキ診療室",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_20301.png",
+        "unit": "ホロライブID 3期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25865,
+        "performance": 7682,
+        "technic": 11380,
+        "sense": 6803,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果135％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "27秒毎に中確率で10秒間スコアが115％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "なし",
+        "passive-target": "ピュアタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}2人の全スコアサポート効果11％",
+        "costumeｰname": "サッシーナース",
+        "costumeｰeffect": "テクニックUP",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}2人以上で全員のテクニックが130％UP",
+        "connect-mass": "4マス効果",
+        "connect-target": "[4マス] 上左 ┛型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100402.png",
+        "connect_effect": "範囲内のホロメンボード効果を200％UP",
+        "fast_release": "変幻自在☆Cosplay Nightガチャ",
+        "release_at": 20261029,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20301.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration3.png"
+        ]
+      },
+      {
+        "id": 30303004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30303004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30303004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_30303004.png",
+        "character": "ネリッサ・レイヴンクロフト",
+        "alias": "魅惑のMagic Potion",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_30303.png",
+        "unit": "ホロライブEN Advent",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ハッピー",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+        "total_status": 25920,
+        "performance": 11145,
+        "technic": 6947,
+        "sense": 7828,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "15秒間スコアサポート効果105％",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "29秒毎に高確率で11秒間スコアが105％UP",
+        "passive-type": "パフォーマンスUP",
+        "passive-conditions": "ハッピータイプ〇人以上",
+        "passive-target": "ハッピータイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ハッピータイプ}2人以上で{ハッピータイプ}2人のパフォーマンスが43％UP",
+        "costumeｰname": "アリュールウィッチ",
+        "costumeｰeffect": "スコアサポート, パフォーマンスUP",
+        "costume-conditions": "ハッピータイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ハッピータイプ}2人以上で全員のパフォーマンスが80％UP\n{ハッピータイプ}2人以上で全員のスコアサポート効果25％",
+        "connect-mass": "4マス効果",
+        "connect-target": "[4マス] 上右┗ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100403.png",
+        "connect_effect": "範囲内のホロメンボード効果を200％UP",
+        "fast_release": "変幻自在☆Cosplay Nightガチャ",
+        "release_at": 20261029,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30303.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+        ]
+      },
+      {
+        "id": 40103004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40103004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_40103004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_40103004.png",
+        "character": "儒烏風亭らでん",
+        "alias": "高貴なるヴァンパイアの嗜み",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_40103.png",
+        "unit": "DEV_IS ReGLOSS",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 25920,
+        "performance": 7828,
+        "technic": 11145,
+        "sense": 6947,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "ReGLOSS〇人以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果120％\n{ReGLOSS}が2人以上でスキル発動率が45％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "23秒毎に中確率で8秒間スコアが120％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "ReGLOSS〇人以上",
+        "passive-target": "ReGLOSS〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ReGLOSS}が2人以上で{ReGLOSS}2人のスコアサポート効果12％",
+        "costumeｰname": "ゴシックヴァンパイア",
+        "costumeｰeffect": "テクニックUP",
+        "costume-conditions": "ReGLOSS〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ReGLOSS}が2人以上で全員のテクニックが135％UP",
+        "connect-mass": "8マス効果",
+        "connect-target": "[8マス] 右寄り",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100802.png",
+        "connect_effect": "範囲内のホロメンボード効果を135％UP",
+        "fast_release": "変幻自在☆Cosplay Nightガチャ",
+        "release_at": 20261029,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_40103.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_ReGLOSS.png"
+        ]
+      },
+      {
+        "id": 40104004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40104004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_40104004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_40104004.png",
+        "character": "轟はじめ",
+        "alias": "今宵開幕！あやかしダンシング",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_40104.png",
+        "unit": "DEV_IS ReGLOSS",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25974,
+        "performance": 7221,
+        "technic": 10909,
+        "sense": 7844,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "14秒間スコアサポート効果115％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率, ReGLOSS〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "32秒毎に中確率で11秒間スコアが65％UP\n{ReGLOSS}が2人以上でスコアが130％UP",
+        "passive-type": "全パラメータUP",
+        "passive-conditions": "ReGLOSS〇人以上",
+        "passive-target": "自身",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ReGLOSS}が2人以上で自身の全パラメータが33％UP",
+        "costumeｰname": "さいきょうキョンシー",
+        "costumeｰeffect": "全パラメータUP",
+        "costume-conditions": "ReGLOSS〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ReGLOSS}が2人以上で全員の全パラメータが50％UP",
+        "connect-mass": "8マス効果",
+        "connect-target": "[8マス] 右寄り",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100802.png",
+        "connect_effect": "範囲内のホロメンボード効果を135％UP",
+        "fast_release": "変幻自在☆Cosplay Nightガチャ",
+        "release_at": 20261029,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_40104.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_ReGLOSS.png"
+        ]
+      },
       {
         "id": 10402004,
         "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10402004.jpg",
@@ -1930,7 +2203,7 @@
         "fast_release": "至福のシーサイドデイズガチャ",
         "release_at": 20261019,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10402.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation4.png"
         ]
@@ -1979,7 +2252,7 @@
         "fast_release": "至福のシーサイドデイズガチャ",
         "release_at": 20261019,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10503.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
         ]
@@ -2028,7 +2301,7 @@
         "fast_release": "至福のシーサイドデイズガチャ",
         "release_at": 20261019,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20302.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration3.png"
         ]
@@ -2077,7 +2350,7 @@
         "fast_release": "至福のシーサイドデイズガチャ",
         "release_at": 20261019,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30302.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
         ]
@@ -12444,6 +12717,24 @@
         ],
         "cards": [
           {
+            "id": 10104004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10104004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10104004.jpg",
+            "alias": "おてんば狼のあま～いTrick",
+            "character": "夏色まつり",
+            "char_id": 10104,
+            "rarity": 5,
+            "release_at": 20261029,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブ 1期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation1.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10104.png"
+          },
+          {
             "id": 10104001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10104001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10104001.jpg",
@@ -14606,6 +14897,24 @@
         ],
         "cards": [
           {
+            "id": 20301004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20301004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20301004.jpg",
+            "alias": "気まぐれガールのドキドキ診療室",
+            "character": "ベスティア・ゼータ",
+            "char_id": 20301,
+            "rarity": 5,
+            "release_at": 20261029,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブID 3期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration3.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20301.png"
+          },
+          {
             "id": 20301001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20301001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20301001.jpg",
@@ -15447,6 +15756,24 @@
         ],
         "cards": [
           {
+            "id": 30303004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30303004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30303004.jpg",
+            "alias": "魅惑のMagic Potion",
+            "character": "ネリッサ・レイヴンクロフト",
+            "char_id": 30303,
+            "rarity": 5,
+            "release_at": 20261029,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+            "units": [
+              "ホロライブEN Advent"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30303.png"
+          },
+          {
             "id": 30303001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30303001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30303001.jpg",
@@ -15844,6 +16171,24 @@
         ],
         "cards": [
           {
+            "id": 40103004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_40103004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40103004.jpg",
+            "alias": "高貴なるヴァンパイアの嗜み",
+            "character": "儒烏風亭らでん",
+            "char_id": 40103,
+            "rarity": 5,
+            "release_at": 20261029,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "DEV_IS ReGLOSS"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_ReGLOSS.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_40103.png"
+          },
+          {
             "id": 40103001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_40103001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40103001.jpg",
@@ -15908,6 +16253,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_ReGLOSS.png"
         ],
         "cards": [
+          {
+            "id": 40104004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_40104004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40104004.jpg",
+            "alias": "今宵開幕！あやかしダンシング",
+            "character": "轟はじめ",
+            "char_id": 40104,
+            "rarity": 5,
+            "release_at": 20261029,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "DEV_IS ReGLOSS"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_ReGLOSS.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_40104.png"
+          },
           {
             "id": 40104001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_40104001.png",
@@ -20463,6 +20826,146 @@
         "hard": 23,
         "expert": 28,
         "mv_url": "https://www.youtube.com/watch?v=7CM4ZbyrafQ",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100156,
+        "music_title": "ENDLESS FES",
+        "read": "ENDLESS FES",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100156.png",
+        "length": "1:52",
+        "type": "オリジナル",
+        "artist": "夏色まつり",
+        "lyrics": "TOPHAMHAT-KYO (FAKE TYPE.)",
+        "composition": "FAKE TYPE.",
+        "arrangement": "DYES IWASAKI (FAKE TYPE.)",
+        "copyright": "",
+        "score_rate": "夏色まつり",
+        "easy": 6,
+        "normal": 11,
+        "hard": 18,
+        "expert": 27,
+        "mv_url": "https://www.youtube.com/watch?v=Wr10_8s_yAQ",
+        "digital_distribution": "https://cover.lnk.to/xV58yv"
+      },
+      {
+        "id": 100157,
+        "music_title": "Break It Down",
+        "read": "Break It Down",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100157.png",
+        "length": "2:21",
+        "type": "オリジナル",
+        "artist": "ベスティア・ゼータ",
+        "lyrics": "Ryo'LEFTY'Miyata",
+        "composition": "Ryo'LEFTY'Miyata",
+        "arrangement": "Ryo'LEFTY'Miyata",
+        "copyright": "",
+        "score_rate": "ベスティア・ゼータ",
+        "easy": 6,
+        "normal": 12,
+        "hard": 19,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=q4CY4XY-06Q",
+        "digital_distribution": "https://cover.lnk.to/jF9WTL"
+      },
+      {
+        "id": 100158,
+        "music_title": "Sweetest Scarlet",
+        "read": "Sweetest Scarlet",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100158.png",
+        "length": "2:18",
+        "type": "オリジナル",
+        "artist": "ネリッサ・レイヴンクロフト",
+        "lyrics": "Nerissa Ravencroft, Kazunari Okada",
+        "composition": "Toshiya Hosokawa, Akira Kabe, Kazunari Okada",
+        "arrangement": "Toshiya Hosokawa",
+        "copyright": "",
+        "score_rate": "ネリッサ・レイヴンクロフト",
+        "easy": 3,
+        "normal": 10,
+        "hard": 16,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=WLMlYZdynxE",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100159,
+        "music_title": "Miracle Palette",
+        "read": "Miracle Palette",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100159.png",
+        "length": "2:21",
+        "type": "オリジナル",
+        "artist": "儒烏風亭らでん",
+        "lyrics": "太田 春晃(TOKYO LOGIC)",
+        "composition": "太田 春晃(TOKYO LOGIC)",
+        "arrangement": "太田 春晃(TOKYO LOGIC)",
+        "copyright": "",
+        "score_rate": "儒烏風亭らでん",
+        "easy": 7,
+        "normal": 14,
+        "hard": 23,
+        "expert": 28,
+        "mv_url": "https://www.youtube.com/watch?v=gmbXUFiiKYU",
+        "digital_distribution": "https://cover.lnk.to/8UkwBA"
+      },
+      {
+        "id": 100160,
+        "music_title": "BANZAI",
+        "read": "BANZAI",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100160.png",
+        "length": "2:14",
+        "type": "オリジナル",
+        "artist": "轟はじめ",
+        "lyrics": "マサ",
+        "composition": "マサ",
+        "arrangement": "田中タリラ",
+        "copyright": "",
+        "score_rate": "轟はじめ",
+        "easy": 3,
+        "normal": 10,
+        "hard": 17,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=AuVjtPcxlfE",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100161,
+        "music_title": "怪宴スペクタクル",
+        "read": "かいえんすぺくたくる",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100161.png",
+        "length": "1:56",
+        "type": "オリジナル",
+        "artist": "夏色まつり, ベスティア・ゼータ, ネリッサ・レイヴンクロフト, 儒烏風亭らでん, 轟はじめ",
+        "lyrics": "ミズノゲンキ",
+        "composition": "睦月周平",
+        "arrangement": "睦月周平",
+        "copyright": "",
+        "score_rate": "夏色まつり, ベスティア・ゼータ, ネリッサ・レイヴンクロフト, 儒烏風亭らでん, 轟はじめ",
+        "easy": 7,
+        "normal": 14,
+        "hard": 22,
+        "expert": 28,
+        "mv_url": "https://www.youtube.com/watch?v=R-ChvjRIKdk",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100162,
+        "music_title": "Sakuraful March",
+        "read": "Sakuraful March",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100162.png",
+        "length": "2:14",
+        "type": "オリジナル",
+        "artist": "さくらみこ",
+        "lyrics": "TOPHAMHAT-KYO (FAKE TYPE.)",
+        "composition": "FAKE TYPE.",
+        "arrangement": "DYES IWASAKI (FAKE TYPE.)",
+        "copyright": "",
+        "score_rate": "さくらみこ",
+        "easy": 4,
+        "normal": 10,
+        "hard": 21,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=bKJefYPsJdk",
         "digital_distribution": ""
       }
     ],
