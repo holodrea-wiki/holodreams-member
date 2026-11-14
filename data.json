@@ -193,26 +193,46 @@
     {
       "timestamp": "2026-11-07",
       "message": "以下の新楽曲を追加！\n・「LOVE MISSION」\n　　- ベスティア・ゼータ"
+    },
+    {
+      "timestamp": "2026-11-14",
+      "message": "新イベント「うららかな秋にお出かけを♪ガチャ」の新メンバー追加！\n・ロボ子さん［高性能なボクと紅葉デート］\n・兎田ぺこら［ご機嫌ステップでおめかし散歩］\n・桃鈴ねね［ビタミンカラーの落ち葉シャワー］\n・パヴォリア・レイネ［風薫る♪銀杏並木のその先へ］\n・IRyS［この手に希望を実らせて♪］"
+    },
+    {
+      "timestamp": "2026-11-14",
+      "message": "以下の新楽曲を追加！\n・「微熱」\n　　- ロボ子さん"
     }
   ],
   "pickupImages": [
     {
-      "id": "20101004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20101004.jpg",
-      "character": "アユンダ・リス",
-      "alias": "うとうと気分で身支度を"
+      "id": "10002004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10002004.jpg",
+      "character": "ロボ子さん",
+      "alias": "高性能なボクと紅葉デート"
     },
     {
-      "id": "20102004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20102004.jpg",
-      "character": "ムーナ・ホシノヴァ",
-      "alias": "星瞬く夜、ゆったりバスタイム"
+      "id": "10301004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10301004.jpg",
+      "character": "兎田ぺこら",
+      "alias": "ご機嫌ステップでおめかし散歩"
     },
     {
-      "id": "20103004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20103004.jpg",
-      "character": "アイラニ・イオフィフティーン",
-      "alias": "陽だまりぽかぽかスマイル"
+      "id": "10502004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10502004.jpg",
+      "character": "桃鈴ねね",
+      "alias": "ビタミンカラーの落ち葉シャワー"
+    },
+    {
+      "id": "20203004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20203004.jpg",
+      "character": "パヴォリア・レイネ",
+      "alias": "風薫る♪銀杏並木のその先へ"
+    },
+    {
+      "id": "30201004",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30201004.jpg",
+      "character": "IRyS",
+      "alias": "この手に希望を実らせて♪"
     }
   ],
   "allImages": [
@@ -311,7 +331,12 @@
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_40104004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20101004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20102004.jpg",
-    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20103004.jpg"
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20103004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10002004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10301004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10502004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20203004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30201004.jpg"
   ],
   "copyright": {
     "著作権表示": "当サイトはファン有志による非公式の攻略データサイトです。\nサイト内のゲーム画像・データの著作権は、すべてカバー株式会社および株式会社QualiArtsに帰属します。\n© COVER Corp. / © QualiArts, Inc.",
@@ -420,6 +445,7 @@
             "高性能なVサイン",
             "ゆるふわウインクLIVE",
             "We are hololive!",
+            "高性能なボクと紅葉デート",
             "ロボ子さん"
           ],
           "message": "「はろーぼー！ロボ子だよー」",
@@ -840,6 +866,7 @@
             "愛嬌たっぷりラビットフィールド",
             "cheekyホッピンバニー",
             "We are hololive!",
+            "ご機嫌ステップでおめかし散歩",
             "兎田ぺこら"
           ],
           "message": "「こんぺこ！こんぺこ！こんぺこー！兎田ぺこらぺこ～！どうも〜どうも〜」",
@@ -1061,6 +1088,7 @@
             "一緒に歌お！イノセントリズム",
             "get excitedジャンプ！",
             "We are hololive!",
+            "ビタミンカラーの落ち葉シャワー",
             "桃鈴ねね"
           ],
           "message": "「こんねね～！ホロライブ5期生、アイドルVTuberの桃鈴ねねで～す！」",
@@ -1398,6 +1426,7 @@
             "おすまし孔雀と嗜む一杯",
             "祝福のラグジュアリーナイト",
             "We are hololive!",
+            "風薫る♪銀杏並木のその先へ",
             "パヴォリア・レイネ"
           ],
           "message": "「注目！風舞う孔雀の乙女、ホロライブIDのパヴォリア・レイネです！」",
@@ -1599,6 +1628,7 @@
             "nephilim sonority",
             "響き渡るホープフルボイス",
             "We are hololive!",
+            "この手に希望を実らせて♪",
             "IRyS"
           ],
           "message": "「ハイRyS！私はIRyS！世界を希望で満たす、君たちの清楚なネフィリムです！」",
@@ -1923,6 +1953,251 @@
   "holomenTableData": {
     "rows": [
       {
+        "id": 10002004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10002004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10002004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10002004.png",
+        "character": "ロボ子さん",
+        "alias": "高性能なボクと紅葉デート",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10002.png",
+        "unit": "ホロライブ 0期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25920,
+        "performance": 6947,
+        "technic": 7828,
+        "sense": 11145,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果120％\nスキル発動率が40％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率, ピュアタイプ〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "33秒毎に中確率で12秒間スコアが60％UP\n{ピュアタイプ}2人以上でスコアが120％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "なし",
+        "passive-target": "ピュアタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}2人のスコアサポート効果11％",
+        "costumeｰname": "パフィーチェック",
+        "costumeｰeffect": "スコアサポート, センスUP",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}2人以上で全員のセンスが80％UP\n{ピュアタイプ}2人以上で全員のスコアサポート効果25％",
+        "connect-mass": "6マス効果",
+        "connect-target": "[6マス] 左┣ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100601.png",
+        "connect_effect": "範囲内のホロメンボード効果を160％UP",
+        "fast_release": "うららかな秋にお出かけを♪ガチャ",
+        "release_at": 20261114,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10002.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation0.png"
+        ]
+      },
+      {
+        "id": 10301004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10301004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10301004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10301004.png",
+        "character": "兎田ぺこら",
+        "alias": "ご機嫌ステップでおめかし散歩",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10301.png",
+        "unit": "ホロライブ 3期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25865,
+        "performance": 6803,
+        "technic": 7682,
+        "sense": 11380,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "11秒間スコアサポート効果145％",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "25秒毎に高確率で8秒間スコアが125％UP",
+        "passive-type": "スコアサポート",
+        "passive-conditions": "なし",
+        "passive-target": "ピュアタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}2人のスコアサポート効果11％",
+        "costumeｰname": "ドーリーブラックフリル",
+        "costumeｰeffect": "スコアUP",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}2人以上で全員のセンスが130％UP",
+        "connect-mass": "8マス効果",
+        "connect-target": "[8マス] 右寄り",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100802.png",
+        "connect_effect": "範囲内のホロメンボード効果を135％UP",
+        "fast_release": "うららかな秋にお出かけを♪ガチャ",
+        "release_at": 20261114,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10301.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation3.png"
+        ]
+      },
+      {
+        "id": 10502004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10502004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10502004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10502004.png",
+        "character": "桃鈴ねね",
+        "alias": "ビタミンカラーの落ち葉シャワー",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10502.png",
+        "unit": "ホロライブ 5期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ハッピー",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+        "total_status": 25920,
+        "performance": 7828,
+        "technic": 11145,
+        "sense": 6947,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "5期生〇人以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果120％\n{5期生}が2人以上でスキル発動率が45％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "17秒毎に中確率で6秒間スコアが120％UP",
+        "passive-type": "テクニックUP",
+        "passive-conditions": "なし",
+        "passive-target": "5期生〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{5期生}2人のテクニックが43％UP",
+        "costumeｰname": "Go-Out Energy",
+        "costumeｰeffect": "テクニックUP",
+        "costume-conditions": "5期生〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{5期生}2人以上で全員のテクニックが135％UP",
+        "connect-mass": "5マス効果",
+        "connect-target": "[5マス] 下 ╋ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100502.png",
+        "connect_effect": "範囲内のホロメンボード効果を200％UP",
+        "fast_release": "うららかな秋にお出かけを♪ガチャ",
+        "release_at": 20261114,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10502.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
+        ]
+      },
+      {
+        "id": 20203004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20203004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20203004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_20203004.png",
+        "character": "パヴォリア・レイネ",
+        "alias": "風薫る♪銀杏並木のその先へ",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_20203.png",
+        "unit": "ホロライブID 2期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 25920,
+        "performance": 11145,
+        "technic": 6947,
+        "sense": 7828,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "ID2期生〇人以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "11秒間スコアサポート効果130％\n{ID2期生}が2人以上でスキル発動率が50％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "27秒毎に中確率で10秒間スコアが115％UP",
+        "passive-type": "パフォーマンスUP",
+        "passive-conditions": "なし",
+        "passive-target": "ID2期生〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ID2期生}2人のパフォーマンスが43％UP",
+        "costumeｰname": "ビビッドpeafowl",
+        "costumeｰeffect": "パフォーマンスUP",
+        "costume-conditions": "ID2期生〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ID2期生}2人以上で全員のパフォーマンスが135％UP",
+        "connect-mass": "5マス効果",
+        "connect-target": "[5マス] 下 ╋ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100502.png",
+        "connect_effect": "範囲内のホロメンボード効果を200％UP",
+        "fast_release": "うららかな秋にお出かけを♪ガチャ",
+        "release_at": 20261114,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20203.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration2.png"
+        ]
+      },
+      {
+        "id": 30201004,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30201004.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30201004.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_30201004.png",
+        "character": "IRyS",
+        "alias": "この手に希望を実らせて♪",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_30201.png",
+        "unit": "ホロライブEN Promise",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 26082,
+        "performance": 10433,
+        "technic": 7668,
+        "sense": 7981,
+        "special-effect": "スコアサポート",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "14秒間スコアサポート効果115％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率, ライフ〇以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "20秒毎に高確率で7秒間スコアが60％UP\nライフ600以上でスコアが120％UP",
+        "passive-type": "パフォーマンスUP",
+        "passive-conditions": "キュートタイプ〇人以上",
+        "passive-target": "キュートタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{キュートタイプ}2人以上で{キュートタイプ}2人のパフォーマンスが43％UP",
+        "costumeｰname": "ガーリッシュクラッシュ",
+        "costumeｰeffect": "スコアサポート",
+        "costume-conditions": "なし",
+        "costume-target": "全員",
+        "costumeｰskill": "全員のスコアサポート効果60％",
+        "connect-mass": "3マス効果",
+        "connect-target": "[3マス] 右3マス",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100303.png",
+        "connect_effect": "範囲内のホロメンボード効果を260％UP",
+        "fast_release": "うららかな秋にお出かけを♪ガチャ",
+        "release_at": 20261114,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30201.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Promise.png"
+        ]
+      },
+      {
         "id": 20101004,
         "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20101004.jpg",
         "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20101004.png",
@@ -1966,7 +2241,7 @@
         "fast_release": "ぬくもりのチルタイムガチャ",
         "release_at": 20261106,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20101.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration1.png"
         ]
@@ -2002,7 +2277,7 @@
         "passive-conditions": "なし",
         "passive-target": "ハッピータイプ〇人",
         "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
-        "passive-skill": "{ハッピータイプ}2人の全スコアサポート効果11％",
+        "passive-skill": "{ハッピータイプ}2人のスコアサポート効果11％",
         "costumeｰname": "くつろぎスターリー",
         "costumeｰeffect": "スコアサポート, パフォーマンスUP",
         "costume-conditions": "ハッピータイプ〇人以上",
@@ -2015,7 +2290,7 @@
         "fast_release": "ぬくもりのチルタイムガチャ",
         "release_at": 20261106,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20102.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration1.png"
         ]
@@ -2064,7 +2339,7 @@
         "fast_release": "ぬくもりのチルタイムガチャ",
         "release_at": 20261106,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20103.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration1.png"
         ]
@@ -12336,6 +12611,24 @@
         ],
         "cards": [
           {
+            "id": 10002004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10002004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10002004.jpg",
+            "alias": "高性能なボクと紅葉デート",
+            "character": "ロボ子さん",
+            "char_id": 10002,
+            "rarity": 5,
+            "release_at": 20261114,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブ 0期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation0.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10002.png"
+          },
+          {
             "id": 10002001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10002001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10002001.jpg",
@@ -13435,6 +13728,24 @@
         ],
         "cards": [
           {
+            "id": 10301004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10301004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10301004.jpg",
+            "alias": "ご機嫌ステップでおめかし散歩",
+            "character": "兎田ぺこら",
+            "char_id": 10301,
+            "rarity": 5,
+            "release_at": 20261114,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブ 3期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation3.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10301.png"
+          },
+          {
             "id": 10301001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10301001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10301001.jpg",
@@ -14080,6 +14391,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
         ],
         "cards": [
+          {
+            "id": 10502004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10502004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10502004.jpg",
+            "alias": "ビタミンカラーの落ち葉シャワー",
+            "character": "桃鈴ねね",
+            "char_id": 10502,
+            "rarity": 5,
+            "release_at": 20261114,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_happy.png",
+            "units": [
+              "ホロライブ 5期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10502.png"
+          },
           {
             "id": 10502001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10502001.png",
@@ -15041,6 +15370,24 @@
         ],
         "cards": [
           {
+            "id": 20203004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20203004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20203004.jpg",
+            "alias": "風薫る♪銀杏並木のその先へ",
+            "character": "パヴォリア・レイネ",
+            "char_id": 20203,
+            "rarity": 5,
+            "release_at": 20261114,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "ホロライブID 2期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration2.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20203.png"
+          },
+          {
             "id": 20203001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_20203001.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20203001.jpg",
@@ -15585,6 +15932,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Promise.png"
         ],
         "cards": [
+          {
+            "id": 30201004,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30201004.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30201004.jpg",
+            "alias": "この手に希望を実らせて♪",
+            "character": "IRyS",
+            "char_id": 30201,
+            "rarity": 5,
+            "release_at": 20261114,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "ホロライブEN Promise"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Promise.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30201.png"
+          },
           {
             "id": 30201001,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30201001.png",
@@ -21276,6 +21641,26 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=XdgzEDySUS8",
         "digital_distribution": "https://cover.lnk.to/uBkooc"
+      },
+      {
+        "id": 100168,
+        "music_title": "微熱",
+        "read": "びねつ",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100168.png",
+        "length": "2:09",
+        "type": "オリジナル",
+        "artist": "ロボ子さん",
+        "lyrics": "今野耕輔 (Core Creative)",
+        "composition": "今野耕輔 (Core Creative)",
+        "arrangement": "今野耕輔 (Core Creative)",
+        "copyright": "",
+        "score_rate": "ロボ子さん",
+        "easy": 4,
+        "normal": 9,
+        "hard": 16,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=uUckK82qZkM",
+        "digital_distribution": ""
       }
     ],
     "globalIcons": {
