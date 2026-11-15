@@ -201,6 +201,10 @@
     {
       "timestamp": "2026-11-14",
       "message": "以下の新楽曲を追加！\n・「微熱」\n　　- ロボ子さん"
+    },
+    {
+      "timestamp": "2026-11-15",
+      "message": "以下の新楽曲を追加！\n・「Fleur」\n　　- 雪花ラミィ"
     }
   ],
   "pickupImages": [
@@ -21661,6 +21665,26 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=uUckK82qZkM",
         "digital_distribution": ""
+      },
+      {
+        "id": 100169,
+        "music_title": "Fleur",
+        "read": "ふるーる",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100169.png",
+        "length": "2:01",
+        "type": "オリジナル",
+        "artist": "雪花ラミィ",
+        "lyrics": "Neko Hacker",
+        "composition": "山田高弘",
+        "arrangement": "山田高弘",
+        "copyright": "",
+        "score_rate": "雪花ラミィ",
+        "easy": 3,
+        "normal": 9,
+        "hard": 18,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=kU-KWiNpRmw",
+        "digital_distribution": "https://cover.lnk.to/Fleur"
       }
     ],
     "globalIcons": {
