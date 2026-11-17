@@ -205,6 +205,10 @@
     {
       "timestamp": "2026-11-15",
       "message": "以下の新楽曲を追加！\n・「Fleur」\n　　- 雪花ラミィ"
+    },
+    {
+      "timestamp": "2026-11-17",
+      "message": "以下の新楽曲を追加！\n・「ぺこらいざー」\n　　- 兎田ぺこら"
     }
   ],
   "pickupImages": [
@@ -21685,6 +21689,26 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=kU-KWiNpRmw",
         "digital_distribution": "https://cover.lnk.to/Fleur"
+      },
+      {
+        "id": 100170,
+        "music_title": "ぺこらいざー",
+        "read": "ぺこらいざー",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100170.png",
+        "length": "2:15",
+        "type": "オリジナル",
+        "artist": "兎田ぺこら",
+        "lyrics": "太嘉志, 猟平",
+        "composition": "太嘉志, 猟平",
+        "arrangement": "太嘉志, 猟平",
+        "copyright": "",
+        "score_rate": "兎田ぺこら",
+        "easy": 5,
+        "normal": 14,
+        "hard": 21,
+        "expert": 28,
+        "mv_url": "https://www.youtube.com/watch?v=ozuDe2Wn8Hc",
+        "digital_distribution": ""
       }
     ],
     "globalIcons": {
