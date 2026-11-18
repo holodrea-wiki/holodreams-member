@@ -209,6 +209,10 @@
     {
       "timestamp": "2026-11-17",
       "message": "以下の新楽曲を追加！\n・「ぺこらいざー」\n　　- 兎田ぺこら"
+    },
+    {
+      "timestamp": "2026-11-19",
+      "message": "以下の新楽曲を追加！\n・「Burning hope」\n　　- IRyS"
     }
   ],
   "pickupImages": [
@@ -21708,6 +21712,26 @@
         "hard": 21,
         "expert": 28,
         "mv_url": "https://www.youtube.com/watch?v=ozuDe2Wn8Hc",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100171,
+        "music_title": "Burning hope",
+        "read": "ばーにんぐ ほーぷ",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100171.png",
+        "length": "2:10",
+        "type": "オリジナル",
+        "artist": "IRyS",
+        "lyrics": "Diz",
+        "composition": "Diz",
+        "arrangement": "Diz",
+        "copyright": "",
+        "score_rate": "IRyS",
+        "easy": 6,
+        "normal": 15,
+        "hard": 23,
+        "expert": 29,
+        "mv_url": "https://www.youtube.com/watch?v=bgwcVkAMV8w",
         "digital_distribution": ""
       }
     ],
