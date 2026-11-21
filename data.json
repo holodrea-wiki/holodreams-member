@@ -213,6 +213,14 @@
     {
       "timestamp": "2026-11-19",
       "message": "以下の新楽曲を追加！\n・「Burning hope」\n　　- IRyS"
+    },
+    {
+      "timestamp": "2026-11-20",
+      "message": "以下の新楽曲を追加！\n・「前略、君に捧げるらびゅそんぐ！」\n　　- 桃鈴ねね"
+    },
+    {
+      "timestamp": "2026-11-21",
+      "message": "以下の新楽曲を追加！\n・「お嫁♡HOLIC」\n　　- ネリッサ・レイヴンクロフト"
     }
   ],
   "pickupImages": [
@@ -21733,6 +21741,46 @@
         "expert": 29,
         "mv_url": "https://www.youtube.com/watch?v=bgwcVkAMV8w",
         "digital_distribution": ""
+      },
+      {
+        "id": 100172,
+        "music_title": "前略、君に捧げるらびゅそんぐ！",
+        "read": "ぜんりゃく、きみにささげるらびゅそんぐ！",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100172.png",
+        "length": "1:44",
+        "type": "オリジナル",
+        "artist": "桃鈴ねね",
+        "lyrics": "SARAH",
+        "composition": "宮川麿",
+        "arrangement": "宮川麿",
+        "copyright": "",
+        "score_rate": "桃鈴ねね",
+        "easy": 6,
+        "normal": 13,
+        "hard": 21,
+        "expert": 28,
+        "mv_url": "https://www.youtube.com/watch?v=_dpOzpLoIoA",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100173,
+        "music_title": "お嫁♡HOLIC",
+        "read": "およめ♡HOLIC",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100173.png",
+        "length": "2:25",
+        "type": "オリジナル",
+        "artist": "ネリッサ・レイヴンクロフト",
+        "lyrics": "かたほとり (IOSYS)",
+        "composition": "ARM（IOSYS）",
+        "arrangement": "ARM（IOSYS）",
+        "copyright": "",
+        "score_rate": "ネリッサ・レイヴンクロフト",
+        "easy": 4,
+        "normal": 10,
+        "hard": 19,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=yFzN8ydNeH8",
+        "digital_distribution": "https://cover.lnk.to/OpOIob"
       }
     ],
     "globalIcons": {
