@@ -225,6 +225,10 @@
     {
       "timestamp": "2026-11-22",
       "message": "以下の新楽曲を追加！\n・「Halulu」\n　　- パヴォリア・レイネ"
+    },
+    {
+      "timestamp": "2026-11-24",
+      "message": "以下の新楽曲を追加！\n・「リリカルMonster」\n　　- 白銀ノエル"
     }
   ],
   "pickupImages": [
@@ -21805,6 +21809,26 @@
         "expert": 24,
         "mv_url": "https://www.youtube.com/watch?v=pzUoVO4Lf6o",
         "digital_distribution": ""
+      },
+      {
+        "id": 100175,
+        "music_title": "リリカルMonster",
+        "read": "りりかるMonster",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100175.png",
+        "length": "2:21",
+        "type": "オリジナル",
+        "artist": "白銀ノエル",
+        "lyrics": "モリタコータ",
+        "composition": "青木宏憲(HANO), 日直伸次(HANO), 廣澤優也(HANO)",
+        "arrangement": "日直伸次(HANO), 青木宏憲(HANO)",
+        "copyright": "",
+        "score_rate": "白銀ノエル",
+        "easy": 7,
+        "normal": 11,
+        "hard": 18,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=qIRKvXbbbsk",
+        "digital_distribution": "https://cover.lnk.to/LyricalMonster"
       }
     ],
     "globalIcons": {
