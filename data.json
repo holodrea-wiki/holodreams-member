@@ -221,6 +221,10 @@
     {
       "timestamp": "2026-11-21",
       "message": "以下の新楽曲を追加！\n・「お嫁♡HOLIC」\n　　- ネリッサ・レイヴンクロフト"
+    },
+    {
+      "timestamp": "2026-11-22",
+      "message": "以下の新楽曲を追加！\n・「Halulu」\n　　- パヴォリア・レイネ"
     }
   ],
   "pickupImages": [
@@ -21781,6 +21785,26 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=yFzN8ydNeH8",
         "digital_distribution": "https://cover.lnk.to/OpOIob"
+      },
+      {
+        "id": 100174,
+        "music_title": "Halulu",
+        "read": "Halulu",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100174.png",
+        "length": "2:02",
+        "type": "オリジナル",
+        "artist": "パヴォリア・レイネ",
+        "lyrics": "Mai Haylee,Yui Kylee",
+        "composition": "先田貴裕(Dream Monster)",
+        "arrangement": "先田貴裕(Dream Monster)",
+        "copyright": "",
+        "score_rate": "パヴォリア・レイネ",
+        "easy": 4,
+        "normal": 10,
+        "hard": 17,
+        "expert": 24,
+        "mv_url": "https://www.youtube.com/watch?v=pzUoVO4Lf6o",
+        "digital_distribution": ""
       }
     ],
     "globalIcons": {
