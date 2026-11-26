@@ -229,38 +229,40 @@
     {
       "timestamp": "2026-11-24",
       "message": "以下の新楽曲を追加！\n・「リリカルMonster」\n　　- 白銀ノエル"
+    },
+    {
+      "timestamp": "2026-11-26",
+      "message": "新イベント「心舞うクリスマスモーメントガチャ」の新メンバー追加！\n・さくらみこ［エリートサンタがやってきた！］\n・姫森ルーナ［輝きのプリンセスシンフォニー］\n・一伊那尓栖［Sweet Snow INAvitation］\n・シオリ・ノヴェラ［キャンドルライトに誘われて］"
+    },
+    {
+      "timestamp": "2026-11-26",
+      "message": "以下の新楽曲を追加！\n・「SUNAO」\n　　- さくらみこ\n・「絶対忠誠♡なのなのら！」\n　　- 姫森ルーナ\n・「TAKO∞TAKOVER」\n　　- 一伊那尓栖\n・「Whisper Whisper Whisper」\n　　- シオリ・ノヴェラ\n・「Holiday Dream」\n　　- さくらみこ, 姫森ルーナ, 一伊那尓栖, シオリ・ノヴェラ"
     }
   ],
   "pickupImages": [
     {
-      "id": "10002004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10002004.jpg",
-      "character": "ロボ子さん",
-      "alias": "高性能なボクと紅葉デート"
+      "id": "10004005",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10004005.jpg",
+      "character": "さくらみこ",
+      "alias": "エリートサンタがやってきた！"
     },
     {
-      "id": "10301004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10301004.jpg",
-      "character": "兎田ぺこら",
-      "alias": "ご機嫌ステップでおめかし散歩"
+      "id": "10403005",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10403005.jpg",
+      "character": "姫森ルーナ",
+      "alias": "輝きのプリンセスシンフォニー"
     },
     {
-      "id": "10502004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10502004.jpg",
-      "character": "桃鈴ねね",
-      "alias": "ビタミンカラーの落ち葉シャワー"
+      "id": "30103005",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30103005.jpg",
+      "character": "一伊那尓栖",
+      "alias": "Sweet Snow INAvitation"
     },
     {
-      "id": "20203004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20203004.jpg",
-      "character": "パヴォリア・レイネ",
-      "alias": "風薫る♪銀杏並木のその先へ"
-    },
-    {
-      "id": "30201004",
-      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30201004.jpg",
-      "character": "IRyS",
-      "alias": "この手に希望を実らせて♪"
+      "id": "30301005",
+      "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30301005.jpg",
+      "character": "シオリ・ノヴェラ",
+      "alias": "キャンドルライトに誘われて"
     }
   ],
   "allImages": [
@@ -364,7 +366,11 @@
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10301004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10502004.jpg",
     "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_20203004.jpg",
-    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30201004.jpg"
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30201004.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10004005.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10403005.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30103005.jpg",
+    "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30301005.jpg"
   ],
   "copyright": {
     "著作権表示": "当サイトはファン有志による非公式の攻略データサイトです。\nサイト内のゲーム画像・データの著作権は、すべてカバー株式会社および株式会社QualiArtsに帰属します。\n© COVER Corp. / © QualiArts, Inc.",
@@ -525,6 +531,7 @@
             "両手広げるCheerful show",
             "We are hololive!",
             "ビーチで弾ける、光彩ショット！",
+            "エリートサンタがやってきた！",
             "さくらみこ",
             "ビーチで弾ける",
             "光彩ショット！"
@@ -1058,6 +1065,7 @@
             "ふんわりプリンセスステージ",
             "We are hololive!",
             "のんびり姫のおねだりビーチ",
+            "輝きのプリンセスシンフォニー",
             "姫森ルーナ"
           ],
           "message": "「みんな～、おりゅ～？」",
@@ -1624,6 +1632,7 @@
             "舞台を飾る和やか笑顔",
             "We are hololive!",
             "潮騒の記憶をたどって",
+            "Sweet Snow INAvitation",
             "一伊那尓栖"
           ],
           "message": "「おはよう、こんにちは、こんばんは！WAHンダフルな一日を過ごせていますように！」",
@@ -1741,6 +1750,7 @@
             "ステージでもKeep it real",
             "We are hololive!",
             "知を潤すナイトプール",
+            "キャンドルライトに誘われて",
             "シオリ・ノヴェラ"
           ],
           "message": "「それって素敵な物語だと思わない？」",
@@ -1981,6 +1991,202 @@
   "holomenTableData": {
     "rows": [
       {
+        "id": 10004005,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10004005.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10004005.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10004005.png",
+        "character": "さくらみこ",
+        "alias": "エリートサンタがやってきた！",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10004.png",
+        "unit": "ホロライブ 0期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 25921,
+        "performance": 6947,
+        "technic": 11146,
+        "sense": 7828,
+        "special-effect": "スコアサポート, スキル発動率",
+        "special-conditions": "なし",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "11秒間スコアサポート効果130％\nスキル発動率が45％UP",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率, キュートタイプ〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "{キュートタイプ}2人以上で発動\n31秒毎に高確率で10秒間スコアが130％UP",
+        "passive-type": "テクニックUP",
+        "passive-conditions": "キュートタイプ〇人以上",
+        "passive-target": "キュートタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{キュートタイプ}3人以上で{キュートタイプ}3人のテクニックが30％UP",
+        "costumeｰname": "スターリットチェック",
+        "costumeｰeffect": "テクニックUP",
+        "costume-conditions": "キュートタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{キュートタイプ}3人以上で全員のテクニックが135％UP",
+        "connect-mass": "5マス効果",
+        "connect-target": "[5マス] 下 ╋ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100502.png",
+        "connect_effect": "範囲内のホロメンボード効果を200％UP",
+        "fast_release": "心舞うクリスマスモーメントガチャ",
+        "release_at": 20261126,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10004.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation0.png"
+        ]
+      },
+      {
+        "id": 10403005,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10403005.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10403005.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_10403005.png",
+        "character": "姫森ルーナ",
+        "alias": "輝きのプリンセスシンフォニー",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_10403.png",
+        "unit": "ホロライブ 4期生",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 25921,
+        "performance": 6947,
+        "technic": 7828,
+        "sense": 11146,
+        "special-effect": "スコアサポート",
+        "special-conditions": "ライフ〇以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "12秒間スコアサポート効果70％\nライフ1000以上でスコアサポート効果145％",
+        "active-type": "スコアUP",
+        "active-conditions": "中確率, キュートタイプ〇人以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "{キュートタイプ}2人以上で発動\n22秒毎に中確率で7秒間スコアが140％UP",
+        "passive-type": "センスUP, スキル発動率",
+        "passive-conditions": "キュートタイプ〇人以上",
+        "passive-target": "キュートタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{キュートタイプ}3人以上で{キュートタイプ}2人のスキル発動率が19％UP\n{キュートタイプ}3人以上で{キュートタイプ}2人のセンスが17％UP",
+        "costumeｰname": "ロイヤルポンポンパステル",
+        "costumeｰeffect": "スコアサポート, センスUP",
+        "costume-conditions": "キュートタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{キュートタイプ}3人以上で全員のスコアサポート効果45％\n{キュートタイプ}3人以上で全員のセンスが50％UP",
+        "connect-mass": "8マス効果",
+        "connect-target": "[8マス] 十字",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100803.png",
+        "connect_effect": "範囲内のホロメンボード効果を125％UP",
+        "fast_release": "心舞うクリスマスモーメントガチャ",
+        "release_at": 20261126,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10403.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation4.png"
+        ]
+      },
+      {
+        "id": 30103005,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30103005.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30103005.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_30103005.png",
+        "character": "一伊那尓栖",
+        "alias": "Sweet Snow INAvitation",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_30103.png",
+        "unit": "ホロライブEN Myth",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "キュート",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+        "total_status": 25867,
+        "performance": 11381,
+        "technic": 7683,
+        "sense": 6803,
+        "special-effect": "スコアサポート",
+        "special-conditions": "キュートタイプ〇人以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "10秒間スコアサポート効果85％\n{キュートタイプ}3人以上でスコアサポート効果175％",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率, コンボ〇以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "29秒毎に高確率で10秒間スコアが60％UP\n40コンボ以上でスコアが120％UP",
+        "passive-type": "パフォーマンスUP",
+        "passive-conditions": "キュートタイプ〇人以上",
+        "passive-target": "キュートタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{キュートタイプ}3人以上で{キュートタイプ}2人のパフォーマンスが45％UP",
+        "costumeｰname": "Winter White Fairy",
+        "costumeｰeffect": "スコアサポート, パフォーマンスUP",
+        "costume-conditions": "キュートタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{キュートタイプ}3人以上で全員のパフォーマンスが135％UP\n{キュートタイプ}3人以上で全員のスコアサポート効果25％",
+        "connect-mass": "5マス効果",
+        "connect-target": "[5マス] 左 ■ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100505.png",
+        "connect_effect": "範囲内のホロメンボード効果を185％UP",
+        "fast_release": "心舞うクリスマスモーメントガチャ",
+        "release_at": 20261126,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30103.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Myth.png"
+        ]
+      },
+      {
+        "id": 30301005,
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30301005.jpg",
+        "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30301005.png",
+        "costume_icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/costumeIcon/costumeIcon_30301005.png",
+        "character": "シオリ・ノヴェラ",
+        "alias": "キャンドルライトに誘われて",
+        "name_plate_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplatePc/namePlate_pc_30301.png",
+        "unit": "ホロライブEN Advent",
+        "rarity": 5,
+        "rarity-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/rarity5.png",
+        "type": "ピュア",
+        "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+        "total_status": 25867,
+        "performance": 7683,
+        "technic": 11381,
+        "sense": 6803,
+        "special-effect": "スコアサポート",
+        "special-conditions": "ピュアタイプ〇人以上",
+        "special-target": "全員",
+        "special-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_special.png",
+        "special-skill": "13秒間スコアサポート効果65％\n{ピュアタイプ}3人以上でスコアサポート効果135％",
+        "active-type": "スコアUP",
+        "active-conditions": "高確率, ライフ〇以上",
+        "active-target": "全員",
+        "active-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_active.png",
+        "active-skill": "21秒毎に高確率で7秒間スコアが60％UP\nライフ600以上でスコアが125％UP",
+        "passive-type": "テクニックUP",
+        "passive-conditions": "ピュアタイプ〇人以上",
+        "passive-target": "ピュアタイプ〇人",
+        "passive-icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/skill_passive.png",
+        "passive-skill": "{ピュアタイプ}3人以上で{ピュアタイプ}2人のパフォーマンスが45％UP",
+        "costumeｰname": "Holly Jolly Gothmas",
+        "costumeｰeffect": "スコアサポート, テクニックUP",
+        "costume-conditions": "ピュアタイプ〇人以上",
+        "costume-target": "全員",
+        "costumeｰskill": "{ピュアタイプ}3人以上で全員のセンスが85％UP\n{ピュアタイプ}3人以上で全員のスコアサポート効果25％",
+        "connect-mass": "5マス効果",
+        "connect-target": "[5マス] 右 ■ 型",
+        "connect-target_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/connectEffect/connectEffect_100506.png",
+        "connect_effect": "範囲内のホロメンボード効果を185％UP",
+        "fast_release": "心舞うクリスマスモーメントガチャ",
+        "release_at": 20261126,
+        "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30301.png",
+        "pickup": true,
+        "unit_tag_urls": [
+          "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+        ]
+      },
+      {
         "id": 10002004,
         "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10002004.jpg",
         "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10002004.png",
@@ -2024,7 +2230,7 @@
         "fast_release": "うららかな秋にお出かけを♪ガチャ",
         "release_at": 20261114,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10002.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation0.png"
         ]
@@ -2073,7 +2279,7 @@
         "fast_release": "うららかな秋にお出かけを♪ガチャ",
         "release_at": 20261114,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10301.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation3.png"
         ]
@@ -2122,7 +2328,7 @@
         "fast_release": "うららかな秋にお出かけを♪ガチャ",
         "release_at": 20261114,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10502.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation5.png"
         ]
@@ -2171,7 +2377,7 @@
         "fast_release": "うららかな秋にお出かけを♪ガチャ",
         "release_at": 20261114,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_20203.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_IdGeneration2.png"
         ]
@@ -2220,7 +2426,7 @@
         "fast_release": "うららかな秋にお出かけを♪ガチャ",
         "release_at": 20261114,
         "mobile_name_plate": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30201.png",
-        "pickup": true,
+        "pickup": false,
         "unit_tag_urls": [
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Promise.png"
         ]
@@ -12787,6 +12993,24 @@
         ],
         "cards": [
           {
+            "id": 10004005,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10004005.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10004005.jpg",
+            "alias": "エリートサンタがやってきた！",
+            "character": "さくらみこ",
+            "char_id": 10004,
+            "rarity": 5,
+            "release_at": 20261126,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "ホロライブ 0期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation0.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10004.png"
+          },
+          {
             "id": 10004004,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10004004.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10004004.jpg",
@@ -14253,6 +14477,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation4.png"
         ],
         "cards": [
+          {
+            "id": 10403005,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10403005.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_10403005.jpg",
+            "alias": "輝きのプリンセスシンフォニー",
+            "character": "姫森ルーナ",
+            "char_id": 10403,
+            "rarity": 5,
+            "release_at": 20261126,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "ホロライブ 4期生"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Generation4.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_10403.png"
+          },
           {
             "id": 10403004,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_10403004.png",
@@ -15878,6 +16120,24 @@
         ],
         "cards": [
           {
+            "id": 30103005,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30103005.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30103005.jpg",
+            "alias": "Sweet Snow INAvitation",
+            "character": "一伊那尓栖",
+            "char_id": 30103,
+            "rarity": 5,
+            "release_at": 20261126,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_cute.png",
+            "units": [
+              "ホロライブEN Myth"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Myth.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30103.png"
+          },
+          {
             "id": 30103004,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30103004.png",
             "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30103004.jpg",
@@ -16191,6 +16451,24 @@
           "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
         ],
         "cards": [
+          {
+            "id": 30301005,
+            "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30301005.png",
+            "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberCard/memberCard_30301005.jpg",
+            "alias": "キャンドルライトに誘われて",
+            "character": "シオリ・ノヴェラ",
+            "char_id": 30301,
+            "rarity": 5,
+            "release_at": 20261126,
+            "type_url": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/globalIcon/type_pure.png",
+            "units": [
+              "ホロライブEN Advent"
+            ],
+            "unit_tag_urls": [
+              "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/Tag/unit_Advent.png"
+            ],
+            "name_plate_bg": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/namePlate/nameplateMobile/namePlate_mobile_30301.png"
+          },
           {
             "id": 30301004,
             "icon": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/member/memberIcon/memberIcon_30301004.png",
@@ -21829,6 +22107,106 @@
         "expert": 26,
         "mv_url": "https://www.youtube.com/watch?v=qIRKvXbbbsk",
         "digital_distribution": "https://cover.lnk.to/LyricalMonster"
+      },
+      {
+        "id": 100176,
+        "music_title": "SUNAO",
+        "read": "SUNAO",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100176.png",
+        "length": "1:48",
+        "type": "オリジナル",
+        "artist": "さくらみこ",
+        "lyrics": "水野良樹",
+        "composition": "水野良樹",
+        "arrangement": "中野領太, 田中ユウスケ",
+        "copyright": "",
+        "score_rate": "さくらみこ",
+        "easy": 3,
+        "normal": 10,
+        "hard": 18,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=4ZafIoQ_g7Y",
+        "digital_distribution": "https://cover.lnk.to/flowerrhapsody"
+      },
+      {
+        "id": 100177,
+        "music_title": "絶対忠誠♡なのなのら！",
+        "read": "ぜったいちゅうせい♡なのなのら！",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100177.png",
+        "length": "1:53",
+        "type": "オリジナル",
+        "artist": "姫森ルーナ",
+        "lyrics": "saji (Hifumi,inc.)",
+        "composition": "伊藤嵩也 (Hifumi,inc.)",
+        "arrangement": "伊藤嵩也 (Hifumi,inc.)",
+        "copyright": "",
+        "score_rate": "姫森ルーナ",
+        "easy": 3,
+        "normal": 10,
+        "hard": 19,
+        "expert": 25,
+        "mv_url": "https://www.youtube.com/watch?v=IY2kSsj3CGc",
+        "digital_distribution": "https://cover.lnk.to/Nanonanora"
+      },
+      {
+        "id": 100178,
+        "music_title": "TAKO∞TAKOVER",
+        "read": "TAKO∞TAKOVER",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100178.png",
+        "length": "2:13",
+        "type": "オリジナル",
+        "artist": "一伊那尓栖",
+        "lyrics": "Mori Calliope",
+        "composition": "Aiobahn +81",
+        "arrangement": "Aiobahn +81",
+        "copyright": "",
+        "score_rate": "一伊那尓栖",
+        "easy": 5,
+        "normal": 11,
+        "hard": 18,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=6sAQ1wuYzxk",
+        "digital_distribution": "https://cover.lnk.to/f3LaFq"
+      },
+      {
+        "id": 200065,
+        "music_title": "Whisper Whisper Whisper",
+        "read": "Whisper Whisper Whisper",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/cover/jacketBanner_200065.png",
+        "length": "2:05",
+        "type": "カバー",
+        "artist": "シオリ・ノヴェラ",
+        "lyrics": "Azari",
+        "composition": "Azari",
+        "arrangement": "",
+        "copyright": "© 2022 by Warner Music Japan Inc.",
+        "score_rate": "シオリ・ノヴェラ",
+        "easy": 3,
+        "normal": 10,
+        "hard": 18,
+        "expert": 24,
+        "mv_url": "https://www.youtube.com/watch?v=tgCgHwIWgUU",
+        "digital_distribution": ""
+      },
+      {
+        "id": 100179,
+        "music_title": "Holiday Dream",
+        "read": "Holiday Dream",
+        "image": "https://raw.githubusercontent.com/holodrea-wiki/holodreams-member/main/assets/jacket/original/jacketBanner_100179.png",
+        "length": "2:15",
+        "type": "オリジナル",
+        "artist": "さくらみこ, 姫森ルーナ, 一伊那尓栖, シオリ・ノヴェラ",
+        "lyrics": "ケリー",
+        "composition": "Snail's House",
+        "arrangement": "Snail's House",
+        "copyright": "",
+        "score_rate": "さくらみこ, 姫森ルーナ, 一伊那尓栖, シオリ・ノヴェラ",
+        "easy": 2,
+        "normal": 9,
+        "hard": 16,
+        "expert": 26,
+        "mv_url": "https://www.youtube.com/watch?v=K18AokpGnBs",
+        "digital_distribution": ""
       }
     ],
     "globalIcons": {
